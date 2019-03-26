@@ -1,4 +1,6 @@
-﻿var app = angular.module('ChainApp', ['ngRoute', 'LocalStorageModule', 'angular-loading-bar', 'ngSanitize', 'ngAnimate', 'dx' ]).config(['cfpLoadingBarProvider', function (cfpLoadingBarProvider) {
+﻿'use strict';
+
+var app = angular.module('ChainApp', ['ngRoute', 'LocalStorageModule', 'angular-loading-bar', 'ngSanitize', 'ngAnimate', 'dx']).config(['cfpLoadingBarProvider', function (cfpLoadingBarProvider) {
     cfpLoadingBarProvider.includeSpinner = false;
 }]);
  
