@@ -1,0 +1,171 @@
+﻿
+<!DOCTYPE html>
+<html lang="en-US" class="no-js" itemscope itemtype="http://schema.org/WebPage" ng-app="ChainApp">
+
+ 
+<head>
+
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link rel="alternate" hreflang="en-us" href="#" />
+
+    <link rel="shortcut icon" href="http://www.3dchain.io/images/logo_3dchain.png" />
+
+
+    <title ng-bind='browser_title'>
+
+    </title>
+
+
+
+
+    <link href="content/css/bootstrap.css" rel="stylesheet" />
+    <!--<link rel='stylesheet' id='layerslider-css' href='http://commigrant.com/wp-content/plugins/LayerSlider/static/layerslider/css/layerslider.css?ver=6.7.6' type='text/css' media='all' />-->
+    <link rel='stylesheet' id='layerslider-css' href='content/css/wp-layerslider.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='mfn-base-css' href='content/css/base.css?ver=20.9.6.2' type='text/css' media='all' />
+    <link rel='stylesheet' id='mfn-layout-css' href='content/css/wp-layout.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='mfn-shortcodes-css' href='content/css/wp-shortcodes.css?ver=20.9.6.2' type='text/css' media='all' />
+    <link rel='stylesheet' id='mfn-animations-css' href='content/css/wp-animations.min.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='mfn-jquery-ui-css' href='content/css/wp-jquery.ui.all.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='mfn-jplayer-css' href='content/css/wp-jplayer.blue.monday.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='mfn-responsive-css' href='content/css/wp-responsive.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='Roboto-css' href='http://fonts.googleapis.com/css?family=Roboto%3A1%2C300%2C400%2C400italic%2C500%2C700%2C700italic&#038;ver=5.1' type='text/css' media='all' />
+    <link rel='stylesheet' id='Lora-css' href='http://fonts.googleapis.com/css?family=Lora%3A1%2C300%2C400%2C400italic%2C500%2C700%2C700italic&#038;ver=5.1' type='text/css' media='all' />
+
+
+    <script type='text/javascript'>
+        /* <![CDATA[ */
+        var LS_Meta = { "v": "6.7.6" };
+        /* ]]> */
+    </script>
+    <!-- <script src="scripts/jquery-3.1.0.js"></script>-->
+    <script type='text/javascript' src='http://commigrant.com/wp-content/plugins/LayerSlider/static/layerslider/js/greensock.js?ver=1.19.0'></script>
+    <script type='text/javascript' src='scripts/wp-jquery.js'></script>
+    <script type='text/javascript' src='scripts/wp-jquery-migrate.min.js'></script>
+    <script type='text/javascript' src='http://commigrant.com/wp-content/plugins/LayerSlider/static/layerslider/js/layerslider.kreaturamedia.jquery.js?ver=6.7.6'></script>
+    <script type='text/javascript' src='http://commigrant.com/wp-content/plugins/LayerSlider/static/layerslider/js/layerslider.transitions.js?ver=6.7.6'></script>
+    <script type='text/javascript' src='scripts/wp-jquery.themepunch.tools.min.js'></script>
+    <script type='text/javascript' src='scripts/wp-jquery.themepunch.revolution.min.js'></script>
+
+
+    <!-- <link rel='stylesheet' id='mfn-dnmc-style-css' href='content/css/wp-page.css' type='text/css' media='all' />-->
+    <!-- style | custom css | theme options -->
+    <style id="mfn-dnmc-theme-css">
+        /* sample custom CSS */
+        #Top_bar a.button.action_button {
+            margin-left: 10px;
+        }
+    </style>
+    <meta name="generator" content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress." />
+    <!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="http://commigrant.com/wp-content/plugins/js_composer/assets/css/vc_lte_ie9.min.css" media="screen"><![endif]-->
+    <meta name="generator" content="Powered by Slider Revolution 5.4.7.4 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface." />
+    <script type="text/javascript">
+        function setREVStartSize(e) {
+            try {
+                e.c = jQuery(e.c); var i = jQuery(window).width(), t = 9999, r = 0, n = 0, l = 0, f = 0, s = 0, h = 0;
+                if (e.responsiveLevels && (jQuery.each(e.responsiveLevels, function (e, f) { f > i && (t = r = f, l = e), i > f && f > r && (r = f, n = e) }), t > r && (l = n)), f = e.gridheight[l] || e.gridheight[0] || e.gridheight, s = e.gridwidth[l] || e.gridwidth[0] || e.gridwidth, h = i / s, h = h > 1 ? 1 : h, f = Math.round(h * f), "fullscreen" == e.sliderLayout) { var u = (e.c.width(), jQuery(window).height()); if (void 0 != e.fullScreenOffsetContainer) { var c = e.fullScreenOffsetContainer.split(","); if (c) jQuery.each(c, function (e, i) { u = jQuery(i).length > 0 ? u - jQuery(i).outerHeight(!0) : u }), e.fullScreenOffset.split("%").length > 1 && void 0 != e.fullScreenOffset && e.fullScreenOffset.length > 0 ? u -= jQuery(window).height() * parseInt(e.fullScreenOffset, 0) / 100 : void 0 != e.fullScreenOffset && e.fullScreenOffset.length > 0 && (u -= parseInt(e.fullScreenOffset, 0)) } f = u } else void 0 != e.minHeight && f < e.minHeight && (f = e.minHeight); e.c.closest(".rev_slider_wrapper").css({ height: f })
+            } catch (d) { console.log("Failure at Presize of Slider:" + d) }
+        };</script>
+    <noscript>
+        <style type="text/css">
+            .wpb_animate_when_almost_visible {
+                opacity: 1;
+            }
+        </style>
+    </noscript>
+
+
+
+
+
+    <link href="https://unpkg.com/ionicons@4.5.5/dist/css/ionicons.min.css" rel="stylesheet">
+    <link href="content/css/dx.common.css" rel="stylesheet" />
+
+    <link rel="dx-theme" data-theme="material.purple-light" href="content/css/material.purple-light.custom.css" data-active="false" />
+
+
+    <link href="temp.css" rel="stylesheet" />
+</head>
+
+<!-- body -->
+<body class="home page-template-default page page-id-92 template-slider  color-custom style-default button-default layout-full-width no-content-padding header-plain sticky-header sticky-tb-color ab-show subheader-both-center menu-link-color menuo-right mobile-tb-hide mobile-side-slide mobile-mini-mr-ll be-reg-20962 wpb-js-composer js-comp-ver-5.5.2 vc_responsive">
+
+    <div id="Wrapper" class="anfade" ng-view>
+
+
+
+    </div>
+
+    <div id="Side_slide" class="right dark" data-width="250">
+        <div class="close-wrapper"><a href="#" class="close"><i class="icon-cancel-fine"></i></a></div><div class="extras">
+            <a href="SignIn.html" class="action_button color-p" target="_self">Sign In</a><div class="extras-wrapper">
+
+            </div>
+        </div><div class="search-wrapper"><form id="side-form" method="get" action="http://commigrant.com/"><input type="text" class="field" name="s" placeholder="Enter your search" /><input type="submit" class="submit" value="" style="display:none;" /><a class="submit" href="#"><i class="icon-search-fine"></i></a></form></div><div class="lang-wrapper"></div><div class="menu_wrapper"></div>
+        <ul class="social">
+            <li class="twitter"><a href="#" class="social-link"><img src="content/imgs/twitter.png" class="social-icon-1" style="width:25px;height:25px"></a></li>
+            <li class="twitter"><a href="#" class="social-link"><img src="content/imgs/telegram.png" class="social-icon-1" title="Telegram" alt="Telegram" style="width:25px;height:25px"></a></li>
+
+
+
+            <li class="facebook"> <a href="#" class="social-link" style="margin-left:-2px"><img src="content/imgs/facebook.png" class="social-icon-1" title="Facebook" alt="Facebook" style="width:25px;height:25px"></a></li>
+
+            <li class="youtube">  <a href="#" class="social-link"><img src="content/imgs/youtube.png" class="social-icon-1" title="Youtube" alt="Youtube" style="width:25px;height:25px"></a></li>
+
+            <li class="instagram"> <a href="#" class="social-link"><img src="content/imgs/instagram.png" class="social-icon-1" title="Instagram" alt="Instagram" style="width:25px;height:25px"></a></li>
+
+        </ul>
+    </div>
+    <div id="body_overlay"></div>
+
+    <script src="scripts/angular-1.7.2.js"></script>
+    <script src="scripts/angularjs-sanitize.js"></script>
+    <script src="scripts/angular-route-1.7.2.js"></script>
+    <script src="scripts/angular-animate.js"></script>
+    <script src="scripts/angular-local-storage.min.js"></script>
+    <script src="scripts/loading-bar.min.js"></script>
+    <script type="text/javascript" src="scripts/linq.min.js"></script>
+    <script src="scripts/moment.js"></script>
+
+
+
+
+    <script type='text/javascript' src='scripts.js?ver=5.1.1'></script>
+    <script type='text/javascript' src='scripts/wp-core.min.js'></script>
+    <script type='text/javascript' src='scripts/wp-widget.min.js'></script>
+    <script type='text/javascript' src='scripts/wp-mouse.min.js'></script>
+    <script type='text/javascript' src='scripts/wp-sortable.min.js'></script>
+    <script type='text/javascript' src='scripts/wp-tabs.min.js'></script>
+    <script type='text/javascript' src='scripts/wp-accordion.min.js'></script>
+    <script type='text/javascript' src='scripts/wp-plugins.js'></script>
+    <script type='text/javascript' src='scripts/wp-menu.js'></script>
+    <script type='text/javascript' src='scripts/wp-animations.min.js'></script>
+    <script type='text/javascript' src='scripts/wp-jplayer.min.js'></script>
+    <script type='text/javascript' src='scripts/wp-translate3d.js'></script>
+    <script type='text/javascript' src='scripts/wp-smoothscroll.js'></script>
+    <script type='text/javascript' src='scripts/wp-scripts.js'></script>
+    <script type='text/javascript' src='scripts/wp-embed.min.js'></script>
+
+    <script type="text/javascript" src="scripts/dx.all.js"></script>
+
+
+    <script src="app/app.js?v=2"></script>
+
+    <script src="app/services/authService.js?v=2"></script>
+    <script src="app/services/activityService.js?v=2"></script>
+    <script src="app/services/pageService.js?v=2"></script>
+
+    <script src="app/controllers/indexController.js?v=2"></script>
+    <script src="app/controllers/headerMainController.js?v=2"></script>
+    <script src="app/controllers/headerController.js?v=2"></script>
+    <script src="app/controllers/homeController.js?v=2"></script>
+    <script src="app/controllers/signInController.js"></script>
+    <script src="app/controllers/signUpController.js"></script>
+    <script src="app/controllers/aboutController.js?v=2"></script>
+    <script src="app/controllers/pressController.js?v=2"></script>
+    <script src="app/controllers/researchController.js"></script>
+
+
+</body>
+</html>

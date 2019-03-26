@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="content/css/dx.common.css" rel="stylesheet" />
+   
+    <link rel="dx-theme" data-theme="generic.dark" href="content/css/dx.dark.css" data-active="false" />
+</head>
+<body>
+
+    <div id="simple"></div>
+    <div id="select"></div>
+    <script src="scripts/jquery-3.1.0.js"></script>
+    <script type="text/javascript" src="scripts/dx.all.js"></script>
+    <script>
+        $(function () {
+            $("#simple").dxTextBox({
+                value: "John Smith"
+            });
+            $("#select").dxSelectBox({
+                value: "John Smith"
+            });
+
+            $("#placeholder").dxTextBox({
+                placeholder: "Enter full name here..."
+            });
+
+            $("#clear-button").dxTextBox({
+                value: "John Smith",
+                showClearButton: true
+            });
+
+            $("#password").dxTextBox({
+                mode: "password",
+                placeholder: "Enter password",
+                showClearButton: true,
+                value: "f5lzKs0T",
+            });
+
+            $("#mask").dxTextBox({
+                mask: "+1 (X00) 000-0000",
+                maskRules: { "X": /[02-9]/ }
+            });
+
+            $("#disabled").dxTextBox({
+                value: "John Smith",
+                disabled: true
+            });
+
+            $("#full-name").dxTextBox({
+                value: "Smith",
+                showClearButton: true,
+                placeholder: "Enter full name",
+                valueChangeEvent: "keyup",
+                onValueChanged: function (data) {
+                    emailEditor.option("value", data.value.replace(/\s/g, "").toLowerCase() + "@corp.com");
+                }
+            });
+
+            var emailEditor = $("#email").dxTextBox({
+                value: "smith@corp.com",
+                readOnly: true,
+                hoverStateEnabled: false
+            }).data("dxTextBox");
+        });
+    </script>
+</body>
+</html>
