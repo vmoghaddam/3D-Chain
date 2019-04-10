@@ -122,16 +122,16 @@
     /* Position the content inside the overlay */
     .overlay-content {
         position: relative;
-        /*top: 25%;*/  
+        /*top: 25%;*/
         width: 100%; /* 100% width */
         text-align: center; /* Centered text/links */
         margin-top: 10px; /* 30px top margin to avoid conflict with the close button on smaller screens */
-        padding:0 15px 0 15px;
+        padding: 0 15px 0 15px;
     }
 
     /* The navigation links inside the overlay */
     .overlay a {
-        padding: 12px 8px 12px 8px;
+        padding: 8px 8px 8px 8px;
         text-decoration: none;
         font-size: 17px;
         color: #818181;
@@ -154,6 +154,9 @@
         font-size: 60px;
     }
 
+    .dx-popup-content {
+        padding: 5px !important;
+    }
     /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
     @media screen and (max-height: 450px) {
         .overlay a {
@@ -179,9 +182,9 @@
                         <span class="color-p logo-title" style="font-size:26px !important;margin-left:12px;top:-19px;">3D-Chain</span>
                     </a>
                 </td>
-                <td style="text-align:right;width:285px">
-                    <div class="index-menu-item" id="header_menu" style="padding:0;position:relative;top:-4px" ng-mouseover="header_menu_mouse()" ng-mouseleave="header_menu_leave()">
-                        <a href="signin.html" class="_menulink icon nounderline " target="_self" style="padding:0 40px 5px 40px">
+                <td style="text-align:right;width:145px">
+                    <div class="index-menu-item" id="header_menu" style="padding:0;position:relative;top:-1px" ng-mouseover="header_menu_mouse()" ng-mouseleave="header_menu_leave()">
+                        <a href="signin.html" class="_menulink icon nounderline " target="_self" style="padding:0 40px 0px 40px">
 
                             <span style="position:relative;top:-4px;left: 0px; color:black !important;font-weight:bold " class="f16">
                                 3D-Chain
@@ -189,11 +192,27 @@
                             </span>
                         </a>
                     </div>
-                    <div class="index-menu-item" style="padding:0 10px 0 10px;position:relative;top:-4px">
-                        <a href="signin.html" class="_menulink icon nounderline violet" target="_self" style="padding:0 40px 5px 40px" ng-show="IsSignInVisible">
+
+                    <!---->
+                </td>
+                <td style="width:200px">
+                    <div id="link_signin" class="index-menu-item" style="padding:0 10px 0 10px;position:relative;top:-1px;">
+                        <a href="signin.html" class="_menulink icon nounderline violet" target="_self" style="padding:0 40px 0px 40px" ng-show="IsSignInVisible">
 
                             <span style="position:relative;top:0px;left: 0px; color:black !important;font-weight:bold " class="f16">
                                 Sign In
+
+                            </span>
+                        </a>
+                    </div>
+
+                    <div id="link_profile" class="index-menu-item link_profile" style="padding:0px 20px 0 20px;position:relative;top:-7px" ng-show="ProfileVisible">
+                        <a href="" data-ng-click="link_profile_click()" class="nounderline" target="_self" style="border:none !important;padding:0 !important;  ">
+
+
+                            <img ng-src="{{image}}" style="width:35px;height:35px;border-radius:50%;  " />
+                            <span style="position:relative;top:-12px;left: 3px; color:black; font-weight:bold" class="f16">
+                                {{userTitle}}
 
                             </span>
                         </a>
@@ -211,8 +230,9 @@
                             <span class="color-p logo-title" style="font-size:20px !important;margin-left:10px;top:-12px;">3D-Chain</span>
                         </a>
                     </td>
+                    <td id="img_cnt" style="width:35px;text-align:center"><img ng-show="ProfileVisible" ng-src="{{image}}" style="width:30px;height:30px;border-radius:50%;  " /></td>
                     <td style="width:50px">
-                        <div class="menu-container" ng-click="menu_click($event)"  >
+                        <div class="menu-container" ng-click="menu_click($event)">
                             <div class="bar1"></div>
                             <div class="bar2"></div>
                             <div class="bar3"></div>
@@ -220,17 +240,32 @@
                     </td>
                 </tr>
             </table>
-            
+
         </div>
     </div>
 
-
+    <div id="popup_profile" dx-popup="popup_profile">
+        <div style="padding:5px 0px 0px 10px" class="dx-border">
+            <div style="margin:0px 0 5px 0px;font-size:16px">
+                <i class="icon ion-md-information-circle-outline" style="font-size:24px;color:rgba(0,0,0,.7)"></i>
+                <span style="display:inline-block;position:relative;top:-4px;left:3px"><a href="" target="_blank" ng-click="viewProfile()">View Profile</a></span>
+            </div>
+            <div style="margin:0px 0 5px 0px;font-size:16px">
+                <i class="icon ion-md-settings" style="font-size:24px;color:rgba(0,0,0,.7)"></i>
+                <span style="display:inline-block;position:relative;top:-4px;left:3px"><a href="#" target="_blank">Settings & Privacy</a></span>
+            </div>
+            <div style="margin:0px 0 0px 0px;font-size:16px">
+                <i class="icon ion-md-log-out" style="font-size:24px;color:rgba(0,0,0,.7)"></i>
+                <span style="display:inline-block;position:relative;top:-4px;left:3px"><a href="" ng-click="signOut()" target="_blank">Sign Out</a></span>
+            </div>
+        </div>
+    </div>
 </div>
 <div class="container" style="margin:0 auto 0 auto">
     <table style="width:100%">
         <tr>
             <td style="text-align:left"></td>
-            <td style="text-align:right;width:285px;position:relative">
+            <td style="text-align:right;width:145px;position:relative">
                 <div class="dropdown-content" style="top: 40px;left:0 !important" id="header_menu_content" ng-mouseover="header_menu_mouse()" ng-mouseleave="header_menu_leave()">
                     <a href="#" style="padding-top:10px">
                         3DP Service
@@ -247,6 +282,7 @@
                     </a>
                 </div>
             </td>
+            <td style="width:200px"></td>
         </tr>
     </table>
 
@@ -255,17 +291,47 @@
 
 <div id="myNav" class="overlay">
 
-    
+
 
     <!-- Overlay content -->
     <div class="overlay-content">
-        <a href="#"> Sign In</a>
+        <a id="_lnk_signin" href="" data-ng-click="navigate2('/signin','signin',1)" style="display:none"> Sign In</a>
+        <div style="color:white;font-size:16px;font-weight:bold;display:none" class="_lnk_profile">
+            {{userTitle}}
+        </div>
+        <div class="_lnk_profile" style="display:none; margin-top:10px;margin-bottom:10px">
+            <img ng-src="{{image}}" style="width:60px;height:60px;border-radius:50%;  " />
+        </div>
+        <!--<div id="_lnk_profile" style="display:none;background:white;padding:5px;">
+             <img ng-src="{{image}}" style="width:60px;height:60px;border-radius:50%;  " />
+            <span style="position:relative;top:0px;left: 0; color:rgba(0,0,0,0.7); font-weight:bold" class="f16">
+                {{userTitle}}
+
+            </span>
+            <div style="margin:0px 0 5px 0px;font-size:16px">
+
+                <span style="display:inline-block;position:relative;top:0;left:0px"><a href="" target="_blank" ng-click="viewProfile()" style="border-bottom:none;padding:0;color:rgba(0,0,0,0.7);font-size:16px">View Profile</a></span>
+            </div>
+            <div style="margin:0px 0 5px 0px;font-size:16px">
+
+                <span style="display:inline-block;position:relative;top:0;left:0px"><a href="#" target="_blank" style="border-bottom:none;padding:0;color:rgba(0,0,0,0.7);font-size:16px">Settings & Privacy</a></span>
+            </div>
+            <div style="margin:0px 0 0px 0px;font-size:16px">
+
+                <span style="display:inline-block;position:relative;top:0;left:0px"><a href="" ng-click="signOut()" target="_blank" style="border-bottom:none;padding:0;color:rgba(0,0,0,0.7);font-size:16px">Sign Out</a></span>
+            </div>
+        </div>-->
         <a href="#"> 3DP Service</a>
         <a href="#">3DP Technology</a>
         <a href="#">Laser Cutting</a>
+        <a href="#">R & D</a>
         <a href="#">Design</a>
         <a href="#">Marketplace</a>
-        <a href="#">R & D</a>
+        <a href="#">About Us</a>
+        <a href="#">Contact Us</a>
+        <a href="" class="_lnk_profile" style="display:none" ng-click="viewProfile()">View Profile</a>
+        <a href="" class="_lnk_profile" style="display:none">Settings & Privacy</a>
+        <a href="" class="_lnk_profile" style="display:none" ng-click="logOut()">Sign Out</a>
     </div>
 
 </div>

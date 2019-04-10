@@ -1,6 +1,6 @@
 ﻿'use strict';
 
-var app = angular.module('ChainApp', ['ngRoute', 'LocalStorageModule', 'angular-loading-bar', 'ngSanitize', 'ngAnimate', 'dx']).config(['cfpLoadingBarProvider', function (cfpLoadingBarProvider) {
+var app = angular.module('ChainApp', ['ngRoute', 'LocalStorageModule', 'angular-loading-bar', 'ngSanitize',  'dx']).config(['cfpLoadingBarProvider', function (cfpLoadingBarProvider) {
     cfpLoadingBarProvider.includeSpinner = false;
 }]);
  
@@ -32,6 +32,12 @@ app.config(function ($routeProvider) {
         title: '3D-Chain - Research & Development',
 
     });
+    $routeProvider.when("/researchers", {
+        controller: "researchersController",
+        templateUrl: "/app/views/researchers.html",
+        title: '3D-Chain - Researchers Network',
+
+    });
     $routeProvider.when("/signin", {
         controller: "signInController",
         templateUrl: "/app/views/signin.html",
@@ -46,6 +52,12 @@ app.config(function ($routeProvider) {
         type: 1,//Research and Development network
 
     });
+    $routeProvider.when("/profile/:id", {
+        controller: "profileController",
+        templateUrl: "/app/views/profile.html",
+        type: -1,
+
+    });
 
      
      $routeProvider.otherwise({ redirectTo: "/home" });
@@ -55,8 +67,10 @@ app.config(function ($routeProvider) {
  
 
 
-var serviceBase =  'http://localhost:58908/';
-var webBase = 'http://localhost:23579';
+var serviceBase =  'http://localhost:58909/';
+var webBase = 'http://localhost:23579/';
+
+//http://localhost:23579/content/upload/
 
 
 
@@ -76,12 +90,13 @@ app.config(['$httpProvider', function ($httpProvider) {
    // $httpProvider.interceptors.push('authInterceptorService');
 }]);
  
-app.run(['$rootScope', '$location', '$templateCache', 'authService', 'activityService', function ($rootScope, $location, $templateCache, authService, activityService) {
+app.run(['$rootScope', '$location', '$window', '$templateCache', 'authService', 'activityService', function ($rootScope, $location, $window, $templateCache, authService, activityService) {
    
     $rootScope.browser_title = '';
     $rootScope.serviceUrl = serviceBase;
     $rootScope.fileHandlerUrl = webBase + 'filehandler.ashx';
     $rootScope.clientsFilesUrl = webBase + 'upload/clientsfiles/';
+    $rootScope.imagesUrl = webBase + '/content/upload/';
     $rootScope.app_title = '3D-Chain Network';
     $rootScope.page_title = '';
     $rootScope.app_remark = 'Lorem ipsum dolor sit amet';
@@ -94,9 +109,14 @@ app.run(['$rootScope', '$location', '$templateCache', 'authService', 'activitySe
     $rootScope.userName = '';
     $rootScope.userTitle = '';
     $rootScope.userId = null;
-
+    $rootScope.image = '';
     DevExpress.ui.themes.current('material.purple-light');
-
+    authService.fillAuthData();
+    $rootScope.logOut = function () { authService.logOut(); };
+     
+    $rootScope.viewProfile = function () { $rootScope.navigate2('/profile/' + $rootScope.userId); };
+   // alert($rootScope.userName);
+   // alert($rootScope.userTitle);
     ////////////////////
     $rootScope.subscribe_name = null;
     $rootScope.subscribe_email = null;
@@ -104,7 +124,352 @@ app.run(['$rootScope', '$location', '$templateCache', 'authService', 'activitySe
         alert($rootScope.subscribe_name);
         alert($rootScope.subscribe_email);
     };
-    
+    $rootScope.getWindowSize = function () {
+       
+        var w = $(window).width();
+        var h = $(window).height();
+
+
+        return { width: w, height: h };
+    };
+    $rootScope.popupHeightFull = function (a, fullscreen) {
+        if (!fullscreen)
+            return $jq(window).height() *a ;
+        else
+            return $jq(window).height();
+    };
+    $rootScope.popupWidth = function (w, fullscreen) {
+        if (!fullscreen)
+            return w;
+        else
+            return w;//$jq(window).width();
+    };
+     
+    /////////////////////////
+    $rootScope.researchers = [
+        {
+            "Id": 4,
+            Email: 'babak@3dchain.io',
+            Website: 'www.3dchain.io',
+            Twitter: '3dChain',
+            LinkedIn: 'https://www.linkedin.com/in/babak-zareiyan-phd-a8206459/',
+            Remark: 'Additive Manufacturing, 3D Concrete Printing, Design of Experiments',
+            DateJoin: 'January 2019',
+            "Name": "Babak Zareiyan",
+            "LastName": "Zareiyan",
+            "Prefix": "Mr.",
+            "Position": "Co-founder",
+            "Location": "Los Angeles, CA, United States",
+            "Organization": "3d-Chain",
+            "Picture": "Babak.jpg",
+            "BirthDate": "1964/03/16",
+            "HireDate": "1995/01/15",
+            "Notes": "John has been in the Audio/Video industry since 1990. He has led DevAv as its CEO since 2003.\r\n\r\nWhen not working hard as the CEO, John loves to golf and bowl. He once bowled a perfect game of 300.",
+            "Address": "351 S Hill St.",
+            "Education": "PhD, Civil Engineering",
+            Networks: [
+                { Id: 7, Title: '3DP Technology', link: '#' },
+                { Id: 1, Title: '3DP (Concrete)', link: '#' },
+                { Id: 9, Title: 'Material Engineering', link: '#' },
+                { Id: 3, Title: 'Business Development', link: '#' },
+            ],
+            Activity: [{ title: 'Babak wrote a review for 3D-Chain', rate: 5, date: '1/20/2019' }],
+            Publications: [
+                {Id:1, Title: 'Effects of mixture ingredients on extrudability of concrete in Contour Crafting', Remark: '2018 - Rapid Prototyping Journal' },
+                { Id: 2, Title: 'Effects of mixture ingredients on interlayer adhesion of concrete in Contour Crafting', Remark: '2018 - Rapid Prototyping Journal' },
+                { Id: 3,Title: 'Effects of interlocking on interlayer adhesion and strength of structures in 3D printing of concrete', Remark: '2017 - Automation in Construction' },
+                { Id: 4,Title: 'Interlayer adhesion and strength of structures in Contour Crafting-Effects of aggregate size, extrusion rate, and layer thickness', Remark: '2017 - Automation in Construction' },
+            ],
+            Awards: [
+                { Title: 'Featured Research Assistant', Date: 'Aug 2015', Issuer: 'Sonny Astani Department of Civil and Environmental Engineering' },
+                { Title: 'Best Student Paper', Date: 'Apr 2015 ', Issuer: 'Institute of Industrial Engineers, Construction Division' },
+            ],
+            Projects: [
+                { Title:'Lorem ipsum dolor sit amet',Date:'Apr 2015'}
+            ],
+            Patents: [
+                { Title: 'Lorem ipsum dolor sit amet (1)', Date: 'Aug 2017', Issuer: 'Patent issuer' },
+                { Title: 'Lorem ipsum dolor sit amet (2)', Date: 'Feb 2016', Issuer: 'Patent issuer' },
+                { Title: 'Lorem ipsum dolor sit amet (3)', Date: 'Aug 2015', Issuer: 'Patent issuer' },
+            ],
+            Certifications: [
+                { Title: 'Lorem ipsum dolor sit amet (1)', Authority: 'Certification Authority' },
+                
+            ],
+            Summary: { Reviews: 12, },
+        },
+        {
+            "Id": 101,
+            Email: 'mail@3dchain.io',
+            Website: 'www.3dchain.io',
+            Twitter: '3dChain',
+            LinkedIn: 'https://www.linkedin.com/in/korjani/',
+            Remark:'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+            DateJoin: 'February 2019',
+            "Name": "Mehdi Korjani",
+            "LastName": "Korjani",
+            "Prefix": "Mr.",
+            "Position": "Co-founder",
+            "Location": "Los Angeles, CA, United States",
+            "Organization": "3d-Chain",
+            "Picture": "mohammad.jpg",
+            "BirthDate": "1964/03/16",
+            "HireDate": "1995/01/15",
+            "Notes": "John has been in the Audio/Video industry since 1990. He has led DevAv as its CEO since 2003.\r\n\r\nWhen not working hard as the CEO, John loves to golf and bowl. He once bowled a perfect game of 300.",
+            "Address": "351 S Hill St.",
+            "Education": "PhD, Electrical Engineering",
+            Networks: [
+                { Id: 4, Title: 'Artificial Intelligence', link: '#' },
+                { Id: 2, Title: 'Internet of Things', link: '#' },
+                { Id: 3, Title: 'Business Development', link: '#' },
+            ],
+            Activity: [{ title: 'Mehdi wrote a review for 3D-Chain', rate: 4.5, date: '1/20/2019' }],
+            Summary: { Reviews: 8, },
+        },
+        {
+            "Id": 1,
+            Email: 'mail@3dchain.io',
+            Website: 'www.3dchain.io',
+            Twitter: '3dChain',
+            LinkedIn: 'https://www.linkedin.com/in/babak-zareiyan-phd-a8206459/',
+            Remark: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+            DateJoin: 'February 2019',
+            "Name": "John Heart",
+            "LastName": "Heart",
+            "Prefix": "Mr.",
+            "Position": "CEO",
+            "Location": "Los Angeles, CA, United States",
+            "Organization": "3d-Chain",
+            "Picture": "01.png",
+            "BirthDate": "1964/03/16",
+            "HireDate": "1995/01/15",
+            "Notes": "John has been in the Audio/Video industry since 1990. He has led DevAv as its CEO since 2003.\r\n\r\nWhen not working hard as the CEO, John loves to golf and bowl. He once bowled a perfect game of 300.",
+            "Address": "351 S Hill St.",
+            "Education": "MSc, Electrical Engineering",
+            Networks: [
+
+                { Id: 4, Title: 'Artificial Intelligence', link: '#' },
+
+            ],
+            Activity: [{ title: 'John wrote a review for 3D-Chain', rate: 4, date: '1/20/2019' }],
+            Summary: { Reviews: 8, },
+        }, {
+            "Id": 20,
+            Email: 'mail@3dchain.io',
+            Website: 'www.3dchain.io',
+            Twitter: '3dChain',
+            LinkedIn: 'https://www.linkedin.com/in/babak-zareiyan-phd-a8206459/',
+            Remark: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+            DateJoin: 'February 2019',
+            "Name": "Olivia Peyton",
+            "LastName": "Peyton",
+            "Prefix": "Mrs.",
+            "Position": "Sales Assistant",
+            "Location": "Los Angeles, CA, United States",
+            "Organization": "3d-Chain",
+            "Picture": "09.png",
+            "BirthDate": "1981/06/03",
+            "HireDate": "2012/05/14",
+            "Notes": "Olivia loves to sell. She has been selling DevAV products since 2012. \r\n\r\nOlivia was homecoming queen in high school. She is expecting her first child in 6 months. Good Luck Olivia.",
+            "Address": "807 W Paseo Del Mar",
+            "Education": "BSc, Civil Engineering",
+            Networks: [
+
+                { Id: 2, Title: 'Internet of Things', link: '#' },
+
+            ],
+            Activity: [{ title: 'User wrote a review for 3D-Chain', rate: 3, date: '1/20/2019' }],
+            Summary: { Reviews: 8, },
+        }, {
+            "Id": 400,
+            Email: 'mail@3dchain.io',
+            Website: 'www.3dchain.io',
+            Twitter: '3dChain',
+            LinkedIn: 'https://www.linkedin.com/in/babak-zareiyan-phd-a8206459/',
+            Remark: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+            DateJoin: 'February 2019',
+            "Name": "Robert Reagan",
+            "LastName": "Reagan",
+            "Prefix": "Mr.",
+            "Position": "CMO",
+            "Location": "Los Angeles, CA, United States",
+            "Organization": "3d-Chain",
+            "Picture": "03.png",
+            "BirthDate": "1974/09/07",
+            "HireDate": "2002/11/08",
+            "Notes": "Robert was recently voted the CMO of the year by CMO Magazine. He is a proud member of the DevAV Management Team.\r\n\r\nRobert is a championship BBQ chef, so when you get the chance ask him for his secret recipe.",
+            "Address": "4 Westmoreland Pl.",
+            "Education": "MSc, Electrical Engineering",
+            Networks: [
+                { Id: 1, Title: '3DP (Concrete)', link: '#' },
+
+            ],
+            Activity: [{ title: 'User wrote a review for 3D-Chain', rate: 3, date: '1/20/2019' }],
+            Summary: { Reviews: 8, },
+        }, {
+            "Id": 5,
+            Email: 'mail@3dchain.io',
+            Website: 'www.3dchain.io',
+            Twitter: '3dChain',
+            LinkedIn: 'https://www.linkedin.com/in/babak-zareiyan-phd-a8206459/',
+            Remark: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+            DateJoin: 'February 2019',
+            "Name": "Greta Sims",
+            "LastName": "Sims",
+            "Prefix": "Ms.",
+            "Position": "HR Manager",
+            "Location": "Los Angeles, CA, United States",
+            "Organization": "3d-Chain",
+            "Picture": "04.png",
+            "BirthDate": "1977/11/22",
+            "HireDate": "1998/04/23",
+            "Notes": "Greta has been DevAV's HR Manager since 2003. She joined DevAV from Sonee Corp.\r\n\r\nGreta is currently training for the NYC marathon. Her best marathon time is 4 hours. Go Greta.",
+            "Address": "1700 S Grandview Dr.",
+            "Education": "PhD, Civil Engineering",
+            Networks: [
+                { Id: 1, Title: '3DP (Concrete)', link: '#' },
+                { Id: 4, Title: 'Artificial Intelligence', link: '#' },
+                { Id: 2, Title: 'Internet of Things', link: '#' },
+                { Id: 3, Title: 'Business Development', link: '#' },
+            ],
+            Activity: [{ title: 'User wrote a review for 3D-Chain', rate: 3, date: '1/20/2019' }],
+            Summary: { Reviews: 8, },
+        }, {
+            "Id": 6,
+            Email: 'mail@3dchain.io',
+            Website: 'www.3dchain.io',
+            Twitter: '3dChain',
+            LinkedIn: 'https://www.linkedin.com/in/babak-zareiyan-phd-a8206459/',
+            Remark: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+            DateJoin: 'February 2019',
+            "Name": "Brett Wade",
+            "LastName": "Wade",
+            "Prefix": "Mr.",
+            "Position": "IT Manager",
+            "Location": "Los Angeles, CA, United States",
+            "Organization": "3d-Chain",
+            "Picture": "05.png",
+            "BirthDate": "1968/12/01",
+            "HireDate": "2009/03/06",
+            "Notes": "Brett came to DevAv from Microsoft and has led our IT department since 2012.\r\n\r\nWhen he is not working hard for DevAV, he coaches Little League (he was a high school pitcher).",
+            "Address": "1120 Old Mill Rd.",
+            "Education": "BSc, Electrical Engineering",
+            Networks: [
+                { Id: 1, Title: '3DP (Concrete)', link: '#' },
+
+                { Id: 2, Title: 'Internet of Things', link: '#' },
+
+            ],
+            Activity: [{ title: 'User wrote a review for 3D-Chain', rate: 3, date: '1/20/2019' }],
+            Summary: { Reviews: 8, },
+        }, {
+            "Id": 7,
+            Email: 'mail@3dchain.io',
+            Website: 'www.3dchain.io',
+            Twitter: '3dChain',
+            LinkedIn: 'https://www.linkedin.com/in/babak-zareiyan-phd-a8206459/',
+            Remark: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+            DateJoin: 'February 2019',
+            "Name": "Sandra Johnson",
+            "LastName": "Johnson",
+            "Prefix": "Mrs.",
+            "Position": "Controller",
+            "Location": "Los Angeles, CA, United States",
+            "Organization": "3d-Chain",
+            "Picture": "06.png",
+            "BirthDate": "1974/11/15",
+            "HireDate": "2005/05/11",
+            "Notes": "Sandra is a CPA and has been our controller since 2008. She loves to interact with staff so if you've not met her, be certain to say hi.\r\n\r\nSandra has 2 daughters both of whom are accomplished gymnasts.",
+            "Address": "4600 N Virginia Rd.",
+            "Education": "PhD, Civil Engineering",
+            Networks: [
+                { Id: 1, Title: '3DP (Concrete)', link: '#' },
+
+            ],
+            Activity: [{ title: 'User wrote a review for 3D-Chain', rate: 3, date: '1/20/2019' }],
+            Summary: { Reviews: 8, },
+        }, {
+            "Id": 10,
+            Email: 'mail@3dchain.io',
+            Website: 'www.3dchain.io',
+            Twitter: '3dChain',
+            LinkedIn: 'https://www.linkedin.com/in/babak-zareiyan-phd-a8206459/',
+            Remark: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+            DateJoin: 'February 2019',
+            "Name": "Kevin Carter",
+            "LastName": "Carter",
+            "Prefix": "Mr.",
+            "Position": "Shipping Manager",
+            "Location": "Los Angeles, CA, United States",
+            "Organization": "3d-Chain",
+            "Picture": "07.png",
+            "BirthDate": "1978/01/09",
+            "HireDate": "2009/08/11",
+            "Notes": "Kevin is our hard-working shipping manager and has been helping that department work like clockwork for 18 months.\r\n\r\nWhen not in the office, he is usually on the basketball court playing pick-up games.",
+            "Address": "424 N Main St.",
+            "Education": "MSc, Electrical Engineering",
+            Networks: [
+                { Id: 1, Title: '3DP (Concrete)', link: '#' },
+
+                { Id: 3, Title: 'Business Development', link: '#' },
+            ],
+            Activity: [{ title: 'User wrote a review for 3D-Chain', rate: 3, date: '1/20/2019' }],
+            Summary: { Reviews: 8, },
+        }, {
+            "Id": 11,
+            Email: 'mail@3dchain.io',
+            Website: 'www.3dchain.io',
+            Twitter: '3dChain',
+            LinkedIn: 'https://www.linkedin.com/in/babak-zareiyan-phd-a8206459/',
+            Remark: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+            DateJoin: 'February 2019',
+            "Name": "Cynthia Stanwick",
+            "LastName": "Stanwick",
+            "Prefix": "Ms.",
+            "Position": "HR Assistant",
+            "Location": "Los Angeles, CA, United States",
+            "Organization": "3d-Chain",
+            "Picture": "08.png",
+            "BirthDate": "1985/06/05",
+            "HireDate": "2008/03/24",
+            "Notes": "Cindy joined us in 2008 and has been in the HR department for 2 years. \r\n\r\nShe was recently awarded employee of the month. Way to go Cindy!",
+            "Address": "2211 Bonita Dr.",
+            "Education": "MSc, Electrical Engineering",
+            Networks: [
+
+                { Id: 3, Title: 'Business Development', link: '#' },
+            ],
+            Activity: [{ title: 'User wrote a review for 3D-Chain', rate: 3, date: '1/20/2019' }],
+            Summary: { Reviews: 8, },
+        }, {
+            "Id": 30,
+            Email: 'mail@3dchain.io',
+            Website: 'www.3dchain.io',
+            Twitter: '3dChain',
+            LinkedIn: 'https://www.linkedin.com/in/babak-zareiyan-phd-a8206459/',
+            Remark: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+            DateJoin: 'February 2019',
+            "Name": "Kent Samuelson",
+            "LastName": "Samuelson",
+            "Prefix": "Dr.",
+            "Position": "Ombudsman",
+            "Picture": "02.png",
+            "Location": "Los Angeles, CA, United States",
+            "Organization": "3d-Chain",
+            "BirthDate": "1972/09/11",
+            "HireDate": "2009/04/22",
+            "Notes": "As our ombudsman, Kent is on the front-lines solving customer problems and helping our partners address issues out in the field.    He is a classically trained musician and is a member of the Chamber Orchestra.",
+            "Address": "12100 Mora Dr",
+            "Education": "MSc, Civil Engineering",
+            Networks: [
+
+                { Id: 4, Title: 'Artificial Intelligence', link: '#' },
+                { Id: 2, Title: 'Internet of Things', link: '#' },
+
+            ],
+            Activity: [{ title: 'User wrote a review for 3D-Chain', rate: 3, date: '1/20/2019' }],
+            Summary: { Reviews: 8, },
+        }];
     ///////////////////
     $rootScope.history = [];
     $rootScope.$on('$routeChangeSuccess', function (event, currentRoute, previousRoute ) {
@@ -117,12 +482,25 @@ app.run(['$rootScope', '$location', '$templateCache', 'authService', 'activitySe
     });
     ///////////////////////////////
     $rootScope.navigate = function (target, key, module) {
+       
+        //var rec = Enumerable.From(Config.MenuItems).Where('$.key=="' + key + '"').FirstOrDefault();
+        //activityService.hitMenu(key, target, 'Visiting ' + $rootScope.module + ' > ' + rec.title, module);
+
+     //   $window.location.assign('#!'+target);
+        $rootScope.$apply(function () {
+            $location.path(target);
+        });
+
+    };
+    $rootScope.navigate2 = function (target, key, module) {
 
         //var rec = Enumerable.From(Config.MenuItems).Where('$.key=="' + key + '"').FirstOrDefault();
         //activityService.hitMenu(key, target, 'Visiting ' + $rootScope.module + ' > ' + rec.title, module);
 
-        $location.path(target);
-
+        //   $window.location.assign('#!'+target);
+       
+            $location.path(target);
+        
 
     };
     ///////////////////////////////
@@ -710,8 +1088,11 @@ app.run(['$rootScope', '$location', '$templateCache', 'authService', 'activitySe
     };
 
    // $rootScope.pageFunctions();
-
-    window.onscroll = function () { scrollFunction() };
+    $rootScope.onScrollDisabled = false;
+    window.onscroll = function () {
+      if (!$rootScope.onScrollDisabled)
+           scrollFunction();
+    };
 
     function scrollFunction() {
         var y = $jq(window).scrollTop();

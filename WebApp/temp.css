@@ -76,8 +76,8 @@ h1, h2, h3, h4, h5, h6 {
     bottom: -8px;
 }*/
 .social-icon-1 {
-    width: 60px;
-    height: 60px;
+    width: 45px;
+    height: 45px;
     -webkit-transition: .3s ease-in-out;
     transition: .3s ease-in-out;
 }
@@ -356,6 +356,13 @@ a.simple {
     background-repeat: no-repeat;
     background-size: 64%;
     background-position: top;
+}
+.ep-row4 {
+    padding: 25px 0 25px 0;
+    background: url('content/imgs/row2.png');
+    background-repeat: no-repeat;
+    background-size: 76%;
+    background-position: top center;
 }
 .ep-row-empty {
     padding: 30px 0 30px 0;
@@ -649,3 +656,180 @@ padding-right:0;
     width:800px;
     /*margin-left:90px;*/
 }
+.readOnly{
+    cursor:default;
+}
+.pointer {
+    cursor: pointer;
+}
+.circle-network {
+    position: absolute;
+    width: 153px;
+   
+    transition: .3s ease-in-out;
+}
+    .circle-network:hover {
+        opacity:1;
+        filter: grayscale(100%);
+    }
+    .circle-network.readOnly:hover {
+        opacity: 1;
+        filter: unset;
+    }
+     
+.circle-network2 {
+    position: absolute;
+    width: 159px;
+    
+    transition: .3s ease-in-out;
+}
+    
+    .circle-network2:hover {
+        opacity: 1;
+        filter: grayscale(100%);
+    }
+    .circle-network2.readOnly:hover {
+        opacity: 1;
+        filter: unset;
+    }
+
+.circle-gray {
+    filter: grayscale(100%);
+}
+    
+    .circle-gray.readOnly:hover {
+        filter: grayscale(100%);
+    }
+.dg-cell-link {
+    font-weight: bold;
+}
+.dg-cell-div {
+    font-size: 16px;
+    float: left; 
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 0px;
+    overflow-wrap: break-word;
+    white-space:normal;
+}
+.dx-popup-title.dx-toolbar .dx-toolbar-items-container {
+    height: 45px;
+}
+.dx-popup-title.dx-toolbar{
+    background:white;
+    color:black;
+}
+.dx-popup-content {
+    padding: 10px 20px 10px 20px !important;
+}
+.star {
+    font-size: 26px;
+    display: inline-block;
+    margin-left: 3px
+}
+.link_profile img, .link_profile span{
+    transition: all .3s ease-in-out;
+}
+
+    .link_profile:hover img {
+        box-shadow: 0px 0px 1px 2px rgba(112,48,160,1);
+    }
+.link_profile:hover span {
+    /*color: rgba(112,48,160,1) !important;*/
+    /*font-weight:bold !important;*/
+    /*text-shadow: -1px  1px 1px rgba(112,48,160,1) !important;*/
+}
+
+.hide{
+    display:none;
+}
+
+.link_edit {
+    transition: all .3s ease-in-out;
+    border: 0px solid gray;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    text-align: center;
+    
+    padding-top: 3px;
+}
+.link_edit i {
+    font-size:28px !important;
+}
+
+.link_edit:hover{
+    color:rgba(112,48,160,1) !important;
+    background:white;
+}
+
+    .link_edit.hover_white:hover {
+        color: rgba(112,48,160,1) !important;
+        background: rgba(231,231,231,1);
+    }
+
+    .no-yscroll{
+        overflow-y:hidden !important;
+    }
+
+.thin-scroll::-webkit-scrollbar {
+    width: 6px;
+}
+
+.thin-scroll::-webkit-scrollbar-thumb {
+    background: #888;
+    outline: 1px solid slategrey;
+}
+.thin-scroll::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+div.accordion {
+    background-color: white;
+    border-bottom: 1px solid #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 14px;
+    width: 100%;
+    text-align: left;
+    /*outline: none;*/
+    font-size: 15px;
+    transition: 0.4s;
+    font-size: 17px;
+    font-weight: normal;
+    color: rgb(0, 112, 192);
+    position:relative;
+}
+
+    div.accordion:hover {
+        background-color: rgba(230,230,230,1);
+        
+    }
+    div.accordion.active {
+        border: none;
+        background-color: rgba(230,230,230,1);
+    }
+
+        div.accordion:after {
+            content: '\2630';
+            font-size: 20px;
+            color: #777;
+            font-weight: normal;
+            float: right;
+            margin-left: 5px;
+            position: initial !important;
+        }
+
+    div.accordion.active:after {
+        content: "\2715";
+        position: initial !important;
+    }
+
+div.accordion-panel {
+    padding: 8px 0px 0px 0px;
+    background-color: white;
+    /*max-height: 0;*/
+    overflow: hidden;
+    display:none;
+    transition: max-height 0.2s ease-out;
+}

@@ -75,7 +75,9 @@
     <Content Include="app\controllers\homeController.js" />
     <Content Include="app\controllers\indexController.js" />
     <Content Include="app\controllers\pressController.js" />
+    <Content Include="app\controllers\profileController.js" />
     <Content Include="app\controllers\researchController.js" />
+    <Content Include="app\controllers\researchersController.js" />
     <Content Include="app\controllers\signInController.js" />
     <Content Include="app\controllers\signUpController.js" />
     <Content Include="app\services\activityService.js" />
@@ -89,7 +91,9 @@
     <Content Include="app\views\header2.html" />
     <Content Include="app\views\home.html" />
     <Content Include="app\views\press.html" />
+    <Content Include="app\views\profile.html" />
     <Content Include="app\views\research.html" />
+    <Content Include="app\views\researchers.html" />
     <Content Include="app\views\signin.html" />
     <Content Include="app\views\signup.html" />
     <Content Include="app\views\subscribe.html" />

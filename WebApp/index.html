@@ -1,6 +1,6 @@
 ﻿
 <!DOCTYPE html>
-<html lang="en-US" class="no-js" itemscope itemtype="http://schema.org/WebPage" ng-app="ChainApp">
+<html lang="en-US" class="no-js thin-scroll" itemscope itemtype="http://schema.org/WebPage" ng-app="ChainApp" >
 
  
 <head>
@@ -21,7 +21,7 @@
 
 
     <link href="content/css/bootstrap.css" rel="stylesheet" />
-    <!--<link rel='stylesheet' id='layerslider-css' href='http://commigrant.com/wp-content/plugins/LayerSlider/static/layerslider/css/layerslider.css?ver=6.7.6' type='text/css' media='all' />-->
+
     <link rel='stylesheet' id='layerslider-css' href='content/css/wp-layerslider.css' type='text/css' media='all' />
     <link rel='stylesheet' id='mfn-base-css' href='content/css/base.css?ver=20.9.6.2' type='text/css' media='all' />
     <link rel='stylesheet' id='mfn-layout-css' href='content/css/wp-layout.css' type='text/css' media='all' />
@@ -40,9 +40,12 @@
         /* ]]> */
     </script>
     <!-- <script src="scripts/jquery-3.1.0.js"></script>-->
+    <!--<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>-->
+
+
     <script type='text/javascript' src='http://commigrant.com/wp-content/plugins/LayerSlider/static/layerslider/js/greensock.js?ver=1.19.0'></script>
-    <script type='text/javascript' src='scripts/wp-jquery.js'></script>
-    <script type='text/javascript' src='scripts/wp-jquery-migrate.min.js'></script>
+    <script type='text/javascript' src='scripts/wp-jquery.js'></script> 
+      <script type='text/javascript' src='scripts/wp-jquery-migrate.min.js'></script> 
     <script type='text/javascript' src='http://commigrant.com/wp-content/plugins/LayerSlider/static/layerslider/js/layerslider.kreaturamedia.jquery.js?ver=6.7.6'></script>
     <script type='text/javascript' src='http://commigrant.com/wp-content/plugins/LayerSlider/static/layerslider/js/layerslider.transitions.js?ver=6.7.6'></script>
     <script type='text/javascript' src='scripts/wp-jquery.themepunch.tools.min.js'></script>
@@ -80,6 +83,7 @@
 
 
     <link href="https://unpkg.com/ionicons@4.5.5/dist/css/ionicons.min.css" rel="stylesheet">
+    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">-->
     <link href="content/css/dx.common.css" rel="stylesheet" />
 
     <link rel="dx-theme" data-theme="material.purple-light" href="content/css/material.purple-light.custom.css" data-active="false" />
@@ -89,9 +93,9 @@
 </head>
 
 <!-- body -->
-<body class="home page-template-default page page-id-92 template-slider  color-custom style-default button-default layout-full-width no-content-padding header-plain sticky-header sticky-tb-color ab-show subheader-both-center menu-link-color menuo-right mobile-tb-hide mobile-side-slide mobile-mini-mr-ll be-reg-20962 wpb-js-composer js-comp-ver-5.5.2 vc_responsive">
+<body   class="home page-template-default page page-id-92 template-slider  color-custom style-default button-default layout-full-width no-content-padding header-plain sticky-header sticky-tb-color ab-show subheader-both-center menu-link-color menuo-right mobile-tb-hide mobile-side-slide mobile-mini-mr-ll be-reg-20962 wpb-js-composer js-comp-ver-5.5.2 vc_responsive">
 
-    <div id="Wrapper" class="anfade" ng-view>
+    <div id="Wrapper" class="anfade" ng-view autoscroll="true">
 
 
 
@@ -122,7 +126,7 @@
     <script src="scripts/angular-1.7.2.js"></script>
     <script src="scripts/angularjs-sanitize.js"></script>
     <script src="scripts/angular-route-1.7.2.js"></script>
-    <script src="scripts/angular-animate.js"></script>
+   <!-- <script src="scripts/angular-animate.js"></script>-->
     <script src="scripts/angular-local-storage.min.js"></script>
     <script src="scripts/loading-bar.min.js"></script>
     <script type="text/javascript" src="scripts/linq.min.js"></script>
@@ -147,6 +151,8 @@
     <script type='text/javascript' src='scripts/wp-scripts.js'></script>
     <script type='text/javascript' src='scripts/wp-embed.min.js'></script>
 
+
+   <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>-->
     <script type="text/javascript" src="scripts/dx.all.js"></script>
 
 
@@ -165,6 +171,8 @@
     <script src="app/controllers/aboutController.js?v=2"></script>
     <script src="app/controllers/pressController.js?v=2"></script>
     <script src="app/controllers/researchController.js"></script>
+    <script src="app/controllers/researchersController.js"></script>
+    <script src="app/controllers/profileController.js"></script>
 
 
 </body>

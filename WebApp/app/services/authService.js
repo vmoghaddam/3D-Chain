@@ -33,7 +33,7 @@ app.factory('authService', ['$http', '$q', 'localStorageService', 'ngAuthSetting
         if (loginData.useRefreshTokens) {
             data = data + "&client_id=" + ngAuthSettings.clientId;
         }
-
+        console.log(data);
         var deferred = $q.defer();
 
         //$http.post(serviceBase + 'token', data, { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } }).success(function (response) {
@@ -67,18 +67,20 @@ app.factory('authService', ['$http', '$q', 'localStorageService', 'ngAuthSetting
             else {
                 localStorageService.set('authorizationData', { token: responseData.access_token, userName: loginData.userName, refreshToken: "", expires: responseData['.expires'], useRefreshTokens: false });
             }
-            localStorageService.set('userData', { Name: responseData.Name, UserId: responseData.UserId, EmployeeId: responseData.EmployeeId });
+            localStorageService.set('userData', { Name: responseData.Name, UserId: responseData.UserId, Image: responseData.Image });
             _authentication.isAuth = true;
             _authentication.userName = loginData.userName;
             _authentication.useRefreshTokens = loginData.useRefreshTokens;
             $rootScope.userName = loginData.userName;
             $rootScope.userTitle = responseData.Name;
             $rootScope.userId = responseData.UserId;
-            $rootScope.employeeId = responseData.EmployeeId;
+            $rootScope.image = $rootScope.imagesUrl+ responseData.Image;
             deferred.resolve(response);
 
         }, function (err, status) {
-            _logOut();
+            alert('ex');
+            console.log(err);
+           // _logOut();
             deferred.reject(err);
         });
 
@@ -93,7 +95,7 @@ app.factory('authService', ['$http', '$q', 'localStorageService', 'ngAuthSetting
         _authentication.isAuth = false;
         _authentication.userName = "";
         _authentication.useRefreshTokens = false;
-        $location.path('/login');
+        $location.path('/signin');
     };
 
     var _fillAuthData = function () {
@@ -110,7 +112,7 @@ app.factory('authService', ['$http', '$q', 'localStorageService', 'ngAuthSetting
             if (userData) {
                 $rootScope.userTitle = userData.Name;
                 $rootScope.userId = userData.UserId;
-                $rootScope.employeeId = userData.EmployeeId;
+                $rootScope.image = $rootScope.imagesUrl+ userData.Image;
             }
         }
 
@@ -221,8 +223,8 @@ app.factory('authService', ['$http', '$q', 'localStorageService', 'ngAuthSetting
     };
     var _redirectToLogin = function () {
         localStorageService.remove('authorizationData');
-        $location.path('/login');
-    }
+        $location.path('/signin');
+    };
     var _checkAuth = function () {
         var authData = localStorageService.get('authorizationData');
 

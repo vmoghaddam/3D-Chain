@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="3f81523febe14ad0ace704e25063c581" Name="Diagram1">
+        <EntityTypeShape EntityType="EPAGRIFFINModel.C__MigrationHistory" Width="1.5" PointX="0.75" PointY="6.75" />
+        <EntityTypeShape EntityType="EPAGRIFFINModel.AspNetRoleClaim" Width="1.5" PointX="2.75" PointY="6.75" />
+        <EntityTypeShape EntityType="EPAGRIFFINModel.AspNetRole" Width="1.5" PointX="0.75" PointY="2.5" />
+        <EntityTypeShape EntityType="EPAGRIFFINModel.AspNetUserClaim" Width="1.5" PointX="5.25" PointY="3.625" />
+        <EntityTypeShape EntityType="EPAGRIFFINModel.AspNetUserLogin" Width="1.5" PointX="5.25" PointY="1" />
+        <EntityTypeShape EntityType="EPAGRIFFINModel.AspNetUser" Width="1.5" PointX="3" PointY="1.375" />
+        <EntityTypeShape EntityType="EPAGRIFFINModel.AspNetUserToken" Width="1.5" PointX="4.75" PointY="6.75" />
+        <EntityTypeShape EntityType="EPAGRIFFINModel.RefreshToken" Width="1.5" PointX="6.75" PointY="6.75" />
+        <AssociationConnector Association="EPAGRIFFINModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" />
+        <AssociationConnector Association="EPAGRIFFINModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" />
+        <AssociationConnector Association="EPAGRIFFINModel.AspNetUserRoles" />
+        <EntityTypeShape EntityType="EPAGRIFFINModel.AssignedRole" Width="1.5" PointX="7.75" PointY="1.375" />
+        <EntityTypeShape EntityType="EPAGRIFFINModel.City" Width="1.5" PointX="0.75" PointY="10.375" />
+        <EntityTypeShape EntityType="EPAGRIFFINModel.Country" Width="1.5" PointX="9.75" PointY="1.375" />
+        <EntityTypeShape EntityType="EPAGRIFFINModel.Option" Width="1.5" PointX="12.75" PointY="0.75" />
+        <EntityTypeShape EntityType="EPAGRIFFINModel.Person" Width="1.5" PointX="9.75" PointY="10.875" />
+        <EntityTypeShape EntityType="EPAGRIFFINModel.PersonAccomplishment" Width="1.5" PointX="12" PointY="4.125" />
+        <EntityTypeShape EntityType="EPAGRIFFINModel.PersonAward" Width="1.5" PointX="12" PointY="23.625" />
+        <EntityTypeShape EntityType="EPAGRIFFINModel.PersonCertification" Width="1.5" PointX="12" PointY="17.5" />
+        <EntityTypeShape EntityType="EPAGRIFFINModel.PersonNetwork" Width="1.5" PointX="15" PointY="14" />
+        <EntityTypeShape EntityType="EPAGRIFFINModel.PersonPatent" Width="1.5" PointX="12" PointY="11.5" />
+        <EntityTypeShape EntityType="EPAGRIFFINModel.PersonProject" Width="1.5" PointX="12" PointY="26.75" />
+        <EntityTypeShape EntityType="EPAGRIFFINModel.PersonPublication" Width="1.5" PointX="12" PointY="20.5" />
+        <EntityTypeShape EntityType="EPAGRIFFINModel.Review" Width="1.5" PointX="12" PointY="7.375" />
+        <EntityTypeShape EntityType="EPAGRIFFINModel.State" Width="1.5" PointX="2.75" PointY="10.375" />
+        <EntityTypeShape EntityType="EPAGRIFFINModel.ViewPerson" Width="1.5" PointX="4.75" PointY="10.375" />
+        <AssociationConnector Association="EPAGRIFFINModel.fk_net_option" />
+        <AssociationConnector Association="EPAGRIFFINModel.fk_accomplish_person" />
+        <AssociationConnector Association="EPAGRIFFINModel.fk_net_person" />
+        <AssociationConnector Association="EPAGRIFFINModel.FK_PersonAward_Person_Id" />
+        <AssociationConnector Association="EPAGRIFFINModel.FK_PersonCertification_Person_Id" />
+        <AssociationConnector Association="EPAGRIFFINModel.FK_PersonPatent_Person_Id" />
+        <AssociationConnector Association="EPAGRIFFINModel.FK_PersonProject_Person_Id" />
+        <AssociationConnector Association="EPAGRIFFINModel.FK_PersonPublication_Person_Id" />
+        <AssociationConnector Association="EPAGRIFFINModel.fk_review_person" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
