@@ -1,5 +1,7 @@
 ﻿app.controller("headerController", ['$scope', '$rootScope', '$routeParams', '$location', 'authService', function ($scope, $rootScope, $routeParams, $location, authService) {
 
+    $scope.Role = $rootScope.role;
+
     $scope.btn_signin = {
         text: 'SIGN IN',
         type: 'default',
@@ -96,7 +98,15 @@
     $scope.popup_profile = {
         // position: { of: '#link_profile'},
         shading: true,
-
+        animation: {
+            show: {
+                type: 'slide'
+            },
+            //hide: {
+            //    type: 'pop',
+            //    duration: 200
+            //}
+        }     ,
         position: {
             //my: 'left',
             at: 'top left',

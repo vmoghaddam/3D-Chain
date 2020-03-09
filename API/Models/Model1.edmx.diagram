@@ -5,33 +5,57 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="3f81523febe14ad0ace704e25063c581" Name="Diagram1">
-        <EntityTypeShape EntityType="EPAGRIFFINModel.C__MigrationHistory" Width="1.5" PointX="0.75" PointY="6.75" />
-        <EntityTypeShape EntityType="EPAGRIFFINModel.AspNetRoleClaim" Width="1.5" PointX="2.75" PointY="6.75" />
-        <EntityTypeShape EntityType="EPAGRIFFINModel.AspNetRole" Width="1.5" PointX="0.75" PointY="2.5" />
-        <EntityTypeShape EntityType="EPAGRIFFINModel.AspNetUserClaim" Width="1.5" PointX="5.25" PointY="3.625" />
-        <EntityTypeShape EntityType="EPAGRIFFINModel.AspNetUserLogin" Width="1.5" PointX="5.25" PointY="1" />
-        <EntityTypeShape EntityType="EPAGRIFFINModel.AspNetUser" Width="1.5" PointX="3" PointY="1.375" />
-        <EntityTypeShape EntityType="EPAGRIFFINModel.AspNetUserToken" Width="1.5" PointX="4.75" PointY="6.75" />
-        <EntityTypeShape EntityType="EPAGRIFFINModel.RefreshToken" Width="1.5" PointX="6.75" PointY="6.75" />
-        <AssociationConnector Association="EPAGRIFFINModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" />
-        <AssociationConnector Association="EPAGRIFFINModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" />
-        <AssociationConnector Association="EPAGRIFFINModel.AspNetUserRoles" />
-        <EntityTypeShape EntityType="EPAGRIFFINModel.AssignedRole" Width="1.5" PointX="7.75" PointY="1.375" />
-        <EntityTypeShape EntityType="EPAGRIFFINModel.City" Width="1.5" PointX="0.75" PointY="10.375" />
-        <EntityTypeShape EntityType="EPAGRIFFINModel.Country" Width="1.5" PointX="9.75" PointY="1.375" />
-        <EntityTypeShape EntityType="EPAGRIFFINModel.Option" Width="1.5" PointX="12.75" PointY="0.75" />
-        <EntityTypeShape EntityType="EPAGRIFFINModel.Person" Width="1.5" PointX="9.75" PointY="10.875" />
-        <EntityTypeShape EntityType="EPAGRIFFINModel.PersonAccomplishment" Width="1.5" PointX="12" PointY="4.125" />
-        <EntityTypeShape EntityType="EPAGRIFFINModel.PersonAward" Width="1.5" PointX="12" PointY="23.625" />
-        <EntityTypeShape EntityType="EPAGRIFFINModel.PersonCertification" Width="1.5" PointX="12" PointY="17.5" />
-        <EntityTypeShape EntityType="EPAGRIFFINModel.PersonNetwork" Width="1.5" PointX="15" PointY="14" />
-        <EntityTypeShape EntityType="EPAGRIFFINModel.PersonPatent" Width="1.5" PointX="12" PointY="11.5" />
-        <EntityTypeShape EntityType="EPAGRIFFINModel.PersonProject" Width="1.5" PointX="12" PointY="26.75" />
-        <EntityTypeShape EntityType="EPAGRIFFINModel.PersonPublication" Width="1.5" PointX="12" PointY="20.5" />
-        <EntityTypeShape EntityType="EPAGRIFFINModel.Review" Width="1.5" PointX="12" PointY="7.375" />
-        <EntityTypeShape EntityType="EPAGRIFFINModel.State" Width="1.5" PointX="2.75" PointY="10.375" />
-        <EntityTypeShape EntityType="EPAGRIFFINModel.ViewPerson" Width="1.5" PointX="4.75" PointY="10.375" />
+        <EntityTypeShape EntityType="EPAGRIFFINModel.C__MigrationHistory" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="EPAGRIFFINModel.AspNetRoleClaim" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="EPAGRIFFINModel.AspNetRole" Width="1.5" PointX="5.75" PointY="2.5" />
+        <EntityTypeShape EntityType="EPAGRIFFINModel.AspNetUserClaim" Width="1.5" PointX="10.25" PointY="1" />
+        <EntityTypeShape EntityType="EPAGRIFFINModel.AspNetUserLogin" Width="1.5" PointX="10.25" PointY="3.75" />
+        <EntityTypeShape EntityType="EPAGRIFFINModel.AspNetUserToken" Width="1.5" PointX="10.75" PointY="6.75" />
+        <EntityTypeShape EntityType="EPAGRIFFINModel.AssignedRole" Width="1.5" PointX="10.75" PointY="9.75" />
+        <EntityTypeShape EntityType="EPAGRIFFINModel.City" Width="1.5" PointX="12.75" PointY="0.75" />
+        <EntityTypeShape EntityType="EPAGRIFFINModel.CompanyRate" Width="1.5" PointX="5.25" PointY="20.5" />
+        <EntityTypeShape EntityType="EPAGRIFFINModel.CompanySlider" Width="1.5" PointX="5.25" PointY="23.5" />
+        <EntityTypeShape EntityType="EPAGRIFFINModel.Country" Width="1.5" PointX="12.75" PointY="3.75" />
+        <EntityTypeShape EntityType="EPAGRIFFINModel.Manufacturer" Width="1.5" PointX="5.75" PointY="12.75" />
+        <EntityTypeShape EntityType="EPAGRIFFINModel.NetworkGroup" Width="1.5" PointX="0.75" PointY="12.875" />
+        <EntityTypeShape EntityType="EPAGRIFFINModel.Option" Width="1.5" PointX="5.75" PointY="7.875" />
+        <EntityTypeShape EntityType="EPAGRIFFINModel.Person" Width="1.5" PointX="0.75" PointY="16" />
+        <EntityTypeShape EntityType="EPAGRIFFINModel.PersonAccomplishment" Width="1.5" PointX="3" PointY="14.25" />
+        <EntityTypeShape EntityType="EPAGRIFFINModel.PersonAward" Width="1.5" PointX="3" PointY="31.75" />
+        <EntityTypeShape EntityType="EPAGRIFFINModel.PersonCertification" Width="1.5" PointX="3" PointY="4.125" />
+        <EntityTypeShape EntityType="EPAGRIFFINModel.PersonNetwork" Width="1.5" PointX="3" PointY="19.625" />
+        <EntityTypeShape EntityType="EPAGRIFFINModel.PersonPatent" Width="1.5" PointX="3" PointY="34.875" />
+        <EntityTypeShape EntityType="EPAGRIFFINModel.PersonProject" Width="1.5" PointX="3" PointY="7" />
+        <EntityTypeShape EntityType="EPAGRIFFINModel.PersonPublication" Width="1.5" PointX="3" PointY="38" />
+        <EntityTypeShape EntityType="EPAGRIFFINModel.Printer" Width="1.5" PointX="5.25" PointY="26.5" />
+        <EntityTypeShape EntityType="EPAGRIFFINModel.Printer2Material" Width="1.5" PointX="7.5" PointY="31.875" />
+        <EntityTypeShape EntityType="EPAGRIFFINModel.Printer2Optic" Width="1.5" PointX="8" PointY="7" />
+        <EntityTypeShape EntityType="EPAGRIFFINModel.PrinterMaterial" Width="1.5" PointX="7.5" PointY="27.75" />
+        <EntityTypeShape EntityType="EPAGRIFFINModel.PrinterModel" Width="1.5" PointX="7.75" PointY="12.75" />
+        <EntityTypeShape EntityType="EPAGRIFFINModel.PrinterTechnology" Width="1.5" PointX="8" PointY="9.625" />
+        <EntityTypeShape EntityType="EPAGRIFFINModel.PrintingMaterial" Width="1.5" PointX="5.25" PointY="31.75" />
+        <EntityTypeShape EntityType="EPAGRIFFINModel.RefreshToken" Width="1.5" PointX="14.75" PointY="0.75" />
+        <EntityTypeShape EntityType="EPAGRIFFINModel.Review" Width="1.5" PointX="3" PointY="10" />
+        <EntityTypeShape EntityType="EPAGRIFFINModel.ReviewRate" Width="1.5" PointX="14.75" PointY="3.75" />
+        <EntityTypeShape EntityType="EPAGRIFFINModel.State" Width="1.5" PointX="14.75" PointY="6.75" />
+        <EntityTypeShape EntityType="EPAGRIFFINModel.UserContentActivity" Width="1.5" PointX="5.25" PointY="16.5" />
+        <EntityTypeShape EntityType="EPAGRIFFINModel.ViewAward" Width="1.5" PointX="14.75" PointY="9.75" />
+        <EntityTypeShape EntityType="EPAGRIFFINModel.ViewCertification" Width="1.5" PointX="12.75" PointY="14.75" />
+        <EntityTypeShape EntityType="EPAGRIFFINModel.ViewCountry" Width="1.5" PointX="7.75" PointY="15.75" />
+        <EntityTypeShape EntityType="EPAGRIFFINModel.ViewOption" Width="1.5" PointX="9.75" PointY="15.75" />
+        <EntityTypeShape EntityType="EPAGRIFFINModel.ViewPerson" Width="1.5" PointX="16.75" PointY="0.75" />
+        <EntityTypeShape EntityType="EPAGRIFFINModel.ViewPersonNetwork" Width="1.5" PointX="16.75" PointY="10.75" />
+        <EntityTypeShape EntityType="EPAGRIFFINModel.ViewPersonPatent" Width="1.5" PointX="16.75" PointY="13.75" />
+        <EntityTypeShape EntityType="EPAGRIFFINModel.ViewPersonPublication" Width="1.5" PointX="11.75" PointY="17.75" />
+        <EntityTypeShape EntityType="EPAGRIFFINModel.ViewPersonReview" Width="1.5" PointX="16.75" PointY="17.75" />
+        <EntityTypeShape EntityType="EPAGRIFFINModel.ViewPrinter" Width="1.5" PointX="18.75" PointY="0.75" />
+        <EntityTypeShape EntityType="EPAGRIFFINModel.ViewPrinter2Optic" Width="1.5" PointX="7.75" PointY="18.75" />
+        <EntityTypeShape EntityType="EPAGRIFFINModel.ViewPrinterTechnology" Width="1.5" PointX="18.75" PointY="17.75" />
+        <EntityTypeShape EntityType="EPAGRIFFINModel.ViewProject" Width="1.5" PointX="20.75" PointY="0.75" />
+        <EntityTypeShape EntityType="EPAGRIFFINModel.ViewUserContentActivity" Width="1.5" PointX="20.75" PointY="3.75" />
         <AssociationConnector Association="EPAGRIFFINModel.fk_net_option" />
+        <AssociationConnector Association="EPAGRIFFINModel.fk_po2_option" />
+        <AssociationConnector Association="EPAGRIFFINModel.fk_pt_opt" />
         <AssociationConnector Association="EPAGRIFFINModel.fk_accomplish_person" />
         <AssociationConnector Association="EPAGRIFFINModel.fk_net_person" />
         <AssociationConnector Association="EPAGRIFFINModel.FK_PersonAward_Person_Id" />
@@ -40,6 +64,31 @@
         <AssociationConnector Association="EPAGRIFFINModel.FK_PersonProject_Person_Id" />
         <AssociationConnector Association="EPAGRIFFINModel.FK_PersonPublication_Person_Id" />
         <AssociationConnector Association="EPAGRIFFINModel.fk_review_person" />
+        <AssociationConnector Association="EPAGRIFFINModel.fk_uca_person" />
+        <AssociationConnector Association="EPAGRIFFINModel.fk_pm_printer" />
+        <AssociationConnector Association="EPAGRIFFINModel.fk_pm2_m" />
+        <AssociationConnector Association="EPAGRIFFINModel.fk_pm_m" />
+        <AssociationConnector Association="EPAGRIFFINModel.fk_uca_review" />
+        <EntityTypeShape EntityType="EPAGRIFFINModel.ViewManufacturer" Width="1.5" PointX="19.375" PointY="20.75" />
+        <EntityTypeShape EntityType="EPAGRIFFINModel.ViewPrinterModel" Width="1.5" PointX="21.375" PointY="7.75" />
+        <EntityTypeShape EntityType="EPAGRIFFINModel.Printer2" Width="1.5" PointX="21.375" PointY="10.75" />
+        <EntityTypeShape EntityType="EPAGRIFFINModel.ViewPrinter2" Width="1.5" PointX="10.375" PointY="21.75" />
+        <EntityTypeShape EntityType="EPAGRIFFINModel.Material" Width="1.5" PointX="12.375" PointY="21.75" />
+        <EntityTypeShape EntityType="EPAGRIFFINModel.Supplier" Width="1.5" PointX="7.375" PointY="21.75" />
+        <EntityTypeShape EntityType="EPAGRIFFINModel.ViewAMProcess" Width="1.5" PointX="21.375" PointY="18.75" />
+        <EntityTypeShape EntityType="EPAGRIFFINModel.ViewAmTechnology" Width="1.5" PointX="21.375" PointY="21.75" />
+        <EntityTypeShape EntityType="EPAGRIFFINModel.ViewCompanyPrinter" Width="1.5" PointX="14.375" PointY="22.75" />
+        <EntityTypeShape EntityType="EPAGRIFFINModel.AspNetUser" Width="1.5" PointX="8" PointY="1.375" />
+        <AssociationConnector Association="EPAGRIFFINModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" />
+        <AssociationConnector Association="EPAGRIFFINModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" />
+        <AssociationConnector Association="EPAGRIFFINModel.AspNetUserRoles" />
+        <EntityTypeShape EntityType="EPAGRIFFINModel.CompanyPrinter" Width="1.5" PointX="16.375" PointY="22.75" />
+        <EntityTypeShape EntityType="EPAGRIFFINModel.Company" Width="1.5" PointX="3" PointY="22.75" />
+        <AssociationConnector Association="EPAGRIFFINModel.fk_company_person" />
+        <AssociationConnector Association="EPAGRIFFINModel.fk_printer_company" />
+        <AssociationConnector Association="EPAGRIFFINModel.fk_rate_company" />
+        <AssociationConnector Association="EPAGRIFFINModel.fk_slider_company" />
+        <EntityTypeShape EntityType="EPAGRIFFINModel.ViewCompany" Width="1.5" PointX="23.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -25,7 +25,7 @@
     <link rel='stylesheet' id='layerslider-css' href='content/css/wp-layerslider.css' type='text/css' media='all' />
     <link rel='stylesheet' id='mfn-base-css' href='content/css/base.css?ver=20.9.6.2' type='text/css' media='all' />
     <link rel='stylesheet' id='mfn-layout-css' href='content/css/wp-layout.css' type='text/css' media='all' />
-    <link rel='stylesheet' id='mfn-shortcodes-css' href='content/css/wp-shortcodes.css?ver=20.9.6.2' type='text/css' media='all' />
+
     <link rel='stylesheet' id='mfn-animations-css' href='content/css/wp-animations.min.css' type='text/css' media='all' />
     <link rel='stylesheet' id='mfn-jquery-ui-css' href='content/css/wp-jquery.ui.all.css' type='text/css' media='all' />
     <link rel='stylesheet' id='mfn-jplayer-css' href='content/css/wp-jplayer.blue.monday.css' type='text/css' media='all' />
@@ -41,12 +41,12 @@
     </script>
     <!-- <script src="scripts/jquery-3.1.0.js"></script>-->
     <!--<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>-->
-
-
-    <script type='text/javascript' src='http://commigrant.com/wp-content/plugins/LayerSlider/static/layerslider/js/greensock.js?ver=1.19.0'></script>
-    <script type='text/javascript' src='scripts/wp-jquery.js'></script> 
-      <script type='text/javascript' src='scripts/wp-jquery-migrate.min.js'></script> 
-    <script type='text/javascript' src='http://commigrant.com/wp-content/plugins/LayerSlider/static/layerslider/js/layerslider.kreaturamedia.jquery.js?ver=6.7.6'></script>
+    <!--<script type='text/javascript' src='http://commigrant.com/wp-content/plugins/LayerSlider/static/layerslider/js/greensock.js?ver=1.19.0'></script>-->
+    <script type='text/javascript' src='scripts/greenshock.js'></script>
+    <script type='text/javascript' src='scripts/wp-jquery.js'></script>
+    <script type='text/javascript' src='scripts/wp-jquery-migrate.min.js'></script>
+    <!--<script type='text/javascript' src='http://commigrant.com/wp-content/plugins/LayerSlider/static/layerslider/js/layerslider.kreaturamedia.jquery.js?ver=6.7.6'></script>-->
+    <script type='text/javascript' src='scripts/layerslider.kreaturamedia.jquery.js'></script>
     <script type='text/javascript' src='http://commigrant.com/wp-content/plugins/LayerSlider/static/layerslider/js/layerslider.transitions.js?ver=6.7.6'></script>
     <script type='text/javascript' src='scripts/wp-jquery.themepunch.tools.min.js'></script>
     <script type='text/javascript' src='scripts/wp-jquery.themepunch.revolution.min.js'></script>
@@ -93,7 +93,7 @@
 </head>
 
 <!-- body -->
-<body   class="home page-template-default page page-id-92 template-slider  color-custom style-default button-default layout-full-width no-content-padding header-plain sticky-header sticky-tb-color ab-show subheader-both-center menu-link-color menuo-right mobile-tb-hide mobile-side-slide mobile-mini-mr-ll be-reg-20962 wpb-js-composer js-comp-ver-5.5.2 vc_responsive">
+<body class="home page-template-default page page-id-92 template-slider  color-custom style-default button-default layout-full-width no-content-padding header-plain sticky-header sticky-tb-color ab-show subheader-both-center menu-link-color menuo-right mobile-tb-hide mobile-side-slide mobile-mini-mr-ll be-reg-20962 wpb-js-composer js-comp-ver-5.5.2 vc_responsive">
 
     <div id="Wrapper" class="anfade" ng-view autoscroll="true">
 
@@ -126,7 +126,7 @@
     <script src="scripts/angular-1.7.2.js"></script>
     <script src="scripts/angularjs-sanitize.js"></script>
     <script src="scripts/angular-route-1.7.2.js"></script>
-   <!-- <script src="scripts/angular-animate.js"></script>-->
+    <!-- <script src="scripts/angular-animate.js"></script>-->
     <script src="scripts/angular-local-storage.min.js"></script>
     <script src="scripts/loading-bar.min.js"></script>
     <script type="text/javascript" src="scripts/linq.min.js"></script>
@@ -152,15 +152,33 @@
     <script type='text/javascript' src='scripts/wp-embed.min.js'></script>
 
 
-   <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>-->
+
+
+    <script src="bootstrap.min.js"></script>
+    <script src="docs.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="ie10-viewport-bug-workaround.js"></script>
+
+    <!-- jssor slider scripts-->
+    <script type="text/javascript" src="jssor.slider.min.js"></script>
+
+
+
+
+
+    <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>-->
     <script type="text/javascript" src="scripts/dx.all.js"></script>
 
+
+    <script src="scripts/core.js"></script>
 
     <script src="app/app.js?v=2"></script>
 
     <script src="app/services/authService.js?v=2"></script>
     <script src="app/services/activityService.js?v=2"></script>
     <script src="app/services/pageService.js?v=2"></script>
+    <script src="app/services/userService.js?v=2"></script>
+    <script src="app/services/reviewService.js"></script>
 
     <script src="app/controllers/indexController.js?v=2"></script>
     <script src="app/controllers/headerMainController.js?v=2"></script>
@@ -168,12 +186,21 @@
     <script src="app/controllers/homeController.js?v=2"></script>
     <script src="app/controllers/signInController.js"></script>
     <script src="app/controllers/signUpController.js"></script>
+    <script src="app/controllers/signupservice.js"></script>
+    <script src="app/controllers/signup2Controller.js"></script>
     <script src="app/controllers/aboutController.js?v=2"></script>
     <script src="app/controllers/pressController.js?v=2"></script>
     <script src="app/controllers/researchController.js"></script>
     <script src="app/controllers/researchersController.js"></script>
     <script src="app/controllers/profileController.js"></script>
-
+    <script src="app/controllers/manprofileController.js"></script>
+    <script src="app/controllers/printingController.js"></script>
+    <script src="app/controllers/printersController.js"></script>
+    <script src="app/controllers/printerProfileController.js"></script>
+    <script src="app/controllers/materialsController.js"></script>
+    <script src="app/controllers/materialProfile.js"></script>
+    <script src="app/controllers/privacy.js"></script>
+    <script src="app/controllers/useragreement.js"></script>
 
 </body>
 </html>

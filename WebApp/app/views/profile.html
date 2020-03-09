@@ -1,4 +1,67 @@
-﻿<div class="profile">
+﻿<style>
+    table tr:nth-child(2n) td {
+        background: initial;
+    }
+    .dx-datagrid .dx-row-lines > td {
+        border-bottom: 1px solid #e0e0e0 !important;
+    }
+
+    .dx-row.dx-selection {
+        background-color: #eee;
+    }
+
+    .dx-datagrid-headers .dx-header-row {
+        background-color: #00aba9;
+        background-color: #647687;
+        background-color: #898e8c;
+        color: white;
+    }
+
+    .dx-datagrid-headers .dx-datagrid-table .dx-row > td .dx-sort-indicator, .dx-datagrid-headers .dx-datagrid-table .dx-row > td .dx-sort {
+        color: white;
+    }
+
+
+    .dx-datagrid .dx-row > td {
+        font-size: 16px;
+    }
+
+    #dg_researchers .dx-datagrid-rowsview, #dg_researchers_xs .dx-datagrid-rowsview {
+        /*background: rgba(38,38,38,1);
+        color: white;*/
+    }
+
+    #dg_researchers_xs .dx-datagrid-text-content {
+        font-size: 13px;
+        white-space: normal;
+        text-align: center;
+    }
+
+    #dg_researchers_xs .dx-datagrid-headers {
+        border: none;
+    }
+
+    #dg_researchers_xs .dx-datagrid-rowsview {
+        border: none;
+    }
+
+    #dg_researchers_xs .dx-datagrid td {
+        font-size: 30px;
+        padding: 5px !important;
+    }
+
+    #dg_researchers .dx-datagrid td {
+        padding: 10px !important;
+    }
+
+    #dg_researchers .dx-datagrid-filter-row td {
+        padding: 0 !important
+    }
+    .dx-item-content.dx-toolbar-item-content{
+        font-size:16px;
+    }
+</style>
+<div class="profile bg-gray">
     <div ng-include="'app/views/header.html'" ng-init="type = 'profile';"></div>
 
     <div id="Content" style="margin-top:45px;">
@@ -6,8 +69,8 @@
             <div class="sections_group">
                 <div class="entry-content" itemprop="mainContentOfPage">
 
-                    <div class="section mcb-section  " style="padding-top:0px; padding-bottom:0px; background-color:rgba(0,112,192,1) !important;border-top:0px solid rgba(60,56,55,1);border-bottom:0px solid rgba(60,56,55,1);">
-                        <div class="section_wrapper mcb-section-inner ep-row4">
+                    <div class="section mcb-section  hidden-xs hidden-sm hidden-md" style="padding-top:0px; padding-bottom:0px; background-color:rgba(112,48,160,1) !important;border-top:0px solid rgba(60,56,55,1);border-bottom:0px solid rgba(60,56,55,1);">
+                        <div class="section_wrapper mcb-section-inner ep-row4 no-box-shadow">
                             <div class="wrap mcb-wrap one  valign-top clearfix" style="">
                                 <div class="mcb-wrap-inner">
                                     <div style="text-align:center; color:white; position:relative" class="ep-hint">
@@ -27,7 +90,7 @@
                                                     </div>
                                                 </td>
                                                 <td style="padding:0;width:200px;">
-                                                    <div style="display:inline-block;border-radius:50%;background:white;width:150px;height:150px;position:relative">
+                                                    <div style="display:inline-block;border-radius:50%;background:white;width:150px;height:150px;position:relative;top:15px">
                                                         <img src="../../content/imgs/researcher2.png" style="width:110px;top:27px;position:relative" />
                                                     </div>
 
@@ -45,61 +108,147 @@
                         </div>
                     </div>
 
-                    <div class="section mcb-section  " style="padding-top:0px; padding-bottom:0px; background-color:rgba(230,230,230,1) !important;border-top:0px solid rgba(60,56,55,1);border-bottom:0px solid rgba(60,56,55,1);">
-                        <div class="section_wrapper mcb-section-inner" style="padding:0 !important; ">
+                    <!--mobile Title-->
+                    <div class="section mcb-section  hidden visible-xs visible-sm" style="margin-top:25px;margin-bottom:0; padding-top:0px; padding-bottom:0px; background-color:rgba(0,112,192,1) !important;border-top:0px solid rgba(60,56,55,1);border-bottom:0px solid rgba(60,56,55,1);">
+                        <div class="section_wrapper mcb-section-inner ep-row2  no-box-shadow" style="padding:20px 14px 20px 14px">
                             <div class="wrap mcb-wrap one  valign-top clearfix" style="">
-                                <div class="mcb-wrap-inner" style="padding:10px 0 10px 0">
+                                <div class="mcb-wrap-inner">
+                                    <div style="text-align:center; color:white; " class="ep-hint">
+
+                                        <!--“ Decentralized Manufacturing: Global Decentralized Network Directly Connecting Manufacturers, Designers, and Consumers “-->
+                                        <div style="text-align:center;font-family:'Arial Narrow'!important;  ">
+                                            <div style=" font-weight:bold" class="page-header-title ">3D-Chain</div>
+                                            <div style="margin-top:8px;font-size:18px" class="page-header-comment">
+                                                Research and Development Network
+                                            </div>
+
+                                            <div style="margin-top:10px;font-size:15px;line-height:19px" class="page-header-comment">
+                                                Explore Researchers, Professionals and Start-up companies in discovering and developing breakthrough 3D Printing technologies.
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--End of Title-->
+
+                    <div class="section mcb-section  bg-gray" style=" padding-top:0px; padding-bottom:0px;  border-top:0px solid rgba(60,56,55,1);border-bottom:0px solid rgba(60,56,55,1);">
+                        <div class="section_wrapper mcb-section-inner bgcolor-gray b-shadow" style="padding:0 !important; ">
+                            <div class="wrap mcb-wrap one  valign-top clearfix" style="">
+                                <div class="mcb-wrap-inner" style="padding:10px 10px 10px 10px">
                                     <table style="margin:0;padding:0;width:100%">
                                         <tr>
-                                            <td style="width:120px;padding:0">
-                                                <img style='border-radius:0%;min-width:120px;width:120px; ' ng-src="{{profile.Picture}}" />
+                                            <td style="width:120px;padding:0;position:relative">
+                                                <img style='border-radius:0%;min-width:120px;width:120px; ' ng-src="{{profile.User.ImageUrl2}}" />
+                                                <a href="" class="link_edit" style="position:absolute;top:0px;left:5px" ng-click="take_photo()" ng-show="isEditable">
+                                                    <i class="icon ion-md-camera" style="font-size:32px;"></i>
+                                                </a>
                                             </td>
                                             <td style="text-align:left;padding:0 0 0 20px;vertical-align:middle">
-                                                <div class='dg-cell-div' style="font-size:20px;font-weight:bold">{{profile.Name}}</div>
-                                                <div class='dg-cell-div' style="font-size:19px;font-weight:normal;margin-top:4px">{{profile.Education}}</div>
-                                                <div class='dg-cell-div' style="font-size:17px;font-weight:bold;margin-top:4px">{{profile.Position}}</div>
-                                                <div class='dg-cell-div' style="font-size:17px;margin-top:4px;font-weight:bold"><a href="#">{{profile.Organization}}</a>  </div>
-                                                <div class='dg-cell-div' style="font-size:17px;margin-top:4px">{{profile.Location}}</div>
+                                                <div class='dg-cell-div profile-title'>{{profile.User.Name}}</div>
+                                                <div class='dg-cell-div profile-education' style="margin-top:6px">{{profile.User.Education}}</div>
+                                                <div class='dg-cell-div profile-position' style="margin-top:6px">{{profile.User.Position}}</div>
+                                                <!--<div class='dg-cell-div' style="font-size:17px;margin-top:4px;font-weight:bold"><a href="#">{{profile.User.University}}</a>  </div>-->
+                                                <div class='dg-cell-div profile-university' style="margin-top:6px;">{{profile.User.University}}</div>
+                                                <div class='dg-cell-div profile-location' style="margin-top:6px">{{profile.User.Location}}</div>
+                                                <div class="hidden visible-xs dg-cell-div" style="margin-top:4px"><span style="font-weight:bold;">Joined </span><span>{{profile.User.DateJoinStr}}</span></div>
                                             </td>
-                                            <td style="width:200px;padding:0;text-align:left;vertical-align:middle">
+                                            <td class="hidden-xs  " style="width:200px;padding:0;text-align:left;vertical-align:middle">
 
-                                                <div><span style="font-weight:bold;">Joined </span><span>{{profile.DateJoin}}</span></div>
+                                                <div><span style="font-weight:bold;">Joined </span><span>{{profile.User.DateJoinStr}}</span></div>
                                                 <div style="margin-top:10px"><span style="font-weight:bold;"><a href="" ng-click="click_contact()">Contact Info</a> </span></div>
 
 
                                             </td>
                                         </tr>
                                     </table>
-                                    <a href="" class="link_edit" style="position:absolute;top:10px;right:0" ng-click="edit_main()" ng-show="isEditable">
+                                    <a href="" class="link_edit" style="position:absolute;top:10px;right:10px" ng-click="edit_main()" ng-show="isEditable">
                                         <i class="icon ion-md-create" style="font-size:32px;"></i>
                                     </a>
                                 </div>
                             </div>
-                        </div>
-                    </div>
 
-                    <div class="section mcb-section  " style="padding-top:0px; padding-bottom:0px; border-top:0px solid rgba(60,56,55,1);border-bottom:0px solid rgba(60,56,55,1);">
-                        <div class="section_wrapper mcb-section-inner" style="padding:0 !important; ">
-                            <div class="wrap mcb-wrap one  valign-top clearfix" style="">
-                                <div class="mcb-wrap-inner" style="padding:10px 0 10px 0">
-                                    <table style="margin:0;padding:0;width:100%">
-                                        <tr>
+
+                            <!--bani-->
+                            <div class="wrap mcb-wrap one  valign-top clearfix bg-white" style="">
+                                <div class="mcb-wrap-inner" style="padding:10px 0 0px 0">
+                                    <table class="hidden-xs" style="margin:0;padding:0;width:100%">
+                                        <tr style="height:25px">
                                             <td style="width:120px;padding:0"></td>
                                             <td style="text-align:left;padding:0 0 0 20px;width:90px;font-size:18px">
                                                 Website
                                             </td>
                                             <td style="text-align:left;padding:0 0 0 0px;font-size:17px">
-                                                <a ng-href="http://{{profile.Website}}" target="_blank">{{profile.Website}}</a>
+                                                <a ng-href="{{profile.User.Website}}" target="_blank">{{profile.User.Website}}</a>
                                             </td>
                                         </tr>
                                         <tr></tr>
-                                        <tr style="height:35px">
+                                        <tr style="height:30px">
                                             <td style="width:120px;padding:0"></td>
                                             <td style="text-align:left;padding:0 0 0 20px;width:90px;font-size:18px">
                                                 LinkedIn
                                             </td>
                                             <td style="text-align:left;padding:0 0 0 0px;font-size:17px">
-                                                <a ng-href="{{profile.LinkedIn}}" target="_blank">View on LinkedIn</a>
+                                                <a ng-href="{{profile.User.LinkedIn}}" target="_blank">View on LinkedIn</a>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <div class="hidden visible-xs" style="text-align:left;padding-bottom:10px;padding-left:15px">
+                                        <div class="col-xs-8" style="padding:0">
+                                            <div style="font-size:16px;font-weight:bold;margin-bottom:3px;">Website</div>
+
+                                        </div>
+
+                                        <div class="col-xs-4" style="padding:0 10px 0 0;text-align:right"><span style="font-weight:bold;font-size:16px"><a href="" ng-click="click_contact()">Contact Info</a> </span></div>
+                                        <div style="clear:both"></div>
+                                        <a style="font-size:16px;" ng-href="{{profile.User.Website}}" target="_blank">{{profile.User.Website}}</a>
+                                        <div style="font-size:16px;font-weight:bold;margin-top:5px;margin-bottom:3px;">LinkedIn</div>
+                                        <a style="font-size:16px;" ng-href="{{profile.User.LinkedIn}}" target="_blank">View on LinkedIn</a>
+                                    </div>
+                                </div>
+
+
+                                <div class="mcb-wrap-inner" style="padding:15px 0 15px 0;border-top:15px solid rgba(0,112,192,1)">
+                                    <!--<div class="wbar1" style="width:100%;height:15px;background:rgba(0,112,192,1);padding:0px 0 0px 10px"></div>-->
+                                    <div class="profile-headline" style="text-align:center; color:black; ">
+                                        {{profile.User.Headline}}
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <!-------->
+                        </div>
+                    </div>
+
+                    <div class="section mcb-section bg-gray " style="display:none; padding-top:0px; padding-bottom:0px; border-top:0px solid rgba(60,56,55,1);border-bottom:0px solid rgba(60,56,55,1);">
+                        <div class="section_wrapper mcb-section-inner bg-white" style="padding:0 !important; ">
+                            <div class="wrap mcb-wrap one  valign-top clearfix" style="">
+                                <div class="mcb-wrap-inner" style="padding:10px 0 0px 0">
+                                    <table style="margin:0;padding:0;width:100%">
+                                        <tr style="height:25px">
+                                            <td style="width:120px;padding:0"></td>
+                                            <td style="text-align:left;padding:0 0 0 20px;width:90px;font-size:18px">
+                                                Website
+                                            </td>
+                                            <td style="text-align:left;padding:0 0 0 0px;font-size:17px">
+                                                <a ng-href="{{profile.User.Website}}" target="_blank">{{profile.User.Website}}</a>
+                                            </td>
+                                        </tr>
+                                        <tr></tr>
+                                        <tr style="height:30px">
+                                            <td style="width:120px;padding:0"></td>
+                                            <td style="text-align:left;padding:0 0 0 20px;width:90px;font-size:18px">
+                                                LinkedIn
+                                            </td>
+                                            <td style="text-align:left;padding:0 0 0 0px;font-size:17px">
+                                                <a ng-href="{{profile.User.LinkedIn}}" target="_blank">View on LinkedIn</a>
                                             </td>
                                         </tr>
                                     </table>
@@ -110,156 +259,297 @@
 
 
 
-                    <div class="section mcb-section  " style="padding-top:0px; padding-bottom:0px; border-top:0px solid rgba(60,56,55,1);border-bottom:0px solid rgba(60,56,55,1);">
-                        <div class="wbar" style="width:70%;height:15px;background:rgba(0,112,192,1);padding:0px 0 0px 10px"></div>
-                        <div class="section_wrapper mcb-section-inner" style="padding:0 !important; ">
+                    <div class="section mcb-section  bg-gray" style="display:none; padding-top:0px; padding-bottom:0px; border-top:0px solid rgba(60,56,55,1);border-bottom:0px solid rgba(60,56,55,1);">
+                        <!--<div class="wbar" style="width:70%;height:15px;background:rgba(0,112,192,1);padding:0px 0 0px 10px"></div>-->
+                        <div class="section_wrapper mcb-section-inner bg-white" style="padding:0 !important; ">
                             <div class="wrap mcb-wrap one  valign-top clearfix" style="">
-                                <div class="mcb-wrap-inner" style="padding:10px 0 10px 0">
-                                    <div style="text-align:center; color:black; font-size:18px;font-weight:bold">
-                                        {{profile.Remark}}
+                                <div class="mcb-wrap-inner" style="padding:15px 0 15px 0;border-top:15px solid rgba(0,112,192,1)">
+                                    <!--<div class="wbar1" style="width:100%;height:15px;background:rgba(0,112,192,1);padding:0px 0 0px 10px"></div>-->
+                                    <div style="text-align:center; color:black; font-size:20px;font-weight:bold">
+                                        {{profile.User.Headline}}
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="section mcb-section" data-aos-duration="500" data-aos="fade-up" ng-show="IsAccomplishmentsVisible" style=" padding-top:0px; padding-bottom:0px; border-top:0px solid rgba(60,56,55,1);border-bottom:0px solid rgba(60,56,55,1);">
-                        <div class="bar" style="width:70%;background:rgba(0,112,192,1);color:white;font-weight:normal;padding:8px 0 8px 10px;font-size:17px">
+
+
+
+
+
+                    <div class="section mcb-section bg-gray" ng-show="IsAccomplishmentsVisible" style=" padding-top:0px; padding-bottom:0px; border-top:0px solid rgba(60,56,55,1);border-bottom:0px solid rgba(60,56,55,1);">
+                        <!--<div class="bar" style="width:70%;background:rgba(0,112,192,1);color:white;font-weight:normal;padding:8px 0 8px 10px;font-size:17px">
                             Accomplishments
-                        </div>
-                        <div class="section_wrapper mcb-section-inner" style="padding:0 !important; ">
+                        </div>-->
+                        <div class="section_wrapper mcb-section-inner bg-white" style="padding:0 !important; ">
                             <div class="wrap mcb-wrap one  valign-top clearfix" style="">
-                                <div class="mcb-wrap-inner" style="padding:5px 0 10px 0">
-
-
-                                    <div class="accordion" ng-show="IsPublicationsVisible">
-                                        <span style="font-size:24px;font-weight:bold">{{profile.Publications.length}}</span><span style="color:gray;display:inline-block;margin-left:5px;position:relative;top:0;font-size:20px">{{publications_title}}</span>
-                                        <a href="" class="link_edit " style="position:absolute;top:7px;right:40px; " ng-show="isEditable" ng-click="add_click($event,'publication')">
-                                            <i class="icon ion-md-add" style="font-size:28px;"></i>
-                                        </a>
+                                <div class="mcb-wrap-inner" style="padding:0px 0 10px 0">
+                                    <div class="xbar1" style="background:rgba(0,112,192,1);color:white;font-weight:bold;padding:13px 0 13px 10px;font-size:17px">
+                                        Accomplishments
+                                        <!--<a href="" class="link_edit hover_white" style="position:absolute;top:3px;right:10px;color:white" ng-show="isEditable" ng-click="edit_click($event,'acc',x.Id)">
+                                            <i class="icon ion-md-create" style="font-size:28px;"></i>
+                                        </a>-->
                                     </div>
-                                    <div class="accordion-panel">
-                                        <div style="text-align:left; color:black; font-size:19px;padding-left:70px">
-                                            <div ng-repeat="x in profile.Publications" style="padding:0px 0 13px 0;border-bottom:1px solid #ccc;margin-bottom:10px;position:relative">
-                                                <div style="font-weight:normal;margin-bottom:5px">{{x.Title}}</div>
-                                                <div style="font-weight:normal;font-size:16px;">{{x.Remark}}</div>
-                                                <a href="" class="link_edit hover_white" style="position:absolute;top:5px;right:0;" ng-show="isEditable" ng-click="edit_click($event,'publication',x.Id)">
-                                                    <i class="icon ion-md-create" style="font-size:28px;"></i>
-                                                </a>
-                                                <a href="" class="link_edit hover_white" style="position:absolute;top:5px;right:40px; " ng-show="isEditable" ng-click="remove_click($event,'publication',x.Id)">
-                                                    <i class="icon ion-md-remove-circle" style="font-size:28px;"></i>
-                                                </a>
+                                    <!--<div style="text-align:left; color:black; font-size:19px;padding-left:70px" ng-show="IsPublicationsVisible">
+                                        <div style="padding:15px 0 10px 0;border-bottom:1px solid #ccc;margin-bottom:10px;position:relative">
+                                            <div style="font-weight:normal;margin-bottom:5px">{{profile.Accompolishments.Publication.Title}}</div>
+                                            <div style="font-weight:normal;font-size:16px;">{{profile.Accompolishments.Publication.DateStr}} - {{profile.Accompolishments.Publication.Publisher}}</div>
+
+                                        </div>
+                                    </div>
+                                    <div style="text-align:left; color:black; font-size:19px;padding-left:70px" ng-show="IsPatentsVisible">
+                                        <div style="padding:10px 0 10px 0;border-bottom:1px solid #ccc;margin-bottom:10px;position:relative">
+
+                                            <div style="font-weight:normal;margin-bottom:5px">{{profile.Accompolishments.Patent.Title}}</div>
+                                            <div style="font-weight:normal;font-size:16px;"><span>{{profile.Accompolishments.Patent.DateStr}}</span><span> - </span><span>{{profile.Accompolishments.Patent.Issuer}}</span></div>
+                                        </div>
+                                    </div>
+                                    <div style="text-align:left; color:black; font-size:19px;padding-left:70px" ng-show="IsCertificationsVisible">
+                                        <div style="padding:10px 0 10px 0;border-bottom:1px solid #ccc;margin-bottom:10px;position:relative">
+                                            <div style="font-weight:normal;margin-bottom:5px">{{profile.Accompolishments.Certification.Title}}</div>
+                                            <div style="font-weight:normal;font-size:16px;"><span>{{profile.Accompolishments.Certification.Authority}}</span></div>
+                                        </div>
+                                    </div>
+                                    <div style="text-align:left; color:black; font-size:19px;padding-left:70px" ng-show="IsProjectsVisible">
+                                        <div style="padding:10px 0 10px 0;border-bottom:1px solid #ccc;margin-bottom:10px;position:relative">
+                                            <div style="font-weight:normal;margin-bottom:5px">{{profile.Accompolishments.Project.Title}}</div>
+                                            <div style="font-weight:normal;font-size:16px;"><span>{{profile.Accompolishments.Project.DateStr}}</span></div>
+                                        </div>
+                                    </div>
+                                    <div style="text-align:left; color:black; font-size:19px;padding-left:70px" ng-show="IsAwardsVisible">
+                                        <div style="padding:10px 0 5px 0;border-bottom:0px solid #ccc;margin-bottom:10px;position:relative">
+                                            <div style="font-weight:normal;margin-bottom:5px">{{profile.Accompolishments.Award.Title}}</div>
+                                            <div style="font-weight:normal;font-size:16px;"><span>{{profile.Accompolishments.Award.DateStr}}</span><span> - </span><span>{{profile.Accompolishments.Award.Issuer}}</span></div>
+                                        </div>
+                                    </div>-->
+                                    <div ng-show="!isEditable" style="padding-top:5px;">
+                                        <div ng-repeat="x in profile.Accompolishments">
+                                            <div class="accomplishment-item" ng-if="'publication' == x.Type">
+                                                <div style="padding: 5px 0 10px 0;border-bottom:1px solid #ccc;margin-bottom:5px;position:relative">
+                                                    <div style="margin-bottom:5px">{{x.Item.Title}}</div>
+                                                    <div style="font-weight:normal;font-size:16px;">{{x.Item.DateStr}} - {{x.Item.Publisher}}</div>
+
+                                                </div>
                                             </div>
+                                            <div ng-if="'award' == x.Type" class="accomplishment-item">
+                                                <div style="padding: 5px 0 10px 0;border-bottom:1px solid #ccc;margin-bottom:5px;position:relative">
+                                                    <div style="margin-bottom:5px">{{x.Item.Title}}</div>
+                                                    <div style="font-weight:normal;font-size:16px;"><span>{{x.Item.DateStr}}</span><span> - </span><span>{{x.Item.Issuer}}</span></div>
+
+                                                </div>
+                                            </div>
+                                            <div ng-if="'project' == x.Type" class="accomplishment-item">
+                                                <div style="padding: 5px 0 10px 0;border-bottom:1px solid #ccc;margin-bottom:5px;position:relative">
+                                                    <div style="margin-bottom:5px">{{x.Item.Title}}</div>
+                                                    <div style="font-weight:normal;font-size:16px;"><span>{{x.Item.DateStr}}</span></div>
+                                                </div>
+                                            </div>
+                                            <div ng-if="'patent' == x.Type" class="accomplishment-item">
+                                                <div style="padding: 5px 0 10px 0;border-bottom:1px solid #ccc;margin-bottom:5px;position:relative">
+                                                    <div style="margin-bottom:5px">{{x.Item.Title}}</div>
+                                                    <div style="font-weight:normal;font-size:16px;"><span>{{x.Item.DateStr}}</span><span> - </span><span>{{x.Item.Issuer}}</span></div>
+                                                </div>
+                                            </div>
+                                            <div ng-if="'certification' == x.Type" class="accomplishment-item">
+                                                <div style="padding: 5px 0 10px 0;border-bottom:1px solid #ccc;margin-bottom:5px;position:relative">
+                                                    <div style="margin-bottom:5px">{{x.Item.Title}}</div>
+                                                    <div style="font-weight:normal;font-size:16px;"><span>{{x.Item.Authority}}</span></div>
+                                                </div>
+                                            </div>
+
                                         </div>
                                     </div>
 
-                                    <div class="accordion" ng-show="IsPatentsVisible">
-                                        <span style="font-size:24px;font-weight:bold">{{profile.Patents.length}}</span><span style="color:gray;display:inline-block;margin-left:5px;position:relative;top:0;font-size:20px">{{patents_title}}</span>
-                                        <a href="" class="link_edit " style="position:absolute;top:7px;right:40px; " ng-show="isEditable" ng-click="add_click($event,'patent')">
-                                            <i class="icon ion-md-add" style="font-size:28px;"></i>
-                                        </a>
-                                    </div>
-                                    <div class="accordion-panel">
-                                        <div style="text-align:left; color:black; font-size:19px;padding-left:70px">
-                                            <div ng-repeat="x in profile.Patents" style="padding:0px 0 13px 0;border-bottom:1px solid #ccc;margin-bottom:10px;position:relative">
-                                                <div style="font-weight:normal;margin-bottom:5px">{{x.Title}}</div>
-                                                <div style="font-weight:normal;font-size:16px;"><span>{{x.Date}}</span><span> - </span><span>{{x.Issuer}}</span></div>
-                                                <a href="" class="link_edit hover_white" style="position:absolute;top:5px;right:40px; " ng-show="isEditable" ng-click="remove_click($event,'patent',x.Id)">
-                                                    <i class="icon ion-md-remove-circle" style="font-size:28px;"></i>
-                                                </a>
-                                                <a href="" class="link_edit hover_white" style="position:absolute;top:5px;right:0" ng-show="isEditable" ng-click="edit_click($event,'patent',x.Id)">
-                                                    <i class="icon ion-md-create" style="font-size:28px;"></i>
-                                                </a>
+                                    <div ng-show="isEditable">
+                                        <div class="accordion">
+                                            <span style="font-size:24px;font-weight:bold">{{profile.Publications.length}}</span><span style="color:gray;display:inline-block;margin-left:5px;position:relative;top:0;font-size:20px">{{publications_title}}</span>
+                                            <a href="" class="link_edit " style="position:absolute;top:7px;right:40px; " ng-show="isEditable" ng-click="add_click($event,'publication')">
+                                                <i class="icon ion-md-add" style="font-size:28px;"></i>
+                                            </a>
+                                        </div>
+                                        <div class="accordion-panel" id="publication_panel">
+                                            <div style="text-align:left; color:black; " class="accomplishment-panel">
+                                                <div ng-repeat="x in profile.Publications" style="padding:0px 0 13px 0;border-bottom:1px solid #ccc;margin-bottom:10px;position:relative">
+                                                    <div class="pitem" style=" margin-bottom:5px">{{x.Title}}</div>
+                                                    <div style="font-weight:normal;font-size:16px;">{{x.DateStr}} - {{x.Publisher}}</div>
+                                                    <a href="" class="link_edit hover_white hidden-xs" style="position:absolute;top:5px;right:10px;" ng-show="isEditable" ng-click="edit_click($event,'publication',x.Id)">
+                                                        <i class="icon ion-md-create" style="font-size:28px;"></i>
+                                                    </a>
+                                                    <a href="" class="link_edit hover_white hidden-xs" style="position:absolute;top:5px;right:50px; " ng-show="isEditable" ng-click="remove_click($event,'publication',x.Id)">
+                                                        <i class="icon ion-md-remove-circle" style="font-size:28px;"></i>
+                                                    </a>
+                                                    <div class="hidden visible-xs" style="position:relative;text-align:right;margin-top:5px">
+                                                        <a href="" class="link_edit hover_white" style=" top:5px;right:10px;" ng-show="isEditable" ng-click="edit_click($event,'publication',x.Id)">
+                                                            <i class="icon ion-md-create" style="font-size:28px;"></i>
+                                                        </a>
+                                                        <a href="" class="link_edit hover_white" style=" margin-left:10px;top:5px;right:50px; " ng-show="isEditable" ng-click="remove_click($event,'publication',x.Id)">
+                                                            <i class="icon ion-md-remove-circle" style="font-size:28px;"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
 
-                                    <div class="accordion" ng-show="IsCertificationsVisible">
-                                        <span style="font-size:24px;font-weight:bold">{{profile.Certifications.length}}</span><span style="color:gray;display:inline-block;margin-left:5px;position:relative;top:0;font-size:20px">{{certifications_title}}</span>
-                                        <a href="" class="link_edit " style="position:absolute;top:7px;right:40px; " ng-show="isEditable" ng-click="add_click($event,'certification')">
-                                            <i class="icon ion-md-add" style="font-size:28px;"></i>
-                                        </a>
-                                    </div>
-                                    <div class="accordion-panel">
-                                        <div style="text-align:left; color:black; font-size:19px;padding-left:70px">
-                                            <div ng-repeat="x in profile.Certifications" style="padding:0px 0 13px 0;border-bottom:1px solid #ccc;margin-bottom:10px;position:relative">
-                                                <div style="font-weight:normal;margin-bottom:5px">{{x.Title}}</div>
-                                                <div style="font-weight:normal;font-size:16px;"><span>{{x.Authority}}</span></div>
-                                                <a href="" class="link_edit hover_white" style="position:absolute;top:5px;right:40px; " ng-show="isEditable" ng-click="remove_click($event,'certification',x.Id)">
-                                                    <i class="icon ion-md-remove-circle" style="font-size:28px;"></i>
-                                                </a>
-                                                <a href="" class="link_edit hover_white" style="position:absolute;top:5px;right:0" ng-show="isEditable" ng-click="edit_click($event,'certification',x.Id)">
-                                                    <i class="icon ion-md-create" style="font-size:28px;"></i>
-                                                </a>
+                                        <div class="accordion">
+                                            <span style="font-size:24px;font-weight:bold">{{profile.Patents.length}}</span><span style="color:gray;display:inline-block;margin-left:5px;position:relative;top:0;font-size:20px">{{patents_title}}</span>
+                                            <a href="" class="link_edit " style="position:absolute;top:7px;right:40px; " ng-show="isEditable" ng-click="add_click($event,'patent')">
+                                                <i class="icon ion-md-add" style="font-size:28px;"></i>
+                                            </a>
+                                        </div>
+                                        <div class="accordion-panel" id="patent_panel">
+                                            <div style="text-align:left; color:black; " class="accomplishment-panel">
+                                                <div ng-repeat="x in profile.Patents" style="padding:0px 0 13px 0;border-bottom:1px solid #ccc;margin-bottom:10px;position:relative">
+                                                    <div class="pitem" style="margin-bottom:5px">{{x.Title}}</div>
+                                                    <div style="font-weight:normal;font-size:16px;"><span>{{x.DateStr}}</span><span> - </span><span>{{x.Issuer}}</span></div>
+                                                    <a href="" class="link_edit hover_white hidden-xs" style="position:absolute;top:5px;right:50px; " ng-show="isEditable" ng-click="remove_click($event,'patent',x.Id)">
+                                                        <i class="icon ion-md-remove-circle" style="font-size:28px;"></i>
+                                                    </a>
+                                                    <a href="" class="link_edit hover_white hidden-xs" style="position:absolute;top:5px;right:10px" ng-show="isEditable" ng-click="edit_click($event,'patent',x.Id)">
+                                                        <i class="icon ion-md-create" style="font-size:28px;"></i>
+                                                    </a>
+                                                    <div class="hidden visible-xs" style="position:relative;text-align:right;margin-top:5px">
+                                                        <a href="" class="link_edit hover_white" style=" top:5px;right:10px;" ng-show="isEditable" ng-click="edit_click($event,'patent',x.Id)">
+                                                            <i class="icon ion-md-create" style="font-size:28px;"></i>
+                                                        </a>
+                                                        <a href="" class="link_edit hover_white" style=" margin-left:10px;top:5px;right:50px; " ng-show="isEditable" ng-click="remove_click($event,'patent',x.Id)">
+                                                            <i class="icon ion-md-remove-circle" style="font-size:28px;"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
 
-                                    <div class="accordion" ng-show="IsProjectsVisible">
-                                        <span style="font-size:24px;font-weight:bold">{{profile.Projects.length}}</span><span style="color:gray;display:inline-block;margin-left:5px;position:relative;top:0;font-size:20px">{{projects_title}}</span>
-                                        <a href="" class="link_edit " style="position:absolute;top:7px;right:40px; " ng-show="isEditable" ng-click="add_click($event,'project')">
-                                            <i class="icon ion-md-add" style="font-size:28px;"></i>
-                                        </a>
-                                    </div>
-                                    <div class="accordion-panel">
-                                        <div style="text-align:left; color:black; font-size:19px;padding-left:70px">
-                                            <div ng-repeat="x in profile.Projects" style="padding:0px 0 13px 0;border-bottom:1px solid #ccc;margin-bottom:10px;position:relative">
-                                                <div style="font-weight:normal;margin-bottom:5px">{{x.Title}}</div>
-                                                <div style="font-weight:normal;font-size:16px;"><span>{{x.Date}}</span></div>
-                                                <a href="" class="link_edit hover_white" style="position:absolute;top:5px;right:40px; " ng-show="isEditable" ng-click="remove_click($event,'project',x.Id)">
-                                                    <i class="icon ion-md-remove-circle" style="font-size:28px;"></i>
-                                                </a>
-                                                <a href="" class="link_edit hover_white" style="position:absolute;top:5px;right:0" ng-show="isEditable" ng-click="edit_click($event,'project',x.Id)">
-                                                    <i class="icon ion-md-create" style="font-size:28px;"></i>
-                                                </a>
+                                        <div class="accordion">
+                                            <span style="font-size:24px;font-weight:bold">{{profile.Certifications.length}}</span><span style="color:gray;display:inline-block;margin-left:5px;position:relative;top:0;font-size:20px">{{certifications_title}}</span>
+                                            <a href="" class="link_edit " style="position:absolute;top:7px;right:40px; " ng-show="isEditable" ng-click="add_click($event,'certification')">
+                                                <i class="icon ion-md-add" style="font-size:28px;"></i>
+                                            </a>
+                                        </div>
+                                        <div class="accordion-panel" id="certification_panel">
+                                            <div style="text-align:left; color:black; " class="accomplishment-panel">
+                                                <div ng-repeat="x in profile.Certifications" style="padding:0px 0 13px 0;border-bottom:1px solid #ccc;margin-bottom:10px;position:relative">
+                                                    <div class="pitem" style="margin-bottom:5px">{{x.Title}}</div>
+                                                    <div style="font-weight:normal;font-size:16px;"><span>{{x.Authority}}</span></div>
+                                                    <a href="" class="link_edit hover_white hidden-xs" style="position:absolute;top:5px;right:50px; " ng-show="isEditable" ng-click="remove_click($event,'certification',x.Id)">
+                                                        <i class="icon ion-md-remove-circle" style="font-size:28px;"></i>
+                                                    </a>
+                                                    <a href="" class="link_edit hover_white hidden-xs" style="position:absolute;top:5px;right:10px" ng-show="isEditable" ng-click="edit_click($event,'certification',x.Id)">
+                                                        <i class="icon ion-md-create" style="font-size:28px;"></i>
+                                                    </a>
+                                                    <div class="hidden visible-xs" style="position:relative;text-align:right;margin-top:5px">
+                                                        <a href="" class="link_edit hover_white" style=" top:5px;right:10px;" ng-show="isEditable" ng-click="edit_click($event,'certification',x.Id)">
+                                                            <i class="icon ion-md-create" style="font-size:28px;"></i>
+                                                        </a>
+                                                        <a href="" class="link_edit hover_white" style=" margin-left:10px;top:5px;right:50px; " ng-show="isEditable" ng-click="remove_click($event,'certification',x.Id)">
+                                                            <i class="icon ion-md-remove-circle" style="font-size:28px;"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
 
-                                    <div class="accordion" ng-show="IsAwardsVisible">
-                                        <span style="font-size:24px;font-weight:bold">{{profile.Awards.length}}</span><span style="color:gray;display:inline-block;margin-left:5px;position:relative;top:0;font-size:20px">{{awards_title}}</span>
-                                        <a href="" class="link_edit " style="position:absolute;top:7px;right:40px; " ng-show="isEditable" ng-click="add_click($event,'award')">
-                                            <i class="icon ion-md-add" style="font-size:28px;"></i>
-                                        </a>
-                                    </div>
-                                    <div class="accordion-panel">
-                                        <div style="text-align:left; color:black; font-size:19px;padding-left:70px">
-                                            <div ng-repeat="x in profile.Awards" style="padding:0px 0 13px 0;border-bottom:1px solid #ccc;margin-bottom:10px;position:relative">
-                                                <div style="font-weight:normal;margin-bottom:5px">{{x.Title}}</div>
-                                                <div style="font-weight:normal;font-size:16px;"><span>{{x.Date}}</span><span> - </span><span>{{x.Issuer}}</span></div>
-                                                <a href="" class="link_edit hover_white" style="position:absolute;top:5px;right:40px; " ng-show="isEditable" ng-click="remove_click($event,'project',x.Id)">
-                                                    <i class="icon ion-md-remove-circle" style="font-size:28px;"></i>
-                                                </a>
-                                                <a href="" class="link_edit hover_white" style="position:absolute;top:5px;right:0" ng-show="isEditable" ng-click="edit_click($event,'award',x.Id)">
-                                                    <i class="icon ion-md-create" style="font-size:28px;"></i>
-                                                </a>
+                                        <div class="accordion">
+                                            <span style="font-size:24px;font-weight:bold">{{profile.Projects.length}}</span><span style="color:gray;display:inline-block;margin-left:5px;position:relative;top:0;font-size:20px">{{projects_title}}</span>
+                                            <a href="" class="link_edit " style="position:absolute;top:7px;right:40px; " ng-show="isEditable" ng-click="add_click($event,'project')">
+                                                <i class="icon ion-md-add" style="font-size:28px;"></i>
+                                            </a>
+                                        </div>
+                                        <div class="accordion-panel" id="project_panel">
+                                            <div style="text-align:left; color:black; " class="accomplishment-panel">
+                                                <div ng-repeat="x in profile.Projects" style="padding:0px 0 13px 0;border-bottom:1px solid #ccc;margin-bottom:10px;position:relative">
+                                                    <div class="pitem" style="margin-bottom:5px">{{x.Title}}</div>
+                                                    <div style="font-weight:normal;font-size:16px;"><span>{{x.DateStr}}</span></div>
+                                                    <a href="" class="link_edit hover_white hidden-xs" style="position:absolute;top:5px;right:50px; " ng-show="isEditable" ng-click="remove_click($event,'project',x.Id)">
+                                                        <i class="icon ion-md-remove-circle" style="font-size:28px;"></i>
+                                                    </a>
+                                                    <a href="" class="link_edit hover_white hidden-xs" style="position:absolute;top:5px;right:10px" ng-show="isEditable" ng-click="edit_click($event,'project',x.Id)">
+                                                        <i class="icon ion-md-create" style="font-size:28px;"></i>
+                                                    </a>
+                                                    <div class="hidden visible-xs" style="position:relative;text-align:right;margin-top:5px">
+                                                        <a href="" class="link_edit hover_white" style=" top:5px;right:10px;" ng-show="isEditable" ng-click="edit_click($event,'project',x.Id)">
+                                                            <i class="icon ion-md-create" style="font-size:28px;"></i>
+                                                        </a>
+                                                        <a href="" class="link_edit hover_white" style=" margin-left:10px;top:5px;right:50px; " ng-show="isEditable" ng-click="remove_click($event,'project',x.Id)">
+                                                            <i class="icon ion-md-remove-circle" style="font-size:28px;"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
+
+                                        <div class="accordion">
+                                            <span style="font-size:24px;font-weight:bold">{{profile.Awards.length}}</span><span style="color:gray;display:inline-block;margin-left:5px;position:relative;top:0;font-size:20px">{{awards_title}}</span>
+                                            <a href="" class="link_edit " style="position:absolute;top:7px;right:40px; " ng-show="isEditable" ng-click="add_click($event,'award')">
+                                                <i class="icon ion-md-add" style="font-size:28px;"></i>
+                                            </a>
+                                        </div>
+                                        <div class="accordion-panel" id="award_panel">
+                                            <div style="text-align:left; color:black; " class="accomplishment-panel">
+                                                <div ng-repeat="x in profile.Awards" style="padding:0px 0 13px 0;border-bottom:1px solid #ccc;margin-bottom:10px;position:relative">
+                                                    <div class="pitem" style="margin-bottom:5px">{{x.Title}}</div>
+                                                    <div style="font-weight:normal;font-size:16px;"><span>{{x.DateStr}}</span><span> - </span><span>{{x.Issuer}}</span></div>
+                                                    <a href="" class="link_edit hover_white hidden-xs" style="position:absolute;top:5px;right:50px; " ng-show="isEditable" ng-click="remove_click($event,'award',x.Id)">
+                                                        <i class="icon ion-md-remove-circle" style="font-size:28px;"></i>
+                                                    </a>
+                                                    <a href="" class="link_edit hover_white hidden-xs" style="position:absolute;top:5px;right:10px" ng-show="isEditable" ng-click="edit_click($event,'award',x.Id)">
+                                                        <i class="icon ion-md-create" style="font-size:28px;"></i>
+                                                    </a>
+                                                    <div class="hidden visible-xs" style="position:relative;text-align:right;margin-top:5px">
+                                                        <a href="" class="link_edit hover_white" style=" top:5px;right:10px;" ng-show="isEditable" ng-click="edit_click($event,'award',x.Id)">
+                                                            <i class="icon ion-md-create" style="font-size:28px;"></i>
+                                                        </a>
+                                                        <a href="" class="link_edit hover_white" style=" margin-left:10px;top:5px;right:50px; " ng-show="isEditable" ng-click="remove_click($event,'award',x.Id)">
+                                                            <i class="icon ion-md-remove-circle" style="font-size:28px;"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
                                     </div>
 
 
 
 
 
-
-
-                                    <!--<a href="" class="link_edit hover_white" style="position:absolute;top:10px;right:0">
-        <i class="icon ion-md-create" style="font-size:32px;"></i>
-    </a>-->
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="section mcb-section  " data-aos-duration="500" data-aos="fade-up" style="padding-top:0px; padding-bottom:0px; border-top:0px solid rgba(60,56,55,1);border-bottom:0px solid rgba(60,56,55,1);">
-                        <div class="bar" style="width:70%;background:rgba(112,48,160,1);color:white;font-weight:normal;padding:8px 0 8px 10px;font-size:17px">
+                    <div class="section mcb-section bg-gray" ng-show="IsActivityVisible" data-aos-duration="500" data-aos="fade-up" style="padding-top:0px; padding-bottom:0px; border-top:0px solid rgba(60,56,55,1);border-bottom:0px solid rgba(60,56,55,1);">
+                        <!--<div class="bar" style="width:70%;background:rgba(112,48,160,1);color:white;font-weight:normal;padding:8px 0 8px 10px;font-size:17px">
                             Recent Activity
 
-                        </div>
-                        <div class="section_wrapper mcb-section-inner" style="padding:0 !important; ">
+                        </div>-->
+                        <div class="section_wrapper mcb-section-inner bg-white" style="padding:0 !important; ">
                             <div class="wrap mcb-wrap one  valign-top clearfix" style="">
-                                <div class="mcb-wrap-inner activity" style="padding:15px 0 15px 0">
+                                <div class="mcb-wrap-inner activity" style="padding:0px 0 15px 0">
+                                    <div class="xbar1" style="width:100%;background:rgba(112,48,160,1);color:white;font-weight:bold;padding:12px 0 12px 10px;font-size:17px;margin-bottom:15px">
+                                        Recent Activity
 
-                                    <div style="text-align:left; color:black; font-size:17px;padding-left:70px;width:70%;float:left">
-                                        <div>{{profile.Activity[0].title}}   ({{profile.Activity[0].date}})</div>
+                                    </div>
+                                    <div ng-repeat="x in profile.Activity">
+                                        <div ng-if="1 == x.Type" style="position:relative">
+                                            <div class="review-item" style="text-align:left; color:black; ">
+                                                <div>{{x.Remark}}   ({{x.DateStr}})</div>
+                                                <div ng-bind-html="x.rateStars" style="margin-top:5px"> </div>
+                                                <p style="padding:5px 0 0 0;line-height:21px;font-size:16px;font-weight:normal">{{x.ReviewAbs}}</p>
+                                            </div>
+                                            <a href="#" data-ng-click="" style="background:rgba(217,217,217,1);margin-right:10px; float:right;color:black;font-weight:normal; font-size:16px;padding:12px 30px 12px 30px;">
+                                                {{profile.Summary.Reviews}} Review(s)
+                                            </a>
+                                            <a href="" class="link_edit hover_white review-delete" style="position:absolute;top:5px;right:185px; " ng-show="isEditable" ng-click="remove_click($event,'review',x.Id)">
+                                                <i class="icon ion-md-remove-circle" style="font-size:28px;"></i>
+                                            </a>
+                                            <a href="" class="link_edit hover_white review-edit" style="position:absolute;top:5px;right:145px" ng-show="isEditable" ng-click="edit_click($event,'review',x.ReviewId)">
+                                                <i class="icon ion-md-create" style="font-size:28px;"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div style="clear:both"></div>
+                                    <!--
+                                        <div style="text-align:left; color:black; font-size:17px;padding-left:70px;width:70%;float:left">
+                                        <div>{{profile.Activity[0].Remark}}   ({{profile.Activity[0].DateStr}})</div>
                                         <div ng-bind-html="profile.Activity[0].rateStars" style="margin-top:5px"> </div>
                                     </div>
 
@@ -270,92 +560,102 @@
                                     <a href="" class="link_edit hover_white" style="position:absolute;top:17px;right:0" ng-show="isEditable">
                                         <i class="icon ion-md-create" style="font-size:32px;"></i>
                                     </a>
+                                        -->
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="section mcb-section  " data-aos-duration="500" data-aos="fade-up" style="padding-top:0px; padding-bottom:0px; border-top:0px solid rgba(60,56,55,1);border-bottom:0px solid rgba(60,56,55,1);">
-                        <div class="bar" style="width:70%;background:rgba(0,112,192,1);color:white;font-weight:normal;padding:8px 0 8px 10px;font-size:17px">
-                            {{profile.FirstName}} ’s Network
-                        </div>
-                        <div class="section_wrapper mcb-section-inner" style="padding:0 !important; ">
+                    <div class="section mcb-section bg-gray " data-aos-duration="500" data-aos="fade-up" style="padding-top:0px; padding-bottom:0px; border-top:0px solid rgba(60,56,55,1);border-bottom:0px solid rgba(60,56,55,1);">
+                        <!--<div class="bar" style="width:70%;background:rgba(0,112,192,1);color:white;font-weight:normal;padding:8px 0 8px 10px;font-size:17px">
+                            {{profile.User.FirstName}} ’s Network
+                        </div>-->
+
+
+                        <div class="section_wrapper mcb-section-inner bg-white" style="padding:0 !important; ">
+
+     
+
                             <div class="wrap mcb-wrap one  valign-top clearfix" style="">
-                                <div class="mcb-wrap-inner" style="padding:10px 0 10px 0">
-                                    <a href="" class="link_edit hover_white" style="position:absolute;top:20px;right:0" ng-show="isEditable">
+                                
+                                <div class="mcb-wrap-inner" style="padding:0px 0 10px 0">
+                                    <div class="xbar1" style="width:100%;background:rgba(0,112,192,1);color:white;font-weight:bold;padding:12px 0 18px 10px;font-size:17px">
+                                        {{profile.User.FirstName}} ’s Network
+                                    </div>
+                                    <a href="" class="link_edit hover_white" style="position:absolute;top:60px;right:10px" ng-show="isEditable" ng-click="edit_click($event,'network',-1)">
                                         <i class="icon ion-md-create" style="font-size:32px;"></i>
                                     </a>
                                     <div style="text-align:center; color:black; font-size:18px">
-                                        <div style="width:837px;min-height:740px;margin:-30px auto 0 auto;position:relative" class="hidden-xs">
-                                            <a href="#" data-ng-click="navigate('/signup/development','signup-development',1)" class="bgcolor-p hidden-xs" style="position:absolute;bottom:0px;left:-71px; color:white;font-weight:bold; font-size:15px;padding:17px 15px 17px 15px;width:250px">
+                                        <div style="width:837px;min-height:740px;margin:-30px auto 0 auto;position:relative" class="hidden-xs hidden-sm">
+                                            <a href="" data-ng-click="navigate2('/signup/development','signup-development',1)" class="bgcolor-p hidden-xs hidden-lg" style="position:absolute;bottom:0px;left:-71px; color:white;font-weight:bold; font-size:15px;padding:17px 15px 17px 15px;width:250px">
                                                 JOIN NETWORK OF RESEARCHERS
 
 
                                             </a>
-                                            <a href="#" data-ng-click="navigate('/signup/development','signup-development',1)" class="bgcolor-p hidden-xs" style="position:absolute;bottom:0px;left:658px; color:white;font-weight:bold; font-size:15px;padding:10px;width:250px">
+                                            <a href="" data-ng-click="" class="bgcolor-p hidden-xs hidden-lg" style="position:absolute;bottom:0px;left:658px; color:white;font-weight:bold; font-size:15px;padding:10px;width:250px">
                                                 CHECK OUT NETWORK OF START-UP BUSINESSES
 
 
                                             </a>
 
 
-                                            <img src="../../content/imgs/circles-off.png" style="position:absolute;left:0" />
+                                            <img src="../../content/imgs/circles-off.png" style="position:absolute;left:0;cursor:pointer" data-ng-click="navigate2('/researchers','researchers',1)" />
                                             <img src="../../content/imgs/researcher2.png" style="position:absolute;left:0;z-index:-1;top:348px;left:286px;width:250px" />
 
-                                            <img src="../../content/imgs/3dp.png" data-id="7" style="left: 338px;    top: 175.5px;" class="circle-network2 circle-gray readOnly" ng-click="circle_clicked($event,7)" />
-                                            <img src="../../content/imgs/software.png" data-id="8" style="left: 196px;    top: 234.5px;" class="circle-network2 circle-gray readOnly" ng-click="circle_clicked($event,8)" />
-                                            <img src="../../content/imgs/dental.png" data-id="11" style="left: 138px;    top: 378px;" class="circle-network2 circle-gray readOnly" ng-click="circle_clicked($event,11)" />
-                                            <img src="../../content/imgs/medical.png" data-id="13" style="left: 197px;    top: 519px;" class="circle-network2 circle-gray readOnly" ng-click="circle_clicked($event,13)" />
-                                            <img src="../../content/imgs/polymer.png" data-id="14" style="left: 338px;    top: 578px;" class="circle-network2 circle-gray readOnly" ng-click="circle_clicked($event,14)" />
-                                            <img src="../../content/imgs/ceramic.png" data-id="15" style="left: 480px;    top: 519px;" class="circle-network2 circle-gray readOnly" ng-click="circle_clicked($event,15)" />
-                                            <img src="../../content/imgs/metal.png" data-id="12" style="left: 539px;    top: 377px;" class="circle-network2 circle-gray readOnly" ng-click="circle_clicked($event,12)" />
-                                            <img src="../../content/imgs/concrete.png" data-id="1" style="left: 480px;    top: 234px;" class="circle-network2 circle-gray readOnly" ng-click="circle_clicked($event,1)" />
+                                            <img src="../../content/imgs/3dp.png" data-id="7" style="left: 338px;    top: 175.5px;" class="circle-network2 circle-gray readOnly network-circle" ng-click="circle_clicked($event,7,'3DP Technology')" />
+                                            <img src="../../content/imgs/software.png" data-id="8" style="left: 196px;    top: 234.5px;" class="circle-network2 circle-gray readOnly  network-circle" ng-click="circle_clicked($event,8,'3DP (Software)')" />
+                                            <img src="../../content/imgs/dental.png" data-id="11" style="left: 138px;    top: 378px;" class="circle-network2 circle-gray readOnly network-circle" ng-click="circle_clicked($event,11,'3DP (Dental)')" />
+                                            <img src="../../content/imgs/medical.png" data-id="13" style="left: 197px;    top: 519px;" class="circle-network2 circle-gray readOnly network-circle" ng-click="circle_clicked($event,13,'3DP (Medical)')" />
+                                            <img src="../../content/imgs/polymer.png" data-id="14" style="left: 338px;    top: 578px;" class="circle-network2 circle-gray readOnly network-circle" ng-click="circle_clicked($event,14,'3DP (Polymer)')" />
+                                            <img src="../../content/imgs/ceramic.png" data-id="15" style="left: 480px;    top: 519px;" class="circle-network2 circle-gray readOnly network-circle" ng-click="circle_clicked($event,15,'3DP (Ceramic)')" />
+                                            <img src="../../content/imgs/metal.png" data-id="12" style="left: 539px;    top: 377px;" class="circle-network2 circle-gray readOnly network-circle" ng-click="circle_clicked($event,12,'3DP (Metal)')" />
+                                            <img src="../../content/imgs/concrete.png" data-id="1" style="left: 480px;    top: 234px;" class="circle-network2 circle-gray readOnly network-circle" ng-click="circle_clicked($event,1,'3DP (Concrete)')" />
 
-                                            <img src="../../content/imgs/iot.png" data-id="2" style="left: 342px;    top: -2px;" class="circle-network circle-gray readOnly" ng-click="circle_clicked($event,2)" />
-                                            <img src="../../content/imgs/dam.png" data-id="5" style="left: 217px;    top: 84px;" class="circle-network circle-gray readOnly" ng-click="circle_clicked($event,5)" />
-                                            <img src="../../content/imgs/me.png" data-id="9" style="left: 47px;    top:257px;" class="circle-network circle-gray readOnly" ng-click="circle_clicked($event,9)" />
-                                            <img src="../../content/imgs/ham.png" data-id="6" style="left: 463px;    top: 85px;" class="circle-network circle-gray readOnly" ng-click="circle_clicked($event,6)" />
-                                            <img src="../../content/imgs/plr.png" data-id="10" style="left: 637px;    top:257px;" class="circle-network circle-gray readOnly" ng-click="circle_clicked($event,10)" />
-                                            <img src="../../content/imgs/bd.png" data-id="3" style="left: 47px;    top:503px;" class="circle-network circle-gray readOnly" ng-click="circle_clicked($event,3)" />
-                                            <img src="../../content/imgs/ai.png" data-id="4" style="left: 637px;    top:503px;" class="circle-network circle-gray readOnly" ng-click="circle_clicked($event,4)" />
+                                            <img src="../../content/imgs/iot.png" data-id="2" style="left: 342px;    top: -2px;" class="circle-network circle-gray readOnly network-circle" ng-click="circle_clicked($event,2,'Internet of Things (IoT)')" />
+                                            <img src="../../content/imgs/dam.png" data-id="5" style="left: 217px;    top: 84px;" class="circle-network circle-gray readOnly network-circle" ng-click="circle_clicked($event,5,'Design for Additive Manufacturing')" />
+                                            <img src="../../content/imgs/me.png" data-id="9" style="left: 47px;    top:257px;" class="circle-network circle-gray readOnly network-circle" ng-click="circle_clicked($event,9,'Material Engineering')" />
+                                            <img src="../../content/imgs/ham.png" data-id="6" style="left: 463px;    top: 85px;" class="circle-network circle-gray readOnly network-circle" ng-click="circle_clicked($event,6,'Hybrid Additive Manufacturing')" />
+                                            <img src="../../content/imgs/plr.png" data-id="10" style="left: 637px;    top:257px;" class="circle-network circle-gray readOnly network-circle" ng-click="circle_clicked($event,10,'Product Liability and Regulatory')" />
+                                            <img src="../../content/imgs/bd.png" data-id="3" style="left: 47px;    top:503px;" class="circle-network circle-gray readOnly network-circle" ng-click="circle_clicked($event,3,'Business Development')" />
+                                            <img src="../../content/imgs/ai.png" data-id="4" style="left: 637px;    top:503px;" class="circle-network circle-gray readOnly network-circle" ng-click="circle_clicked($event,4,'Artificial Intelligence')" />
 
                                         </div>
 
-                                        <div style="min-height:400px;  margin:110px auto 0 auto;position:relative" class="hidden-lg">
-                                            <div style="position:relative;margin:0 auto 0 auto;width:90%">
-                                                <img id="xs-core" src="../../content/imgs/circles-core.png" style="width:100%;position:absolute;top:0px;left:0;height:auto" />
+                                        <div style="min-height:420px;  margin:0 auto 0 auto;position:relative" class="hidden-lg mobile1">
+                                            <div style="position:relative;margin:0px auto 0 auto;width:90%;max-width:360px">
+                                                <img id="xs-core" src="../../content/imgs/circles-core-x.png" style="cursor:pointer;width:100%;position:absolute;top:0px;left:0;height:auto" data-ng-click="navigate2('/researchers','researchers',1)" />
 
-                                                <img id="c_3dp" src="../../content/imgs/3dpx.png" data-id="7" style="position: absolute;top:200px;left:200px" class="xcircle" ng-click="circle_clicked($event,7)" />
-                                                <img id="c_iot" src="../../content/imgs/iot.png" data-id="2" style="position: absolute;top:200px;left:200px" class="xcircle" ng-click="circle_clicked($event,2)" />
-                                                <img id="c_dam" src="../../content/imgs/dam.png" data-id="5" style="position: absolute;top:200px;left:200px" class="xcircle" ng-click="circle_clicked($event,5)" />
-                                                <img id="c_ham" src="../../content/imgs/ham.png" data-id="6" style="position: absolute;top:200px;left:200px" class="xcircle" ng-click="circle_clicked($event,6)" />
-                                                <img id="c_software" src="../../content/imgs/softwarex.png" data-id="8" style="position: absolute;top:200px;left:200px" class="xcircle" ng-click="circle_clicked($event,8)" />
-                                                <img id="c_concrete" src="../../content/imgs/concretex.png" data-id="1" style="position: absolute;top:200px;left:200px" class="xcircle" ng-click="circle_clicked($event,1)" />
-                                                <img id="c_dental" src="../../content/imgs/dental.png" data-id="11" style="position: absolute;top:200px;left:200px" class="xcircle" ng-click="circle_clicked($event,11)" />
-                                                <img id="c_metal" src="../../content/imgs/metal.png" data-id="12" style="position: absolute;top:200px;left:200px" class="xcircle" ng-click="circle_clicked($event,12)" />
-                                                <img id="c_medical" src="../../content/imgs/medical.png" data-id="13" style="position: absolute;top:200px;left:200px" class="xcircle" ng-click="circle_clicked($event,13)" />
-                                                <img id="c_ceramic" src="../../content/imgs/ceramic.png" data-id="15" style="position: absolute;top:200px;left:200px" class="xcircle" ng-click="circle_clicked($event,15)" />
-                                                <img id="c_polymer" src="../../content/imgs/polymer.png" data-id="14" style="position: absolute;top:200px;left:200px" class="xcircle" ng-click="circle_clicked($event,14)" />
+                                                <img id="c_3dp" src="../../content/imgs/3dpx.png" data-id="7" style="position: absolute;top:200px;left:200px" class="xcircle network-circle" ng-click="circle_clicked($event,7,'3DP Technology')" />
+                                                <img id="c_iot" src="../../content/imgs/iot.png" data-id="2" style="position: absolute;top:200px;left:200px" class="xcircle network-circle" ng-click="circle_clicked($event,2,'Internet of Things (IoT)')" />
+                                                <img id="c_dam" src="../../content/imgs/dam.png" data-id="5" style="position: absolute;top:200px;left:200px" class="xcircle network-circle" ng-click="circle_clicked($event,5,'Design for Additive Manufacturing')" />
+                                                <img id="c_ham" src="../../content/imgs/ham.png" data-id="6" style="position: absolute;top:200px;left:200px" class="xcircle network-circle" ng-click="circle_clicked($event,6,'Hybrid Additive Manufacturing')" />
+                                                <img id="c_software" src="../../content/imgs/softwarex.png" data-id="8" style="position: absolute;top:200px;left:200px" class="xcircle network-circle" ng-click="circle_clicked($event,8,'3DP (Software)')" />
+                                                <img id="c_concrete" src="../../content/imgs/concretex.png" data-id="1" style="position: absolute;top:200px;left:200px" class="xcircle network-circle" ng-click="circle_clicked($event,1,'3DP (Concrete)')" />
+                                                <img id="c_dental" src="../../content/imgs/dental.png" data-id="11" style="position: absolute;top:200px;left:200px" class="xcircle network-circle" ng-click="circle_clicked($event,11,'3DP (Dental)')" />
+                                                <img id="c_metal" src="../../content/imgs/metal.png" data-id="12" style="position: absolute;top:200px;left:200px" class="xcircle network-circle" ng-click="circle_clicked($event,12,'3DP (Metal)')" />
+                                                <img id="c_medical" src="../../content/imgs/medical.png" data-id="13" style="position: absolute;top:200px;left:200px" class="xcircle network-circle" ng-click="circle_clicked($event,13,'3DP (Medical)')" />
+                                                <img id="c_ceramic" src="../../content/imgs/ceramic.png" data-id="15" style="position: absolute;top:200px;left:200px" class="xcircle network-circle" ng-click="circle_clicked($event,15,'3DP (Ceramic)')" />
+                                                <img id="c_polymer" src="../../content/imgs/polymer.png" data-id="14" style="position: absolute;top:200px;left:200px" class="xcircle network-circle" ng-click="circle_clicked($event,14,'3DP (Polymer)')" />
 
-                                                <img id="c_me" src="../../content/imgs/me.png" data-id="9" style="position: absolute;top:200px;left:200px" class="xcircle" ng-click="circle_clicked($event,9)" />
-                                                <img id="c_bd" src="../../content/imgs/bd.png" data-id="3" style="position: absolute;top:200px;left:200px" class="xcircle" ng-click="circle_clicked($event,3)" />
-                                                <img id="c_ai" src="../../content/imgs/ai.png" data-id="4" style="position: absolute;top:200px;left:200px" class="xcircle" ng-click="circle_clicked($event,4)" />
-                                                <img id="c_plr" src="../../content/imgs/plr.png" data-id="10" style="position: absolute;top:200px;left:200px" class="xcircle" ng-click="circle_clicked($event,10)" />
+                                                <img id="c_me" src="../../content/imgs/me.png" data-id="9" style="position: absolute;top:200px;left:200px" class="xcircle network-circle" ng-click="circle_clicked($event,9,'Material Engineering')" />
+                                                <img id="c_bd" src="../../content/imgs/bd.png" data-id="3" style="position: absolute;top:200px;left:200px" class="xcircle network-circle" ng-click="circle_clicked($event,3,'Business Development')" />
+                                                <img id="c_ai" src="../../content/imgs/ai.png" data-id="4" style="position: absolute;top:200px;left:200px" class="xcircle network-circle" ng-click="circle_clicked($event,4,'Artificial Intelligence')" />
+                                                <img id="c_plr" src="../../content/imgs/plr.png" data-id="10" style="position: absolute;top:200px;left:200px" class="xcircle network-circle" ng-click="circle_clicked($event,10,'Product Liability and Regulatory')" />
                                             </div>
 
 
                                         </div>
 
-                                        <a href="#" data-ng-click="navigate('/signup/development','signup-development',1)" class="bgcolor-p hidden-lg" style="  color:white;font-weight:bold; font-size:12px;padding:7px;width:95%;display:block;margin:0 auto">
+                                        <!--<a href="" data-ng-click="navigate2('/signup/development','signup-development',1)" class="bgcolor-p hidden-lg" style="  color:white;font-weight:bold; font-size:12px;padding:7px;width:95%;display:block;margin:0 auto">
                                             JOIN NETWORK OF RESEARCHERS
 
 
                                         </a>
-                                        <a href="#" data-ng-click="navigate('/signup/development','signup-development',1)" class="bgcolor-p hidden-lg" style="  color:white;font-weight:bold; font-size:12px;padding:7px;width:95%;display:block;margin:5px auto 5px auto">
+                                        <a href="" class="bgcolor-p hidden-lg" style="  color:white;font-weight:bold; font-size:12px;padding:7px;width:95%;display:block;margin:5px auto 5px auto">
                                             CHECK OUT NETWORK OF START-UP BUSINESSES
 
 
-                                        </a>
+                                        </a>-->
 
 
 
@@ -365,7 +665,24 @@
                         </div>
                     </div>
 
+                    <div class="section mcb-section  bg-gray" style=" padding-top:0px; padding-bottom:0px;  border-top:0px solid rgba(60,56,55,1);border-bottom:0px solid rgba(60,56,55,1);">
+                        <div class="section_wrapper mcb-section-inner bg-white b-shadow" style="padding:0 !important; ">
+                            <div class="wrap mcb-wrap one  valign-top clearfix" style="">
+                                <div class="mcb-wrap-inner njoin" style="padding:15px 15% 15px 15%" >
+                                    <a href="" data-ng-click="navigate2('/signup/development','signup-development',1)" class="bgcolor-p " style="text-align:center;  color:white;font-weight:bold; font-size:14px;padding:12px;width:95%;display:block;margin:0 auto">
+                                        JOIN NETWORK OF RESEARCHERS
 
+
+                                    </a>
+                                    <a href="" class="bgcolor-p" style="text-align:center;   color:white;font-weight:bold; font-size:14px;padding:12px;width:95%;display:block;margin:10px auto 5px auto">
+                                        CHECK OUT NETWORK OF START-UP BUSINESSES
+
+
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
             </div>
@@ -376,19 +693,19 @@
             <div style="color:rgba(0,0,0,.9);font-size:16px">Contact Info</div>
             <div style="margin:10px 0 0px 30px;font-size:18px">
                 <i class="icon ion-md-mail" style="font-size:24px;color:rgba(0,0,0,.7)"></i>
-                <span style="display:inline-block;position:relative;top:-2px;left:3px"><a href="#" target="_blank">{{profile.Email}}</a></span>
+                <span style="display:inline-block;position:relative;top:-2px;left:3px"><a href="#" target="_blank">{{profile.User.Email}}</a></span>
             </div>
             <div style="margin:10px 0 10px 30px;font-size:18px">
                 <i class="icon ion-md-link" style="font-size:24px;color:rgba(0,0,0,.7)"></i>
-                <span style="display:inline-block;position:relative;top:-2px;left:3px"><a ng-href="http://{{profile.Website}}" target="_blank">{{profile.Website}}</a></span>
+                <span style="display:inline-block;position:relative;top:-2px;left:3px"><a ng-href="http://{{profile.Website}}" target="_blank">{{profile.User.Website}}</a></span>
             </div>
             <div style="margin:10px 0 10px 30px;font-size:17px">
                 <i class="icon ion-logo-linkedin" style="font-size:24px;color:rgba(0,0,0,.7);position:relative;left:2px"></i>
-                <span style="display:inline-block;position:relative;top:-2px;left:6px"><a ng-href="{{profile.LinkedIn}}" target="_blank">View on LinkedIn</a></span>
+                <span style="display:inline-block;position:relative;top:-2px;left:6px"><a ng-href="{{profile.User.LinkedIn}}" target="_blank">View on LinkedIn</a></span>
             </div>
             <div style="margin:10px 0 10px 30px;font-size:18px">
                 <i class="icon ion-logo-twitter" style="font-size:24px;color:rgba(0,0,0,.7)"></i>
-                <span style="display:inline-block;position:relative;top:-2px;left:3px"><a ng-href="https://twitter.com/{{profile.Twitter}}">@{{profile.Twitter}}</a></span>
+                <span style="display:inline-block;position:relative;top:-2px;left:3px"><a ng-href="https://twitter.com/{{profile.User.Twitter}}">@{{profile.User.Twitter}}</a></span>
             </div>
         </div>
     </div>
@@ -402,60 +719,293 @@
 <div id="popup_intro" dx-popup="popup_intro">
     <div id="scrollview" dx-scroll-view="scroll_main">
         <div style="padding:10px 10px 0 10px" class="dx-border">
-            <div class="col-lg-6" style="padding:0 0 0 5px">
-                <div dx-text-box="txt_first_name"></div>
-            </div>
-            <div class="col-lg-6" style="padding:0 0 0 5px">
-                <div dx-text-box="txt_last_name"></div>
-            </div>
-            <div class="col-lg-8" style="padding:10px 0 0 5px">
-                <div dx-select-box="sb_study_field"></div>
-            </div>
-            <div class="col-lg-4" style="padding:10px 0 0 5px">
-                <div dx-select-box="sb_degree"></div>
-            </div>
-            <div class="col-lg-8" style="padding:10px 0 0 5px">
-                <div dx-text-box="txt_university"></div>
-            </div>
-            <div class="col-lg-4" style="padding:10px 0 0 5px">
-                <div dx-select-box="sb_position"></div>
+
+            <div class="col-lg-12" style="padding:0 0 0 5px">
+                <div dx-text-box="txt_first_name" dx-validator="{validationGroup:'profileintro',  validationRules: [{ type: 'required'}]}"></div>
             </div>
             <div class="col-lg-12" style="padding:10px 0 0 5px">
-                <div dx-text-box="txt_website"></div>
-            </div>
-            <div class="col-lg-6" style="padding:10px 0 0 5px">
-                <div dx-select-box="sb_country"></div>
-            </div>
-            <div class="col-lg-6" style="padding:10px 0 0 5px">
-                <div dx-text-box="txt_zip_code"></div>
-            </div>
-            <div class="col-lg-6" style="padding:10px 0 0 5px">
-                <div dx-text-box="txt_state"></div>
-            </div>
-            <div class="col-lg-6" style="padding:10px 0 0 5px">
-                <div dx-text-box="txt_city"></div>
+                <div dx-text-box="txt_last_name" dx-validator="{validationGroup:'profileintro',  validationRules: [{ type: 'required'}]}"></div>
             </div>
             <div class="col-lg-12" style="padding:10px 0 0 5px">
-                <div dx-text-box="txt_linkedin"></div>
+                <div dx-select-box="sb_study_field" dx-validator="{validationGroup:'profileintro',  validationRules: [{ type: 'required'}]}"></div>
+            </div>
+            <div class="col-lg-12" style="padding:10px 0 0 5px">
+                <div dx-select-box="sb_degree" dx-validator="{validationGroup:'profileintro',  validationRules: [{ type: 'required'}]}"></div>
+            </div>
+            <div class="col-lg-12" style="padding:10px 0 0 5px">
+                <div dx-text-box="txt_university" dx-validator="{validationGroup:'profileintro',  validationRules: [{ type: 'required'}]}"></div>
+            </div>
+            <div class="col-lg-12" style="padding:10px 0 0 5px">
+                <div dx-select-box="sb_position" dx-validator="{validationGroup:'profileintro',  validationRules: [{ type: 'required'}]}"></div>
+            </div>
+            <div class="col-lg-12" style="padding:10px 0 0 5px">
+                <div dx-text-box="txt_website" dx-validator="{validationGroup:'profileintro',  validationRules: [{ type: 'required'}]}"></div>
+            </div>
+            <div class="col-lg-12" style="padding:10px 0 0 5px">
+                <div dx-select-box="sb_country" dx-validator="{validationGroup:'profileintro',  validationRules: [{ type: 'required'}]}"></div>
+            </div>
+            <div class="col-lg-12" style="padding:10px 0 0 5px">
+                <div dx-text-box="txt_zip_code" dx-validator="{validationGroup:'profileintro',  validationRules: [{ type: 'required'}]}"></div>
+            </div>
+            <div class="col-lg-12" style="padding:10px 0 0 5px">
+                <div dx-text-box="txt_state" dx-validator="{validationGroup:'profileintro',  validationRules: [{ type: 'required'}]}"> </div>
+            </div>
+            <div class="col-lg-12" style="padding:10px 0 0 5px">
+                <div dx-text-box="txt_city" dx-validator="{validationGroup:'profileintro',  validationRules: [{ type: 'required'}]}"></div>
+            </div>
+            <div class="col-lg-12" style="padding:10px 0 0 5px">
+                <div dx-text-box="txt_linkedin" dx-validator="{validationGroup:'profileintro',  validationRules: [{ type: 'required'}]}"></div>
             </div>
             <div style="clear:both;"></div>
             <div style="padding:10px 0 0 10px;margin-left:5px; margin-top:15px;border-top:1px dotted rgba(0,112,192,1);">
                 Contact info:
             </div>
-            <div class="col-lg-6" style="padding:10px 0 0 5px">
-                <div dx-text-box="txt_email"></div>
+            <div class="col-lg-12" style="padding:10px 0 0 5px">
+                <div dx-text-box="txt_email" dx-validator="{validationGroup:'profileintro',  validationRules: [{ type: 'required'}]}"></div>
             </div>
-            <div class="col-lg-6" style="padding:10px 0 0 5px">
-                <div dx-text-box="txt_twitter"></div>
+            <div class="col-lg-12" style="padding:10px 0 0 5px">
+                <div dx-text-box="txt_twitter" dx-validator="{validationGroup:'profileintro',  validationRules: [{ type: 'required'}]}"></div>
             </div>
             <div style="clear:both;"></div>
             <div style="padding:0px 0 0 10px;margin-left:5px; margin-top:15px;border-top:1px dotted rgba(0,112,192,1);">
 
             </div>
             <div class="col-lg-12" style="padding:10px 0 0 5px">
-                <div dx-text-box="txt_headline"></div>
+                <div dx-text-box="txt_headline" dx-validator="{validationGroup:'profileintro',  validationRules: [{ type: 'required'}]}"></div>
             </div>
         </div>
-       
+
+    </div>
+
+
+</div>
+
+<div id="popup_publication" dx-popup="popup_publication">
+    <div style="padding:10px 3px 0 3px" class="dx-border">
+        <div class="col-lg-12" style="padding:0 0 0 5px">
+            <div dx-text-box="publication_title" dx-validator="{validationGroup:'profilepublication',  validationRules: [{ type: 'required'}]}"></div>
+        </div>
+        <div class="col-lg-8" style="padding:10px 0 0 5px">
+            <div dx-text-box="publication_publisher" dx-validator="{validationGroup:'profilepublication',  validationRules: [{ type: 'required'}]}"></div>
+        </div>
+        <div class="col-lg-4 center" style="padding:10px 0 0 5px">
+            <div dx-date-box="publication_date" dx-validator="{validationGroup:'profilepublication',  validationRules: [{ type: 'required'}]}"></div>
+        </div>
+
     </div>
 </div>
+
+
+<div id="popup_patent" dx-popup="popup_patent">
+    <div style="padding:10px 3px 0 3px" class="dx-border">
+        <div class="col-lg-12" style="padding:0 0 0 5px">
+            <div dx-text-box="patent_title" dx-validator="{validationGroup:'profilepatent',  validationRules: [{ type: 'required'}]}"></div>
+        </div>
+        <div class="col-lg-6 center" style="padding:10px 0 0 5px">
+            <div dx-text-box="patent_issuer" dx-validator="{validationGroup:'profilepatent',  validationRules: [{ type: 'required'}]}"></div>
+        </div>
+        <div class="col-lg-6 center" style="padding:10px 0 0 5px">
+            <div dx-date-box="patent_date" dx-validator="{validationGroup:'profilepatent',  validationRules: [{ type: 'required'}]}"></div>
+        </div>
+
+    </div>
+</div>
+
+<div id="popup_project" dx-popup="popup_project">
+    <div style="padding:10px 3px 0 3px" class="dx-border">
+        <div class="col-lg-12" style="padding:0 0 0 5px">
+            <div dx-text-box="project_title" dx-validator="{validationGroup:'profileproject',  validationRules: [{ type: 'required'}]}"></div>
+        </div>
+
+        <div class="col-lg-12 center" style="padding:10px 0 0 5px">
+            <div dx-date-box="project_date"></div>
+        </div>
+
+    </div>
+</div>
+
+<div id="popup_certification" dx-popup="popup_certification">
+    <div style="padding:10px 3px 0 3px" class="dx-border">
+        <div class="col-lg-12" style="padding:0 0 0 5px">
+            <div dx-text-box="certification_title" dx-validator="{validationGroup:'profilecertification',  validationRules: [{ type: 'required'}]}"></div>
+        </div>
+        <div class="col-lg-12" style="padding:10px 0 0 5px">
+            <div dx-text-box="certification_authority" dx-validator="{validationGroup:'profilecertification',  validationRules: [{ type: 'required'}]}"></div>
+        </div>
+
+    </div>
+</div>
+
+<div id="popup_award" dx-popup="popup_award">
+    <div style="padding:10px 3px 0 3px" class="dx-border">
+        <div class="col-lg-12" style="padding:0 0 0 5px">
+            <div dx-text-box="award_title" dx-validator="{validationGroup:'profileaward',  validationRules: [{ type: 'required'}]}"></div>
+        </div>
+        <div class="col-lg-8" style="padding:10px 0 0 5px">
+            <div dx-text-box="award_issuer" dx-validator="{validationGroup:'profileaward',  validationRules: [{ type: 'required'}]}"></div>
+        </div>
+        <div class="col-lg-4 center" style="padding:10px 0 0 5px">
+            <div dx-date-box="award_date"></div>
+        </div>
+
+    </div>
+</div>
+
+
+<div id="popup_review" dx-popup="popup_review">
+    <div style="padding:10px 3px 0 3px" class="dx-border">
+        <div dx-text-area="txt_review" dx-validator="{validationGroup:'profilereview',  validationRules: [{ type: 'required'}]}"></div>
+
+    </div>
+</div>
+
+
+<div id="popup_network" dx-popup="popup_network">
+    <div style="padding:10px 3px 0 3px" class="dx-border">
+        <div class="col-lg-12" style="padding:0 0 0 5px">
+            <div dx-check-box="chk_grp7"></div>
+        </div>
+        <div class="col-lg-12" style="padding:5px 0 0 5px">
+            <div dx-check-box="chk_grp1"></div>
+        </div>
+        <div class="col-lg-12" style="padding:5px 0 0 5px">
+            <div dx-check-box="chk_grp12"></div>
+        </div>
+        <div class="col-lg-12" style="padding:5px 0 0 5px">
+            <div dx-check-box="chk_grp15"></div>
+        </div>
+        <div class="col-lg-12" style="padding:5px 0 0 5px">
+            <div dx-check-box="chk_grp14"></div>
+        </div>
+        <div class="col-lg-12" style="padding:5px 0 0 5px">
+            <div dx-check-box="chk_grp13"></div>
+        </div>
+        <div class="col-lg-12" style="padding:5px 0 0 5px">
+            <div dx-check-box="chk_grp11"></div>
+        </div>
+        <div class="col-lg-12" style="padding:5px 0 0 5px">
+            <div dx-check-box="chk_grp8"></div>
+        </div>
+        <div class="col-lg-12" style="padding:5px 0 0 5px">
+            <div dx-check-box="chk_grp9"></div>
+        </div>
+        <div class="col-lg-12" style="padding:5px 0 0 5px">
+            <div dx-check-box="chk_grp5"></div>
+        </div>
+        <div class="col-lg-12" style="padding:5px 0 0 5px">
+            <div dx-check-box="chk_grp6"></div>
+        </div>
+        <div class="col-lg-12" style="padding:5px 0 0 5px">
+            <div dx-check-box="chk_grp10"></div>
+        </div>
+        <div class="col-lg-12" style="padding:5px 0 0 5px">
+            <div dx-check-box="chk_grp3"></div>
+        </div>
+        <div class="col-lg-12" style="padding:5px 0 0 5px">
+            <div dx-check-box="chk_grp4"></div>
+        </div>
+        <div class="col-lg-12" style="padding:5px 0 0 5px">
+            <div dx-check-box="chk_grp2"></div>
+        </div>
+
+    </div>
+</div>
+
+<div id="popup_photo" dx-popup="popup_photo">
+    <div style="padding:10px 3px 0 3px" class="dx-border invisibleuploader">
+        <div id="uploader_image" dx-file-uploader="uploader_image" class="invisibleuploader"></div>
+        <div style="text-align:center;padding-top:2px ;height:270px;line-height: 270px;">
+            <img ng-src="{{img_url}}" style="max-height:270px" />
+        </div>
+
+
+    </div>
+</div>
+
+<div id="popup_acc" dx-popup="popup_acc">
+    <div id="scrollview" dx-scroll-view="scroll_acc">
+        <div style="padding:10px 10px 0 3px" class="dx-border">
+            <div class="xbar1" style="margin-bottom:5px;width:185px;background:rgba(0,112,192,1);color:white;font-weight:bold;padding:5px 40px;font-size:14px;display:inline-block;text-align:center">
+                Publication
+            </div>
+            <div class="col-lg-12" style="padding:0 0 0 0px">
+                <div dx-text-box="publication_title"></div>
+            </div>
+            <div class="col-lg-12" style="padding:10px 0 0 0px">
+                <div dx-text-box="publication_publisher" dx-validator="{validationGroup:'profileacc',  validationRules: [{ type: 'custom',reevaluate:true,validationCallback:accpubtitle,message:'Please fill in all required fields.'}]}"></div>
+            </div>
+            <div class="col-lg-12 center" style="padding:10px 0 0 0px">
+                <div dx-date-box="publication_date" dx-validator="{validationGroup:'profileacc',  validationRules: [{ type: 'custom',reevaluate:true,validationCallback:accpubtitle,message:'Please fill in all required fields.'}]}"></div>
+            </div>
+            <div style="clear:both"></div>
+            <div style="border-bottom:1px dotted rgba(0,112,192,1);height:5px;margin-bottom:5px"></div>
+            <div class="xbar1" style="margin-bottom:5px;width:185px;background:rgba(0,112,192,1);color:white;font-weight:bold;padding:5px 40px;font-size:14px;display:inline-block;text-align:center">
+                Patent
+            </div>
+            <div class="col-lg-12" style="padding:0 0 0 0px">
+                <div dx-text-box="patent_title"></div>
+            </div>
+            <div class="col-lg-12 center" style="padding:10px 0 0 0px">
+                <div dx-number-box="patent_issuer" dx-validator="{validationGroup:'profileacc',  validationRules: [{ type: 'custom',reevaluate:true,validationCallback:accpatenttitle,message:'Please fill in all required fields.'}]}"></div>
+            </div>
+            <div class="col-lg-12 center" style="padding:10px 0 0 0px">
+                <div dx-date-box="patent_date" dx-validator="{validationGroup:'profileacc',  validationRules: [{ type: 'custom',reevaluate:true,validationCallback:accpatenttitle,message:'Please fill in all required fields.'}]}"></div>
+            </div>
+            <div style="clear:both"></div>
+            <div style="border-bottom:1px dotted rgba(0,112,192,1);height:5px;margin-bottom:5px"></div>
+
+
+            <div class="xbar1" style="margin-bottom:5px;width:185px;background:rgba(0,112,192,1);color:white;font-weight:bold;padding:5px 40px;font-size:14px;display:inline-block;text-align:center">
+                Certification
+            </div>
+            <div class="col-lg-12" style="padding:0">
+                <div dx-text-box="certification_title"></div>
+            </div>
+            <div class="col-lg-12" style="padding:10px 0 0 0px">
+                <div dx-text-box="certification_authority" dx-validator="{validationGroup:'profileacc',  validationRules: [{ type: 'custom',reevaluate:true,validationCallback:acccertificationtitle,message:'Please fill in all required fields.'}]}"></div>
+            </div>
+            <div style="clear:both"></div>
+            <div style="border-bottom:1px dotted rgba(0,112,192,1);height:5px;margin-bottom:5px"></div>
+
+            <div class="xbar1" style="margin-bottom:5px;width:185px;background:rgba(0,112,192,1);color:white;font-weight:bold;padding:5px 40px;font-size:14px;display:inline-block;text-align:center">
+                Project
+            </div>
+            <div class="col-lg-12" style="padding:0">
+                <div dx-text-box="project_title" dx-validator="{validationGroup:'profileacc',  validationRules: [{ type: 'custom',reevaluate:true,validationCallback:accprojecttitle,message:'Please fill in all required fields.'}]}"></div>
+            </div>
+
+            <div class="col-lg-12 center" style="padding:10px 0 0 0px">
+                <div dx-date-box="project_date" dx-validator="{validationGroup:'profileacc',  validationRules: [{ type: 'custom',reevaluate:true,validationCallback:accprojecttitle,message:'Please fill in all required fields.'}]}"></div>
+            </div>
+            <div style="clear:both"></div>
+            <div style="border-bottom:1px dotted rgba(0,112,192,1);height:5px;margin-bottom:5px"></div>
+
+            <div class="xbar1" style="margin-bottom:5px;width:185px;background:rgba(0,112,192,1);color:white;font-weight:bold;padding:5px 40px;font-size:14px;display:inline-block;text-align:center">
+                Honor and Awards
+            </div>
+            <div class="col-lg-12" style="padding:0">
+                <div dx-text-box="award_title"></div>
+            </div>
+            <div class="col-lg-12" style="padding:10px 0 0 0px">
+                <div dx-text-box="award_issuer" dx-validator="{validationGroup:'profileacc',  validationRules: [{ type: 'custom',reevaluate:true,validationCallback:accawardtitle,message:'Please fill in all required fields.'}]}"></div>
+            </div>
+            <div class="col-lg-12 center" style="padding:10px 0 0 0px">
+                <div dx-date-box="award_date" dx-validator="{validationGroup:'profileacc',  validationRules: [{ type: 'custom',reevaluate:true,validationCallback:accawardtitle,message:'Please fill in all required fields.'}]}"></div>
+            </div>
+            <div style="clear:both"></div>
+            <div style="border-bottom:1px dotted rgba(0,112,192,1);height:5px;margin-bottom:5px"></div>
+
+
+        </div>
+    </div>
+
+</div>
+
+<div id="popup_res" dx-popup="popup_res">
+    <div id="popup_res_wrapper" style="padding:0;height:100%;">
+        <div class="hidden-xs hidden-sm" dx-data-grid="dg_researchers" id="dg_researchers"></div>
+        <div class="hidden-lg" dx-data-grid="dg_researchers_xs" id="dg_researchers_xs"></div>
+    </div>
+</div>
+
+<div dx-load-panel="loadPanel"></div>

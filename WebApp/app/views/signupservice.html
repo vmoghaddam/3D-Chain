@@ -1,0 +1,131 @@
+﻿<style>
+    .dx-button.dx-state-focused {
+        background: rgba(0,112,192,1) !important;
+    }
+</style>
+<div class="signupservice" style="display:none">
+    <div ng-include="'app/views/header.html'" ng-init="type = 'signup';"></div>
+    <div id="Content" style="margin-top:45px;">
+        <div class="content_wrapper clearfix">
+            <div class="sections_group">
+                <div class="entry-content" itemprop="mainContentOfPage">
+
+
+                    <div class="section mcb-section  " style="padding-top:0px; padding-bottom:0px; background-color:rgba(68,84,106,1) !important;border-top:0px solid rgba(60,56,55,1);border-bottom:0px solid rgba(60,56,55,1);">
+                        <div class="section_wrapper mcb-section-inner ep-row2">
+                            <div class="wrap mcb-wrap one  valign-top clearfix" style="">
+                                <div class="mcb-wrap-inner">
+                                    <div style="text-align:center; color:white; " class="ep-hint">
+
+                                        <!--“ Decentralized Manufacturing: Global Decentralized Network Directly Connecting Manufacturers, Designers, and Consumers “-->
+                                        <div style="text-align:center;font-family:'Arial Narrow'!important;  ">
+                                            <div style=" font-weight:bold" class="page-header-title ">3D-Chain</div>
+                                            <div style="margin-top:8px" class="page-header-comment"><span>First Global </span><span style="font-weight:bold; ">Decentralized Network</span></div>
+                                            <div style="margin-top:8px" class="page-header-comment"><span style="font-weight:bold;font-size:inherit !important">Directly</span><span style=" margin-left:3px; display:inline-block">Connecting</span> </div>
+                                            <div style="margin-top:8px" class="page-header-comment">
+                                                <span style="font-weight:bold;font-size:inherit !important">Manufacturers</span>,
+                                                <span style="font-weight:bold;font-size:inherit !important">Designers</span>, <span>and</span> <span style="font-weight:bold;font-size:inherit !important">Consumers</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="section mcb-section  ep-section" style="padding-top:20px; padding-bottom:30px; background-color:white !important">
+
+
+
+                        <div id="hl" class="col-lg-6 col-sm-6 col-md-5 hidden-xs hidden-sm hidden-md ilogo " style="height:465px;position:relative">
+                            <div style="display:inline-block;color:rgba(208,208,208,1); font-size:75px;font-weight:bold;position:absolute;bottom:0;right:230px">3D-Chain</div>
+                            <img src="../../content/imgs/g1.gif" style="position:absolute;bottom:233px;right:251px;width:250px" />
+                        </div>
+                        <div class="col-lg-6    type1" style="padding:0;">
+                            <h2 class="title color-gray xs-font-24  hidden-xs hidden-sm hidden-md" style="font-size:30px; margin-bottom:10px;  font-weight:bold;color:rgba(68,114,196,1) !important">
+                                JOIN MANUFACTURING SERVICE NETWORK
+
+                            </h2>
+                            <div class="signin-box2" style="background:rgba(230,230,230,1);padding:40px 60px 10px 60px">
+                                <h2 class="title color-gray  hidden-lg " style="font-size:19px !important; margin-bottom:10px;  font-weight:bold;color:rgba(68,114,196,1) !important">
+                                    JOIN MANUFACTURING SERVICE NETWORK
+
+                                </h2>
+                                <div>
+
+                                    <div class="dx-border">
+
+                                        <div dx-text-box="txt_company" style="margin-bottom:5px;display:inline-block" dx-validator="{validationGroup:'signupservice',  validationRules: [{ type: 'required'}]}"></div>
+
+
+                                        <div dx-text-box="txt_email" style="margin-bottom:5px" dx-validator="emailValidationRules"></div>
+                                        <div dx-text-box="txt_website" style="margin-bottom:5px;display:inline-block"></div>
+                                        <div dx-text-box="txt_location" style="margin-bottom:5px;display:inline-block"></div>
+                                        <div id="password-validation" dx-text-box="txt_password" style="margin-bottom:5px;display:inline-block" dx-validator="passwordValidationRules"></div>
+                                        <div dx-text-box="txt_confirm_password" style="margin-bottom:5px;display:inline-block" dx-validator="confirmPasswordValidationRules"></div>
+
+
+
+
+
+
+
+
+                                    </div>
+                                    <div class="dx-border">
+
+                                        <div style="text-align:center">
+                                            <div style="margin:10px 0 10px 0;font-size:16px">
+                                                By clicking below you agree to our <a href="#">Terms of Service</a>
+                                            </div>
+                                            <div dx-button="btn_submit"></div>
+                                            <div style="margin:10px 0 10px 0">
+                                                Already have an account? 
+                                                <a href="" data-ng-click="navigate2('/signin','signin',1)"> Login Here</a>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+
+
+
+
+                                </div>
+                                <div style="clear:both"></div>
+
+                            </div>
+                        </div>
+
+
+                        <div style="clear:both"></div>
+
+
+
+
+                    </div>
+
+
+
+                    <div class="section the_content no_content"><div class="section_wrapper"><div class="the_content_wrapper"></div></div></div>
+                    <div class="section section-page-footer">
+                        <div class="section_wrapper clearfix">
+
+                            <div class="column one page-pager">
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div dx-load-panel="loadPanel"></div>
+    <div ng-include="'app/views/footer.html'"></div>
+</div>

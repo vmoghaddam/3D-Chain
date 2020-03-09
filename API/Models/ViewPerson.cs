@@ -30,6 +30,7 @@ namespace API.Models
         public string IDNo { get; set; }
         public string UserId { get; set; }
         public string ImageUrl { get; set; }
+        public string ImageUrl2 { get; set; }
         public Nullable<int> CountryId { get; set; }
         public string ZIPCode { get; set; }
         public string State { get; set; }
@@ -53,5 +54,7 @@ namespace API.Models
         public string Country { get; set; }
         public string Location { get; set; }
         public string Education { get; set; }
+        public string Networks { get; set; }
+        public string NetworkIds { get; set; }
     }
 }

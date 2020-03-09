@@ -1,5 +1,5 @@
 ﻿'use strict';
-app.controller('researchersController', ['$scope', '$location', '$window', '$routeParams', '$rootScope', 'pageService', 'authService', function ($scope, $location, $window, $routeParams, $rootScope, pageService, authService) {
+app.controller('researchersController', ['$scope', '$location', '$window', '$routeParams', '$rootScope', 'userService', 'authService', '$http', '$q', function ($scope, $location, $window, $routeParams, $rootScope, userService, authService, $http, $q) {
 
     var $jq = jQuery.noConflict();
     //link-profile
@@ -7,49 +7,215 @@ app.controller('researchersController', ['$scope', '$location', '$window', '$rou
         // do something
         e.preventDefault();
         var id = $jq(this).data('uid');
-      // $rootScope.navigate('/profile/'+id);
-        $window.open('#!/profile/' + id);
-         
+        // $rootScope.navigate('/profile/'+id);
+      
+        if (authService.isAuthorized()) {
+            $window.open('#!/profile/' + id);
+        }
+        else {
+            //alert('sign in/sign up');
+
+            $scope.$apply(function () {
+                $scope.showInfo();
+            });
+        }
+
     });
     $jq("link[href='content/css/wp-shortcodes.css?ver=20.9.6.2']").remove();
     $scope.prms = $routeParams.prms;
-    //////////////////////////////////////////////
+    /////////////////////////////////
+    $scope.visiblePopup = false;
+
+    $scope.popupOptions = {
+        width: 450,
+        height: 130,
+        contentTemplate: "info",
+        showTitle: true,
+        title: "",
+        dragEnabled: false,
+        closeOnOutsideClick: true,
+        bindingOptions: {
+            visible: "visiblePopup",
+        }
+    };
+
+    $scope.showInfo = function () {
+
+        $scope.visiblePopup = true;
+    };
+    //////////////////////////////////
     $scope.dataSource = [];
     $scope.prepareDataSource = function () {
         $jq.each($rootScope.researchers, function (_i, _d) {
             _d.NetworkIds = Enumerable.From(_d.Networks).Select('$.Id').ToArray();
         });
     };
+    $scope.ex_str = null;
     $scope.bind = function () {
-       
+
+        // var id = $jq(this).data('uid');
+
         var offs = $jq('.researchers .circle-gray');
-        
+
         var ex = [];
-        var result = Enumerable.From($rootScope.researchers).ToArray();
-       
+        
+        //var result = Enumerable.From($rootScope.researchers).ToArray();
+
         $jq.each(offs, function (_i, _d) {
             var _id = $jq(_d).data('id');
             ex.push(_id);
-            result = Enumerable.From(result).Where('$.NetworkIds.indexOf('+_id+')==-1').ToArray();
+            //    result = Enumerable.From(result).Where('$.NetworkIds.indexOf('+_id+')==-1').ToArray();
 
         });
-        //var gg = Enumerable.From($rootScope.researchers).Where('$.Id!=9').ToArray();
-        //alert(gg);
+        if (ex.length > 0)
+            $scope.ex_str = ex.join('_');
+        else
+            $scope.ex_str = null;
+        if ($scope.dg_instance)
+            $scope.dg_instance.refresh();
+        if ($scope.dg_instance_xs)
+            $scope.dg_instance_xs.refresh();
 
-        $scope.dataSource = result;
+        return;
+        //$rootScope.serviceUrl+"api/users/profiles";
+        //$scope.dataSource = result;
+        var url = "api/users/profiles";
+        $scope.dataSource = {
+            store: {
+                type: "odata",
+                url: $rootScope.serviceUrl + url,
+                //url:"https://js.devexpress.com/Demos/WidgetsGallery/data/orderItems",
+                key: "Id",
+                version: 4,
+                onLoaded: function (e) {
+                    // $scope.loadingVisible = false;
+                    //filter
+                    $rootScope.$broadcast('OnDataLoaded', null);
+                },
+                beforeSend: function (e) {
+
+                    // $scope.dsUrl = General.getDsUrl(e);
+
+                    // $scope.$apply(function () {
+                    //    $scope.loadingVisible = true;
+                    // });
+                    $rootScope.$broadcast('OnDataLoading', null);
+                },
+            },
+            // filter: [['OfficeCode', 'startswith', $scope.ParentLocation.FullCode]],
+            sort: [{ getter: "DateJoin", desc: true }],
+
+        };
+
+
+        //$scope.dataSource = DevExpress.data.AspNet.createStore({
+        //    key: "Id",
+        //    loadUrl: url + "api/users/profiles",
+
+        //    onBeforeSend: function (method, ajaxOptions) {
+        //        ajaxOptions.xhrFields = { withCredentials: false };
+        //    }
+        //});
+
+
+        //////////////////////////////////////////////////
+        //userService.getProfiles().then(function (result) {
+
+        //    $scope.dataSource = result;
+        //    /////////////////////////////////////////////////////
+        //}, function (err) { alert('x'); $scope.loadingVisible = false; General.ShowNotify(err.message, 'error'); });
+        /////////////////////////////////////////////////
+        var orders = new DevExpress.data.CustomStore({
+            load: function (loadOptions) {
+                var parameters = {};
+
+                if (loadOptions.sort) {
+                    parameters.orderby = loadOptions.sort[0].selector;
+                    if (loadOptions.sort[0].desc)
+                        parameters.orderby += " desc";
+                }
+
+                parameters.skip = loadOptions.skip;
+                parameters.take = loadOptions.take;
+
+                var config = {
+                    params: parameters
+                };
+
+                return $http.get("https://js.devexpress.com/Demos/WidgetsGallery/data/orderItems", config)
+                    .then(function (response) {
+                        return { data: response.data.items, totalCount: response.data.totalCount };
+                    }, function (response) {
+                        return $q.reject("Data Loading Error");
+                    });
+            }
+        });
+
+        //$scope.dataSource = {
+        //    store: orders
+        //};
+        ///////////////////////////////////////////////////
     };
     $scope.prepareDataSource();
-    $scope.bind();
-   ////////////////////////////////////////////////
+   
+    var orders = new DevExpress.data.CustomStore({
+        load: function (loadOptions) {
+            var parameters = {};
+            //  console.log(loadOptions);
+            if (loadOptions.sort) {
+                parameters.orderby = loadOptions.sort[0].selector;
+                if (loadOptions.sort[0].desc)
+                    parameters.orderby += " desc";
+            }
+
+            parameters.skip = loadOptions.skip;
+            parameters.take = loadOptions.take;
+            if (loadOptions.filter) {
+                var f = loadOptions.filter[0];
+                if (Array.isArray(f)) {
+                    $jq.each(loadOptions.filter, function (_i, _d) {
+                        if (Array.isArray(_d)) {
+                            parameters[_d[0]] = _d[2];
+                        }
+
+
+                    });
+                }
+                else {
+                    parameters[loadOptions.filter[0]] = loadOptions.filter[2];
+                }
+
+            }
+
+            if ($scope.ex_str)
+                parameters.exc = $scope.ex_str;
+
+            var config = {
+                params: parameters
+            };
+
+            return $http.get($rootScope.serviceUrl + "api/users/profiles", config)
+                .then(function (response) {
+                    return { data: response.data.items, totalCount: response.data.totalCount };
+                }, function (response) {
+                    return $q.reject("Data Loading Error");
+                });
+        }
+    });
+    ////////////////////////////////////////////////
+    $scope.dg_instance = null;
+    $scope.dg_instance_xs = null;
     $scope.dg_columns = [
         {
-            dataField: "Picture",
-            caption:'',
+            dataField: "ImageUrl",
+            caption: '',
             width: 90,
             allowFiltering: false,
             allowSorting: false,
             cellTemplate: function (container, options) {
-                var img = "<img style='border-radius:0%;'  src='../../content/upload/" + options.value+"' />";
+                var img = "<a class='dg-cell-link link-profile' href='#' data-uid='" + options.data.Id + "' style=''    >"
+                    + "<img style='border-radius:0%;'  src='../../content/upload/" + options.value + "' />"
+                    + "</a>";
                 $jq("<div style='width:75px;height:75px'>")
                     // .append($jq("<img style='border-radius:50%'>", { "src":'../../content/upload/'+ options.value }))
                     .append(img)
@@ -57,7 +223,7 @@ app.controller('researchersController', ['$scope', '$location', '$window', '$rou
             }
         },
         {
-            dataField: 'Name', caption: 'Name', allowResizing: true, alignment: 'left', dataType: 'string', allowEditing: false, width: 230,
+            dataField: 'Name', caption: 'Name', allowResizing: true, alignment: 'left', dataType: 'string', allowEditing: false, width: 180,
             cellTemplate: function (container, options) {
                 var elem = "<div class='dg-cell-div' ><a class='dg-cell-link link-profile' href='#' data-uid='" + options.data.Id + "' style=''    >" + options.data.Name + "</a></div>";
                 $jq("<div>")
@@ -66,33 +232,38 @@ app.controller('researchersController', ['$scope', '$location', '$window', '$rou
                     .appendTo(container);
             }
         },
-        { dataField: 'Position', caption: 'Position', allowResizing: true, alignment: 'center', dataType: 'string', allowEditing: false, width: 150, },
-        { dataField: 'Organization', caption: 'Organization', allowResizing: true, alignment: 'center', dataType: 'string', allowEditing: false, width: 200 },
+        { dataField: 'Position', caption: 'Position', allowResizing: true, alignment: 'center', dataType: 'string', allowEditing: false, width: 330, },
+        { dataField: 'University', caption: 'Organization', allowResizing: true, alignment: 'center', dataType: 'string', allowEditing: false, width: 220 },
         { dataField: 'Location', caption: 'Location', allowResizing: true, alignment: 'center', dataType: 'string', allowEditing: false, width: 260 },
         {
-            dataField: 'Network', caption: 'Network', allowResizing: true, alignment: 'center', dataType: 'string', allowEditing: false,
+            dataField: 'Networks', caption: 'Networks', allowResizing: true, alignment: 'center', dataType: 'string', allowEditing: false,
             cellTemplate: function (container, options) {
-                var links = [];
-                $jq.each(options.data.Networks, function (_i, _d) {
-                    links.push("<a class='dg-cell-link' href='" + _d.link + "'>" + _d.Title + "</a>");
-                });
-               
+                //var links = [];
+                //$jq.each(options.data.Networks, function (_i, _d) {
+                //    links.push("<a class='dg-cell-link' href='" + _d.link + "'>" + _d.Title + "</a>");
+                //});
+
+                //$jq("<div>")
+                //    // .append($jq("<img style='border-radius:50%'>", { "src":'../../content/upload/'+ options.value }))
+                //    .append(links.join(', '))
+                //    .appendTo(container);
                 $jq("<div>")
-                    // .append($jq("<img style='border-radius:50%'>", { "src":'../../content/upload/'+ options.value }))
-                    .append(links.join(', '))
+                    .append("<a class='dg-cell-link' href='#'>" + options.value + "</a>")
+
                     .appendTo(container);
             }
+
         },
-        
+
 
     ];
-    $scope.dg_researchers = {
-
+    $scope.dg_researchers1 = {
+        wordWrapEnabled: true,
         headerFilter: {
             visible: false
         },
         filterRow: {
-            visible: false,
+            visible: true,
             showOperationChooser: true,
         },
         showRowLines: true,
@@ -105,14 +276,62 @@ app.controller('researchersController', ['$scope', '$location', '$window', '$rou
         },
         allowColumnReordering: true,
         allowColumnResizing: true,
+        scrolling: { mode: 'infinite' },
+        paging: { pageSize: 5 },
+        showBorders: true,
+        selection: { mode: 'single' },
+
+        columnAutoWidth: false,
+
+
+        columns: $scope.dg_columns,
+        onContentReady: function (e) {
+
+        },
+        onSelectionChanged: function (e) {
+            var data = e.selectedRowsData[0];
+
+
+
+        },
+        height: '625',
+        bindingOptions: {
+            dataSource: 'dataSource',
+            // height: 'dg_employees_height'
+        }
+    };
+    $scope.dg_researchers = {
+        wordWrapEnabled: true,
+        headerFilter: {
+            visible: false
+        },
+        filterRow: {
+            visible: true,
+            showOperationChooser: true,
+        },
+        showRowLines: true,
+        showColumnLines: true,
+        sorting: { mode: 'none' },
+
+        noDataText: '',
+        columnFixing: {
+            enabled: true
+        },
+        allowColumnReordering: true,
+        allowColumnResizing: true,
+        remoteOperations: {
+            sorting: true,
+            paging: true,
+            filtering: true
+        },
         paging: {
             pageSize: 5
         },
         pager: {
             showPageSizeSelector: false,
-           // allowedPageSizes: [5, 10, 20],
+            // allowedPageSizes: [5, 10, 20],
             showInfo: true,
-            showNavigationButtons:true,
+            showNavigationButtons: true,
         },
         showBorders: true,
         selection: { mode: 'single' },
@@ -120,49 +339,56 @@ app.controller('researchersController', ['$scope', '$location', '$window', '$rou
         columnAutoWidth: false,
 
 
-       // dataSource: employees,
+        // dataSource: employees,
         columns: $scope.dg_columns,
         onContentReady: function (e) {
-          
+            if (!$scope.dg_instance)
+                $scope.dg_instance = e.component;
         },
         onSelectionChanged: function (e) {
-            
+
         },
-         height: '580',
+        height: '625',
+        dataSource: {
+            store: orders
+        },
         bindingOptions: {
-           dataSource: 'dataSource', //'dg_employees_ds',
+            // dataSource: 'dataSource', //'dg_employees_ds',
             // height: 'dg_employees_height'
         }
     };
+
     $scope.dg_columns_xs = [
         {
-            dataField: "Picture",
+            dataField: "ImageUrl",
             caption: 'Explore Researchers and Professionals in discovering and developing breakthrough technologies.',
             width: 90,
             allowFiltering: false,
             allowSorting: false,
             cellTemplate: function (container, options) {
                 var links = [];
-                $jq.each(options.data.Networks, function (_i, _d) {
-                    links.push("<a class='dg-cell-link' style='font-size:14px;' href='" + _d.link + "'>" + _d.Title + "</a>");
-                   
-                });
+                //$jq.each(options.data.Networks, function (_i, _d) {
+                //    links.push("<a class='dg-cell-link' style='font-size:14px;' href='" + _d.link + "'>" + _d.Title + "</a>");
+
+                //});
                 var elem = "<div style='width:100%'>"
                     + "<table style='width:100%;border-bottom:1px solid gray !important'><tr>"
-                    + "<td style='width:80px;min-width:80px;text-align:left;position:relative;vertical-align:middle'>" 
+                    + "<td style='width:80px;min-width:80px;text-align:left;position:relative;vertical-align:middle'>"
+               + "<a class='dg-cell-link link-profile' href='#' data-uid='" + options.data.Id + "' style='font-size:14px;'    >"
                     + "<img style='border-radius:0%;min-width:75px;width:75px;height:75px; '  src='../../content/upload/" + options.value + "' />"
+                    +"</a>"
                     + "</td>"
                     + "<td style='padding-top:0 !important'>"
-                    + "<div class='dg-cell-div' ><a class='dg-cell-link link-profile' href='#' data-uid='"+options.data.Id+"' style='font-size:14px;'    >" + options.data.Name + "</a></div>"
-                    + "<div class='dg-cell-div' style='font-size:13px'>" + options.data.Organization + ", " + options.data.Position+ "</div>"
+                    + "<div class='dg-cell-div' ><a class='dg-cell-link link-profile' href='#' data-uid='" + options.data.Id + "' style='font-size:14px;'    >" + options.data.Name + "</a></div>"
+                    + "<div class='dg-cell-div' style='font-size:13px'>" + options.data.Organization + ", " + options.data.Position + "</div>"
                     + "<div  class='dg-cell-div'  style='font-size:13px'>" + options.data.Location + "</div>"
-                    + "<div class='dg-cell-div'>" + links.join(', ') + "</div>"
-                    +"</td>"
-                    +"</tr></table>"
-                   
+                    + "<div class='dg-cell-div'>" + "<a class='dg-cell-link' style='font-size:14px;' href='#'>" + options.data.Networks + "</a>" + "</div>"
+                    + "</td>"
+                    + "</tr></table>"
+
                     + "</div>";
 
-               // elem = "<p class='dg-cell-div' style='width:200px'>" + links.join(', ') + "</p>";
+                // elem = "<p class='dg-cell-div' style='width:200px'>" + links.join(', ') + "</p>";
                 //var img = "<img style='border-radius:0%;'  src='../../content/upload/" + options.value + "' />";
                 $jq("<div>")
                     // .append($jq("<img style='border-radius:50%'>", { "src":'../../content/upload/'+ options.value }))
@@ -170,13 +396,18 @@ app.controller('researchersController', ['$scope', '$location', '$window', '$rou
                     .appendTo(container);
             }
         },
-        
+
 
     ];
     $scope.dg_researchers_xs = {
-
+        showColumnHeaders: false,
         headerFilter: {
             visible: false
+        },
+        remoteOperations: {
+            sorting: true,
+            paging: true,
+            filtering: true
         },
         filterRow: {
             visible: false,
@@ -210,20 +441,24 @@ app.controller('researchersController', ['$scope', '$location', '$window', '$rou
         //dataSource: employees,
         columns: $scope.dg_columns_xs,
         onContentReady: function (e) {
-
+            if (!$scope.dg_instance_xs)
+                $scope.dg_instance_xs = e.component;
         },
         onSelectionChanged: function (e) {
 
         },
-        width:'100%',
-      //  height: '550',
+        dataSource: {
+            store: orders
+        },
+        width: '100%',
+        //  height: '550',
         bindingOptions: {
-            dataSource: 'dataSource',
+           // dataSource: 'dataSource',
             //   dataSource: 'dg_ds', //'dg_employees_ds',
             // height: 'dg_employees_height'
         }
     };
-
+   // $scope.bind();
     //////////////////////////////////////////
     $scope.circle_clicked = function ($event) {
         $jq($event.currentTarget).toggleClass('circle-gray');
@@ -241,15 +476,15 @@ app.controller('researchersController', ['$scope', '$location', '$window', '$rou
         // alert('about');
 
         $jq('.researchers').fadeIn(400, function () {
-           //alert( $jq('#xs-core').width());
+            //alert( $jq('#xs-core').width());
             var W1 = $jq('#xs-core').width();
-           
+
             $jq('#xs-core').load(function () {
                 var H1 = $jq('#xs-core').height();
                 var wxcircle = 190 * 1.0 * 100 / 686;
-                 
+
                 $jq('.xcircle').width(wxcircle + '%');
-                
+
                 ///////////////////////
                 var c_3dp_left = (247 * 1.0 / 686) * W1;
                 var c_3dp_top = (4 * 1.0 / 684) * H1;
@@ -311,14 +546,14 @@ app.controller('researchersController', ['$scope', '$location', '$window', '$rou
                 var c_plr_top = (585 * 1.0 / 684) * H1;
                 $jq('#c_plr').width($scope.getCircleWidth(175)).css('left', c_plr_left + 'px').css('top', c_plr_top + 'px');
 
-                $jq('.mobile1').css('margin-top', c_iot_top+228 + 'px');
+                $jq('.mobile1').css('margin-top', c_iot_top + 228 + 'px');
             });
             var w1 = (250 * 1.0 / 686) * W1;
-           // $jq('#tbox').css('left', w1 + 'px');
-          
+            // $jq('#tbox').css('left', w1 + 'px');
 
-           
-            
+
+
+
             //alert(w1);
             // $rootScope.pageFunctions();
         });

@@ -1,5 +1,5 @@
 ﻿'use strict';
-app.controller('homeController', ['$scope',   '$rootScope', function ($scope,   $rootScope) {
+app.controller('homeController', ['$scope', '$rootScope', 'userService', function ($scope, $rootScope, userService) {
     var $jq = jQuery.noConflict();
 
 
@@ -14,6 +14,10 @@ app.controller('homeController', ['$scope',   '$rootScope', function ($scope,   
         $jq('.home').fadeIn(400, function () {
             //$jq('#Top_bar').show();
             // $rootScope.pageFunctions();
+            userService.getMaterials().then(function (response) {
+                 
+
+            }, function (err) {  });
         });
         $rootScope.$broadcast('PageLoaded', 'home');
     });

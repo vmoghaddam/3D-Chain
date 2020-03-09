@@ -30,12 +30,14 @@ namespace API.Models
         public virtual DbSet<AspNetRole> AspNetRoles { get; set; }
         public virtual DbSet<AspNetUserClaim> AspNetUserClaims { get; set; }
         public virtual DbSet<AspNetUserLogin> AspNetUserLogins { get; set; }
-        public virtual DbSet<AspNetUser> AspNetUsers { get; set; }
         public virtual DbSet<AspNetUserToken> AspNetUserTokens { get; set; }
-        public virtual DbSet<RefreshToken> RefreshTokens { get; set; }
         public virtual DbSet<AssignedRole> AssignedRoles { get; set; }
         public virtual DbSet<City> Cities { get; set; }
+        public virtual DbSet<CompanyRate> CompanyRates { get; set; }
+        public virtual DbSet<CompanySlider> CompanySliders { get; set; }
         public virtual DbSet<Country> Countries { get; set; }
+        public virtual DbSet<Manufacturer> Manufacturers { get; set; }
+        public virtual DbSet<NetworkGroup> NetworkGroups { get; set; }
         public virtual DbSet<Option> Options { get; set; }
         public virtual DbSet<Person> People { get; set; }
         public virtual DbSet<PersonAccomplishment> PersonAccomplishments { get; set; }
@@ -45,8 +47,44 @@ namespace API.Models
         public virtual DbSet<PersonPatent> PersonPatents { get; set; }
         public virtual DbSet<PersonProject> PersonProjects { get; set; }
         public virtual DbSet<PersonPublication> PersonPublications { get; set; }
+        public virtual DbSet<Printer> Printers { get; set; }
+        public virtual DbSet<Printer2Material> Printer2Material { get; set; }
+        public virtual DbSet<Printer2Optic> Printer2Optic { get; set; }
+        public virtual DbSet<PrinterMaterial> PrinterMaterials { get; set; }
+        public virtual DbSet<PrinterModel> PrinterModels { get; set; }
+        public virtual DbSet<PrinterTechnology> PrinterTechnologies { get; set; }
+        public virtual DbSet<PrintingMaterial> PrintingMaterials { get; set; }
+        public virtual DbSet<RefreshToken> RefreshTokens { get; set; }
         public virtual DbSet<Review> Reviews { get; set; }
+        public virtual DbSet<ReviewRate> ReviewRates { get; set; }
         public virtual DbSet<State> States { get; set; }
+        public virtual DbSet<UserContentActivity> UserContentActivities { get; set; }
+        public virtual DbSet<ViewAward> ViewAwards { get; set; }
+        public virtual DbSet<ViewCertification> ViewCertifications { get; set; }
+        public virtual DbSet<ViewCountry> ViewCountries { get; set; }
+        public virtual DbSet<ViewOption> ViewOptions { get; set; }
         public virtual DbSet<ViewPerson> ViewPersons { get; set; }
+        public virtual DbSet<ViewPersonNetwork> ViewPersonNetworks { get; set; }
+        public virtual DbSet<ViewPersonPatent> ViewPersonPatents { get; set; }
+        public virtual DbSet<ViewPersonPublication> ViewPersonPublications { get; set; }
+        public virtual DbSet<ViewPersonReview> ViewPersonReviews { get; set; }
+        public virtual DbSet<ViewPrinter> ViewPrinters { get; set; }
+        public virtual DbSet<ViewPrinter2Optic> ViewPrinter2Optic { get; set; }
+        public virtual DbSet<ViewPrinterTechnology> ViewPrinterTechnologies { get; set; }
+        public virtual DbSet<ViewProject> ViewProjects { get; set; }
+        public virtual DbSet<ViewUserContentActivity> ViewUserContentActivities { get; set; }
+        public virtual DbSet<ViewManufacturer> ViewManufacturers { get; set; }
+        public virtual DbSet<ViewPrinterModel> ViewPrinterModels { get; set; }
+        public virtual DbSet<Printer2> Printer2 { get; set; }
+        public virtual DbSet<ViewPrinter2> ViewPrinter2 { get; set; }
+        public virtual DbSet<Material> Materials { get; set; }
+        public virtual DbSet<Supplier> Suppliers { get; set; }
+        public virtual DbSet<ViewAMProcess> ViewAMProcesses { get; set; }
+        public virtual DbSet<ViewAmTechnology> ViewAmTechnologies { get; set; }
+        public virtual DbSet<ViewCompanyPrinter> ViewCompanyPrinters { get; set; }
+        public virtual DbSet<AspNetUser> AspNetUsers { get; set; }
+        public virtual DbSet<CompanyPrinter> CompanyPrinters { get; set; }
+        public virtual DbSet<Company> Companies { get; set; }
+        public virtual DbSet<ViewCompany> ViewCompanies { get; set; }
     }
 }

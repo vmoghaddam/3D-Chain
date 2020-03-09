@@ -215,7 +215,7 @@ body.nice-scroll {
         left: 0;
         bottom: -3px;
         z-index: 1;
-        background: url(../images/box_shadow.png) repeat-x left top
+        /*background: url(../images/box_shadow.png) repeat-x left top*/
     }
 
     #Sliding-top .widgets_wrapper {
@@ -1580,7 +1580,7 @@ a.action_button {
     z-index: 205;
     margin: 0;
     display: none;
-    background-image: url(../images/box_shadow.png);
+    /*background-image: url(../images/box_shadow.png);*/
     background-repeat: repeat-x;
     background-position: left top
 }
@@ -2920,7 +2920,7 @@ body.mobile-side-slide {
     left: 0;
     bottom: -3px;
     z-index: 1;
-    background: url(../images/box_shadow.png) repeat-x left top
+    /*background: url(../images/box_shadow.png) repeat-x left top*/
 }
 
 #Subheader ul.woocommerce-breadcrumb li:last-child span {

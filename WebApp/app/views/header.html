@@ -170,21 +170,37 @@
         }
     }
     /************************/
+    .dchain{
+        top:-10px;
+    }
+    .about .dchain{
+        top:4px;
+    }
+    .about .dsignin{
+        top:-1px !important;
+    }
+
+    .dchainprofile{
+        top:-8px;
+    }
+    .about .dchainprofile{
+        top:-1px;
+    }
 </style>
 
-<div id="navbar" class="loading  " style="background:white;padding:5px 0 0px 0" ng-controller="headerController">
+<div id="navbar" class="loading  " style="background:white;padding:5px 0px 5px 0" ng-controller="headerController">
     <div class="container" style="margin:0 auto 0 auto">
         <table style="width:100%" class="table-header hidden-xs">
             <tr>
                 <td style="text-align:left">
-                    <a href="index.html" style="display:inline-block; padding:0 25px 0 0px;text-decoration:none !important" class="ep-logo">
+                    <a href="#!/home" style="display:inline-block; padding:0 25px 0 0px;text-decoration:none !important" class="ep-logo">
                         <img src="content/imgs/logo.png" style="height:55px !important;margin:0;" />
                         <span class="color-p logo-title" style="font-size:26px !important;margin-left:12px;top:-19px;">3D-Chain</span>
                     </a>
                 </td>
                 <td style="text-align:right;width:145px">
-                    <div class="index-menu-item" id="header_menu" style="padding:0;position:relative;top:-1px" ng-mouseover="header_menu_mouse()" ng-mouseleave="header_menu_leave()">
-                        <a href="signin.html" class="_menulink icon nounderline " target="_self" style="padding:0 40px 0px 40px">
+                    <div class="index-menu-item dchain" id="header_menu" style="padding:0;position:relative;" ng-mouseover="header_menu_mouse()" ng-mouseleave="header_menu_leave()">
+                        <a href="" class="_menulink icon nounderline " target="_self" style="padding:0 40px 0px 40px" ng-click="dummy_click()">
 
                             <span style="position:relative;top:-4px;left: 0px; color:black !important;font-weight:bold " class="f16">
                                 3D-Chain
@@ -196,17 +212,17 @@
                     <!---->
                 </td>
                 <td style="width:200px">
-                    <div id="link_signin" class="index-menu-item" style="padding:0 10px 0 10px;position:relative;top:-1px;">
-                        <a href="signin.html" class="_menulink icon nounderline violet" target="_self" style="padding:0 40px 0px 40px" ng-show="IsSignInVisible">
+                    <div id="link_signin" class="index-menu-item dchain dsignin" style="padding:0 ;position:relative;">
+                        <a href="" data-ng-click="navigate2('/signin','signin',1)" class="_menulink icon nounderline violet" target="_self" style="padding:9px 40px 0px 40px" ng-show="IsSignInVisible">
 
-                            <span style="position:relative;top:0px;left: 0px; color:black !important;font-weight:bold " class="f16">
+                            <span style="position:relative;top:-4px;left: 0px; color:black !important;font-weight:bold " class="f16">
                                 Sign In
 
                             </span>
                         </a>
                     </div>
 
-                    <div id="link_profile" class="index-menu-item link_profile" style="padding:0px 20px 0 20px;position:relative;top:-7px" ng-show="ProfileVisible">
+                    <div id="link_profile" class="index-menu-item link_profile dchainprofile" style="padding:0px 20px 0 20px;position:relative;" ng-show="ProfileVisible">
                         <a href="" data-ng-click="link_profile_click()" class="nounderline" target="_self" style="border:none !important;padding:0 !important;  ">
 
 
@@ -246,9 +262,9 @@
 
     <div id="popup_profile" dx-popup="popup_profile">
         <div style="padding:5px 0px 0px 10px" class="dx-border">
-            <div style="margin:0px 0 5px 0px;font-size:16px">
+            <div style="margin:0px 0 5px 0px;font-size:16px" ng-show="Role=='Person' || Role=='Company'">
                 <i class="icon ion-md-information-circle-outline" style="font-size:24px;color:rgba(0,0,0,.7)"></i>
-                <span style="display:inline-block;position:relative;top:-4px;left:3px"><a href="" target="_blank" ng-click="viewProfile()">View Profile</a></span>
+                <span style="display:inline-block;position:relative;top:-4px;left:3px"><a href="" target="_blank"  ng-click="viewProfile()">View Profile</a></span>
             </div>
             <div style="margin:0px 0 5px 0px;font-size:16px">
                 <i class="icon ion-md-settings" style="font-size:24px;color:rgba(0,0,0,.7)"></i>
@@ -266,20 +282,25 @@
         <tr>
             <td style="text-align:left"></td>
             <td style="text-align:right;width:145px;position:relative">
-                <div class="dropdown-content" style="top: 40px;left:0 !important" id="header_menu_content" ng-mouseover="header_menu_mouse()" ng-mouseleave="header_menu_leave()">
-                    <a href="#" style="padding-top:10px">
+                <div class="dropdown-content" style="top: 40px;left:-50px !important" id="header_menu_content" ng-mouseover="header_menu_mouse()" ng-mouseleave="header_menu_leave()">
+
+                    <a href="#!/printers" style="padding-top:15px">3DP Technology </a>
+                    <a href="#!/materials" style="padding-top:15px">
+                        3DP Material
+                    </a>
+                    <a href="#!/service" style="padding-top:15px">
                         3DP Service
                     </a>
-                    <a href="#">3DP Technology </a>
-                    <a href="#">
-                        Laser Cutting
-                    </a>
-                    <a href="#">Design</a>
-                    <a href="#">Marketplace</a>
+                    <a href="#!/research" style="padding-top:15px">
+                        Research & Development
 
-                    <a href="#" style="padding-bottom:10px">
-                        R & D
                     </a>
+                    
+                    <a href="#" style="padding-top:15px;padding-bottom:15px;color:rgba(0,112,192,1) !important">
+                        WW 3D Printing
+                    </a>
+
+
                 </div>
             </td>
             <td style="width:200px"></td>
@@ -303,31 +324,37 @@
             <img ng-src="{{image}}" style="width:60px;height:60px;border-radius:50%;  " />
         </div>
         <!--<div id="_lnk_profile" style="display:none;background:white;padding:5px;">
-             <img ng-src="{{image}}" style="width:60px;height:60px;border-radius:50%;  " />
-            <span style="position:relative;top:0px;left: 0; color:rgba(0,0,0,0.7); font-weight:bold" class="f16">
-                {{userTitle}}
+         <img ng-src="{{image}}" style="width:60px;height:60px;border-radius:50%;  " />
+        <span style="position:relative;top:0px;left: 0; color:rgba(0,0,0,0.7); font-weight:bold" class="f16">
+            {{userTitle}}
 
-            </span>
-            <div style="margin:0px 0 5px 0px;font-size:16px">
+        </span>
+        <div style="margin:0px 0 5px 0px;font-size:16px">
 
-                <span style="display:inline-block;position:relative;top:0;left:0px"><a href="" target="_blank" ng-click="viewProfile()" style="border-bottom:none;padding:0;color:rgba(0,0,0,0.7);font-size:16px">View Profile</a></span>
-            </div>
-            <div style="margin:0px 0 5px 0px;font-size:16px">
+            <span style="display:inline-block;position:relative;top:0;left:0px"><a href="" target="_blank" ng-click="viewProfile()" style="border-bottom:none;padding:0;color:rgba(0,0,0,0.7);font-size:16px">View Profile</a></span>
+        </div>
+        <div style="margin:0px 0 5px 0px;font-size:16px">
 
-                <span style="display:inline-block;position:relative;top:0;left:0px"><a href="#" target="_blank" style="border-bottom:none;padding:0;color:rgba(0,0,0,0.7);font-size:16px">Settings & Privacy</a></span>
-            </div>
-            <div style="margin:0px 0 0px 0px;font-size:16px">
+            <span style="display:inline-block;position:relative;top:0;left:0px"><a href="#" target="_blank" style="border-bottom:none;padding:0;color:rgba(0,0,0,0.7);font-size:16px">Settings & Privacy</a></span>
+        </div>
+        <div style="margin:0px 0 0px 0px;font-size:16px">
 
-                <span style="display:inline-block;position:relative;top:0;left:0px"><a href="" ng-click="signOut()" target="_blank" style="border-bottom:none;padding:0;color:rgba(0,0,0,0.7);font-size:16px">Sign Out</a></span>
-            </div>
-        </div>-->
-        <a href="#"> 3DP Service</a>
-        <a href="#">3DP Technology</a>
-        <a href="#">Laser Cutting</a>
-        <a href="#">R & D</a>
-        <a href="#">Design</a>
-        <a href="#">Marketplace</a>
-        <a href="#">About Us</a>
+            <span style="display:inline-block;position:relative;top:0;left:0px"><a href="" ng-click="signOut()" target="_blank" style="border-bottom:none;padding:0;color:rgba(0,0,0,0.7);font-size:16px">Sign Out</a></span>
+        </div>
+    </div>-->
+        <a href="#!/printers">3DP Technology</a>
+        <a href="#!/materials">3DP Material</a>
+        <a href="#!/service"> 3DP Service</a>
+
+
+        <a href="#!/research">
+            Research & Development
+        </a>
+
+        <a href="#">
+            Worldwide 3D Printing
+        </a>
+        <a href="#!/about">About Us</a>
         <a href="#">Contact Us</a>
         <a href="" class="_lnk_profile" style="display:none" ng-click="viewProfile()">View Profile</a>
         <a href="" class="_lnk_profile" style="display:none">Settings & Privacy</a>

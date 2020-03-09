@@ -67,19 +67,20 @@ app.factory('authService', ['$http', '$q', 'localStorageService', 'ngAuthSetting
             else {
                 localStorageService.set('authorizationData', { token: responseData.access_token, userName: loginData.userName, refreshToken: "", expires: responseData['.expires'], useRefreshTokens: false });
             }
-            localStorageService.set('userData', { Name: responseData.Name, UserId: responseData.UserId, Image: responseData.Image });
+            localStorageService.set('userData', { Name: responseData.Name, UserId: responseData.UserId, Image: responseData.Image,Role:responseData.Role });
             _authentication.isAuth = true;
             _authentication.userName = loginData.userName;
             _authentication.useRefreshTokens = loginData.useRefreshTokens;
             $rootScope.userName = loginData.userName;
             $rootScope.userTitle = responseData.Name;
             $rootScope.userId = responseData.UserId;
-            $rootScope.image = $rootScope.imagesUrl+ responseData.Image;
+            $rootScope.image = $rootScope.imagesUrl + responseData.Image;
+            $rootScope.role = responseData.Role;
             deferred.resolve(response);
 
         }, function (err, status) {
-            alert('ex');
-            console.log(err);
+            //alert('ex');
+            //console.log(err);
            // _logOut();
             deferred.reject(err);
         });
@@ -112,7 +113,8 @@ app.factory('authService', ['$http', '$q', 'localStorageService', 'ngAuthSetting
             if (userData) {
                 $rootScope.userTitle = userData.Name;
                 $rootScope.userId = userData.UserId;
-                $rootScope.image = $rootScope.imagesUrl+ userData.Image;
+                $rootScope.image = $rootScope.imagesUrl + userData.Image;
+                $rootScope.role = userData.Role;
             }
         }
 
@@ -305,6 +307,17 @@ app.factory('authService', ['$http', '$q', 'localStorageService', 'ngAuthSetting
         _fillModuleData();
 
     };
+    var _register2 = function (entity) {
+        var deferred = $q.defer();
+        $http.post($rootScope.serviceUrl + 'api/users/register', entity).then(function (response) {
+            deferred.resolve(response.data);
+        }, function (err, status) {
+
+            deferred.reject(Exceptions.getMessage(err));
+        });
+
+        return deferred.promise;
+    };
 
 
     authServiceFactory.setModule = _setModule;
@@ -322,6 +335,7 @@ app.factory('authService', ['$http', '$q', 'localStorageService', 'ngAuthSetting
     authServiceFactory.obtainAccessToken = _obtainAccessToken;
     authServiceFactory.externalAuthData = _externalAuthData;
     authServiceFactory.registerExternal = _registerExternal;
+    authServiceFactory.register2 = _register2;
     authServiceFactory.IsAuthurized = function () {
 
         return authServiceFactory.authentication.isAuth;

@@ -235,6 +235,45 @@ app.controller('aboutController', ['$scope', '$location', '$routeParams', '$root
             }
         }
     };
+    ////////////////////////////////////////
+    $scope.video_click = function () {
+        $scope.popup_video_visible = true;
+    };
+    $scope.popup_video_visible = false;
+    $scope.popup_video_title = '';
+    $scope.popup_video = {
+        shading: true,
+        //width: $rootScope.popupWidth(600, true),
+        //height: $rootScope.popupHeight(210, true),
+        fullScreen: true,
+        showTitle: true,
+        dragEnabled: true,
+        toolbarItems: [
+            
+        ],
+        visible: false,
+        closeOnOutsideClick: false,
+        onShowing: function (e) {
+            $jq('html').addClass('no-yscroll');
+            $rootScope.onScrollDisabled = true;
+
+        },
+        onShown: function (e) {
+
+        },
+        onHiding: function () {
+            $jq('html').removeClass('no-yscroll');
+            $rootScope.onScrollDisabled = false;
+            $scope.popup_video_visible = false;
+
+        },
+        bindingOptions: {
+            visible: 'popup_video_visible',
+
+            title: 'popup_video_title',
+
+        }
+    };
     //////////////////////////////////////////
     $scope.fu = function () {
         $rootScope.pageFunctions();
@@ -243,8 +282,9 @@ app.controller('aboutController', ['$scope', '$location', '$routeParams', '$root
        // alert('about');
        
         $jq('.about').fadeIn(400, function () {
-            $jq('#Top_bar').show();
-            $rootScope.pageFunctions();
+            $jq('.animate').show();
+         //   $jq('#Top_bar').show();
+         //   $rootScope.pageFunctions();
         });
         $rootScope.$broadcast('PageLoaded', 'about');
     });

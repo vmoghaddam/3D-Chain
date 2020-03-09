@@ -14,6 +14,12 @@ namespace API.Models
     
     public partial class Review
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Review()
+        {
+            this.UserContentActivities = new HashSet<UserContentActivity>();
+        }
+    
         public int Id { get; set; }
         public int PersonId { get; set; }
         public string Body { get; set; }
@@ -27,5 +33,7 @@ namespace API.Models
         public Nullable<int> ToReviewId { get; set; }
     
         public virtual Person Person { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<UserContentActivity> UserContentActivities { get; set; }
     }
 }

@@ -1,5 +1,5 @@
 ﻿app.controller("headerMainController", ['$scope', '$rootScope', '$routeParams', '$location', 'authService', function ($scope, $rootScope, $routeParams, $location, authService) {
-
+    $scope.Role = $rootScope.role;
     $scope.btn_signin = {
         text: 'SIGN IN',
         type: 'default',
@@ -71,6 +71,7 @@
     }
     
     $rootScope.link_profile_click = function () {
+         
         $scope.popup_profile_visible = true;
 
     };
@@ -79,7 +80,8 @@
     var x = $jq('#link_profile').offset();
 
     //  alert(x.top);
-    var _ox = (x.left + 90) - 30;
+    var _ox = (x.left + 90) - 30+1000;
+     
     var _oy = 60 + 60;
     var _offset = _ox + ' ' + _oy;
     $scope.popup_profile_visible = false;
@@ -87,7 +89,7 @@
     $scope.popup_profile = {
         // position: { of: '#link_profile'},
         shading: true,
-       
+      
         position: {
             //my: 'left',
             at: 'top left',

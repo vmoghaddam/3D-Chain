@@ -25,6 +25,8 @@ namespace API.Models
             this.PersonProjects = new HashSet<PersonProject>();
             this.PersonPublications = new HashSet<PersonPublication>();
             this.Reviews = new HashSet<Review>();
+            this.UserContentActivities = new HashSet<UserContentActivity>();
+            this.Companies = new HashSet<Company>();
         }
     
         public int Id { get; set; }
@@ -57,6 +59,10 @@ namespace API.Models
         public Nullable<int> PositionId { get; set; }
         public Nullable<System.DateTime> DateJoin { get; set; }
         public Nullable<int> FieldOfStudyId { get; set; }
+        public Nullable<int> TempId { get; set; }
+        public string Education2 { get; set; }
+        public string Location2 { get; set; }
+        public string Position2 { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PersonAccomplishment> PersonAccomplishments { get; set; }
@@ -74,5 +80,9 @@ namespace API.Models
         public virtual ICollection<PersonPublication> PersonPublications { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Review> Reviews { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<UserContentActivity> UserContentActivities { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Company> Companies { get; set; }
     }
 }

@@ -1,5 +1,8 @@
 ﻿<style>
-
+    
+    .dx-datagrid .dx-row-lines > td {
+        border-bottom: 1px solid #e0e0e0 !important;
+    }
     .dx-row.dx-selection {
         background-color: #eee;
     }
@@ -47,6 +50,11 @@
     #dg_researchers .dx-datagrid td {
         padding: 10px !important;
     }
+    #dg_researchers .dx-datagrid-filter-row td {
+        padding: 0 !important
+    }
+
+    
 </style>
 
 <div class="researchers">
@@ -57,85 +65,82 @@
                 <div class="entry-content" itemprop="mainContentOfPage">
 
 
-                    <div class="section mcb-section  " style="padding-top:0px; padding-bottom:0px; background-color:rgba(230,230,230,1) !important;border-top:0px solid rgba(60,56,55,1);border-bottom:0px solid rgba(60,56,55,1);">
+                    <div class="section mcb-section  " style="padding-top:0px; padding-bottom:0px; background-color:rgba(230,230,230,1) !important;background:black !important; border-top:0px solid rgba(60,56,55,1);border-bottom:0px solid rgba(60,56,55,1);">
                         <div class="section_wrapper mcb-section-inner" style="padding:0 !important; ">
                             <div class="wrap mcb-wrap one  valign-top clearfix" style="">
                                 <div class="mcb-wrap-inner">
                                     <div style="text-align:center; color:black; font-size:18px">
-                                        <div style="width:837px;min-height:740px;margin:30px auto 0 auto;position:relative" class="hidden-xs hidden-sm">
-                                            <a href="#" data-ng-click="navigate('/signup/development','signup-development',1)" class="bgcolor-p hidden-xs hidden-sm" style="position:absolute;top:135px;left:-71px; color:white;font-weight:bold; font-size:15px;padding:17px 15px 17px 15px;width:250px">
+                                        <div style="width:837px;min-height:740px;margin:50px auto 0 auto;position:relative" class="hidden-xs hidden-sm ">
+                                            <a href="#" data-ng-click="navigate('/signup/development','signup-development',1)" class="bgcolor-p hidden-xs hidden-sm hidden" style="position:absolute;top:135px;left:-71px; color:white;font-weight:bold; font-size:15px;padding:17px 15px 17px 15px;width:250px">
                                                 JOIN NETWORK OF RESEARCHERS
 
 
                                             </a>
-                                            <a href="#" data-ng-click="navigate('/signup/development','signup-development',1)" class="bgcolor-p hidden-xs hidden-sm" style="position:absolute;top:135px;left:658px; color:white;font-weight:bold; font-size:15px;padding:10px;width:250px">
+                                            <a href="#" data-ng-click="navigate('/signup/development','signup-development',1)" class="bgcolor-p hidden-xs hidden-sm hidden" style="position:absolute;top:135px;left:658px; color:white;font-weight:bold; font-size:15px;padding:10px;width:250px">
                                                 CHECK OUT NETWORK OF START-UP BUSINESSES
 
 
                                             </a>
 
 
-                                            <img src="../../content/imgs/circles-off.png" style="position:absolute;left:0" />
+                                            <img src="../../content/imgs/circles-off-x.png" style="position:absolute;left:0;cursor:pointer" data-ng-click="navigate2('/research','research',1)" />
                                             <img src="../../content/imgs/researcher2.png" style="position:absolute;left:0;z-index:-1;top:348px;left:286px;width:250px" />
 
-                                            <img src="../../content/imgs/3dp.png" data-id="7" style="left: 338px;    top: 175.5px;" class="circle-network2" ng-click="circle_clicked($event,7)" />
-                                            <img src="../../content/imgs/software.png" data-id="8" style="left: 196px;    top: 234.5px;" class="circle-network2" ng-click="circle_clicked($event,8)" />
-                                            <img src="../../content/imgs/dental.png" data-id="11" style="left: 138px;    top: 378px;" class="circle-network2" ng-click="circle_clicked($event,11)" />
-                                            <img src="../../content/imgs/medical.png" data-id="13" style="left: 197px;    top: 519px;" class="circle-network2" ng-click="circle_clicked($event,13)" />
-                                            <img src="../../content/imgs/polymer.png" data-id="14" style="left: 338px;    top: 578px;" class="circle-network2" ng-click="circle_clicked($event,14)" />
-                                            <img src="../../content/imgs/ceramic.png" data-id="15" style="left: 480px;    top: 519px;" class="circle-network2" ng-click="circle_clicked($event,15)" />
-                                            <img src="../../content/imgs/metal.png" data-id="12" style="left: 539px;    top: 377px;" class="circle-network2" ng-click="circle_clicked($event,12)" />
-                                            <img src="../../content/imgs/concrete.png" data-id="1" style="left: 480px;    top: 234px;" class="circle-network2" ng-click="circle_clicked($event,1)" />
+                                            <img src="../../content/imgs/3dp-x.png" data-id="7" style="left: 338px;    top: 175.5px;" class="circle-network2" ng-click="circle_clicked($event,7)" />
+                                            <img src="../../content/imgs/software-x.png" data-id="8" style="left: 196px;    top: 234.5px;" class="circle-network2" ng-click="circle_clicked($event,8)" />
+                                            <img src="../../content/imgs/dental-x.png" data-id="11" style="left: 138px;    top: 378px;" class="circle-network2" ng-click="circle_clicked($event,11)" />
+                                            <img src="../../content/imgs/medical-x.png" data-id="13" style="left: 197px;    top: 519px;" class="circle-network2" ng-click="circle_clicked($event,13)" />
+                                            <img src="../../content/imgs/polymer-x.png" data-id="14" style="left: 338px;    top: 578px;" class="circle-network2" ng-click="circle_clicked($event,14)" />
+                                            <img src="../../content/imgs/ceramic-x.png" data-id="15" style="left: 480px;    top: 519px;" class="circle-network2" ng-click="circle_clicked($event,15)" />
+                                            <img src="../../content/imgs/metal-x.png" data-id="12" style="left: 539px;    top: 377px;" class="circle-network2" ng-click="circle_clicked($event,12)" />
+                                            <img src="../../content/imgs/concrete-x.png" data-id="1" style="left: 480px;    top: 234px;" class="circle-network2" ng-click="circle_clicked($event,1)" />
 
-                                            <img src="../../content/imgs/iot.png" data-id="2" style="left: 342px;    top: -2px;" class="circle-network" ng-click="circle_clicked($event,2)" />
-                                            <img src="../../content/imgs/dam.png" data-id="5" style="left: 217px;    top: 84px;" class="circle-network" ng-click="circle_clicked($event,5)" />
-                                            <img src="../../content/imgs/me.png" data-id="9" style="left: 47px;    top:257px;" class="circle-network" ng-click="circle_clicked($event,9)" />
-                                            <img src="../../content/imgs/ham.png" data-id="6" style="left: 463px;    top: 85px;" class="circle-network" ng-click="circle_clicked($event,6)" />
-                                            <img src="../../content/imgs/plr.png" data-id="10" style="left: 637px;    top:257px;" class="circle-network" ng-click="circle_clicked($event,10)" />
-                                            <img src="../../content/imgs/bd.png"  data-id="3" style="left: 47px;    top:503px;" class="circle-network" ng-click="circle_clicked($event,3)" />
-                                            <img src="../../content/imgs/ai.png" data-id="4" style="left: 637px;    top:503px;" class="circle-network" ng-click="circle_clicked($event,4)" />
+                                            <img src="../../content/imgs/iot-x.png" data-id="2" style="left: 342px;    top: -2px;" class="circle-network" ng-click="circle_clicked($event,2)" />
+                                            <img src="../../content/imgs/dam-x.png" data-id="5" style="left: 217px;    top: 84px;" class="circle-network" ng-click="circle_clicked($event,5)" />
+                                            <img src="../../content/imgs/me-x.png" data-id="9" style="left: 47px;    top:257px;" class="circle-network" ng-click="circle_clicked($event,9)" />
+                                            <img src="../../content/imgs/ham-x.png" data-id="6" style="left: 463px;    top: 85px;" class="circle-network" ng-click="circle_clicked($event,6)" />
+                                            <img src="../../content/imgs/plr-x.png" data-id="10" style="left: 637px;    top:257px;" class="circle-network" ng-click="circle_clicked($event,10)" />
+                                            <img src="../../content/imgs/bd-x.png" data-id="3" style="left: 47px;    top:503px;" class="circle-network" ng-click="circle_clicked($event,3)" />
+                                            <img src="../../content/imgs/ai-x.png" data-id="4" style="left: 637px;    top:503px;" class="circle-network" ng-click="circle_clicked($event,4)" />
 
                                         </div>
 
-                                        <div style="min-height:450px;  margin:0 auto 0 auto;position:relative" class="hidden-lg mobile1">
+                                        <div style="min-height:420px;  margin:0 auto 0 auto;position:relative" class="hidden-lg mobile1">
                                             <div style="position:relative;margin:0px auto 0 auto;width:90%;max-width:360px">
-                                                <img id="xs-core" src="../../content/imgs/circles-core.png" style="width:100%;position:absolute;top:0px;left:0;height:auto" />
+                                                <img id="xs-core" src="../../content/imgs/circles-core-x.png" style="cursor:pointer;width:100%;position:absolute;top:0px;left:0;height:auto" data-ng-click="navigate2('/research','research',1)" />
 
-                                                <img id="c_3dp" src="../../content/imgs/3dpx.png" data-id="7" style="position: absolute;top:200px;left:200px" class="xcircle" ng-click="circle_clicked($event,7)" />
-                                                <img id="c_iot" src="../../content/imgs/iot.png" data-id="2" style="position: absolute;top:200px;left:200px" class="xcircle" ng-click="circle_clicked($event,2)" />
-                                                <img id="c_dam" src="../../content/imgs/dam.png" data-id="5" style="position: absolute;top:200px;left:200px" class="xcircle" ng-click="circle_clicked($event,5)" />
-                                                <img id="c_ham" src="../../content/imgs/ham.png" data-id="6" style="position: absolute;top:200px;left:200px" class="xcircle" ng-click="circle_clicked($event,6)" />
-                                                <img id="c_software" src="../../content/imgs/softwarex.png" data-id="8" style="position: absolute;top:200px;left:200px" class="xcircle" ng-click="circle_clicked($event,8)" />
-                                                <img id="c_concrete" src="../../content/imgs/concretex.png" data-id="1" style="position: absolute;top:200px;left:200px" class="xcircle" ng-click="circle_clicked($event,1)" />
-                                                <img id="c_dental" src="../../content/imgs/dental.png" data-id="11" style="position: absolute;top:200px;left:200px" class="xcircle" ng-click="circle_clicked($event,11)" />
-                                                <img id="c_metal" src="../../content/imgs/metal.png" data-id="12" style="position: absolute;top:200px;left:200px" class="xcircle" ng-click="circle_clicked($event,12)" />
-                                                <img id="c_medical" src="../../content/imgs/medical.png" data-id="13" style="position: absolute;top:200px;left:200px" class="xcircle" ng-click="circle_clicked($event,13)" />
-                                                <img id="c_ceramic" src="../../content/imgs/ceramic.png" data-id="15" style="position: absolute;top:200px;left:200px" class="xcircle" ng-click="circle_clicked($event,15)" />
-                                                <img id="c_polymer" src="../../content/imgs/polymer.png" data-id="14" style="position: absolute;top:200px;left:200px" class="xcircle" ng-click="circle_clicked($event,14)" />
+                                                <img id="c_3dp" src="../../content/imgs/3dp-x.png" data-id="7" style="position: absolute;top:200px;left:200px" class="xcircle" ng-click="circle_clicked($event,7)" />
+                                                <img id="c_iot" src="../../content/imgs/iot-x.png" data-id="2" style="position: absolute;top:200px;left:200px" class="xcircle" ng-click="circle_clicked($event,2)" />
+                                                <img id="c_dam" src="../../content/imgs/dam-x.png" data-id="5" style="position: absolute;top:200px;left:200px" class="xcircle" ng-click="circle_clicked($event,5)" />
+                                                <img id="c_ham" src="../../content/imgs/ham-x.png" data-id="6" style="position: absolute;top:200px;left:200px" class="xcircle" ng-click="circle_clicked($event,6)" />
+                                                <img id="c_software" src="../../content/imgs/softwarex-x.png" data-id="8" style="position: absolute;top:200px;left:200px" class="xcircle" ng-click="circle_clicked($event,8)" />
+                                                <img id="c_concrete" src="../../content/imgs/concretex-x.png" data-id="1" style="position: absolute;top:200px;left:200px" class="xcircle" ng-click="circle_clicked($event,1)" />
+                                                <img id="c_dental" src="../../content/imgs/dental-x.png" data-id="11" style="position: absolute;top:200px;left:200px" class="xcircle" ng-click="circle_clicked($event,11)" />
+                                                <img id="c_metal" src="../../content/imgs/metal-x.png" data-id="12" style="position: absolute;top:200px;left:200px" class="xcircle" ng-click="circle_clicked($event,12)" />
+                                                <img id="c_medical" src="../../content/imgs/medical-x.png" data-id="13" style="position: absolute;top:200px;left:200px" class="xcircle" ng-click="circle_clicked($event,13)" />
+                                                <img id="c_ceramic" src="../../content/imgs/ceramic-x.png" data-id="15" style="position: absolute;top:200px;left:200px" class="xcircle" ng-click="circle_clicked($event,15)" />
+                                                <img id="c_polymer" src="../../content/imgs/polymer-x.png" data-id="14" style="position: absolute;top:200px;left:200px" class="xcircle" ng-click="circle_clicked($event,14)" />
 
-                                                <img id="c_me" src="../../content/imgs/me.png" data-id="9" style="position: absolute;top:200px;left:200px" class="xcircle" ng-click="circle_clicked($event,9)" />
-                                                <img id="c_bd" src="../../content/imgs/bd.png" data-id="3" style="position: absolute;top:200px;left:200px" class="xcircle" ng-click="circle_clicked($event,3)" />
-                                                <img id="c_ai" src="../../content/imgs/ai.png" data-id="4" style="position: absolute;top:200px;left:200px" class="xcircle" ng-click="circle_clicked($event,4)" />
-                                                <img id="c_plr" src="../../content/imgs/plr.png" data-id="10" style="position: absolute;top:200px;left:200px" class="xcircle" ng-click="circle_clicked($event,10)" />
+                                                <img id="c_me" src="../../content/imgs/me-x.png" data-id="9" style="position: absolute;top:200px;left:200px" class="xcircle" ng-click="circle_clicked($event,9)" />
+                                                <img id="c_bd" src="../../content/imgs/bd-x.png" data-id="3" style="position: absolute;top:200px;left:200px" class="xcircle" ng-click="circle_clicked($event,3)" />
+                                                <img id="c_ai" src="../../content/imgs/ai-x.png" data-id="4" style="position: absolute;top:200px;left:200px" class="xcircle" ng-click="circle_clicked($event,4)" />
+                                                <img id="c_plr" src="../../content/imgs/plr-x.png" data-id="10" style="position: absolute;top:200px;left:200px" class="xcircle" ng-click="circle_clicked($event,10)" />
                                             </div>
 
 
                                         </div>
 
-                                        <a href="#" data-ng-click="navigate('/signup/development','signup-development',1)" class="bgcolor-p hidden-lg" style="  color:white;font-weight:bold; font-size:12px;padding:7px;width:95%;display:block;margin:0 auto">
+                                        <a href="" data-ng-click="navigate2('/signup/development','signup-development',1)" class="bgcolor-p hidden-lg hidden" style="  color:white;font-weight:bold; font-size:12px;padding:7px;width:95%;display:block;margin:0 auto">
                                             JOIN NETWORK OF RESEARCHERS
 
 
                                         </a>
-                                        <a href="#" data-ng-click="navigate('/signup/development','signup-development',1)" class="bgcolor-p hidden-lg" style="  color:white;font-weight:bold; font-size:12px;padding:7px;width:95%;display:block;margin:5px auto 5px auto">
+                                        <a href="" class="bgcolor-p hidden-lg hidden" style="  color:white;font-weight:bold; font-size:12px;padding:7px;width:95%;display:block;margin:5px auto 5px auto">
                                             CHECK OUT NETWORK OF START-UP BUSINESSES
 
 
                                         </a>
-                                        <div style=" margin:10px auto 10px auto;position:relative;font-size:20px;" class="hidden-xs">
-                                            Explore Researchers and Professionals in discovering and developing breakthrough technologies.
 
-                                        </div>
                                         <!--<div class="col-lg-3 col-md-3 ep-row3" style="text-align:left">
                                             <img src="../../content/imgs/signup1.png" style="height:180px;position:relative;top:1px" />
                                         </div>
@@ -148,7 +153,27 @@
 
                                     </div>
 
+                                    <a href="" data-ng-click="navigate2('/signup/development','signup-development',1)" class="bgcolor-p hidden-xs" style="text-align:center;  color:white;font-weight:bold; font-size:14px;padding:12px;width:70%;display:block;margin:10px auto 10px auto">
+                                        JOIN NETWORK OF RESEARCHERS
 
+
+                                    </a>
+                                    <a href="" class="bgcolor-p hidden-xs" style="text-align:center;   color:white;font-weight:bold; font-size:14px;padding:12px;width:70%;display:block;margin:10px auto 10px auto">
+                                        CHECK OUT NETWORK OF START-UP BUSINESSES
+
+
+                                    </a>
+
+                                    <a href="" data-ng-click="navigate2('/signup/development','signup-development',1)" class="bgcolor-p hidden visible-xs" style="text-align:center;  color:white;font-weight:bold; font-size:14px;padding:12px;width:90%;display:block;margin:10px auto 10px auto">
+                                        JOIN NETWORK OF RESEARCHERS
+
+
+                                    </a>
+                                    <a href="" class="bgcolor-p visible-xs" style="text-align:center;   color:white;font-weight:bold; font-size:14px;padding:12px;width:90%;display:block;margin:10px auto 10px auto">
+                                        CHECK OUT NETWORK OF START-UP BUSINESSES
+
+
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -185,6 +210,20 @@
 
                 </div>
             </div>
+        </div>
+    </div>
+    <div dx-popup="popupOptions">
+        <div data-options="dxTemplate: { name:'info' }">
+            <p style="text-align:center;font-size:20px;padding:10px;">
+                For more details,
+                <a href="#!/signin/printers" style="display:inline;font-size:24px;font-weight:bold">
+                    Sign in
+                </a>
+
+
+                to your 3d chain network account.
+            </p>
+
         </div>
     </div>
     <div ng-include="'app/views/footer.html'"></div>

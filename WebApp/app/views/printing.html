@@ -1,0 +1,849 @@
+﻿<link rel='stylesheet' id='mfn-shortcodes-css' href='content/css/wp-shortcodes.css?ver=20.9.6.2' type='text/css' media='all' />
+<style>
+    input[type="date"], input[type="email"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="url"], select, textarea {
+        border: 0;
+    }
+
+    .how_it_works.has_border:after {
+        content: "";
+        display: block;
+        width: 12%;
+        height: 4px;
+        background: rgba(255,255,255,.7);
+        -webkit-border-radius: 2px;
+        border-radius: 2px;
+        position: absolute;
+        right: -10.5%;
+        top: 38%;
+    }
+
+    .how_it_works.has_border.after2:after {
+        content: "";
+        display: block;
+        width: 12%;
+        height: 4px;
+        background: rgba(255,255,255,.7);
+        -webkit-border-radius: 2px;
+        border-radius: 2px;
+        position: absolute;
+        right: -24.5%;
+        top: 47%;
+    }
+
+    .how_it_works .image .number {
+        position: absolute;
+        right: -10px;
+        bottom: 5px;
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+        font-size: 15px;
+        text-align: center;
+        border-radius: 100%;
+        -webkit-box-shadow: inset 0 0 0 2px rgba(0,0,0,.1);
+        box-shadow: inset 0 0 0 2px rgba(0,0,0,.1);
+    }
+
+    div.accordion:after {
+        margin-top: 6px;
+    }
+
+    div.accordion {
+        padding-left: 0;
+        padding-bottom: 7px;
+        border-bottom: none;
+    }
+
+    div.accordion-panel {
+        padding: 5px 0px 5px 0px;
+    }
+
+    .accomplishment-panel {
+        padding-left: 20px;
+    }
+
+    .dx-checkbox-container .dx-checkbox-text {
+        font-size: 15px;
+    }
+
+    .dx-datagrid .dx-row-lines > td {
+        border-bottom: 1px solid #e0e0e0 !important;
+    }
+
+    .dx-row.dx-selection {
+        background-color: #eee;
+    }
+
+    .dx-datagrid-headers .dx-header-row {
+        background-color: #00aba9;
+        background-color: #647687;
+        background-color: #898e8c;
+        color: white;
+    }
+
+    .dx-datagrid-headers .dx-datagrid-table .dx-row > td .dx-sort-indicator, .dx-datagrid-headers .dx-datagrid-table .dx-row > td .dx-sort {
+        color: white;
+    }
+
+
+    .dx-datagrid .dx-row > td {
+        font-size: 16px;
+    }
+
+    #dg_printing .dx-datagrid-rowsview, #dg_printing_xs .dx-datagrid-rowsview {
+        background: rgba(38,38,38,1);
+        color: white;
+    }
+
+    #dg_printing_xs .dx-datagrid-text-content {
+        font-size: 13px;
+        white-space: normal;
+        text-align: center;
+    }
+
+    #dg_printing_xs .dx-datagrid-headers {
+        border: none;
+    }
+
+    #dg_printing_xs .dx-datagrid-rowsview {
+        border: none;
+    }
+
+    #dg_printing_xs .dx-datagrid td {
+        font-size: 30px;
+        padding: 5px !important;
+    }
+
+    #dg_printing .dx-datagrid td {
+        padding: 10px !important;
+    }
+
+    #dg_printing .dx-datagrid-filter-row td {
+        padding: 0 !important
+    }
+
+    div.accordion.active.ac2:after {
+        position: absolute !important;
+        right: 0;
+        top: 7px;
+    }
+
+    div.accordion.ac2:after {
+        position: absolute !important;
+        right: 0;
+        top: 7px;
+    }
+
+    table th, table td {
+        text-align: left
+    }
+</style>
+<div class="about  bg-gray">
+
+    <div ng-include="'app/views/header.html'"></div>
+
+    <div id="Content" style="margin-top:45px;">
+        <div class="content_wrapper clearfix">
+            <div class="sections_group">
+                <div class="entry-content" itemprop="mainContentOfPage">
+
+
+                    <div class="section mcb-section  " style="margin-top:0;margin-bottom:0;padding-top:0px; padding-bottom:0px; background-color:rgba(0,112,192,1) !important;border-top:0px solid rgba(60,56,55,1);border-bottom:0px solid rgba(60,56,55,1);">
+                        <div class="section_wrapper mcb-section-inner ep-row2  no-box-shadow">
+                            <div class="wrap mcb-wrap one  valign-top clearfix" style="">
+                                <div class="mcb-wrap-inner">
+                                    <div style="text-align:center; color:white; " class="ep-hint">
+
+
+                                        <div style="text-align:center;font-family:'Arial Narrow'!important; font-size:24px !important">
+                                            <div style=" font-weight:bold;  " class="page-header-title ">
+                                                3D Printing Service
+
+                                            </div>
+                                            <div style=" font-weight:normal;margin-top:7px " class="page-header-comment">
+                                                Explore 3D Printing companies to find suitable custom 3D Printing
+                                            </div>
+                                            <div style=" font-weight:normal;margin-top:7px " class="page-header-comment">
+                                                service for your products
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!--Section 2-->
+                    <div class="section mcb-section   bg-gray hidden-xs   lghow margin-bottom-10" style="padding-top:0px; padding-bottom:0px;  ">
+                        <div class="section_wrapper mcb-section-inner">
+                            <div class="wrap mcb-wrap one  valign-top clearfix" style="">
+                                <div class="mcb-wrap-inner bgcolor-gray" style="padding:20px 0 20px 0;position:relative">
+                                    <img src="../../content/imgs/txt1.jpg" style="position:absolute;top:48px;left:548px;width:400px;">
+                                    <img src="../../content/imgs/txt2.jpg" style="position:absolute;top:145px;left:478px;width:229px">
+                                    <img src="../../content/imgs/txt3.jpg" style="position:absolute;top:105px;left:930px;width:197px">
+                                    <img src="../../content/imgs/txt4.jpg" style="position:absolute;bottom:93px;left:429px;width:338px">
+                                    <img src="../../content/imgs/txt5.jpg" style="position:absolute;bottom:138px;left:940px;width:191px">
+                                    <img src="../../content/imgs/txt6.jpg" style="position:absolute;bottom:43px;left:878px;width:153px">
+                                    <div class="column mcb-column one-fifth column_how_it_works " style="text-transform:uppercase;width:10.5%">
+                                        <h4 class="hidden-md hidden-sm" style="transform: rotate(-90deg);width:265px;font-size:17px !important;position:relative;top:211px">
+                                            find A Manufacturer
+                                        </h4>
+                                    </div>
+                                    <div class="column mcb-column one-fifth column_how_it_works " style="text-transform:uppercase;border:dashed 4px white;position:relative">
+                                        <div class="how_it_works  has_border after2" style="padding-top:5px !important;padding-bottom:5px !important">
+
+                                            <div class="animate" data-anim-type="fadeIn">
+                                                <div class="image image2" style="margin-bottom:5px;"><img src="../../content/imgs/select_a_material.gif" class="scale-with-grid" alt="select_a_material" width="676" height="525"></div>
+
+                                                <h4 class="hidden-md hidden-sm" style="font-size:14px !important;">Select A Material</h4>
+                                                <h4 class="hidden visible-sm visible-md" style="font-size:13px !important">Select A Material</h4>
+                                            </div>
+                                            <div class="animate" data-anim-type="fadeIn" style="margin-top:7px;">
+                                                <div class="image image2" style="margin-bottom:5px;"><img src="../../content/imgs/g1.gif" class="scale-with-grid" alt="design" width="675" height="525"></div>
+                                                <h4 class="hidden-md hidden-sm" style="font-size:14px !important;">
+                                                    SELECT A TECHNOLOGY
+                                                </h4>
+                                                <h4 class="hidden visible-sm visible-md" style="font-size:13px !important">
+                                                    SELECT A TECHNOLOGY
+                                                </h4>
+
+                                            </div>
+                                            <div class="animate" data-anim-type="fadeIn" style="margin-top:7px;">
+                                                <div class="image image2" style="margin-bottom:5px;"><img src="../../content/imgs/g2.gif" class="scale-with-grid" alt="design" width="675" height="525" style="max-width:110px !important"></div>
+                                                <h4 class="hidden-md hidden-sm" style="font-size:14px !important;">
+                                                    SELECT A SIZE
+                                                </h4>
+                                                <h4 class="hidden visible-sm visible-md" style="font-size:13px !important">
+                                                    SELECT A SIZE
+                                                </h4>
+
+                                            </div>
+                                        </div>
+                                        <span class="number number2">1</span>
+                                    </div>
+                                    <div class="column mcb-column one-fifth column_how_it_works " style="text-transform:uppercase;padding-left:10px">
+                                        <div class="how_it_works  has_border" style="top:191px">
+                                            <div class="animate" data-anim-type="fadeIn">
+                                                <div class="image image2"><img src="../../content/imgs/g4.gif" class="scale-with-grid" alt="design" width="675" height="525"><span class="number">2</span></div>
+                                                <h4 class="hidden-md hidden-sm">
+                                                    Upload your design
+                                                </h4>
+                                                <h4 class="hidden visible-sm visible-md" style="font-size:13px !important">
+                                                    Upload your design
+                                                </h4>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="column mcb-column one-fifth column_how_it_works " style="text-transform:uppercase">
+                                        <div class="how_it_works  has_border" style="top:191px">
+                                            <div class="animate" data-anim-type="fadeIn">
+                                                <div class="image image2"><img src="../../content/imgs/g3.gif" class="scale-with-grid" alt="find_a_manufacturer" width="675" height="525"><span class="number">3</span></div>
+
+                                                <h4 class="hidden-md hidden-sm">
+                                                    3D Printing & post processing
+                                                </h4>
+                                                <h4 class="hidden visible-sm visible-md" style="font-size:13px !important">
+                                                    3D Printing & post processing
+                                                </h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column mcb-column one-fifth column_how_it_works " style="text-transform:uppercase">
+                                        <div class="how_it_works  no_border" style="top:191px">
+                                            <div class="animate" data-anim-type="fadeIn">
+                                                <div class="image image2"><img src="../../content/imgs/receive_your_product.gif" class="scale-with-grid" alt="receive_your_product" width="675" height="525"><span class="number">4</span></div>
+
+                                                <h4 class="hidden-md hidden-sm">
+                                                    RECEIVE YOUR PRODUCT
+                                                </h4>
+                                                <h4 class="hidden visible-sm visible-md" style="font-size:13px !important">
+                                                    RECEIVE YOUR PRODUCT
+                                                </h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="clear:both"></div>
+                                </div>
+
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Section 2-->
+                    <!--Section 2 mobile-->
+                    <div class="section mcb-section   bg-gray hidden-lg hidden-md hidden-sm lghow margin-bottom-10" style="padding-top:0px; padding-bottom:0px;  ">
+                        <div class="section_wrapper mcb-section-inner" style="padding:0 !important">
+                            <div class="wrap mcb-wrap one  valign-top clearfix" style="">
+                                <div class="mcb-wrap-inner bgcolor-gray" style="padding:0px 0 0px 0;position:relative">
+                                    <img src="../../content/imgs/txt1.jpg" style="position:absolute;top:48px;left:548px;width:400px;">
+                                    <img src="../../content/imgs/txt2.jpg" style="position:absolute;top:145px;left:478px;width:229px">
+                                    <img src="../../content/imgs/txt3.jpg" style="position:absolute;top:105px;left:930px;width:197px">
+                                    <img src="../../content/imgs/txt4.jpg" style="position:absolute;bottom:93px;left:429px;width:338px">
+                                    <img src="../../content/imgs/txt5.jpg" style="position:absolute;bottom:138px;left:940px;width:191px">
+                                    <img src="../../content/imgs/txt6.jpg" style="position:absolute;bottom:43px;left:878px;width:153px">
+
+                                    <div class="column mcb-column one-fifth column_how_it_works " style="text-transform:uppercase;border:dashed 4px white;position:relative">
+                                        <div class="how_it_works  has_border after2" style="padding-top:7px !important;padding-bottom:5px !important">
+                                            <div style="font-weight:bold">find A Manufacturer</div>
+                                            <div class="animate" data-anim-type="fadeIn" style="margin-top:5px;width:48%;display:inline-block">
+                                                <div class="image image2" style="margin-bottom:5px;"><img src="../../content/imgs/select_a_material.gif" class="scale-with-grid" alt="select_a_material" width="676" height="525"></div>
+
+                                                <h4 class="hidden-md hidden-sm" style="font-size:14px !important;">Select A Material</h4>
+                                                <h4 class="hidden visible-sm visible-md" style="font-size:13px !important">Select A Material</h4>
+                                            </div>
+                                            <div class="animate" data-anim-type="fadeIn" style="margin-top:5px;width:48%;display:inline-block">
+                                                <div class="image image2" style="margin-bottom:5px;"><img src="../../content/imgs/g1.gif" class="scale-with-grid" alt="design" width="675" height="525"></div>
+                                                <h4 class="hidden-md hidden-sm" style="font-size:14px !important;">
+                                                    SELECT A TECHNOLOGY
+                                                </h4>
+                                                <h4 class="hidden visible-sm visible-md" style="font-size:13px !important">
+                                                    SELECT A TECHNOLOGY
+                                                </h4>
+
+                                            </div>
+                                            <div class="animate" data-anim-type="fadeIn" style="margin-top:7px;">
+                                                <div class="image image2" style="margin-bottom:5px;"><img src="../../content/imgs/g2.gif" class="scale-with-grid" alt="design" width="675" height="525" style="max-width:110px !important"></div>
+                                                <h4 class="hidden-md hidden-sm" style="font-size:14px !important;">
+                                                    SELECT A SIZE
+                                                </h4>
+                                                <h4 class="hidden visible-sm visible-md" style="font-size:13px !important">
+                                                    SELECT A SIZE
+                                                </h4>
+
+                                            </div>
+                                        </div>
+                                        <span class="number number2">1</span>
+                                    </div>
+                                    <div class="column mcb-column one-fifth column_how_it_works " style="text-transform:uppercase;padding-left:10px">
+                                        <div class="how_it_works  has_border">
+                                            <div class="animate" data-anim-type="fadeIn">
+                                                <div class="image image2"><img src="../../content/imgs/g4.gif" class="scale-with-grid" alt="design" width="675" height="525"><span class="number">2</span></div>
+                                                <h4 class="hidden-md hidden-sm">
+                                                    Upload your design
+                                                </h4>
+                                                <h4 class="hidden visible-sm visible-md" style="font-size:13px !important">
+                                                    Upload your design
+                                                </h4>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="column mcb-column one-fifth column_how_it_works " style="text-transform:uppercase">
+                                        <div class="how_it_works  has_border">
+                                            <div class="animate" data-anim-type="fadeIn">
+                                                <div class="image image2"><img src="../../content/imgs/g3.gif" class="scale-with-grid" alt="find_a_manufacturer" width="675" height="525"><span class="number">3</span></div>
+
+                                                <h4 class="hidden-md hidden-sm">
+                                                    3D Printing & post processing
+                                                </h4>
+                                                <h4 class="hidden visible-sm visible-md" style="font-size:13px !important">
+                                                    3D Printing & post processing
+                                                </h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column mcb-column one-fifth column_how_it_works " style="text-transform:uppercase">
+                                        <div class="how_it_works  no_border">
+                                            <div class="animate" data-anim-type="fadeIn">
+                                                <div class="image image2"><img src="../../content/imgs/receive_your_product.gif" class="scale-with-grid" alt="receive_your_product" width="675" height="525"><span class="number">4</span></div>
+
+                                                <h4 class="hidden-md hidden-sm">
+                                                    RECEIVE YOUR PRODUCT
+                                                </h4>
+                                                <h4 class="hidden visible-sm visible-md" style="font-size:13px !important">
+                                                    RECEIVE YOUR PRODUCT
+                                                </h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="clear:both"></div>
+                                </div>
+
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Section 2-->
+                    <!--section 3-->
+                    <div class="section mcb-section bg-gray margin-bottom-20 hidden-xs" style="padding-top:0px; padding-bottom:0px;  border-top:0px solid rgba(60,56,55,1);border-bottom:0px solid rgba(60,56,55,1);">
+                        <div class="section_wrapper mcb-section-inner no-box-shadow">
+                            <div class="wrap mcb-wrap one  valign-top clearfix" style="">
+                                <div class="mcb-wrap-inner b-shadow bg-white sec3" style="padding:10px 0 0px 0">
+                                    <div style="text-align:center; color:black; font-size:14px; ">
+
+                                        <a href="" style="background:rgba(0,112,192,1);color:white;font-weight:bold; padding:10px 75px;display:inline-block;cursor:initial;" class="hidden-xs">
+                                            FIND A MANUFACTURER
+
+                                        </a>
+                                        <a href="" style="background:rgba(0,112,192,1);color:white;font-weight:bold; padding:10px 44px;display:inline-block;font-size:13px;cursor:initial;" class="hidden-lg hidden-sm hidden-md">
+                                            FIND A MANUFACTURER
+
+                                        </a>
+                                        <div style="clear:both"></div>
+
+                                        <div class="column mcb-column one-third " style="min-height:295px; background:rgba(59,56,56,1);margin:10px 0 0 0;width:36%;color:white;padding:0 20px 10px 40px">
+                                            <div style="border-bottom:7px solid rgba(68,114,196,1);display:inline-block;padding: 15px 95px 5px 95px;font-size:17px;margin:0 auto 0 auto">
+                                                AM Technology
+                                            </div>
+                                            <div dx-select-box="sb_tech" id="sb_tech_con" style="margin:5px auto 0 auto"></div>
+                                            <div style="border-bottom:7px solid rgba(68,114,196,1);display:inline-block;padding: 15px 70px 5px 70px;font-size:17px;margin:0 auto 0 auto">
+                                                Min Build Volume (mm)
+
+                                            </div>
+                                            <div dx-number-box="txt_w" style="margin-top:5px;margin-bottom:5px;display:inline-block "></div>
+                                            <div dx-number-box="txt_h" style="margin-bottom:5px; display:inline-block"></div>
+                                            <div dx-number-box="txt_d" style="margin-bottom:5px; display:inline-block"></div>
+                                            <!--<div class="accordion" style="background: rgba(59,56,56,1);text-align:left">
+
+                                                <div style="border-bottom:7px solid rgba(68,114,196,1);display:inline-block;padding: 0px 25px 5px 25px;font-size:17px;color:white;margin:0 auto 0 auto">
+                                                    3D Printing Material
+                                                </div>
+                                            </div>
+
+                                            <div class="accordion-panel" id="publication_panel">
+                                                <div style="text-align:left; color:black; " class="accomplishment-panel">
+                                                    <div dx-check-box="chk_nylon" style="margin-bottom:0px;"></div>
+                                                    <div dx-check-box="chk_abs" style="margin-bottom:0px;"></div>
+                                                    <div dx-check-box="chk_pla" style="margin-bottom:0px;"></div>
+                                                    <div dx-check-box="chk_hdpe" style="margin-bottom:0px;"></div>
+                                                    <div dx-check-box="chk_pva" style="margin-bottom:0px;"></div>
+                                                    <div dx-check-box="chk_petg" style="margin-bottom:0px;"></div>
+                                                    <div dx-check-box="chk_resin" style="margin-bottom:0px;"></div>
+                                                    <div dx-check-box="chk_metals" style="margin-bottom:0px;"></div>
+                                                    <div dx-check-box="chk_carbon" style="margin-bottom:0px;"></div>
+                                                    <div dx-check-box="chk_multicolor" style="margin-bottom:0px;"></div>
+                                                    <div dx-check-box="chk_ceramic" style="margin-bottom:0px;"></div>
+                                                    <div dx-check-box="chk_wax" style="margin-bottom:0px;"></div>
+                                                    <div dx-check-box="chk_gypsum" style="margin-bottom:0px;"></div>
+                                                    <div dx-check-box="chk_concrete" style="margin-bottom:0px;"></div>
+
+                                                </div>
+                                            </div>-->
+                                            <div style="clear:both"></div>
+                                        </div>
+                                        <div class="column mcb-column one-third " style=" margin:10px 0 0 0;width:28%;padding:0 15px 0 15px; height:295px;">
+                                            <div style="background:rgba(59,56,56,1);color:white;height:295px">
+                                                <div style="border-bottom:7px solid rgba(68,114,196,1);display:inline-block;padding: 15px 85px 5px 85px;font-size:17px">Location</div>
+                                                <div style="display:inline-block;margin:5px auto 0 auto;width:222px">
+                                                    <div dx-text-box="txt_location" class="center" style="margin-bottom:5px;display:inline-block"></div>
+                                                </div>
+
+                                                <div style="border-bottom:7px solid rgba(68,114,196,1);display:inline-block;padding: 15px 68px 5px 68px;font-size:17px">
+                                                    Rush Delivery
+                                                </div>
+                                                <div style="background:white;margin:5px auto 0 auto;padding:10px;display:inline-block;text-align:left;width:222px;display:block">
+
+                                                    <div dx-check-box="chk_rush24" style="margin-bottom:10px;"></div>
+                                                    <div dx-check-box="chk_rush48" style="margin-bottom:0px;"></div>
+                                                </div>
+                                                <!--<div style="position:relative;width:289px;left:-4px;top:17px">
+                                                    <a class="button violet bgcolor-p color-white f14 bold letterspace sw85" style="margin-left:0px;text-align:center;margin-bottom:7px;border-radius:0;font-size:15px !important;margin-top:10px;z-index:1000" data-ng-click="search()" href="">SEARCH</a>
+
+                                                </div>-->
+                                                <!--<img src="../../content/imgs/earth.png" style="width:200px;margin:20px 0 20px 0" />-->
+
+                                            </div>
+                                            <div style="position:relative;width:480px;left:-81px;top:-67px">
+                                                <a class="button violet bgcolor-p color-white f14 bold letterspace sw85" style="margin-left:0px;text-align:center;margin-bottom:7px;border-radius:0;font-size:15px !important;margin-top:10px;z-index:1000" data-ng-click="search()" href="">SEARCH</a>
+
+                                            </div>
+
+                                            <!--<div style="position:relative;width:280px;left:18px;top:-10px" id="show_filters">
+                                                <a class="button   color-white f14 bold letterspace sw85" style="margin-left:0px;text-align:center;margin-bottom:7px;border-radius:0;font-size:15px !important;margin-top:10px;z-index:1000;background:rgba(0,176,80,1);padding-top:0;padding-bottom:10px" data-ng-click="show_advanced_filters()" href="">
+                                                    Advanced Filters
+                                                    <i class="icon ion-md-add  star" style="position:relative;top:6px;"></i>
+                                                </a>
+
+                                            </div>-->
+                                        </div>
+                                        <div class="column mcb-column one-third " style="min-height:295px; background:rgba(59,56,56,1);margin:10px 0 0 0;width:36%;color:white;padding:0 40px 10px 20px">
+                                            <div style="border-bottom:7px solid rgba(68,114,196,1);display:inline-block;padding: 15px 70px 5px 70px;font-size:17px;margin:0 auto 0 auto">
+                                                General Material Types
+                                            </div>
+                                            <div dx-select-box="sb_mat" style="margin:5px auto 0 auto"></div>
+                                            <div style="border-bottom:7px solid rgba(68,114,196,1);display:inline-block;padding: 15px 60px 5px 60px;font-size:17px;margin:0 auto 0 auto">
+                                                Min. Layer Height (micron)
+                                            </div>
+                                            <div dx-number-box="txt_minh" style="margin-top:5px;margin-bottom:15px;display:inline-block "></div>
+                                            <div style="border-bottom:7px solid rgba(68,114,196,1);display:inline-block;padding: 0px 60px 5px 60px;font-size:17px;margin:0 auto 0 auto">
+                                                Max. Layer Height (micron)
+
+                                            </div>
+                                            <div dx-number-box="txt_maxh" style="margin-top:5px;margin-bottom:5px;display:inline-block "></div>
+                                            <!--<div class="accordion" style="background: rgba(59,56,56,1);text-align:left">
+
+                                                <div style="border-bottom:7px solid rgba(68,114,196,1);display:inline-block;padding: 0px 25px 5px 25px;font-size:17px;color:white;margin:0 auto 0 auto">
+                                                    3D Printing Technology
+                                                </div>
+                                            </div>
+                                            <div class="accordion-panel" id="publication_panel">
+                                                <div style="text-align:left; color:black; " class="accomplishment-panel">
+                                                    <div dx-check-box="chk_fdm" style="margin-bottom:0px;"></div>
+                                                    <div dx-check-box="chk_sls" style="margin-bottom:0px;"></div>
+                                                    <div dx-check-box="chk_sla" style="margin-bottom:0px;"></div>
+                                                    <div dx-check-box="chk_mp" style="margin-bottom:0px;"></div>
+                                                    <div dx-check-box="chk_dlp" style="margin-bottom:0px;"></div>
+                                                    <div dx-check-box="chk_dmls" style="margin-bottom:0px;"></div>
+                                                    <div dx-check-box="chk_sdl" style="margin-bottom:0px;"></div>
+                                                    <div dx-check-box="chk_bj" style="margin-bottom:0px;"></div>
+                                                    <div dx-check-box="chk_ebm" style="margin-bottom:0px;"></div>
+                                                    <div dx-check-box="chk_slm" style="margin-bottom:0px;"></div>
+                                                    <div dx-check-box="chk_clip" style="margin-bottom:0px;"></div>
+                                                    <div dx-check-box="chk_fusion" style="margin-bottom:0px;"></div>
+
+
+                                                </div>
+                                            </div>-->
+                                            <div style="clear:both"></div>
+                                        </div>
+                                        <div style="clear:both"></div>
+                                        <div class="column mcb-column" id="filter_panel" style="height:225px;display:none;width:100%;background:rgba(230,230,230,1);margin:0px 0 0 0;color:black;padding:0 40px 10px 20px;margin-top:-26px">
+                                            <div style="text-align:right">
+                                                <i class="icon ion-md-close  star" style="position:relative;top:6px;color:red;cursor:pointer" data-ng-click="close_filters()"></i>
+                                            </div>
+                                            <div class="column mcb-column one-third " style="margin:10px 0 0 0;text-align:center ;padding-left:50px">
+                                                <div style="border-bottom:7px solid rgba(68,114,196,1);display:inline-block;padding: 0px 25px 5px 25px;font-size:17px;margin:0 auto 0 auto">
+                                                    Min Build Volume (mm)
+
+                                                </div>
+                                                <div dx-number-box="txt_w" style="margin-top:5px;margin-bottom:5px;display:inline-block "></div>
+                                                <div dx-number-box="txt_h" style="margin-bottom:5px; display:inline-block"></div>
+                                                <div dx-number-box="txt_d" style="margin-bottom:5px; display:inline-block"></div>
+                                            </div>
+                                            <div class="column mcb-column one-third " style="margin:10px 0 0 0;text-align:center;padding-left:90px ">
+                                                <div style="border-bottom:7px solid rgba(68,114,196,1);display:inline-block;padding: 0px 42px 5px 42px;font-size:17px;margin:0 auto 0 auto">
+                                                    Rush Delivery
+                                                </div>
+                                                <div style="background:white;margin:5px auto 0 auto;padding:10px;display:inline-block;text-align:left;width:170px;display:block">
+                                                    <div dx-check-box="chk_rush24" style="margin-bottom:10px;"></div>
+                                                    <div dx-check-box="chk_rush48" style="margin-bottom:0px;"></div>
+                                                </div>
+                                                <div style="position:relative;width:289px;left:-4px;top:17px">
+                                                    <a class="button violet bgcolor-p color-white f14 bold letterspace sw85" style="margin-left:0px;text-align:center;margin-bottom:7px;border-radius:0;font-size:15px !important;margin-top:10px;z-index:1000" data-ng-click="search()" href="">SEARCH</a>
+
+                                                </div>
+                                            </div>
+                                            <div class="column mcb-column one-third " style="margin:10px 0 0 0;text-align:center;padding-left:100px ">
+                                                <div style="border-bottom:7px solid rgba(68,114,196,1);display:inline-block;padding: 0px 16px 5px 16px;font-size:17px;margin:0 auto 0 auto">
+                                                    Min. Layer Height (micron)
+                                                </div>
+                                                <div dx-number-box="txt_minh" style="margin-top:5px;margin-bottom:18px;display:inline-block "></div>
+                                                <div style="border-bottom:7px solid rgba(68,114,196,1);display:inline-block;padding: 0px 16px 5px 16px;font-size:17px;margin:0 auto 0 auto">
+                                                    Max. Layer Height (micron)
+
+                                                </div>
+                                                <div dx-number-box="txt_maxh" style="margin-top:5px;margin-bottom:5px;display:inline-block "></div>
+                                            </div>
+                                            <div style="clear:both"></div>
+                                        </div>
+
+                                        <div class="ep-row2" style="background:url(content/imgs/graybgw.png);background-size:70%;background-position:center;background-repeat:no-repeat">
+                                            <div class="column mcb-column one-second " style=" padding:15px 0px 0px 80px;text-align:left;margin-bottom:0">
+                                                <h1 style="font-weight:bold;font-size:18px">
+                                                    CREATE ACCOUNT TO HAVE ACCESS TO:
+                                                </h1>
+                                                <ul style="list-style:disc;padding:5px 0 0 30px;font-size:17px;">
+                                                    <li style="line-height:25px">
+                                                        Reliable manufacturing solutions
+                                                    </li>
+                                                    <li style="line-height:25px">
+                                                        Local and international manufacturers
+                                                    </li>
+                                                    <li style="line-height:25px">
+                                                        Transfer files securely
+                                                    </li>
+                                                </ul>
+                                                <div style="position:relative;width:350px; ">
+                                                    <a class="button violet bgcolor-b color-white f14 bold letterspace sw85" style="margin-left:0px;text-align:center;margin-bottom:7px;border-radius:0;font-size:15px !important;margin-top:10px;z-index:1000" href="">CREATE ACCOUNT</a>
+
+                                                </div>
+                                                <div class="xs-center xs-margin-bottom-20" style="padding-left:0px; display:block; margin-top:0px;margin-bottom:10px">
+                                                    <a class="simple f16" href="" data-ng-click="navigate2('/signup/service','signup-service',1)">
+                                                        <i class="icon ion-md-log-in hidden-xs" style="padding-right:5px;font-size:16px;position:relative;top:2px"></i> <span style="font-weight:bold;font-size:14px;">JOIN MANUFACTURING SERVICE NETWORK</span>
+                                                    </a>
+                                                </div>
+
+                                                <div class="xs-center xs-margin-bottom-20" style="padding-left:0px; display:block; margin-bottom:7px;width:450px">
+                                                    <a class="simple f16" href="" data-ng-click="navigate2('/signup/development','signup-development',1)">
+                                                        <i class="icon ion-md-log-in hidden-xs" style="padding-right:5px;font-size:16px;position:relative;top:2px"></i><span style="font-weight:bold;font-size:14px;"> JOIN RESEARCH AND DEVELOPMENT NETWORK</span>
+                                                    </a>
+                                                </div>
+
+                                                <div class="xs-center xs-margin-bottom-20" style="padding-left:0px; display:block; ">
+                                                    <a class="simple f16" href="">
+                                                        <i class="icon ion-md-log-in hidden-xs" style="padding-right:5px;font-size:16px;position:relative;top:2px"></i> <span style="font-weight:bold;font-size:14px;">CREATE YOUR PERSONAL ACCOUNT</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="column mcb-column one-second " style=" padding:15px 0px 0px 0px;text-align:left;margin-bottom:0">
+                                                <h1 style="font-weight:bold;font-size:18px">
+                                                    WITH 3D-Chain, YOU CAN:
+                                                </h1>
+                                                <ul style="list-style:disc;padding:5px 0 0 30px;font-size:17px;">
+                                                    <li style="line-height:25px">
+                                                        Manage quantity based on your budget
+                                                    </li>
+                                                    <li style="line-height:25px">
+                                                        Manage your time
+
+                                                    </li>
+                                                    <li style="line-height:25px">
+                                                        Evaluate manufacturers and service providers
+
+                                                    </li>
+                                                    <li style="line-height:25px">
+                                                        Create a collaborative business model
+
+
+                                                    </li>
+                                                    <li style="line-height:25px">
+                                                        Customize products in large scale
+
+
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div style="clear:both"></div>
+                                        </div>
+                                        <div style="clear:both"></div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--end section 3-->
+                    <!--section 3 mobile-->
+                    <div class="section mcb-section bg-gray  hidden-lg hidden-md hidden-sm visible-xs" style="margin-top:0 !important; padding-top:0px; padding-bottom:0px;  border-top:0px solid rgba(60,56,55,1);border-bottom:0px solid rgba(60,56,55,1);">
+                        <div class="section_wrapper mcb-section-inner no-box-shadow" style="padding-right:0 !important;padding-left:0 !important">
+                            <div class="wrap mcb-wrap one  valign-top clearfix" style="">
+                                <div class="mcb-wrap-inner b-shadow bg-white sec3" style="padding:10px 0 0px 0">
+                                    <div style="text-align:center; color:black; font-size:14px; ">
+
+
+                                        <a href="" style="background:rgba(0,112,192,1);color:white;font-weight:bold; padding:10px 44px;width:100%;display:inline-block;font-size:13px;cursor:initial;" class="hidden-lg hidden-sm hidden-md">
+                                            FIND A MANUFACTURER
+
+                                        </a>
+                                        <div style="clear:both"></div>
+                                        <div class="column mcb-column" style=" margin:10px 0 0 0;width:100%;padding:0 0px 0 0px">
+                                            <div style="background:rgba(59,56,56,1);color:white;padding-bottom:20px">
+                                                <div style="border-bottom:7px solid rgba(68,114,196,1);display:inline-block;padding: 15px 65px 5px 65px;width:90%;max-width:300px;font-size :17px">Location</div>
+                                                <div style="display:inline-block;margin:5px auto 0 auto;width:100%;max-width:300px">
+                                                    <div dx-text-box="txt_location" class="center" style="margin-bottom:5px;display:inline-block"></div>
+                                                </div>
+
+
+                                            </div>
+
+
+                                            <!--<div style="position:relative;width:280px;left:18px;top:-10px" id="show_filters">
+                                                <a class="button   color-white f14 bold letterspace sw85" style="margin-left:0px;text-align:center;margin-bottom:7px;border-radius:0;font-size:15px !important;margin-top:10px;z-index:1000;background:rgba(0,176,80,1);padding-top:0;padding-bottom:10px" data-ng-click="show_advanced_filters()" href="">
+                                                    Advanced Filters
+                                                    <i class="icon ion-md-add  star" style="position:relative;top:6px;"></i>
+                                                </a>
+
+                                            </div>-->
+                                        </div>
+
+                                        <div class="column mcb-column one-third " style="  background:rgba(59,56,56,1);margin:5px 0 0 0;width:100%;color:white;padding:0 0px 10px 0px">
+
+                                            <div class="accordion ac2" style="background: rgba(59,56,56,1);text-align:left;width:90%;margin:0 auto;padding-right:0">
+                                                0"
+                                                <!--  <span style="font-size:24px;font-weight:bold">Filters</span><span style="color:gray;display:inline-block;margin-left:5px;position:relative;top:0;font-size:20px">{{publications_title}}</span>-->
+                                                <div style="border-bottom:7px solid rgba(68,114,196,1);display:inline-block;padding: 0px 25px 5px 25px;font-size:17px;color:white;margin:0 auto 0 auto;width:100%;text-align:center">
+                                                    3D Printing Material
+                                                </div>
+                                            </div>
+
+                                            <div class="accordion-panel" id="publication_panel" style="width:90%;margin:0 auto;">
+                                                <div style="text-align:left; color:black; " class="accomplishment-panel">
+                                                    <div dx-check-box="chk_nylon" style="margin-bottom:0px;"></div>
+                                                    <div dx-check-box="chk_abs" style="margin-bottom:0px;"></div>
+                                                    <div dx-check-box="chk_pla" style="margin-bottom:0px;"></div>
+                                                    <div dx-check-box="chk_hdpe" style="margin-bottom:0px;"></div>
+                                                    <div dx-check-box="chk_pva" style="margin-bottom:0px;"></div>
+                                                    <div dx-check-box="chk_petg" style="margin-bottom:0px;"></div>
+                                                    <div dx-check-box="chk_resin" style="margin-bottom:0px;"></div>
+                                                    <div dx-check-box="chk_metals" style="margin-bottom:0px;"></div>
+                                                    <div dx-check-box="chk_carbon" style="margin-bottom:0px;"></div>
+                                                    <div dx-check-box="chk_multicolor" style="margin-bottom:0px;"></div>
+                                                    <div dx-check-box="chk_ceramic" style="margin-bottom:0px;"></div>
+                                                    <div dx-check-box="chk_wax" style="margin-bottom:0px;"></div>
+                                                    <div dx-check-box="chk_gypsum" style="margin-bottom:0px;"></div>
+                                                    <div dx-check-box="chk_concrete" style="margin-bottom:0px;"></div>
+
+                                                </div>
+                                            </div>
+                                            <div style="clear:both"></div>
+                                        </div>
+
+                                        <div class="column mcb-column one-third " style=" background:rgba(59,56,56,1);margin:5px 0 0 0;width:100%;color:white;padding:0 0px 10px 0px">
+
+                                            <div class="accordion ac2" style="background: rgba(59,56,56,1);text-align:left;width:90%;margin:0 auto;padding-right:0">
+
+                                                <div style="border-bottom:7px solid rgba(68,114,196,1);display:inline-block;padding: 0px 25px 5px 25px;font-size:17px;color:white;margin:0 auto 0 auto;width:100%;text-align:center">
+                                                    3D Printing Technology
+                                                </div>
+                                            </div>
+                                            <div class="accordion-panel" id="publication_panel" style="width:90%;margin:0 auto;">
+                                                <div style="text-align:left; color:black; " class="accomplishment-panel">
+                                                    <div dx-check-box="chk_fdm" style="margin-bottom:0px;"></div>
+                                                    ot
+                                                    <div dx-check-box="chk_sls" style="margin-bottom:0px;"></div>
+                                                    <div dx-check-box="chk_sla" style="margin-bottom:0px;"></div>
+                                                    <div dx-check-box="chk_mp" style="margin-bottom:0px;"></div>
+                                                    <div dx-check-box="chk_dlp" style="margin-bottom:0px;"></div>
+                                                    <div dx-check-box="chk_dmls" style="margin-bottom:0px;"></div>
+                                                    <div dx-check-box="chk_sdl" style="margin-bottom:0px;"></div>
+                                                    <div dx-check-box="chk_bj" style="margin-bottom:0px;"></div>
+                                                    <div dx-check-box="chk_ebm" style="margin-bottom:0px;"></div>
+                                                    <div dx-check-box="chk_slm" style="margin-bottom:0px;"></div>
+                                                    <div dx-check-box="chk_clip" style="margin-bottom:0px;"></div>
+                                                    <div dx-check-box="chk_fusion" style="margin-bottom:0px;"></div>
+
+
+                                                </div>
+                                            </div>
+                                            <div style="clear:both"></div>
+                                        </div>
+
+
+
+                                        <div class="column mcb-column one-third " style=" background:rgba(59,56,56,1);margin:5px 0 0 0;width:100%;color:white;padding:0 0px 10px 0px">
+
+                                            <div class="accordion ac2 ac3 ac4" style="background: rgba(59,56,56,1);text-align:left;width:90%;margin:0 auto;padding-right:0">
+
+                                                <div style="border-bottom:7px solid rgba(0,176,80,1);display:inline-block;padding: 0px 25px 5px 25px;font-size:17px;color:white;margin:0 auto 0 auto;width:100%;text-align:center">
+                                                    Advanced Filters
+                                                </div>
+                                            </div>
+                                            <div class="accordion-panel ac3 ac4" id="publication_panel" style="width:90%;margin:0 auto;background:rgb(230, 230, 230);padding-bottom:10px">
+                                                <div style="text-align:center; color:black;padding-top:5px;padding-right:20px " class="accomplishment-panel">
+
+                                                    <div style="border-bottom:7px solid rgba(68,114,196,1);display:inline-block;padding: 0px 25px 5px 25px;font-size:17px;margin:0 auto 0 auto">
+                                                        Min Build Volume (mm)
+
+                                                    </div>
+                                                    <div dx-number-box="txt_w" style="margin-top:5px;margin-bottom:5px;display:inline-block "></div>
+                                                    <div dx-number-box="txt_h" style="margin-bottom:5px; display:inline-block"></div>
+                                                    <div dx-number-box="txt_d" style="margin-bottom:5px; display:inline-block"></div>
+
+
+                                                    <div style="border-bottom:7px solid rgba(68,114,196,1);display:inline-block;padding: 0px 16px 5px 16px;font-size:17px;margin:10px auto 0 auto">
+                                                        Min. Layer Height (micron)
+                                                    </div>
+                                                    <div dx-number-box="txt_minh" style="margin-top:5px;margin-bottom:18px;display:inline-block "></div>
+                                                    <div style="border-bottom:7px solid rgba(68,114,196,1);display:inline-block;padding: 0px 16px 5px 16px;font-size:17px;margin:0 auto 0 auto">
+                                                        Max. Layer Height (micron)
+
+                                                    </div>
+                                                    <div dx-number-box="txt_maxh" style="margin-top:5px;margin-bottom:5px;display:inline-block "></div>
+
+                                                    <div style="border-bottom:7px solid rgba(68,114,196,1);display:inline-block;padding: 0px 42px 5px 42px;font-size:17px;margin:10px auto 10px auto">
+                                                        Rush Delivery
+                                                    </div>
+                                                    <div style="background:white;margin:5px auto 0 auto;padding:10px;display:inline-block;text-align:left;width:170px;display:block">
+                                                        <div dx-check-box="chk_rush24" style="margin-bottom:10px;"></div>
+                                                        <div dx-check-box="chk_rush48" style="margin-bottom:0px;"></div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <div style="clear:both"></div>
+                                        </div>
+
+
+
+                                        <div style="">
+                                            <a class="button violet bgcolor-p color-white f14 bold letterspace sw85" style="margin-left:0px;text-align:center;margin-bottom:7px;border-radius:0;font-size:15px !important;margin-top:10px;z-index:1000;width:90%;max-width:300px" data-ng-click="search()" href="">SEARCH</a>
+
+                                        </div>
+
+                                        <div style="clear:both"></div>
+                                        <div class="column mcb-column" id="filter_panel" style="height:225px;display:none;width:100%;background:rgba(230,230,230,1);margin:0px 0 0 0;color:black;padding:0 40px 10px 20px;margin-top:-26px">
+                                            <div style="text-align:right">
+                                                <i class="icon ion-md-close  star" style="position:relative;top:6px;color:red;cursor:pointer" data-ng-click="close_filters()"></i>
+                                            </div>
+
+                                            <div class="column mcb-column one-third " style="margin:10px 0 0 0;text-align:center;padding-left:90px ">
+                                                <div style="border-bottom:7px solid rgba(68,114,196,1);display:inline-block;padding: 0px 42px 5px 42px;font-size:17px;margin:0 auto 0 auto">
+                                                    Rush Delivery
+                                                </div>
+                                                <div style="background:white;margin:5px auto 0 auto;padding:10px;display:inline-block;text-align:left;width:170px;display:block">
+                                                    <div dx-check-box="chk_rush24" style="margin-bottom:10px;"></div>
+                                                    <div dx-check-box="chk_rush48" style="margin-bottom:0px;"></div>
+                                                </div>
+                                                <div style="position:relative;width:289px;left:-4px;top:17px">
+                                                    <a class="button violet bgcolor-p color-white f14 bold letterspace sw85" style="margin-left:0px;text-align:center;margin-bottom:7px;border-radius:0;font-size:15px !important;margin-top:10px;z-index:1000" data-ng-click="search()" href="">SEARCH</a>
+
+                                                </div>
+                                            </div>
+                                            <div class="column mcb-column one-third " style="margin:10px 0 0 0;text-align:center;padding-left:100px ">
+
+                                            </div>
+                                            <div style="clear:both"></div>
+                                        </div>
+                                        <div style="clear:both"></div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--end section 3-->
+                    <!--section 4-->
+                    <div class="section mcb-section bg-gray " style="margin-top:0 !important; padding-top:0px; padding-bottom:0px;  border-top:0px solid rgba(60,56,55,1);border-bottom:0px solid rgba(60,56,55,1);">
+                        <div class="section_wrapper mcb-section-inner no-box-shadow hidden-xs hidden-sm">
+                            <div class="wrap mcb-wrap one  valign-top clearfix" style="">
+                                <div class="mcb-wrap-inner b-shadow bg-white" style="padding:0px 0 0px 0">
+                                    <div dx-data-grid="dg_printing" id="dg_printing"></div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section_wrapper mcb-section-inner no-box-shadow hidden-lg  hidden-md" style="padding-left:0 !important;padding-right:0 !important; ">
+                            <div class="wrap mcb-wrap one  valign-top clearfix" style="">
+                                <div class="mcb-wrap-inner b-shadow bg-white" style="padding:0px 0 0px 0">
+
+                                    <div dx-data-grid="dg_printing_xs" id="dg_printing_xs"></div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--end section 4-->
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div dx-popup="popupOptions">
+        <div data-options="dxTemplate: { name:'info' }">
+            <p style="text-align:center;font-size:20px;padding:10px;">
+                For more details,
+                <a href="#!/signin/printers" style="display:inline;font-size:24px;font-weight:bold">
+                    Sign in
+                </a>
+
+
+                to your 3d chain network account.
+            </p>
+
+        </div>
+    </div>
+    <div ng-include="'app/views/footer.html'"></div>
+
+</div>

@@ -52,6 +52,10 @@ namespace API
                 routeName: "ODataRoute",
                routePrefix: "OData",
                 model: builder.GetEdmModel());
+
+
+            Controllers.CompanyController cc = new Controllers.CompanyController();
+            cc.CacheMaterials();
              
 
         }

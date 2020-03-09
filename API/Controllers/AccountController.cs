@@ -323,14 +323,46 @@ namespace API.Controllers
         [Route("Register")]
         public async Task<IHttpActionResult> Register(RegisterBindingModel model)
         {
+            //dool
+            try
+            {
+                if (!ModelState.IsValid)
+                {
+                    return BadRequest(ModelState);
+                }
+
+                var user = new ApplicationUser() { UserName = model.Email, Email = model.Email };
+
+                IdentityResult result = await UserManager.CreateAsync(user, model.Password);
+               
+
+                if (!result.Succeeded)
+                {
+                    return GetErrorResult(result);
+                }
+
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest();
+            }
+          
+        }
+
+
+        public async Task<IHttpActionResult> RegisterInternal(RegisterBindingModel model)
+        {
+            //dool
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
-
+           
+            var um = HttpContext.Current.Request.GetOwinContext().GetUserManager<ApplicationUserManager>();
             var user = new ApplicationUser() { UserName = model.Email, Email = model.Email };
 
-            IdentityResult result = await UserManager.CreateAsync(user, model.Password);
+            IdentityResult result = await um.CreateAsync(user, model.Password);
 
             if (!result.Succeeded)
             {
@@ -339,6 +371,7 @@ namespace API.Controllers
 
             return Ok();
         }
+
 
         // POST api/Account/RegisterExternal
         [OverrideAuthentication]

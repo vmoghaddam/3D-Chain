@@ -19,7 +19,7 @@ namespace API.Models
         public int PersonId { get; set; }
         public string Remark { get; set; }
     
-        public virtual Option Option { get; set; }
+        public virtual NetworkGroup NetworkGroup { get; set; }
         public virtual Person Person { get; set; }
     }
 }

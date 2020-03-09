@@ -1694,7 +1694,7 @@ a.mfn-link-2 span, a:hover.mfn-link-2 span:before, a.hover.mfn-link-2 span:befor
         padding: 15px 20px 20px;
         overflow: hidden;
         display: none;
-        background-image: url(../images/box_shadow.png);
+        /*background-image: url(../images/box_shadow.png);*/
         background-repeat: repeat-x;
         background-position: left top
     }
@@ -1865,7 +1865,7 @@ table {
         }
 
     table tr:first-child td {
-        background: url(../images/box_shadow.png) repeat-x left top
+        /*background: url(../images/box_shadow.png) repeat-x left top*/
     }
 
     table tr:nth-child(2n) td {
@@ -6624,13 +6624,7 @@ ul.portfolio_grid {
 /* #2991d6 - theme color, link, #2275ac - link hover, strong */
 
 /* Selections */
-::-moz-selection {
-    color: #fff
-}
 
-::selection {
-    color: #fff
-}
 
 /* Borders */
 .idea_box, .ui-tabs, .accordion .question, .accordion .question.active .title, .accordion .question .title:before, .ui-tabs .ui-tabs-nav, .ui-tabs .ui-tabs-nav li, .tabs_vertical.ui-tabs .ui-tabs-panel, table th, table td, .list_item .circle, input[type="date"], input[type="email"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="url"], select, textarea, .promo_box.has_border:after, dl > dt, dl > dd, .article_box .desc_wrapper p, a.icon_bar, a.content_link, .how_it_works .image, .opening_hours, .opening_hours .opening_hours_wrapper li, .icon_box.has_border:after, .chart_box:before, .pricing-box, .team_list .bq_wrapper, .post-footer .post-links, .format-link .post-title .icon-link, .share_wrapper, .post-header .title_wrapper, .section-post-related .section-related-adjustment, #comments > :first-child, .widget-area, .widget:after, .fixed-nav .desc h6, .portfolio_group.list .portfolio-item, .portfolio_group .portfolio-item .desc .details-wrapper, .Recent_posts ul li .desc h6, .widget_recent_entries ul li a, .woocommerce .widget_best_sellers li, .woocommerce .widget_featured_products li, .woocommerce .widget_recent_reviews li, .woocommerce .widget_recent_products li, .woocommerce .widget_recently_viewed_products li, .woocommerce .widget_random_products li, .woocommerce .widget_top_rated_products li, .woocommerce .widget_onsale li, .woocommerce .widget_layered_nav li, .woocommerce .widget_shopping_cart ul.product_list_widget li, .woocommerce .widget_products li, .woocommerce .product .related.products, .woocommerce .product .upsells.products, .woocommerce .product div.entry-summary h1.product_title:after, .woocommerce .quantity input.qty, .header-stack #Top_bar .logo, .offer_thumb .slider_pagination, .offer_thumb .slider_pagination a, .Latest_news ul li .desc_footer, .Latest_news ul li .photo, .offer_thumb.bottom .slider_pagination a, .style-simple .faq .question, .style-simple #Filters .filters_wrapper ul, #edd_checkout_cart th, #edd_checkout_cart td {

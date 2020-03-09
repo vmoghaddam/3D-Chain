@@ -2,7 +2,16 @@
 
 var app = angular.module('ChainApp', ['ngRoute', 'LocalStorageModule', 'angular-loading-bar', 'ngSanitize',  'dx']).config(['cfpLoadingBarProvider', function (cfpLoadingBarProvider) {
     cfpLoadingBarProvider.includeSpinner = false;
-}]);
+}]).directive('repeatDirective', function () {
+     
+    return function (scope, element, attrs) {
+        
+        if (scope.$last) {
+            scope.$emit(attrs.repeatDirective);
+             
+        }
+    };
+});
  
 app.config(function ($routeProvider) {
     var version = 0.9;
@@ -38,11 +47,70 @@ app.config(function ($routeProvider) {
         title: '3D-Chain - Researchers Network',
 
     });
+    $routeProvider.when("/printing", {
+        controller: "printingController",
+        templateUrl: "/app/views/printing.html",
+        title: '3D-Chain - 3D Printing Service',
+
+    });
+    $routeProvider.when("/service", {
+        controller: "printingController",
+        templateUrl: "/app/views/printing.html",
+        title: '3D-Chain - 3D Printing Service',
+
+    });
+    $routeProvider.when("/printers", {
+        controller: "printersController",
+        templateUrl: "/app/views/printers.html",
+        title: '3D-Chain - 3D Printers',
+
+    });
+    $routeProvider.when("/materials", {
+        controller: "materialsController",
+        templateUrl: "/app/views/materials.html",
+        title: '3D-Chain - 3D Printing Material',
+
+    });
+    $routeProvider.when("/company/:id", {
+        controller: "manprofileController",
+        templateUrl: "/app/views/manprofile.html",
+        //title: '3D-Chain - 3D Printing Service',
+        type: -1,
+
+    });
+    $routeProvider.when("/company/:id/:edit", {
+        controller: "manprofileController",
+        templateUrl: "/app/views/manprofile.html",
+        //title: '3D-Chain - 3D Printing Service',
+        type: -1,
+
+    });
+    $routeProvider.when("/printer/:id", {
+        controller: "printerProfileController",
+        templateUrl: "/app/views/printerprofile.html",
+        //title: '3D-Chain - 3D Printing Service',
+        type: -1,
+
+    });
+    $routeProvider.when("/material/:id", {
+        controller: "materialProfileController",
+        templateUrl: "/app/views/materialprofile.html",
+        //title: '3D-Chain - 3D Printing Service',
+        type: -1,
+
+    });
     $routeProvider.when("/signin", {
         controller: "signInController",
         templateUrl: "/app/views/signin.html",
         title: '3D-Chain - Sign In',
         IsSignInHidden:true,
+
+    });
+    $routeProvider.when("/signin/:ref", {
+        controller: "signInController",
+        templateUrl: "/app/views/signin.html",
+        title: '3D-Chain - Sign In',
+        IsSignInHidden: true,
 
     });
     $routeProvider.when("/signup/development", {
@@ -52,9 +120,35 @@ app.config(function ($routeProvider) {
         type: 1,//Research and Development network
 
     });
+    $routeProvider.when("/signup/service", {
+        controller: "signUpServiceController",
+        templateUrl: "/app/views/signupservice.html",
+        title: '3D-Chain - Sign Up (Development)',
+        type: 1,//Research and Development network
+
+    });
+    $routeProvider.when("/signup/user", {
+        controller: "signup2Controller",
+        templateUrl: "/app/views/signup2.html",
+        title: '3D-Chain - Sign Up (User)',
+        type: 1,//Research and Development network
+
+    });
     $routeProvider.when("/profile/:id", {
         controller: "profileController",
         templateUrl: "/app/views/profile.html",
+        type: -1,
+
+    });
+    $routeProvider.when("/privacy", {
+        controller: "privacyController",
+        templateUrl: "/app/views/privacy.html",
+        type: -1,
+
+    });
+    $routeProvider.when("/useragreement", {
+        controller: "userAgreementController",
+        templateUrl: "/app/views/useragreement.html",
         type: -1,
 
     });
@@ -68,8 +162,11 @@ app.config(function ($routeProvider) {
 
 
 var serviceBase =  'http://localhost:58909/';
-var webBase = 'http://localhost:23579/';
+//var webBase = 'http://localhost:23579/';
 
+//var serviceBase = 'http://api.3dchain.epatrin.ir/';
+//var webBase = 'http://3dchain.epatrin.ir/';
+var webBase = 'http://localhost:23579/';
 //http://localhost:23579/content/upload/
 
 
@@ -95,7 +192,7 @@ app.run(['$rootScope', '$location', '$window', '$templateCache', 'authService', 
     $rootScope.browser_title = '';
     $rootScope.serviceUrl = serviceBase;
     $rootScope.fileHandlerUrl = webBase + 'filehandler.ashx';
-    $rootScope.clientsFilesUrl = webBase + 'upload/clientsfiles/';
+    $rootScope.clientsFilesUrl = webBase + '/content/upload/';;
     $rootScope.imagesUrl = webBase + '/content/upload/';
     $rootScope.app_title = '3D-Chain Network';
     $rootScope.page_title = '';
@@ -114,7 +211,12 @@ app.run(['$rootScope', '$location', '$window', '$templateCache', 'authService', 
     authService.fillAuthData();
     $rootScope.logOut = function () { authService.logOut(); };
      
-    $rootScope.viewProfile = function () { $rootScope.navigate2('/profile/' + $rootScope.userId); };
+    $rootScope.viewProfile = function () {
+        if ($rootScope.role=='Person')
+            $rootScope.navigate2('/profile/' + $rootScope.userId);
+        else
+            $rootScope.navigate2('/company/' + $rootScope.userId);
+    };
    // alert($rootScope.userName);
    // alert($rootScope.userTitle);
     ////////////////////
@@ -138,13 +240,112 @@ app.run(['$rootScope', '$location', '$window', '$templateCache', 'authService', 
         else
             return $jq(window).height();
     };
+    $rootScope.popupHeightFullMax = function (a, max) {
+        var h = $jq(window).height() * a;
+        if (h > max)
+            return max;
+        else
+            return h;
+         
+    };
+    $rootScope.popupHeight = function (h, mobileFull) {
+        if (mobileFull) {
+            return h;
+        }
+         
+            return h;
+    };
+    $rootScope.popupHeight2 = function (a) {
+        var h = $jq(window).height() * a;
+
+        return h;
+    };
     $rootScope.popupWidth = function (w, fullscreen) {
-        if (!fullscreen)
-            return w;
+        var window_width = ($jq(window).width());
+        var window_height = ($jq(window).height());
+        if (!fullscreen) {
+            //if (window_width < 400)
+            //    return window_width;
+            //else
+                return w;
+        }
         else
             return w;//$jq(window).width();
     };
-     
+     //////////////////////////
+    $rootScope.getDatasourceOption = function (pid) {
+        return new DevExpress.data.DataSource({
+            store:
+
+                new DevExpress.data.ODataStore({
+                    url: $rootScope.serviceUrl + 'api/options/' + pid,
+                    //  key: "Id",
+                    // keyType: "Int32",
+                    version: 4
+                }),
+            //filter: ['ParentId', '=', pid],
+            sort: ['OrderIndex', 'Title'],
+        });
+    };
+    $rootScope.getDatasourceCountries = function () {
+        return new DevExpress.data.DataSource({
+            store:
+
+                new DevExpress.data.ODataStore({
+                    url: $rootScope.serviceUrl + 'api/countries/',
+                    //  key: "Id",
+                    // keyType: "Int32",
+                    version: 4
+                }),
+            //filter: ['ParentId', '=', pid],
+            sort: ['Name'],
+        });
+    };
+    $rootScope.getDatasourceMans = function () {
+        return new DevExpress.data.DataSource({
+            store:
+
+                new DevExpress.data.ODataStore({
+                    url: $rootScope.serviceUrl + 'api/manufacturers',
+                    //  key: "Id",
+                    // keyType: "Int32",
+                    version: 4
+                }),
+            //filter: ['ParentId', '=', pid],
+            sort: ['Name'],
+        });
+    };
+    $rootScope.getDatasourceJobs = function () {
+        return new DevExpress.data.DataSource({
+            store:
+
+                new DevExpress.data.ODataStore({
+                    url: $rootScope.serviceUrl + 'api/jobs/',
+                    //  key: "Id",
+                    // keyType: "Int32",
+                    version: 4
+                }),
+            //filter: ['ParentId', '=', pid],
+            sort: ['AssignedRole1'],
+        });
+    };
+    /////////////////////////
+    $rootScope.getSelectedRow = function (instance) {
+        if (!instance)
+            return null;
+        var rows = instance.getSelectedRowsData();
+        if (rows && rows.length > 0)
+            return rows[0];
+        return null;
+    };
+    $rootScope.getSelectedRows = function (instance) {
+        if (!instance)
+            return null;
+        var rows = instance.getSelectedRowsData();
+        if (rows && rows.length > 0)
+            return rows;
+        return null;
+    };
     /////////////////////////
     $rootScope.researchers = [
         {
@@ -1084,6 +1285,9 @@ app.run(['$rootScope', '$location', '$window', '$templateCache', 'authService', 
 
 
 
+
+    };
+    $rootScope.dummy_click = function () {
 
     };
 

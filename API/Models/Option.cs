@@ -17,7 +17,8 @@ namespace API.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Option()
         {
-            this.PersonNetworks = new HashSet<PersonNetwork>();
+            this.Printer2Optic = new HashSet<Printer2Optic>();
+            this.PrinterTechnologies = new HashSet<PrinterTechnology>();
         }
     
         public int Id { get; set; }
@@ -29,6 +30,8 @@ namespace API.Models
         public string Prop1 { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PersonNetwork> PersonNetworks { get; set; }
+        public virtual ICollection<Printer2Optic> Printer2Optic { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PrinterTechnology> PrinterTechnologies { get; set; }
     }
 }
