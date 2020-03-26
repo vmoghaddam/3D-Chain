@@ -1,4 +1,9 @@
-﻿<div class="signup" style="display:none">
+﻿<style>
+    .dx-button.dx-state-focused {
+        background: rgba(0,112,192,1) !important;
+    }
+</style>
+<div class="signup" style="display:none">
     <div ng-include="'app/views/header.html'" ng-init="type = 'signup';"></div>
     <div id="Content" style="margin-top:45px;">
         <div class="content_wrapper clearfix">
@@ -52,26 +57,26 @@
 
                                     <div   class="dx-border">
                                         
-                                            <div dx-text-box="txt_first_name" style="margin-bottom:5px;display:inline-block"  ></div>
+                                            <div dx-text-box="txt_first_name" style="margin-bottom:5px;display:inline-block"  dx-validator="{validationGroup:'signupres',  validationRules: [{ type: 'required'}]}"></div>
                                         
-                                            <div dx-text-box="txt_last_name" style="margin-bottom:5px;display:inline-block" ></div>
+                                            <div dx-text-box="txt_last_name" style="margin-bottom:5px;display:inline-block" dx-validator="{validationGroup:'signupres',  validationRules: [{ type: 'required'}]}"></div>
                                         
                                       
-                                        <div dx-text-box="txt_email" style="margin-bottom:5px"></div>
-                                        <div dx-text-box="txt_password" style="margin-bottom:5px;display:inline-block"></div>
-                                        <div dx-text-box="txt_confirm_password" style="margin-bottom:5px;display:inline-block"></div>
+                                        <div dx-text-box="txt_email" style="margin-bottom:5px" dx-validator="emailValidationRules"></div>
+                                        <div id="password-validation" dx-text-box="txt_password" style="margin-bottom:5px;display:inline-block" dx-validator="passwordValidationRules"></div>
+                                        <div dx-text-box="txt_confirm_password" style="margin-bottom:5px;display:inline-block" dx-validator="confirmPasswordValidationRules"></div>
 
-                                        <div dx-text-box="txt_degree" style="margin-bottom:5px;display:inline-block"></div>
+                                       <!-- <div dx-text-box="txt_degree" style="margin-bottom:5px;display:inline-block"></div>-->
 
                                         <div dx-text-box="txt_company" style="margin-bottom:5px;display:inline-block"></div>
 
-                                        <div dx-text-box="txt_position" style="margin-bottom:5px;display:inline-block"></div>
+                                        <!--<div dx-text-box="txt_position" style="margin-bottom:5px;display:inline-block"></div>-->
 
                                         <div dx-text-box="txt_website" style="margin-bottom:5px;display:inline-block"></div>
 
                                         <div dx-text-box="txt_linkedin" style="margin-bottom:5px;display:inline-block"></div>
 
-                                        <div dx-text-box="txt_location" style="margin-bottom:5px;display:inline-block"></div>
+                                       <!-- <div dx-text-box="txt_location" style="margin-bottom:5px;display:inline-block"></div>-->
                                     </div>
                                     <div class="dx-border">
                                         <!-- <div dx-tag-box="tag_group" style="margin-bottom:5px"></div>-->

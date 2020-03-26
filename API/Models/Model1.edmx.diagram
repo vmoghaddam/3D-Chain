@@ -19,7 +19,6 @@
         <EntityTypeShape EntityType="EPAGRIFFINModel.Manufacturer" Width="1.5" PointX="5.75" PointY="12.75" />
         <EntityTypeShape EntityType="EPAGRIFFINModel.NetworkGroup" Width="1.5" PointX="0.75" PointY="12.875" />
         <EntityTypeShape EntityType="EPAGRIFFINModel.Option" Width="1.5" PointX="5.75" PointY="7.875" />
-        <EntityTypeShape EntityType="EPAGRIFFINModel.Person" Width="1.5" PointX="0.75" PointY="16" />
         <EntityTypeShape EntityType="EPAGRIFFINModel.PersonAccomplishment" Width="1.5" PointX="3" PointY="14.25" />
         <EntityTypeShape EntityType="EPAGRIFFINModel.PersonAward" Width="1.5" PointX="3" PointY="31.75" />
         <EntityTypeShape EntityType="EPAGRIFFINModel.PersonCertification" Width="1.5" PointX="3" PointY="4.125" />
@@ -43,7 +42,6 @@
         <EntityTypeShape EntityType="EPAGRIFFINModel.ViewCertification" Width="1.5" PointX="12.75" PointY="14.75" />
         <EntityTypeShape EntityType="EPAGRIFFINModel.ViewCountry" Width="1.5" PointX="7.75" PointY="15.75" />
         <EntityTypeShape EntityType="EPAGRIFFINModel.ViewOption" Width="1.5" PointX="9.75" PointY="15.75" />
-        <EntityTypeShape EntityType="EPAGRIFFINModel.ViewPerson" Width="1.5" PointX="16.75" PointY="0.75" />
         <EntityTypeShape EntityType="EPAGRIFFINModel.ViewPersonNetwork" Width="1.5" PointX="16.75" PointY="10.75" />
         <EntityTypeShape EntityType="EPAGRIFFINModel.ViewPersonPatent" Width="1.5" PointX="16.75" PointY="13.75" />
         <EntityTypeShape EntityType="EPAGRIFFINModel.ViewPersonPublication" Width="1.5" PointX="11.75" PointY="17.75" />
@@ -56,15 +54,6 @@
         <AssociationConnector Association="EPAGRIFFINModel.fk_net_option" />
         <AssociationConnector Association="EPAGRIFFINModel.fk_po2_option" />
         <AssociationConnector Association="EPAGRIFFINModel.fk_pt_opt" />
-        <AssociationConnector Association="EPAGRIFFINModel.fk_accomplish_person" />
-        <AssociationConnector Association="EPAGRIFFINModel.fk_net_person" />
-        <AssociationConnector Association="EPAGRIFFINModel.FK_PersonAward_Person_Id" />
-        <AssociationConnector Association="EPAGRIFFINModel.FK_PersonCertification_Person_Id" />
-        <AssociationConnector Association="EPAGRIFFINModel.FK_PersonPatent_Person_Id" />
-        <AssociationConnector Association="EPAGRIFFINModel.FK_PersonProject_Person_Id" />
-        <AssociationConnector Association="EPAGRIFFINModel.FK_PersonPublication_Person_Id" />
-        <AssociationConnector Association="EPAGRIFFINModel.fk_review_person" />
-        <AssociationConnector Association="EPAGRIFFINModel.fk_uca_person" />
         <AssociationConnector Association="EPAGRIFFINModel.fk_pm_printer" />
         <AssociationConnector Association="EPAGRIFFINModel.fk_pm2_m" />
         <AssociationConnector Association="EPAGRIFFINModel.fk_pm_m" />
@@ -84,11 +73,22 @@
         <AssociationConnector Association="EPAGRIFFINModel.AspNetUserRoles" />
         <EntityTypeShape EntityType="EPAGRIFFINModel.CompanyPrinter" Width="1.5" PointX="16.375" PointY="22.75" />
         <EntityTypeShape EntityType="EPAGRIFFINModel.Company" Width="1.5" PointX="3" PointY="22.75" />
-        <AssociationConnector Association="EPAGRIFFINModel.fk_company_person" />
         <AssociationConnector Association="EPAGRIFFINModel.fk_printer_company" />
         <AssociationConnector Association="EPAGRIFFINModel.fk_rate_company" />
         <AssociationConnector Association="EPAGRIFFINModel.fk_slider_company" />
         <EntityTypeShape EntityType="EPAGRIFFINModel.ViewCompany" Width="1.5" PointX="23.375" PointY="0.75" />
+        <EntityTypeShape EntityType="EPAGRIFFINModel.Person" Width="1.5" PointX="0.75" PointY="17.375" />
+        <EntityTypeShape EntityType="EPAGRIFFINModel.ViewPerson" Width="1.5" PointX="23.375" PointY="9.75" />
+        <AssociationConnector Association="EPAGRIFFINModel.fk_company_person" />
+        <AssociationConnector Association="EPAGRIFFINModel.fk_accomplish_person" />
+        <AssociationConnector Association="EPAGRIFFINModel.fk_net_person" />
+        <AssociationConnector Association="EPAGRIFFINModel.FK_PersonAward_Person_Id" />
+        <AssociationConnector Association="EPAGRIFFINModel.FK_PersonCertification_Person_Id" />
+        <AssociationConnector Association="EPAGRIFFINModel.FK_PersonPatent_Person_Id" />
+        <AssociationConnector Association="EPAGRIFFINModel.FK_PersonProject_Person_Id" />
+        <AssociationConnector Association="EPAGRIFFINModel.FK_PersonPublication_Person_Id" />
+        <AssociationConnector Association="EPAGRIFFINModel.fk_review_person" />
+        <AssociationConnector Association="EPAGRIFFINModel.fk_uca_person" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

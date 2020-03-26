@@ -404,6 +404,17 @@ app.factory('userService', ['$http', '$q', 'ngAuthSettings', '$rootScope', funct
 
         return deferred.promise;
     };
+    var _removeSlider = function (entity) {
+        var deferred = $q.defer();
+        $http.post($rootScope.serviceUrl + 'api/company/slider/remove/', entity).then(function (response) {
+            deferred.resolve(response.data);
+        }, function (err, status) {
+
+            deferred.reject(Exceptions.getMessage(err));
+        });
+
+        return deferred.promise;
+    };
     var _updateCompany = function (entity) {
         var deferred = $q.defer();
         $http.post($rootScope.serviceUrl + 'api/company/update', entity).then(function (response) {
@@ -451,7 +462,8 @@ app.factory('userService', ['$http', '$q', 'ngAuthSettings', '$rootScope', funct
 
     serviceFactory.registerCompany = _registerCompany;
     serviceFactory.addPrinter = _addPrinter;
-    serviceFactory.removePrinter=_removePrinter;
+    serviceFactory.removePrinter = _removePrinter;
+    serviceFactory.removeSlider = _removeSlider;
     serviceFactory.updateCompany = _updateCompany;
     serviceFactory.saveLogo = _saveLogo;
     serviceFactory.getMaterials = _getMaterials;

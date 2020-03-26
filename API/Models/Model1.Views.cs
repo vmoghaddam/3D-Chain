@@ -11,7 +11,7 @@ using System.Data.Entity.Infrastructure.MappingViews;
 
 [assembly: DbMappingViewCacheTypeAttribute(
     typeof(API.Models.EPAGRIFFINEntities),
-    typeof(Edm_EntityMappingGeneratedViews.ViewsForBaseEntitySets01f64edee5b6c197415209ce37bd0ffb2cacfc60fbd161b99f83e93b6a46d289))]
+    typeof(Edm_EntityMappingGeneratedViews.ViewsForBaseEntitySetsf3501d435207384076f8867cd0b9c03753b0a7f3dd4c05a7334b47a5bcc48634))]
 
 namespace Edm_EntityMappingGeneratedViews
 {
@@ -23,14 +23,14 @@ namespace Edm_EntityMappingGeneratedViews
     /// Implements a mapping view cache.
     /// </summary>
     [GeneratedCode("Entity Framework 6 Power Tools", "0.9.2.0")]
-    internal sealed class ViewsForBaseEntitySets01f64edee5b6c197415209ce37bd0ffb2cacfc60fbd161b99f83e93b6a46d289 : DbMappingViewCache
+    internal sealed class ViewsForBaseEntitySetsf3501d435207384076f8867cd0b9c03753b0a7f3dd4c05a7334b47a5bcc48634 : DbMappingViewCache
     {
         /// <summary>
         /// Gets a hash value computed over the mapping closure.
         /// </summary>
         public override string MappingHashValue
         {
-            get { return "01f64edee5b6c197415209ce37bd0ffb2cacfc60fbd161b99f83e93b6a46d289"; }
+            get { return "f3501d435207384076f8867cd0b9c03753b0a7f3dd4c05a7334b47a5bcc48634"; }
         }
 
         /// <summary>
@@ -162,77 +162,77 @@ namespace Edm_EntityMappingGeneratedViews
                 return GetView22();
             }
 
-            if (extentName == "EPAGRIFFINModelStoreContainer.Person")
+            if (extentName == "EPAGRIFFINModelStoreContainer.PersonAccomplishment")
             {
                 return GetView23();
             }
 
-            if (extentName == "EPAGRIFFINModelStoreContainer.PersonAccomplishment")
+            if (extentName == "EPAGRIFFINModelStoreContainer.PersonAward")
             {
                 return GetView24();
             }
 
-            if (extentName == "EPAGRIFFINModelStoreContainer.PersonAward")
+            if (extentName == "EPAGRIFFINModelStoreContainer.PersonCertification")
             {
                 return GetView25();
             }
 
-            if (extentName == "EPAGRIFFINModelStoreContainer.PersonCertification")
+            if (extentName == "EPAGRIFFINModelStoreContainer.PersonNetwork")
             {
                 return GetView26();
             }
 
-            if (extentName == "EPAGRIFFINModelStoreContainer.PersonNetwork")
+            if (extentName == "EPAGRIFFINModelStoreContainer.PersonPatent")
             {
                 return GetView27();
             }
 
-            if (extentName == "EPAGRIFFINModelStoreContainer.PersonPatent")
+            if (extentName == "EPAGRIFFINModelStoreContainer.PersonProject")
             {
                 return GetView28();
             }
 
-            if (extentName == "EPAGRIFFINModelStoreContainer.PersonProject")
+            if (extentName == "EPAGRIFFINModelStoreContainer.PersonPublication")
             {
                 return GetView29();
             }
 
-            if (extentName == "EPAGRIFFINModelStoreContainer.PersonPublication")
+            if (extentName == "EPAGRIFFINModelStoreContainer.Printer")
             {
                 return GetView30();
             }
 
-            if (extentName == "EPAGRIFFINModelStoreContainer.Printer")
+            if (extentName == "EPAGRIFFINModelStoreContainer.Printer2Material")
             {
                 return GetView31();
             }
 
-            if (extentName == "EPAGRIFFINModelStoreContainer.Printer2Material")
+            if (extentName == "EPAGRIFFINModelStoreContainer.PrinterMaterial")
             {
                 return GetView32();
             }
 
-            if (extentName == "EPAGRIFFINModelStoreContainer.PrinterMaterial")
+            if (extentName == "EPAGRIFFINModelStoreContainer.PrintingMaterial")
             {
                 return GetView33();
             }
 
-            if (extentName == "EPAGRIFFINModelStoreContainer.PrintingMaterial")
+            if (extentName == "EPAGRIFFINModelStoreContainer.Review")
             {
                 return GetView34();
             }
 
-            if (extentName == "EPAGRIFFINModelStoreContainer.Review")
+            if (extentName == "EPAGRIFFINModelStoreContainer.UserContentActivity")
             {
                 return GetView35();
             }
 
-            if (extentName == "EPAGRIFFINModelStoreContainer.UserContentActivity")
+            if (extentName == "EPAGRIFFINModelStoreContainer.Company")
             {
                 return GetView36();
             }
 
-            if (extentName == "EPAGRIFFINModelStoreContainer.Company")
+            if (extentName == "EPAGRIFFINModelStoreContainer.Person")
             {
                 return GetView37();
             }
@@ -252,77 +252,77 @@ namespace Edm_EntityMappingGeneratedViews
                 return GetView40();
             }
 
-            if (extentName == "EPAGRIFFINEntities.People")
+            if (extentName == "EPAGRIFFINEntities.PersonAccomplishments")
             {
                 return GetView41();
             }
 
-            if (extentName == "EPAGRIFFINEntities.PersonAccomplishments")
+            if (extentName == "EPAGRIFFINEntities.PersonAwards")
             {
                 return GetView42();
             }
 
-            if (extentName == "EPAGRIFFINEntities.PersonAwards")
+            if (extentName == "EPAGRIFFINEntities.PersonCertifications")
             {
                 return GetView43();
             }
 
-            if (extentName == "EPAGRIFFINEntities.PersonCertifications")
+            if (extentName == "EPAGRIFFINEntities.PersonNetworks")
             {
                 return GetView44();
             }
 
-            if (extentName == "EPAGRIFFINEntities.PersonNetworks")
+            if (extentName == "EPAGRIFFINEntities.PersonPatents")
             {
                 return GetView45();
             }
 
-            if (extentName == "EPAGRIFFINEntities.PersonPatents")
+            if (extentName == "EPAGRIFFINEntities.PersonProjects")
             {
                 return GetView46();
             }
 
-            if (extentName == "EPAGRIFFINEntities.PersonProjects")
+            if (extentName == "EPAGRIFFINEntities.PersonPublications")
             {
                 return GetView47();
             }
 
-            if (extentName == "EPAGRIFFINEntities.PersonPublications")
+            if (extentName == "EPAGRIFFINEntities.Printers")
             {
                 return GetView48();
             }
 
-            if (extentName == "EPAGRIFFINEntities.Printers")
+            if (extentName == "EPAGRIFFINEntities.Printer2Material")
             {
                 return GetView49();
             }
 
-            if (extentName == "EPAGRIFFINEntities.Printer2Material")
+            if (extentName == "EPAGRIFFINEntities.PrinterMaterials")
             {
                 return GetView50();
             }
 
-            if (extentName == "EPAGRIFFINEntities.PrinterMaterials")
+            if (extentName == "EPAGRIFFINEntities.PrintingMaterials")
             {
                 return GetView51();
             }
 
-            if (extentName == "EPAGRIFFINEntities.PrintingMaterials")
+            if (extentName == "EPAGRIFFINEntities.Reviews")
             {
                 return GetView52();
             }
 
-            if (extentName == "EPAGRIFFINEntities.Reviews")
+            if (extentName == "EPAGRIFFINEntities.UserContentActivities")
             {
                 return GetView53();
             }
 
-            if (extentName == "EPAGRIFFINEntities.UserContentActivities")
+            if (extentName == "EPAGRIFFINEntities.Companies")
             {
                 return GetView54();
             }
 
-            if (extentName == "EPAGRIFFINEntities.Companies")
+            if (extentName == "EPAGRIFFINEntities.People")
             {
                 return GetView55();
             }
@@ -457,212 +457,212 @@ namespace Edm_EntityMappingGeneratedViews
                 return GetView81();
             }
 
-            if (extentName == "EPAGRIFFINModelStoreContainer.ViewPerson")
+            if (extentName == "EPAGRIFFINModelStoreContainer.ViewPersonNetwork")
             {
                 return GetView82();
             }
 
-            if (extentName == "EPAGRIFFINEntities.ViewPersons")
+            if (extentName == "EPAGRIFFINEntities.ViewPersonNetworks")
             {
                 return GetView83();
             }
 
-            if (extentName == "EPAGRIFFINModelStoreContainer.ViewPersonNetwork")
+            if (extentName == "EPAGRIFFINModelStoreContainer.ViewPersonPatent")
             {
                 return GetView84();
             }
 
-            if (extentName == "EPAGRIFFINEntities.ViewPersonNetworks")
+            if (extentName == "EPAGRIFFINEntities.ViewPersonPatents")
             {
                 return GetView85();
             }
 
-            if (extentName == "EPAGRIFFINModelStoreContainer.ViewPersonPatent")
+            if (extentName == "EPAGRIFFINModelStoreContainer.ViewPersonPublication")
             {
                 return GetView86();
             }
 
-            if (extentName == "EPAGRIFFINEntities.ViewPersonPatents")
+            if (extentName == "EPAGRIFFINEntities.ViewPersonPublications")
             {
                 return GetView87();
             }
 
-            if (extentName == "EPAGRIFFINModelStoreContainer.ViewPersonPublication")
+            if (extentName == "EPAGRIFFINModelStoreContainer.ViewPersonReview")
             {
                 return GetView88();
             }
 
-            if (extentName == "EPAGRIFFINEntities.ViewPersonPublications")
+            if (extentName == "EPAGRIFFINEntities.ViewPersonReviews")
             {
                 return GetView89();
             }
 
-            if (extentName == "EPAGRIFFINModelStoreContainer.ViewPersonReview")
+            if (extentName == "EPAGRIFFINModelStoreContainer.ViewPrinter")
             {
                 return GetView90();
             }
 
-            if (extentName == "EPAGRIFFINEntities.ViewPersonReviews")
+            if (extentName == "EPAGRIFFINEntities.ViewPrinters")
             {
                 return GetView91();
             }
 
-            if (extentName == "EPAGRIFFINModelStoreContainer.ViewPrinter")
+            if (extentName == "EPAGRIFFINModelStoreContainer.ViewPrinter2Optic")
             {
                 return GetView92();
             }
 
-            if (extentName == "EPAGRIFFINEntities.ViewPrinters")
+            if (extentName == "EPAGRIFFINEntities.ViewPrinter2Optic")
             {
                 return GetView93();
             }
 
-            if (extentName == "EPAGRIFFINModelStoreContainer.ViewPrinter2Optic")
+            if (extentName == "EPAGRIFFINModelStoreContainer.ViewPrinterTechnology")
             {
                 return GetView94();
             }
 
-            if (extentName == "EPAGRIFFINEntities.ViewPrinter2Optic")
+            if (extentName == "EPAGRIFFINEntities.ViewPrinterTechnologies")
             {
                 return GetView95();
             }
 
-            if (extentName == "EPAGRIFFINModelStoreContainer.ViewPrinterTechnology")
+            if (extentName == "EPAGRIFFINModelStoreContainer.ViewProject")
             {
                 return GetView96();
             }
 
-            if (extentName == "EPAGRIFFINEntities.ViewPrinterTechnologies")
+            if (extentName == "EPAGRIFFINEntities.ViewProjects")
             {
                 return GetView97();
             }
 
-            if (extentName == "EPAGRIFFINModelStoreContainer.ViewProject")
+            if (extentName == "EPAGRIFFINModelStoreContainer.ViewUserContentActivity")
             {
                 return GetView98();
             }
 
-            if (extentName == "EPAGRIFFINEntities.ViewProjects")
+            if (extentName == "EPAGRIFFINEntities.ViewUserContentActivities")
             {
                 return GetView99();
             }
 
-            if (extentName == "EPAGRIFFINModelStoreContainer.ViewUserContentActivity")
+            if (extentName == "EPAGRIFFINModelStoreContainer.ViewManufacturer")
             {
                 return GetView100();
             }
 
-            if (extentName == "EPAGRIFFINEntities.ViewUserContentActivities")
+            if (extentName == "EPAGRIFFINEntities.ViewManufacturers")
             {
                 return GetView101();
             }
 
-            if (extentName == "EPAGRIFFINModelStoreContainer.ViewManufacturer")
+            if (extentName == "EPAGRIFFINModelStoreContainer.ViewPrinterModel")
             {
                 return GetView102();
             }
 
-            if (extentName == "EPAGRIFFINEntities.ViewManufacturers")
+            if (extentName == "EPAGRIFFINEntities.ViewPrinterModels")
             {
                 return GetView103();
             }
 
-            if (extentName == "EPAGRIFFINModelStoreContainer.ViewPrinterModel")
+            if (extentName == "EPAGRIFFINModelStoreContainer.Printer2")
             {
                 return GetView104();
             }
 
-            if (extentName == "EPAGRIFFINEntities.ViewPrinterModels")
+            if (extentName == "EPAGRIFFINEntities.Printer2")
             {
                 return GetView105();
             }
 
-            if (extentName == "EPAGRIFFINModelStoreContainer.Printer2")
+            if (extentName == "EPAGRIFFINModelStoreContainer.ViewPrinter2")
             {
                 return GetView106();
             }
 
-            if (extentName == "EPAGRIFFINEntities.Printer2")
+            if (extentName == "EPAGRIFFINEntities.ViewPrinter2")
             {
                 return GetView107();
             }
 
-            if (extentName == "EPAGRIFFINModelStoreContainer.ViewPrinter2")
+            if (extentName == "EPAGRIFFINModelStoreContainer.Material")
             {
                 return GetView108();
             }
 
-            if (extentName == "EPAGRIFFINEntities.ViewPrinter2")
+            if (extentName == "EPAGRIFFINEntities.Materials")
             {
                 return GetView109();
             }
 
-            if (extentName == "EPAGRIFFINModelStoreContainer.Material")
+            if (extentName == "EPAGRIFFINModelStoreContainer.Supplier")
             {
                 return GetView110();
             }
 
-            if (extentName == "EPAGRIFFINEntities.Materials")
+            if (extentName == "EPAGRIFFINEntities.Suppliers")
             {
                 return GetView111();
             }
 
-            if (extentName == "EPAGRIFFINModelStoreContainer.Supplier")
+            if (extentName == "EPAGRIFFINModelStoreContainer.ViewAMProcess")
             {
                 return GetView112();
             }
 
-            if (extentName == "EPAGRIFFINEntities.Suppliers")
+            if (extentName == "EPAGRIFFINEntities.ViewAMProcesses")
             {
                 return GetView113();
             }
 
-            if (extentName == "EPAGRIFFINModelStoreContainer.ViewAMProcess")
+            if (extentName == "EPAGRIFFINModelStoreContainer.ViewAmTechnology")
             {
                 return GetView114();
             }
 
-            if (extentName == "EPAGRIFFINEntities.ViewAMProcesses")
+            if (extentName == "EPAGRIFFINEntities.ViewAmTechnologies")
             {
                 return GetView115();
             }
 
-            if (extentName == "EPAGRIFFINModelStoreContainer.ViewAmTechnology")
+            if (extentName == "EPAGRIFFINModelStoreContainer.ViewCompanyPrinter")
             {
                 return GetView116();
             }
 
-            if (extentName == "EPAGRIFFINEntities.ViewAmTechnologies")
+            if (extentName == "EPAGRIFFINEntities.ViewCompanyPrinters")
             {
                 return GetView117();
             }
 
-            if (extentName == "EPAGRIFFINModelStoreContainer.ViewCompanyPrinter")
+            if (extentName == "EPAGRIFFINModelStoreContainer.CompanyPrinter")
             {
                 return GetView118();
             }
 
-            if (extentName == "EPAGRIFFINEntities.ViewCompanyPrinters")
+            if (extentName == "EPAGRIFFINEntities.CompanyPrinters")
             {
                 return GetView119();
             }
 
-            if (extentName == "EPAGRIFFINModelStoreContainer.CompanyPrinter")
+            if (extentName == "EPAGRIFFINModelStoreContainer.ViewCompany")
             {
                 return GetView120();
             }
 
-            if (extentName == "EPAGRIFFINEntities.CompanyPrinters")
+            if (extentName == "EPAGRIFFINEntities.ViewCompanies")
             {
                 return GetView121();
             }
 
-            if (extentName == "EPAGRIFFINModelStoreContainer.ViewCompany")
+            if (extentName == "EPAGRIFFINModelStoreContainer.ViewPerson")
             {
                 return GetView122();
             }
 
-            if (extentName == "EPAGRIFFINEntities.ViewCompanies")
+            if (extentName == "EPAGRIFFINEntities.ViewPersons")
             {
                 return GetView123();
             }
@@ -1187,14 +1187,340 @@ namespace Edm_EntityMappingGeneratedViews
         }
 
         /// <summary>
-        /// Gets the view for EPAGRIFFINModelStoreContainer.Person.
+        /// Gets the view for EPAGRIFFINModelStoreContainer.PersonAccomplishment.
         /// </summary>
         /// <returns>The mapping view.</returns>
         private static DbMappingView GetView23()
         {
             return new DbMappingView(@"
+    SELECT VALUE -- Constructing PersonAccomplishment
+        [EPAGRIFFINModel.Store.PersonAccomplishment](T1.PersonAccomplishment_Id, T1.PersonAccomplishment_Title, T1.PersonAccomplishment_Year, T1.PersonAccomplishment_Month, T1.PersonAccomplishment_Remark, T1.PersonAccomplishment_Journal, T1.PersonAccomplishment_PersonId)
+    FROM (
+        SELECT 
+            T.Id AS PersonAccomplishment_Id, 
+            T.Title AS PersonAccomplishment_Title, 
+            T.Year AS PersonAccomplishment_Year, 
+            T.Month AS PersonAccomplishment_Month, 
+            T.Remark AS PersonAccomplishment_Remark, 
+            T.Journal AS PersonAccomplishment_Journal, 
+            T.PersonId AS PersonAccomplishment_PersonId, 
+            True AS _from0
+        FROM EPAGRIFFINEntities.PersonAccomplishments AS T
+    ) AS T1");
+        }
+
+        /// <summary>
+        /// Gets the view for EPAGRIFFINModelStoreContainer.PersonAward.
+        /// </summary>
+        /// <returns>The mapping view.</returns>
+        private static DbMappingView GetView24()
+        {
+            return new DbMappingView(@"
+    SELECT VALUE -- Constructing PersonAward
+        [EPAGRIFFINModel.Store.PersonAward](T1.PersonAward_Id, T1.PersonAward_Title, T1.PersonAward_Date, T1.PersonAward_Issuer, T1.PersonAward_Remark, T1.PersonAward_PersonId)
+    FROM (
+        SELECT 
+            T.Id AS PersonAward_Id, 
+            T.Title AS PersonAward_Title, 
+            T.Date AS PersonAward_Date, 
+            T.Issuer AS PersonAward_Issuer, 
+            T.Remark AS PersonAward_Remark, 
+            T.PersonId AS PersonAward_PersonId, 
+            True AS _from0
+        FROM EPAGRIFFINEntities.PersonAwards AS T
+    ) AS T1");
+        }
+
+        /// <summary>
+        /// Gets the view for EPAGRIFFINModelStoreContainer.PersonCertification.
+        /// </summary>
+        /// <returns>The mapping view.</returns>
+        private static DbMappingView GetView25()
+        {
+            return new DbMappingView(@"
+    SELECT VALUE -- Constructing PersonCertification
+        [EPAGRIFFINModel.Store.PersonCertification](T1.PersonCertification_Id, T1.PersonCertification_Title, T1.PersonCertification_Authority, T1.PersonCertification_Remark, T1.PersonCertification_PersonId)
+    FROM (
+        SELECT 
+            T.Id AS PersonCertification_Id, 
+            T.Title AS PersonCertification_Title, 
+            T.Authority AS PersonCertification_Authority, 
+            T.Remark AS PersonCertification_Remark, 
+            T.PersonId AS PersonCertification_PersonId, 
+            True AS _from0
+        FROM EPAGRIFFINEntities.PersonCertifications AS T
+    ) AS T1");
+        }
+
+        /// <summary>
+        /// Gets the view for EPAGRIFFINModelStoreContainer.PersonNetwork.
+        /// </summary>
+        /// <returns>The mapping view.</returns>
+        private static DbMappingView GetView26()
+        {
+            return new DbMappingView(@"
+    SELECT VALUE -- Constructing PersonNetwork
+        [EPAGRIFFINModel.Store.PersonNetwork](T1.PersonNetwork_Id, T1.PersonNetwork_NetworkId, T1.PersonNetwork_PersonId, T1.PersonNetwork_Remark)
+    FROM (
+        SELECT 
+            T.Id AS PersonNetwork_Id, 
+            T.NetworkId AS PersonNetwork_NetworkId, 
+            T.PersonId AS PersonNetwork_PersonId, 
+            T.Remark AS PersonNetwork_Remark, 
+            True AS _from0
+        FROM EPAGRIFFINEntities.PersonNetworks AS T
+    ) AS T1");
+        }
+
+        /// <summary>
+        /// Gets the view for EPAGRIFFINModelStoreContainer.PersonPatent.
+        /// </summary>
+        /// <returns>The mapping view.</returns>
+        private static DbMappingView GetView27()
+        {
+            return new DbMappingView(@"
+    SELECT VALUE -- Constructing PersonPatent
+        [EPAGRIFFINModel.Store.PersonPatent](T1.PersonPatent_Id, T1.PersonPatent_Title, T1.PersonPatent_Date, T1.PersonPatent_Issuer, T1.PersonPatent_Remark, T1.PersonPatent_PersonId)
+    FROM (
+        SELECT 
+            T.Id AS PersonPatent_Id, 
+            T.Title AS PersonPatent_Title, 
+            T.Date AS PersonPatent_Date, 
+            T.Issuer AS PersonPatent_Issuer, 
+            T.Remark AS PersonPatent_Remark, 
+            T.PersonId AS PersonPatent_PersonId, 
+            True AS _from0
+        FROM EPAGRIFFINEntities.PersonPatents AS T
+    ) AS T1");
+        }
+
+        /// <summary>
+        /// Gets the view for EPAGRIFFINModelStoreContainer.PersonProject.
+        /// </summary>
+        /// <returns>The mapping view.</returns>
+        private static DbMappingView GetView28()
+        {
+            return new DbMappingView(@"
+    SELECT VALUE -- Constructing PersonProject
+        [EPAGRIFFINModel.Store.PersonProject](T1.PersonProject_Id, T1.PersonProject_Title, T1.PersonProject_Date, T1.PersonProject_Remark, T1.PersonProject_PersonId)
+    FROM (
+        SELECT 
+            T.Id AS PersonProject_Id, 
+            T.Title AS PersonProject_Title, 
+            T.Date AS PersonProject_Date, 
+            T.Remark AS PersonProject_Remark, 
+            T.PersonId AS PersonProject_PersonId, 
+            True AS _from0
+        FROM EPAGRIFFINEntities.PersonProjects AS T
+    ) AS T1");
+        }
+
+        /// <summary>
+        /// Gets the view for EPAGRIFFINModelStoreContainer.PersonPublication.
+        /// </summary>
+        /// <returns>The mapping view.</returns>
+        private static DbMappingView GetView29()
+        {
+            return new DbMappingView(@"
+    SELECT VALUE -- Constructing PersonPublication
+        [EPAGRIFFINModel.Store.PersonPublication](T1.PersonPublication_Id, T1.PersonPublication_Title, T1.PersonPublication_Date, T1.PersonPublication_Publisher, T1.PersonPublication_PersonId, T1.PersonPublication_Remark)
+    FROM (
+        SELECT 
+            T.Id AS PersonPublication_Id, 
+            T.Title AS PersonPublication_Title, 
+            T.Date AS PersonPublication_Date, 
+            T.Publisher AS PersonPublication_Publisher, 
+            T.PersonId AS PersonPublication_PersonId, 
+            T.Remark AS PersonPublication_Remark, 
+            True AS _from0
+        FROM EPAGRIFFINEntities.PersonPublications AS T
+    ) AS T1");
+        }
+
+        /// <summary>
+        /// Gets the view for EPAGRIFFINModelStoreContainer.Printer.
+        /// </summary>
+        /// <returns>The mapping view.</returns>
+        private static DbMappingView GetView30()
+        {
+            return new DbMappingView(@"
+    SELECT VALUE -- Constructing Printer
+        [EPAGRIFFINModel.Store.Printer](T1.Printer_Id, T1.Printer_CompanyId, T1.Printer_Name, T1.Printer_Technology, T1.Printer_Material, T1.Printer_BuildVolume, T1.Printer_MinLayerHeight, T1.Printer_MaxLayerHeight, T1.Printer_PrintingSpeed, T1.Printer_ObjectFile, T1.Printer_Color, T1.[Printer.BuildVolume_W], T1.[Printer.BuildVolume_H], T1.[Printer.BuildVolume_D], T1.[Printer.Min_LH], T1.[Printer.Max_LH])
+    FROM (
+        SELECT 
+            T.Id AS Printer_Id, 
+            T.CompanyId AS Printer_CompanyId, 
+            T.Name AS Printer_Name, 
+            T.Technology AS Printer_Technology, 
+            T.Material AS Printer_Material, 
+            T.BuildVolume AS Printer_BuildVolume, 
+            T.MinLayerHeight AS Printer_MinLayerHeight, 
+            T.MaxLayerHeight AS Printer_MaxLayerHeight, 
+            T.PrintingSpeed AS Printer_PrintingSpeed, 
+            T.ObjectFile AS Printer_ObjectFile, 
+            T.Color AS Printer_Color, 
+            T.BuildVolume_W AS [Printer.BuildVolume_W], 
+            T.BuildVolume_H AS [Printer.BuildVolume_H], 
+            T.BuildVolume_D AS [Printer.BuildVolume_D], 
+            T.Min_LH AS [Printer.Min_LH], 
+            T.Max_LH AS [Printer.Max_LH], 
+            True AS _from0
+        FROM EPAGRIFFINEntities.Printers AS T
+    ) AS T1");
+        }
+
+        /// <summary>
+        /// Gets the view for EPAGRIFFINModelStoreContainer.Printer2Material.
+        /// </summary>
+        /// <returns>The mapping view.</returns>
+        private static DbMappingView GetView31()
+        {
+            return new DbMappingView(@"
+    SELECT VALUE -- Constructing Printer2Material
+        [EPAGRIFFINModel.Store.Printer2Material](T1.Printer2Material_PrinterId, T1.Printer2Material_Material, T1.Printer2Material_IsGeneral)
+    FROM (
+        SELECT 
+            T.PrinterId AS Printer2Material_PrinterId, 
+            T.Material AS Printer2Material_Material, 
+            T.IsGeneral AS Printer2Material_IsGeneral, 
+            True AS _from0
+        FROM EPAGRIFFINEntities.Printer2Material AS T
+    ) AS T1");
+        }
+
+        /// <summary>
+        /// Gets the view for EPAGRIFFINModelStoreContainer.PrinterMaterial.
+        /// </summary>
+        /// <returns>The mapping view.</returns>
+        private static DbMappingView GetView32()
+        {
+            return new DbMappingView(@"
+    SELECT VALUE -- Constructing PrinterMaterial
+        [EPAGRIFFINModel.Store.PrinterMaterial](T1.PrinterMaterial_PrinterId, T1.PrinterMaterial_Material, T1.PrinterMaterial_Remark)
+    FROM (
+        SELECT 
+            T.PrinterId AS PrinterMaterial_PrinterId, 
+            T.Material AS PrinterMaterial_Material, 
+            T.Remark AS PrinterMaterial_Remark, 
+            True AS _from0
+        FROM EPAGRIFFINEntities.PrinterMaterials AS T
+    ) AS T1");
+        }
+
+        /// <summary>
+        /// Gets the view for EPAGRIFFINModelStoreContainer.PrintingMaterial.
+        /// </summary>
+        /// <returns>The mapping view.</returns>
+        private static DbMappingView GetView33()
+        {
+            return new DbMappingView(@"
+    SELECT VALUE -- Constructing PrintingMaterial
+        [EPAGRIFFINModel.Store.PrintingMaterial](T1.PrintingMaterial_Title, T1.PrintingMaterial_Remrak, T1.PrintingMaterial_IsSpecific)
+    FROM (
+        SELECT 
+            T.Title AS PrintingMaterial_Title, 
+            T.Remrak AS PrintingMaterial_Remrak, 
+            T.IsSpecific AS PrintingMaterial_IsSpecific, 
+            True AS _from0
+        FROM EPAGRIFFINEntities.PrintingMaterials AS T
+    ) AS T1");
+        }
+
+        /// <summary>
+        /// Gets the view for EPAGRIFFINModelStoreContainer.Review.
+        /// </summary>
+        /// <returns>The mapping view.</returns>
+        private static DbMappingView GetView34()
+        {
+            return new DbMappingView(@"
+    SELECT VALUE -- Constructing Review
+        [EPAGRIFFINModel.Store.Review](T1.Review_Id, T1.Review_PersonId, T1.Review_Body, T1.Review_Title, T1.Review_TotalRate, T1.Review_Date, T1.Review_DateConfirm, T1.Review_ToPersonId, T1.Review_ToPostId, T1.Review_ToNetworkGroupId, T1.Review_ToReviewId)
+    FROM (
+        SELECT 
+            T.Id AS Review_Id, 
+            T.PersonId AS Review_PersonId, 
+            T.Body AS Review_Body, 
+            T.Title AS Review_Title, 
+            T.TotalRate AS Review_TotalRate, 
+            T.Date AS Review_Date, 
+            T.DateConfirm AS Review_DateConfirm, 
+            T.ToPersonId AS Review_ToPersonId, 
+            T.ToPostId AS Review_ToPostId, 
+            T.ToNetworkGroupId AS Review_ToNetworkGroupId, 
+            T.ToReviewId AS Review_ToReviewId, 
+            True AS _from0
+        FROM EPAGRIFFINEntities.Reviews AS T
+    ) AS T1");
+        }
+
+        /// <summary>
+        /// Gets the view for EPAGRIFFINModelStoreContainer.UserContentActivity.
+        /// </summary>
+        /// <returns>The mapping view.</returns>
+        private static DbMappingView GetView35()
+        {
+            return new DbMappingView(@"
+    SELECT VALUE -- Constructing UserContentActivity
+        [EPAGRIFFINModel.Store.UserContentActivity](T1.UserContentActivity_Id, T1.UserContentActivity_ReviewId, T1.UserContentActivity_Remark, T1.UserContentActivity_Date, T1.UserContentActivity_PersonId)
+    FROM (
+        SELECT 
+            T.Id AS UserContentActivity_Id, 
+            T.ReviewId AS UserContentActivity_ReviewId, 
+            T.Remark AS UserContentActivity_Remark, 
+            T.Date AS UserContentActivity_Date, 
+            T.PersonId AS UserContentActivity_PersonId, 
+            True AS _from0
+        FROM EPAGRIFFINEntities.UserContentActivities AS T
+    ) AS T1");
+        }
+
+        /// <summary>
+        /// Gets the view for EPAGRIFFINModelStoreContainer.Company.
+        /// </summary>
+        /// <returns>The mapping view.</returns>
+        private static DbMappingView GetView36()
+        {
+            return new DbMappingView(@"
+    SELECT VALUE -- Constructing Company
+        [EPAGRIFFINModel.Store.Company](T1.Company_Id, T1.Company_Name, T1.Company_Address, T1.Company_Phone, T1.Company_Email, T1.Company_Website, T1.Company_Url, T1.Company_DateVerified, T1.Company_Twitter, T1.Company_LinkedIn, T1.Company_ImageUrl, T1.Company_RushDelivery24, T1.Company_RushDelivery48, T1.Company_PersonId, T1.Company_DateJoin, T1.Company_ZIPCode, T1.Company_City, T1.Company_State, T1.Company_CountryId, T1.Company_Network, T1.Company_UserId, T1.Company_Remark)
+    FROM (
+        SELECT 
+            T.Id AS Company_Id, 
+            T.Name AS Company_Name, 
+            T.Address AS Company_Address, 
+            T.Phone AS Company_Phone, 
+            T.Email AS Company_Email, 
+            T.Website AS Company_Website, 
+            T.Url AS Company_Url, 
+            T.DateVerified AS Company_DateVerified, 
+            T.Twitter AS Company_Twitter, 
+            T.LinkedIn AS Company_LinkedIn, 
+            T.ImageUrl AS Company_ImageUrl, 
+            T.RushDelivery24 AS Company_RushDelivery24, 
+            T.RushDelivery48 AS Company_RushDelivery48, 
+            T.PersonId AS Company_PersonId, 
+            T.DateJoin AS Company_DateJoin, 
+            T.ZIPCode AS Company_ZIPCode, 
+            T.City AS Company_City, 
+            T.State AS Company_State, 
+            T.CountryId AS Company_CountryId, 
+            T.Network AS Company_Network, 
+            T.UserId AS Company_UserId, 
+            T.Remark AS Company_Remark, 
+            True AS _from0
+        FROM EPAGRIFFINEntities.Companies AS T
+    ) AS T1");
+        }
+
+        /// <summary>
+        /// Gets the view for EPAGRIFFINModelStoreContainer.Person.
+        /// </summary>
+        /// <returns>The mapping view.</returns>
+        private static DbMappingView GetView37()
+        {
+            return new DbMappingView(@"
     SELECT VALUE -- Constructing Person
-        [EPAGRIFFINModel.Store.Person](T1.Person_Id, T1.Person_DateCreate, T1.Person_SexId, T1.Person_FirstName, T1.Person_LastName, T1.Person_DateBirth, T1.Person_Email, T1.Person_Mobile, T1.Person_Address, T1.Person_IsActive, T1.Person_IsDeleted, T1.Person_Remark, T1.Person_Nickname, T1.Person_IDNo, T1.Person_UserId, T1.Person_ImageUrl, T1.Person_CountryId, T1.Person_ZIPCode, T1.Person_State, T1.Person_City, T1.Person_Company, T1.Person_University, T1.Person_Website, T1.Person_Twitter, T1.Person_LinkedIn, T1.Person_Headline, T1.Person_DegreeId, T1.Person_PositionId, T1.Person_DateJoin, T1.Person_FieldOfStudyId, T1.Person_TempId, T1.Person_Education2, T1.Person_Location2, T1.Person_Position2)
+        [EPAGRIFFINModel.Store.Person](T1.Person_Id, T1.Person_DateCreate, T1.Person_SexId, T1.Person_FirstName, T1.Person_LastName, T1.Person_DateBirth, T1.Person_Email, T1.Person_Mobile, T1.Person_Address, T1.Person_IsActive, T1.Person_IsDeleted, T1.Person_Remark, T1.Person_Nickname, T1.Person_IDNo, T1.Person_UserId, T1.Person_ImageUrl, T1.Person_CountryId, T1.Person_ZIPCode, T1.Person_State, T1.Person_City, T1.Person_Company, T1.Person_University, T1.Person_Website, T1.Person_Twitter, T1.Person_LinkedIn, T1.Person_Headline, T1.Person_DegreeId, T1.Person_PositionId, T1.Person_DateJoin, T1.Person_FieldOfStudyId, T1.Person_TempId, T1.Person_Education2, T1.Person_Location2, T1.Person_Position2, T1.Person_Degree)
     FROM (
         SELECT 
             T.Id AS Person_Id, 
@@ -1231,334 +1557,9 @@ namespace Edm_EntityMappingGeneratedViews
             T.Education2 AS Person_Education2, 
             T.Location2 AS Person_Location2, 
             T.Position2 AS Person_Position2, 
+            T.Degree AS Person_Degree, 
             True AS _from0
         FROM EPAGRIFFINEntities.People AS T
-    ) AS T1");
-        }
-
-        /// <summary>
-        /// Gets the view for EPAGRIFFINModelStoreContainer.PersonAccomplishment.
-        /// </summary>
-        /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView24()
-        {
-            return new DbMappingView(@"
-    SELECT VALUE -- Constructing PersonAccomplishment
-        [EPAGRIFFINModel.Store.PersonAccomplishment](T1.PersonAccomplishment_Id, T1.PersonAccomplishment_Title, T1.PersonAccomplishment_Year, T1.PersonAccomplishment_Month, T1.PersonAccomplishment_Remark, T1.PersonAccomplishment_Journal, T1.PersonAccomplishment_PersonId)
-    FROM (
-        SELECT 
-            T.Id AS PersonAccomplishment_Id, 
-            T.Title AS PersonAccomplishment_Title, 
-            T.Year AS PersonAccomplishment_Year, 
-            T.Month AS PersonAccomplishment_Month, 
-            T.Remark AS PersonAccomplishment_Remark, 
-            T.Journal AS PersonAccomplishment_Journal, 
-            T.PersonId AS PersonAccomplishment_PersonId, 
-            True AS _from0
-        FROM EPAGRIFFINEntities.PersonAccomplishments AS T
-    ) AS T1");
-        }
-
-        /// <summary>
-        /// Gets the view for EPAGRIFFINModelStoreContainer.PersonAward.
-        /// </summary>
-        /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView25()
-        {
-            return new DbMappingView(@"
-    SELECT VALUE -- Constructing PersonAward
-        [EPAGRIFFINModel.Store.PersonAward](T1.PersonAward_Id, T1.PersonAward_Title, T1.PersonAward_Date, T1.PersonAward_Issuer, T1.PersonAward_Remark, T1.PersonAward_PersonId)
-    FROM (
-        SELECT 
-            T.Id AS PersonAward_Id, 
-            T.Title AS PersonAward_Title, 
-            T.Date AS PersonAward_Date, 
-            T.Issuer AS PersonAward_Issuer, 
-            T.Remark AS PersonAward_Remark, 
-            T.PersonId AS PersonAward_PersonId, 
-            True AS _from0
-        FROM EPAGRIFFINEntities.PersonAwards AS T
-    ) AS T1");
-        }
-
-        /// <summary>
-        /// Gets the view for EPAGRIFFINModelStoreContainer.PersonCertification.
-        /// </summary>
-        /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView26()
-        {
-            return new DbMappingView(@"
-    SELECT VALUE -- Constructing PersonCertification
-        [EPAGRIFFINModel.Store.PersonCertification](T1.PersonCertification_Id, T1.PersonCertification_Title, T1.PersonCertification_Authority, T1.PersonCertification_Remark, T1.PersonCertification_PersonId)
-    FROM (
-        SELECT 
-            T.Id AS PersonCertification_Id, 
-            T.Title AS PersonCertification_Title, 
-            T.Authority AS PersonCertification_Authority, 
-            T.Remark AS PersonCertification_Remark, 
-            T.PersonId AS PersonCertification_PersonId, 
-            True AS _from0
-        FROM EPAGRIFFINEntities.PersonCertifications AS T
-    ) AS T1");
-        }
-
-        /// <summary>
-        /// Gets the view for EPAGRIFFINModelStoreContainer.PersonNetwork.
-        /// </summary>
-        /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView27()
-        {
-            return new DbMappingView(@"
-    SELECT VALUE -- Constructing PersonNetwork
-        [EPAGRIFFINModel.Store.PersonNetwork](T1.PersonNetwork_Id, T1.PersonNetwork_NetworkId, T1.PersonNetwork_PersonId, T1.PersonNetwork_Remark)
-    FROM (
-        SELECT 
-            T.Id AS PersonNetwork_Id, 
-            T.NetworkId AS PersonNetwork_NetworkId, 
-            T.PersonId AS PersonNetwork_PersonId, 
-            T.Remark AS PersonNetwork_Remark, 
-            True AS _from0
-        FROM EPAGRIFFINEntities.PersonNetworks AS T
-    ) AS T1");
-        }
-
-        /// <summary>
-        /// Gets the view for EPAGRIFFINModelStoreContainer.PersonPatent.
-        /// </summary>
-        /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView28()
-        {
-            return new DbMappingView(@"
-    SELECT VALUE -- Constructing PersonPatent
-        [EPAGRIFFINModel.Store.PersonPatent](T1.PersonPatent_Id, T1.PersonPatent_Title, T1.PersonPatent_Date, T1.PersonPatent_Issuer, T1.PersonPatent_Remark, T1.PersonPatent_PersonId)
-    FROM (
-        SELECT 
-            T.Id AS PersonPatent_Id, 
-            T.Title AS PersonPatent_Title, 
-            T.Date AS PersonPatent_Date, 
-            T.Issuer AS PersonPatent_Issuer, 
-            T.Remark AS PersonPatent_Remark, 
-            T.PersonId AS PersonPatent_PersonId, 
-            True AS _from0
-        FROM EPAGRIFFINEntities.PersonPatents AS T
-    ) AS T1");
-        }
-
-        /// <summary>
-        /// Gets the view for EPAGRIFFINModelStoreContainer.PersonProject.
-        /// </summary>
-        /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView29()
-        {
-            return new DbMappingView(@"
-    SELECT VALUE -- Constructing PersonProject
-        [EPAGRIFFINModel.Store.PersonProject](T1.PersonProject_Id, T1.PersonProject_Title, T1.PersonProject_Date, T1.PersonProject_Remark, T1.PersonProject_PersonId)
-    FROM (
-        SELECT 
-            T.Id AS PersonProject_Id, 
-            T.Title AS PersonProject_Title, 
-            T.Date AS PersonProject_Date, 
-            T.Remark AS PersonProject_Remark, 
-            T.PersonId AS PersonProject_PersonId, 
-            True AS _from0
-        FROM EPAGRIFFINEntities.PersonProjects AS T
-    ) AS T1");
-        }
-
-        /// <summary>
-        /// Gets the view for EPAGRIFFINModelStoreContainer.PersonPublication.
-        /// </summary>
-        /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView30()
-        {
-            return new DbMappingView(@"
-    SELECT VALUE -- Constructing PersonPublication
-        [EPAGRIFFINModel.Store.PersonPublication](T1.PersonPublication_Id, T1.PersonPublication_Title, T1.PersonPublication_Date, T1.PersonPublication_Publisher, T1.PersonPublication_PersonId, T1.PersonPublication_Remark)
-    FROM (
-        SELECT 
-            T.Id AS PersonPublication_Id, 
-            T.Title AS PersonPublication_Title, 
-            T.Date AS PersonPublication_Date, 
-            T.Publisher AS PersonPublication_Publisher, 
-            T.PersonId AS PersonPublication_PersonId, 
-            T.Remark AS PersonPublication_Remark, 
-            True AS _from0
-        FROM EPAGRIFFINEntities.PersonPublications AS T
-    ) AS T1");
-        }
-
-        /// <summary>
-        /// Gets the view for EPAGRIFFINModelStoreContainer.Printer.
-        /// </summary>
-        /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView31()
-        {
-            return new DbMappingView(@"
-    SELECT VALUE -- Constructing Printer
-        [EPAGRIFFINModel.Store.Printer](T1.Printer_Id, T1.Printer_CompanyId, T1.Printer_Name, T1.Printer_Technology, T1.Printer_Material, T1.Printer_BuildVolume, T1.Printer_MinLayerHeight, T1.Printer_MaxLayerHeight, T1.Printer_PrintingSpeed, T1.Printer_ObjectFile, T1.Printer_Color, T1.[Printer.BuildVolume_W], T1.[Printer.BuildVolume_H], T1.[Printer.BuildVolume_D], T1.[Printer.Min_LH], T1.[Printer.Max_LH])
-    FROM (
-        SELECT 
-            T.Id AS Printer_Id, 
-            T.CompanyId AS Printer_CompanyId, 
-            T.Name AS Printer_Name, 
-            T.Technology AS Printer_Technology, 
-            T.Material AS Printer_Material, 
-            T.BuildVolume AS Printer_BuildVolume, 
-            T.MinLayerHeight AS Printer_MinLayerHeight, 
-            T.MaxLayerHeight AS Printer_MaxLayerHeight, 
-            T.PrintingSpeed AS Printer_PrintingSpeed, 
-            T.ObjectFile AS Printer_ObjectFile, 
-            T.Color AS Printer_Color, 
-            T.BuildVolume_W AS [Printer.BuildVolume_W], 
-            T.BuildVolume_H AS [Printer.BuildVolume_H], 
-            T.BuildVolume_D AS [Printer.BuildVolume_D], 
-            T.Min_LH AS [Printer.Min_LH], 
-            T.Max_LH AS [Printer.Max_LH], 
-            True AS _from0
-        FROM EPAGRIFFINEntities.Printers AS T
-    ) AS T1");
-        }
-
-        /// <summary>
-        /// Gets the view for EPAGRIFFINModelStoreContainer.Printer2Material.
-        /// </summary>
-        /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView32()
-        {
-            return new DbMappingView(@"
-    SELECT VALUE -- Constructing Printer2Material
-        [EPAGRIFFINModel.Store.Printer2Material](T1.Printer2Material_PrinterId, T1.Printer2Material_Material, T1.Printer2Material_IsGeneral)
-    FROM (
-        SELECT 
-            T.PrinterId AS Printer2Material_PrinterId, 
-            T.Material AS Printer2Material_Material, 
-            T.IsGeneral AS Printer2Material_IsGeneral, 
-            True AS _from0
-        FROM EPAGRIFFINEntities.Printer2Material AS T
-    ) AS T1");
-        }
-
-        /// <summary>
-        /// Gets the view for EPAGRIFFINModelStoreContainer.PrinterMaterial.
-        /// </summary>
-        /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView33()
-        {
-            return new DbMappingView(@"
-    SELECT VALUE -- Constructing PrinterMaterial
-        [EPAGRIFFINModel.Store.PrinterMaterial](T1.PrinterMaterial_PrinterId, T1.PrinterMaterial_Material, T1.PrinterMaterial_Remark)
-    FROM (
-        SELECT 
-            T.PrinterId AS PrinterMaterial_PrinterId, 
-            T.Material AS PrinterMaterial_Material, 
-            T.Remark AS PrinterMaterial_Remark, 
-            True AS _from0
-        FROM EPAGRIFFINEntities.PrinterMaterials AS T
-    ) AS T1");
-        }
-
-        /// <summary>
-        /// Gets the view for EPAGRIFFINModelStoreContainer.PrintingMaterial.
-        /// </summary>
-        /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView34()
-        {
-            return new DbMappingView(@"
-    SELECT VALUE -- Constructing PrintingMaterial
-        [EPAGRIFFINModel.Store.PrintingMaterial](T1.PrintingMaterial_Title, T1.PrintingMaterial_Remrak, T1.PrintingMaterial_IsSpecific)
-    FROM (
-        SELECT 
-            T.Title AS PrintingMaterial_Title, 
-            T.Remrak AS PrintingMaterial_Remrak, 
-            T.IsSpecific AS PrintingMaterial_IsSpecific, 
-            True AS _from0
-        FROM EPAGRIFFINEntities.PrintingMaterials AS T
-    ) AS T1");
-        }
-
-        /// <summary>
-        /// Gets the view for EPAGRIFFINModelStoreContainer.Review.
-        /// </summary>
-        /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView35()
-        {
-            return new DbMappingView(@"
-    SELECT VALUE -- Constructing Review
-        [EPAGRIFFINModel.Store.Review](T1.Review_Id, T1.Review_PersonId, T1.Review_Body, T1.Review_Title, T1.Review_TotalRate, T1.Review_Date, T1.Review_DateConfirm, T1.Review_ToPersonId, T1.Review_ToPostId, T1.Review_ToNetworkGroupId, T1.Review_ToReviewId)
-    FROM (
-        SELECT 
-            T.Id AS Review_Id, 
-            T.PersonId AS Review_PersonId, 
-            T.Body AS Review_Body, 
-            T.Title AS Review_Title, 
-            T.TotalRate AS Review_TotalRate, 
-            T.Date AS Review_Date, 
-            T.DateConfirm AS Review_DateConfirm, 
-            T.ToPersonId AS Review_ToPersonId, 
-            T.ToPostId AS Review_ToPostId, 
-            T.ToNetworkGroupId AS Review_ToNetworkGroupId, 
-            T.ToReviewId AS Review_ToReviewId, 
-            True AS _from0
-        FROM EPAGRIFFINEntities.Reviews AS T
-    ) AS T1");
-        }
-
-        /// <summary>
-        /// Gets the view for EPAGRIFFINModelStoreContainer.UserContentActivity.
-        /// </summary>
-        /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView36()
-        {
-            return new DbMappingView(@"
-    SELECT VALUE -- Constructing UserContentActivity
-        [EPAGRIFFINModel.Store.UserContentActivity](T1.UserContentActivity_Id, T1.UserContentActivity_ReviewId, T1.UserContentActivity_Remark, T1.UserContentActivity_Date, T1.UserContentActivity_PersonId)
-    FROM (
-        SELECT 
-            T.Id AS UserContentActivity_Id, 
-            T.ReviewId AS UserContentActivity_ReviewId, 
-            T.Remark AS UserContentActivity_Remark, 
-            T.Date AS UserContentActivity_Date, 
-            T.PersonId AS UserContentActivity_PersonId, 
-            True AS _from0
-        FROM EPAGRIFFINEntities.UserContentActivities AS T
-    ) AS T1");
-        }
-
-        /// <summary>
-        /// Gets the view for EPAGRIFFINModelStoreContainer.Company.
-        /// </summary>
-        /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView37()
-        {
-            return new DbMappingView(@"
-    SELECT VALUE -- Constructing Company
-        [EPAGRIFFINModel.Store.Company](T1.Company_Id, T1.Company_Name, T1.Company_Address, T1.Company_Phone, T1.Company_Email, T1.Company_Website, T1.Company_Url, T1.Company_DateVerified, T1.Company_Twitter, T1.Company_LinkedIn, T1.Company_ImageUrl, T1.Company_RushDelivery24, T1.Company_RushDelivery48, T1.Company_PersonId, T1.Company_DateJoin, T1.Company_ZIPCode, T1.Company_City, T1.Company_State, T1.Company_CountryId, T1.Company_Network, T1.Company_UserId, T1.Company_Remark)
-    FROM (
-        SELECT 
-            T.Id AS Company_Id, 
-            T.Name AS Company_Name, 
-            T.Address AS Company_Address, 
-            T.Phone AS Company_Phone, 
-            T.Email AS Company_Email, 
-            T.Website AS Company_Website, 
-            T.Url AS Company_Url, 
-            T.DateVerified AS Company_DateVerified, 
-            T.Twitter AS Company_Twitter, 
-            T.LinkedIn AS Company_LinkedIn, 
-            T.ImageUrl AS Company_ImageUrl, 
-            T.RushDelivery24 AS Company_RushDelivery24, 
-            T.RushDelivery48 AS Company_RushDelivery48, 
-            T.PersonId AS Company_PersonId, 
-            T.DateJoin AS Company_DateJoin, 
-            T.ZIPCode AS Company_ZIPCode, 
-            T.City AS Company_City, 
-            T.State AS Company_State, 
-            T.CountryId AS Company_CountryId, 
-            T.Network AS Company_Network, 
-            T.UserId AS Company_UserId, 
-            T.Remark AS Company_Remark, 
-            True AS _from0
-        FROM EPAGRIFFINEntities.Companies AS T
     ) AS T1");
         }
 
@@ -1625,14 +1626,340 @@ namespace Edm_EntityMappingGeneratedViews
         }
 
         /// <summary>
-        /// Gets the view for EPAGRIFFINEntities.People.
+        /// Gets the view for EPAGRIFFINEntities.PersonAccomplishments.
         /// </summary>
         /// <returns>The mapping view.</returns>
         private static DbMappingView GetView41()
         {
             return new DbMappingView(@"
+    SELECT VALUE -- Constructing PersonAccomplishments
+        [EPAGRIFFINModel.PersonAccomplishment](T1.PersonAccomplishment_Id, T1.PersonAccomplishment_Title, T1.PersonAccomplishment_Year, T1.PersonAccomplishment_Month, T1.PersonAccomplishment_Remark, T1.PersonAccomplishment_Journal, T1.PersonAccomplishment_PersonId)
+    FROM (
+        SELECT 
+            T.Id AS PersonAccomplishment_Id, 
+            T.Title AS PersonAccomplishment_Title, 
+            T.Year AS PersonAccomplishment_Year, 
+            T.Month AS PersonAccomplishment_Month, 
+            T.Remark AS PersonAccomplishment_Remark, 
+            T.Journal AS PersonAccomplishment_Journal, 
+            T.PersonId AS PersonAccomplishment_PersonId, 
+            True AS _from0
+        FROM EPAGRIFFINModelStoreContainer.PersonAccomplishment AS T
+    ) AS T1");
+        }
+
+        /// <summary>
+        /// Gets the view for EPAGRIFFINEntities.PersonAwards.
+        /// </summary>
+        /// <returns>The mapping view.</returns>
+        private static DbMappingView GetView42()
+        {
+            return new DbMappingView(@"
+    SELECT VALUE -- Constructing PersonAwards
+        [EPAGRIFFINModel.PersonAward](T1.PersonAward_Id, T1.PersonAward_Title, T1.PersonAward_Date, T1.PersonAward_Issuer, T1.PersonAward_Remark, T1.PersonAward_PersonId)
+    FROM (
+        SELECT 
+            T.Id AS PersonAward_Id, 
+            T.Title AS PersonAward_Title, 
+            T.Date AS PersonAward_Date, 
+            T.Issuer AS PersonAward_Issuer, 
+            T.Remark AS PersonAward_Remark, 
+            T.PersonId AS PersonAward_PersonId, 
+            True AS _from0
+        FROM EPAGRIFFINModelStoreContainer.PersonAward AS T
+    ) AS T1");
+        }
+
+        /// <summary>
+        /// Gets the view for EPAGRIFFINEntities.PersonCertifications.
+        /// </summary>
+        /// <returns>The mapping view.</returns>
+        private static DbMappingView GetView43()
+        {
+            return new DbMappingView(@"
+    SELECT VALUE -- Constructing PersonCertifications
+        [EPAGRIFFINModel.PersonCertification](T1.PersonCertification_Id, T1.PersonCertification_Title, T1.PersonCertification_Authority, T1.PersonCertification_Remark, T1.PersonCertification_PersonId)
+    FROM (
+        SELECT 
+            T.Id AS PersonCertification_Id, 
+            T.Title AS PersonCertification_Title, 
+            T.Authority AS PersonCertification_Authority, 
+            T.Remark AS PersonCertification_Remark, 
+            T.PersonId AS PersonCertification_PersonId, 
+            True AS _from0
+        FROM EPAGRIFFINModelStoreContainer.PersonCertification AS T
+    ) AS T1");
+        }
+
+        /// <summary>
+        /// Gets the view for EPAGRIFFINEntities.PersonNetworks.
+        /// </summary>
+        /// <returns>The mapping view.</returns>
+        private static DbMappingView GetView44()
+        {
+            return new DbMappingView(@"
+    SELECT VALUE -- Constructing PersonNetworks
+        [EPAGRIFFINModel.PersonNetwork](T1.PersonNetwork_Id, T1.PersonNetwork_NetworkId, T1.PersonNetwork_PersonId, T1.PersonNetwork_Remark)
+    FROM (
+        SELECT 
+            T.Id AS PersonNetwork_Id, 
+            T.NetworkId AS PersonNetwork_NetworkId, 
+            T.PersonId AS PersonNetwork_PersonId, 
+            T.Remark AS PersonNetwork_Remark, 
+            True AS _from0
+        FROM EPAGRIFFINModelStoreContainer.PersonNetwork AS T
+    ) AS T1");
+        }
+
+        /// <summary>
+        /// Gets the view for EPAGRIFFINEntities.PersonPatents.
+        /// </summary>
+        /// <returns>The mapping view.</returns>
+        private static DbMappingView GetView45()
+        {
+            return new DbMappingView(@"
+    SELECT VALUE -- Constructing PersonPatents
+        [EPAGRIFFINModel.PersonPatent](T1.PersonPatent_Id, T1.PersonPatent_Title, T1.PersonPatent_Date, T1.PersonPatent_Issuer, T1.PersonPatent_Remark, T1.PersonPatent_PersonId)
+    FROM (
+        SELECT 
+            T.Id AS PersonPatent_Id, 
+            T.Title AS PersonPatent_Title, 
+            T.Date AS PersonPatent_Date, 
+            T.Issuer AS PersonPatent_Issuer, 
+            T.Remark AS PersonPatent_Remark, 
+            T.PersonId AS PersonPatent_PersonId, 
+            True AS _from0
+        FROM EPAGRIFFINModelStoreContainer.PersonPatent AS T
+    ) AS T1");
+        }
+
+        /// <summary>
+        /// Gets the view for EPAGRIFFINEntities.PersonProjects.
+        /// </summary>
+        /// <returns>The mapping view.</returns>
+        private static DbMappingView GetView46()
+        {
+            return new DbMappingView(@"
+    SELECT VALUE -- Constructing PersonProjects
+        [EPAGRIFFINModel.PersonProject](T1.PersonProject_Id, T1.PersonProject_Title, T1.PersonProject_Date, T1.PersonProject_Remark, T1.PersonProject_PersonId)
+    FROM (
+        SELECT 
+            T.Id AS PersonProject_Id, 
+            T.Title AS PersonProject_Title, 
+            T.Date AS PersonProject_Date, 
+            T.Remark AS PersonProject_Remark, 
+            T.PersonId AS PersonProject_PersonId, 
+            True AS _from0
+        FROM EPAGRIFFINModelStoreContainer.PersonProject AS T
+    ) AS T1");
+        }
+
+        /// <summary>
+        /// Gets the view for EPAGRIFFINEntities.PersonPublications.
+        /// </summary>
+        /// <returns>The mapping view.</returns>
+        private static DbMappingView GetView47()
+        {
+            return new DbMappingView(@"
+    SELECT VALUE -- Constructing PersonPublications
+        [EPAGRIFFINModel.PersonPublication](T1.PersonPublication_Id, T1.PersonPublication_Title, T1.PersonPublication_Date, T1.PersonPublication_Publisher, T1.PersonPublication_PersonId, T1.PersonPublication_Remark)
+    FROM (
+        SELECT 
+            T.Id AS PersonPublication_Id, 
+            T.Title AS PersonPublication_Title, 
+            T.Date AS PersonPublication_Date, 
+            T.Publisher AS PersonPublication_Publisher, 
+            T.PersonId AS PersonPublication_PersonId, 
+            T.Remark AS PersonPublication_Remark, 
+            True AS _from0
+        FROM EPAGRIFFINModelStoreContainer.PersonPublication AS T
+    ) AS T1");
+        }
+
+        /// <summary>
+        /// Gets the view for EPAGRIFFINEntities.Printers.
+        /// </summary>
+        /// <returns>The mapping view.</returns>
+        private static DbMappingView GetView48()
+        {
+            return new DbMappingView(@"
+    SELECT VALUE -- Constructing Printers
+        [EPAGRIFFINModel.Printer](T1.Printer_Id, T1.Printer_CompanyId, T1.Printer_Name, T1.Printer_Technology, T1.Printer_Material, T1.Printer_BuildVolume, T1.Printer_MinLayerHeight, T1.Printer_MaxLayerHeight, T1.Printer_PrintingSpeed, T1.Printer_ObjectFile, T1.Printer_Color, T1.[Printer.BuildVolume_W], T1.[Printer.BuildVolume_H], T1.[Printer.BuildVolume_D], T1.[Printer.Min_LH], T1.[Printer.Max_LH])
+    FROM (
+        SELECT 
+            T.Id AS Printer_Id, 
+            T.CompanyId AS Printer_CompanyId, 
+            T.Name AS Printer_Name, 
+            T.Technology AS Printer_Technology, 
+            T.Material AS Printer_Material, 
+            T.BuildVolume AS Printer_BuildVolume, 
+            T.MinLayerHeight AS Printer_MinLayerHeight, 
+            T.MaxLayerHeight AS Printer_MaxLayerHeight, 
+            T.PrintingSpeed AS Printer_PrintingSpeed, 
+            T.ObjectFile AS Printer_ObjectFile, 
+            T.Color AS Printer_Color, 
+            T.BuildVolume_W AS [Printer.BuildVolume_W], 
+            T.BuildVolume_H AS [Printer.BuildVolume_H], 
+            T.BuildVolume_D AS [Printer.BuildVolume_D], 
+            T.Min_LH AS [Printer.Min_LH], 
+            T.Max_LH AS [Printer.Max_LH], 
+            True AS _from0
+        FROM EPAGRIFFINModelStoreContainer.Printer AS T
+    ) AS T1");
+        }
+
+        /// <summary>
+        /// Gets the view for EPAGRIFFINEntities.Printer2Material.
+        /// </summary>
+        /// <returns>The mapping view.</returns>
+        private static DbMappingView GetView49()
+        {
+            return new DbMappingView(@"
+    SELECT VALUE -- Constructing Printer2Material
+        [EPAGRIFFINModel.Printer2Material](T1.Printer2Material_PrinterId, T1.Printer2Material_Material, T1.Printer2Material_IsGeneral)
+    FROM (
+        SELECT 
+            T.PrinterId AS Printer2Material_PrinterId, 
+            T.Material AS Printer2Material_Material, 
+            T.IsGeneral AS Printer2Material_IsGeneral, 
+            True AS _from0
+        FROM EPAGRIFFINModelStoreContainer.Printer2Material AS T
+    ) AS T1");
+        }
+
+        /// <summary>
+        /// Gets the view for EPAGRIFFINEntities.PrinterMaterials.
+        /// </summary>
+        /// <returns>The mapping view.</returns>
+        private static DbMappingView GetView50()
+        {
+            return new DbMappingView(@"
+    SELECT VALUE -- Constructing PrinterMaterials
+        [EPAGRIFFINModel.PrinterMaterial](T1.PrinterMaterial_PrinterId, T1.PrinterMaterial_Material, T1.PrinterMaterial_Remark)
+    FROM (
+        SELECT 
+            T.PrinterId AS PrinterMaterial_PrinterId, 
+            T.Material AS PrinterMaterial_Material, 
+            T.Remark AS PrinterMaterial_Remark, 
+            True AS _from0
+        FROM EPAGRIFFINModelStoreContainer.PrinterMaterial AS T
+    ) AS T1");
+        }
+
+        /// <summary>
+        /// Gets the view for EPAGRIFFINEntities.PrintingMaterials.
+        /// </summary>
+        /// <returns>The mapping view.</returns>
+        private static DbMappingView GetView51()
+        {
+            return new DbMappingView(@"
+    SELECT VALUE -- Constructing PrintingMaterials
+        [EPAGRIFFINModel.PrintingMaterial](T1.PrintingMaterial_Title, T1.PrintingMaterial_Remrak, T1.PrintingMaterial_IsSpecific)
+    FROM (
+        SELECT 
+            T.Title AS PrintingMaterial_Title, 
+            T.Remrak AS PrintingMaterial_Remrak, 
+            T.IsSpecific AS PrintingMaterial_IsSpecific, 
+            True AS _from0
+        FROM EPAGRIFFINModelStoreContainer.PrintingMaterial AS T
+    ) AS T1");
+        }
+
+        /// <summary>
+        /// Gets the view for EPAGRIFFINEntities.Reviews.
+        /// </summary>
+        /// <returns>The mapping view.</returns>
+        private static DbMappingView GetView52()
+        {
+            return new DbMappingView(@"
+    SELECT VALUE -- Constructing Reviews
+        [EPAGRIFFINModel.Review](T1.Review_Id, T1.Review_PersonId, T1.Review_Body, T1.Review_Title, T1.Review_TotalRate, T1.Review_Date, T1.Review_DateConfirm, T1.Review_ToPersonId, T1.Review_ToPostId, T1.Review_ToNetworkGroupId, T1.Review_ToReviewId)
+    FROM (
+        SELECT 
+            T.Id AS Review_Id, 
+            T.PersonId AS Review_PersonId, 
+            T.Body AS Review_Body, 
+            T.Title AS Review_Title, 
+            T.TotalRate AS Review_TotalRate, 
+            T.Date AS Review_Date, 
+            T.DateConfirm AS Review_DateConfirm, 
+            T.ToPersonId AS Review_ToPersonId, 
+            T.ToPostId AS Review_ToPostId, 
+            T.ToNetworkGroupId AS Review_ToNetworkGroupId, 
+            T.ToReviewId AS Review_ToReviewId, 
+            True AS _from0
+        FROM EPAGRIFFINModelStoreContainer.Review AS T
+    ) AS T1");
+        }
+
+        /// <summary>
+        /// Gets the view for EPAGRIFFINEntities.UserContentActivities.
+        /// </summary>
+        /// <returns>The mapping view.</returns>
+        private static DbMappingView GetView53()
+        {
+            return new DbMappingView(@"
+    SELECT VALUE -- Constructing UserContentActivities
+        [EPAGRIFFINModel.UserContentActivity](T1.UserContentActivity_Id, T1.UserContentActivity_ReviewId, T1.UserContentActivity_Remark, T1.UserContentActivity_Date, T1.UserContentActivity_PersonId)
+    FROM (
+        SELECT 
+            T.Id AS UserContentActivity_Id, 
+            T.ReviewId AS UserContentActivity_ReviewId, 
+            T.Remark AS UserContentActivity_Remark, 
+            T.Date AS UserContentActivity_Date, 
+            T.PersonId AS UserContentActivity_PersonId, 
+            True AS _from0
+        FROM EPAGRIFFINModelStoreContainer.UserContentActivity AS T
+    ) AS T1");
+        }
+
+        /// <summary>
+        /// Gets the view for EPAGRIFFINEntities.Companies.
+        /// </summary>
+        /// <returns>The mapping view.</returns>
+        private static DbMappingView GetView54()
+        {
+            return new DbMappingView(@"
+    SELECT VALUE -- Constructing Companies
+        [EPAGRIFFINModel.Company](T1.Company_Id, T1.Company_Name, T1.Company_Address, T1.Company_Phone, T1.Company_Email, T1.Company_Website, T1.Company_Url, T1.Company_DateVerified, T1.Company_Twitter, T1.Company_LinkedIn, T1.Company_ImageUrl, T1.Company_RushDelivery24, T1.Company_RushDelivery48, T1.Company_PersonId, T1.Company_DateJoin, T1.Company_ZIPCode, T1.Company_City, T1.Company_State, T1.Company_CountryId, T1.Company_Network, T1.Company_UserId, T1.Company_Remark)
+    FROM (
+        SELECT 
+            T.Id AS Company_Id, 
+            T.Name AS Company_Name, 
+            T.Address AS Company_Address, 
+            T.Phone AS Company_Phone, 
+            T.Email AS Company_Email, 
+            T.Website AS Company_Website, 
+            T.Url AS Company_Url, 
+            T.DateVerified AS Company_DateVerified, 
+            T.Twitter AS Company_Twitter, 
+            T.LinkedIn AS Company_LinkedIn, 
+            T.ImageUrl AS Company_ImageUrl, 
+            T.RushDelivery24 AS Company_RushDelivery24, 
+            T.RushDelivery48 AS Company_RushDelivery48, 
+            T.PersonId AS Company_PersonId, 
+            T.DateJoin AS Company_DateJoin, 
+            T.ZIPCode AS Company_ZIPCode, 
+            T.City AS Company_City, 
+            T.State AS Company_State, 
+            T.CountryId AS Company_CountryId, 
+            T.Network AS Company_Network, 
+            T.UserId AS Company_UserId, 
+            T.Remark AS Company_Remark, 
+            True AS _from0
+        FROM EPAGRIFFINModelStoreContainer.Company AS T
+    ) AS T1");
+        }
+
+        /// <summary>
+        /// Gets the view for EPAGRIFFINEntities.People.
+        /// </summary>
+        /// <returns>The mapping view.</returns>
+        private static DbMappingView GetView55()
+        {
+            return new DbMappingView(@"
     SELECT VALUE -- Constructing People
-        [EPAGRIFFINModel.Person](T1.Person_Id, T1.Person_DateCreate, T1.Person_SexId, T1.Person_FirstName, T1.Person_LastName, T1.Person_DateBirth, T1.Person_Email, T1.Person_Mobile, T1.Person_Address, T1.Person_IsActive, T1.Person_IsDeleted, T1.Person_Remark, T1.Person_Nickname, T1.Person_IDNo, T1.Person_UserId, T1.Person_ImageUrl, T1.Person_CountryId, T1.Person_ZIPCode, T1.Person_State, T1.Person_City, T1.Person_Company, T1.Person_University, T1.Person_Website, T1.Person_Twitter, T1.Person_LinkedIn, T1.Person_Headline, T1.Person_DegreeId, T1.Person_PositionId, T1.Person_DateJoin, T1.Person_FieldOfStudyId, T1.Person_TempId, T1.Person_Education2, T1.Person_Location2, T1.Person_Position2)
+        [EPAGRIFFINModel.Person](T1.Person_Id, T1.Person_DateCreate, T1.Person_SexId, T1.Person_FirstName, T1.Person_LastName, T1.Person_DateBirth, T1.Person_Email, T1.Person_Mobile, T1.Person_Address, T1.Person_IsActive, T1.Person_IsDeleted, T1.Person_Remark, T1.Person_Nickname, T1.Person_IDNo, T1.Person_UserId, T1.Person_ImageUrl, T1.Person_CountryId, T1.Person_ZIPCode, T1.Person_State, T1.Person_City, T1.Person_Company, T1.Person_University, T1.Person_Website, T1.Person_Twitter, T1.Person_LinkedIn, T1.Person_Headline, T1.Person_DegreeId, T1.Person_PositionId, T1.Person_DateJoin, T1.Person_FieldOfStudyId, T1.Person_TempId, T1.Person_Education2, T1.Person_Location2, T1.Person_Position2, T1.Person_Degree)
     FROM (
         SELECT 
             T.Id AS Person_Id, 
@@ -1669,334 +1996,9 @@ namespace Edm_EntityMappingGeneratedViews
             T.Education2 AS Person_Education2, 
             T.Location2 AS Person_Location2, 
             T.Position2 AS Person_Position2, 
+            T.Degree AS Person_Degree, 
             True AS _from0
         FROM EPAGRIFFINModelStoreContainer.Person AS T
-    ) AS T1");
-        }
-
-        /// <summary>
-        /// Gets the view for EPAGRIFFINEntities.PersonAccomplishments.
-        /// </summary>
-        /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView42()
-        {
-            return new DbMappingView(@"
-    SELECT VALUE -- Constructing PersonAccomplishments
-        [EPAGRIFFINModel.PersonAccomplishment](T1.PersonAccomplishment_Id, T1.PersonAccomplishment_Title, T1.PersonAccomplishment_Year, T1.PersonAccomplishment_Month, T1.PersonAccomplishment_Remark, T1.PersonAccomplishment_Journal, T1.PersonAccomplishment_PersonId)
-    FROM (
-        SELECT 
-            T.Id AS PersonAccomplishment_Id, 
-            T.Title AS PersonAccomplishment_Title, 
-            T.Year AS PersonAccomplishment_Year, 
-            T.Month AS PersonAccomplishment_Month, 
-            T.Remark AS PersonAccomplishment_Remark, 
-            T.Journal AS PersonAccomplishment_Journal, 
-            T.PersonId AS PersonAccomplishment_PersonId, 
-            True AS _from0
-        FROM EPAGRIFFINModelStoreContainer.PersonAccomplishment AS T
-    ) AS T1");
-        }
-
-        /// <summary>
-        /// Gets the view for EPAGRIFFINEntities.PersonAwards.
-        /// </summary>
-        /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView43()
-        {
-            return new DbMappingView(@"
-    SELECT VALUE -- Constructing PersonAwards
-        [EPAGRIFFINModel.PersonAward](T1.PersonAward_Id, T1.PersonAward_Title, T1.PersonAward_Date, T1.PersonAward_Issuer, T1.PersonAward_Remark, T1.PersonAward_PersonId)
-    FROM (
-        SELECT 
-            T.Id AS PersonAward_Id, 
-            T.Title AS PersonAward_Title, 
-            T.Date AS PersonAward_Date, 
-            T.Issuer AS PersonAward_Issuer, 
-            T.Remark AS PersonAward_Remark, 
-            T.PersonId AS PersonAward_PersonId, 
-            True AS _from0
-        FROM EPAGRIFFINModelStoreContainer.PersonAward AS T
-    ) AS T1");
-        }
-
-        /// <summary>
-        /// Gets the view for EPAGRIFFINEntities.PersonCertifications.
-        /// </summary>
-        /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView44()
-        {
-            return new DbMappingView(@"
-    SELECT VALUE -- Constructing PersonCertifications
-        [EPAGRIFFINModel.PersonCertification](T1.PersonCertification_Id, T1.PersonCertification_Title, T1.PersonCertification_Authority, T1.PersonCertification_Remark, T1.PersonCertification_PersonId)
-    FROM (
-        SELECT 
-            T.Id AS PersonCertification_Id, 
-            T.Title AS PersonCertification_Title, 
-            T.Authority AS PersonCertification_Authority, 
-            T.Remark AS PersonCertification_Remark, 
-            T.PersonId AS PersonCertification_PersonId, 
-            True AS _from0
-        FROM EPAGRIFFINModelStoreContainer.PersonCertification AS T
-    ) AS T1");
-        }
-
-        /// <summary>
-        /// Gets the view for EPAGRIFFINEntities.PersonNetworks.
-        /// </summary>
-        /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView45()
-        {
-            return new DbMappingView(@"
-    SELECT VALUE -- Constructing PersonNetworks
-        [EPAGRIFFINModel.PersonNetwork](T1.PersonNetwork_Id, T1.PersonNetwork_NetworkId, T1.PersonNetwork_PersonId, T1.PersonNetwork_Remark)
-    FROM (
-        SELECT 
-            T.Id AS PersonNetwork_Id, 
-            T.NetworkId AS PersonNetwork_NetworkId, 
-            T.PersonId AS PersonNetwork_PersonId, 
-            T.Remark AS PersonNetwork_Remark, 
-            True AS _from0
-        FROM EPAGRIFFINModelStoreContainer.PersonNetwork AS T
-    ) AS T1");
-        }
-
-        /// <summary>
-        /// Gets the view for EPAGRIFFINEntities.PersonPatents.
-        /// </summary>
-        /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView46()
-        {
-            return new DbMappingView(@"
-    SELECT VALUE -- Constructing PersonPatents
-        [EPAGRIFFINModel.PersonPatent](T1.PersonPatent_Id, T1.PersonPatent_Title, T1.PersonPatent_Date, T1.PersonPatent_Issuer, T1.PersonPatent_Remark, T1.PersonPatent_PersonId)
-    FROM (
-        SELECT 
-            T.Id AS PersonPatent_Id, 
-            T.Title AS PersonPatent_Title, 
-            T.Date AS PersonPatent_Date, 
-            T.Issuer AS PersonPatent_Issuer, 
-            T.Remark AS PersonPatent_Remark, 
-            T.PersonId AS PersonPatent_PersonId, 
-            True AS _from0
-        FROM EPAGRIFFINModelStoreContainer.PersonPatent AS T
-    ) AS T1");
-        }
-
-        /// <summary>
-        /// Gets the view for EPAGRIFFINEntities.PersonProjects.
-        /// </summary>
-        /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView47()
-        {
-            return new DbMappingView(@"
-    SELECT VALUE -- Constructing PersonProjects
-        [EPAGRIFFINModel.PersonProject](T1.PersonProject_Id, T1.PersonProject_Title, T1.PersonProject_Date, T1.PersonProject_Remark, T1.PersonProject_PersonId)
-    FROM (
-        SELECT 
-            T.Id AS PersonProject_Id, 
-            T.Title AS PersonProject_Title, 
-            T.Date AS PersonProject_Date, 
-            T.Remark AS PersonProject_Remark, 
-            T.PersonId AS PersonProject_PersonId, 
-            True AS _from0
-        FROM EPAGRIFFINModelStoreContainer.PersonProject AS T
-    ) AS T1");
-        }
-
-        /// <summary>
-        /// Gets the view for EPAGRIFFINEntities.PersonPublications.
-        /// </summary>
-        /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView48()
-        {
-            return new DbMappingView(@"
-    SELECT VALUE -- Constructing PersonPublications
-        [EPAGRIFFINModel.PersonPublication](T1.PersonPublication_Id, T1.PersonPublication_Title, T1.PersonPublication_Date, T1.PersonPublication_Publisher, T1.PersonPublication_PersonId, T1.PersonPublication_Remark)
-    FROM (
-        SELECT 
-            T.Id AS PersonPublication_Id, 
-            T.Title AS PersonPublication_Title, 
-            T.Date AS PersonPublication_Date, 
-            T.Publisher AS PersonPublication_Publisher, 
-            T.PersonId AS PersonPublication_PersonId, 
-            T.Remark AS PersonPublication_Remark, 
-            True AS _from0
-        FROM EPAGRIFFINModelStoreContainer.PersonPublication AS T
-    ) AS T1");
-        }
-
-        /// <summary>
-        /// Gets the view for EPAGRIFFINEntities.Printers.
-        /// </summary>
-        /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView49()
-        {
-            return new DbMappingView(@"
-    SELECT VALUE -- Constructing Printers
-        [EPAGRIFFINModel.Printer](T1.Printer_Id, T1.Printer_CompanyId, T1.Printer_Name, T1.Printer_Technology, T1.Printer_Material, T1.Printer_BuildVolume, T1.Printer_MinLayerHeight, T1.Printer_MaxLayerHeight, T1.Printer_PrintingSpeed, T1.Printer_ObjectFile, T1.Printer_Color, T1.[Printer.BuildVolume_W], T1.[Printer.BuildVolume_H], T1.[Printer.BuildVolume_D], T1.[Printer.Min_LH], T1.[Printer.Max_LH])
-    FROM (
-        SELECT 
-            T.Id AS Printer_Id, 
-            T.CompanyId AS Printer_CompanyId, 
-            T.Name AS Printer_Name, 
-            T.Technology AS Printer_Technology, 
-            T.Material AS Printer_Material, 
-            T.BuildVolume AS Printer_BuildVolume, 
-            T.MinLayerHeight AS Printer_MinLayerHeight, 
-            T.MaxLayerHeight AS Printer_MaxLayerHeight, 
-            T.PrintingSpeed AS Printer_PrintingSpeed, 
-            T.ObjectFile AS Printer_ObjectFile, 
-            T.Color AS Printer_Color, 
-            T.BuildVolume_W AS [Printer.BuildVolume_W], 
-            T.BuildVolume_H AS [Printer.BuildVolume_H], 
-            T.BuildVolume_D AS [Printer.BuildVolume_D], 
-            T.Min_LH AS [Printer.Min_LH], 
-            T.Max_LH AS [Printer.Max_LH], 
-            True AS _from0
-        FROM EPAGRIFFINModelStoreContainer.Printer AS T
-    ) AS T1");
-        }
-
-        /// <summary>
-        /// Gets the view for EPAGRIFFINEntities.Printer2Material.
-        /// </summary>
-        /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView50()
-        {
-            return new DbMappingView(@"
-    SELECT VALUE -- Constructing Printer2Material
-        [EPAGRIFFINModel.Printer2Material](T1.Printer2Material_PrinterId, T1.Printer2Material_Material, T1.Printer2Material_IsGeneral)
-    FROM (
-        SELECT 
-            T.PrinterId AS Printer2Material_PrinterId, 
-            T.Material AS Printer2Material_Material, 
-            T.IsGeneral AS Printer2Material_IsGeneral, 
-            True AS _from0
-        FROM EPAGRIFFINModelStoreContainer.Printer2Material AS T
-    ) AS T1");
-        }
-
-        /// <summary>
-        /// Gets the view for EPAGRIFFINEntities.PrinterMaterials.
-        /// </summary>
-        /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView51()
-        {
-            return new DbMappingView(@"
-    SELECT VALUE -- Constructing PrinterMaterials
-        [EPAGRIFFINModel.PrinterMaterial](T1.PrinterMaterial_PrinterId, T1.PrinterMaterial_Material, T1.PrinterMaterial_Remark)
-    FROM (
-        SELECT 
-            T.PrinterId AS PrinterMaterial_PrinterId, 
-            T.Material AS PrinterMaterial_Material, 
-            T.Remark AS PrinterMaterial_Remark, 
-            True AS _from0
-        FROM EPAGRIFFINModelStoreContainer.PrinterMaterial AS T
-    ) AS T1");
-        }
-
-        /// <summary>
-        /// Gets the view for EPAGRIFFINEntities.PrintingMaterials.
-        /// </summary>
-        /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView52()
-        {
-            return new DbMappingView(@"
-    SELECT VALUE -- Constructing PrintingMaterials
-        [EPAGRIFFINModel.PrintingMaterial](T1.PrintingMaterial_Title, T1.PrintingMaterial_Remrak, T1.PrintingMaterial_IsSpecific)
-    FROM (
-        SELECT 
-            T.Title AS PrintingMaterial_Title, 
-            T.Remrak AS PrintingMaterial_Remrak, 
-            T.IsSpecific AS PrintingMaterial_IsSpecific, 
-            True AS _from0
-        FROM EPAGRIFFINModelStoreContainer.PrintingMaterial AS T
-    ) AS T1");
-        }
-
-        /// <summary>
-        /// Gets the view for EPAGRIFFINEntities.Reviews.
-        /// </summary>
-        /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView53()
-        {
-            return new DbMappingView(@"
-    SELECT VALUE -- Constructing Reviews
-        [EPAGRIFFINModel.Review](T1.Review_Id, T1.Review_PersonId, T1.Review_Body, T1.Review_Title, T1.Review_TotalRate, T1.Review_Date, T1.Review_DateConfirm, T1.Review_ToPersonId, T1.Review_ToPostId, T1.Review_ToNetworkGroupId, T1.Review_ToReviewId)
-    FROM (
-        SELECT 
-            T.Id AS Review_Id, 
-            T.PersonId AS Review_PersonId, 
-            T.Body AS Review_Body, 
-            T.Title AS Review_Title, 
-            T.TotalRate AS Review_TotalRate, 
-            T.Date AS Review_Date, 
-            T.DateConfirm AS Review_DateConfirm, 
-            T.ToPersonId AS Review_ToPersonId, 
-            T.ToPostId AS Review_ToPostId, 
-            T.ToNetworkGroupId AS Review_ToNetworkGroupId, 
-            T.ToReviewId AS Review_ToReviewId, 
-            True AS _from0
-        FROM EPAGRIFFINModelStoreContainer.Review AS T
-    ) AS T1");
-        }
-
-        /// <summary>
-        /// Gets the view for EPAGRIFFINEntities.UserContentActivities.
-        /// </summary>
-        /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView54()
-        {
-            return new DbMappingView(@"
-    SELECT VALUE -- Constructing UserContentActivities
-        [EPAGRIFFINModel.UserContentActivity](T1.UserContentActivity_Id, T1.UserContentActivity_ReviewId, T1.UserContentActivity_Remark, T1.UserContentActivity_Date, T1.UserContentActivity_PersonId)
-    FROM (
-        SELECT 
-            T.Id AS UserContentActivity_Id, 
-            T.ReviewId AS UserContentActivity_ReviewId, 
-            T.Remark AS UserContentActivity_Remark, 
-            T.Date AS UserContentActivity_Date, 
-            T.PersonId AS UserContentActivity_PersonId, 
-            True AS _from0
-        FROM EPAGRIFFINModelStoreContainer.UserContentActivity AS T
-    ) AS T1");
-        }
-
-        /// <summary>
-        /// Gets the view for EPAGRIFFINEntities.Companies.
-        /// </summary>
-        /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView55()
-        {
-            return new DbMappingView(@"
-    SELECT VALUE -- Constructing Companies
-        [EPAGRIFFINModel.Company](T1.Company_Id, T1.Company_Name, T1.Company_Address, T1.Company_Phone, T1.Company_Email, T1.Company_Website, T1.Company_Url, T1.Company_DateVerified, T1.Company_Twitter, T1.Company_LinkedIn, T1.Company_ImageUrl, T1.Company_RushDelivery24, T1.Company_RushDelivery48, T1.Company_PersonId, T1.Company_DateJoin, T1.Company_ZIPCode, T1.Company_City, T1.Company_State, T1.Company_CountryId, T1.Company_Network, T1.Company_UserId, T1.Company_Remark)
-    FROM (
-        SELECT 
-            T.Id AS Company_Id, 
-            T.Name AS Company_Name, 
-            T.Address AS Company_Address, 
-            T.Phone AS Company_Phone, 
-            T.Email AS Company_Email, 
-            T.Website AS Company_Website, 
-            T.Url AS Company_Url, 
-            T.DateVerified AS Company_DateVerified, 
-            T.Twitter AS Company_Twitter, 
-            T.LinkedIn AS Company_LinkedIn, 
-            T.ImageUrl AS Company_ImageUrl, 
-            T.RushDelivery24 AS Company_RushDelivery24, 
-            T.RushDelivery48 AS Company_RushDelivery48, 
-            T.PersonId AS Company_PersonId, 
-            T.DateJoin AS Company_DateJoin, 
-            T.ZIPCode AS Company_ZIPCode, 
-            T.City AS Company_City, 
-            T.State AS Company_State, 
-            T.CountryId AS Company_CountryId, 
-            T.Network AS Company_Network, 
-            T.UserId AS Company_UserId, 
-            T.Remark AS Company_Remark, 
-            True AS _from0
-        FROM EPAGRIFFINModelStoreContainer.Company AS T
     ) AS T1");
         }
 
@@ -2128,12 +2130,13 @@ namespace Edm_EntityMappingGeneratedViews
         {
             return new DbMappingView(@"
     SELECT VALUE -- Constructing PrinterTechnology
-        [EPAGRIFFINModel.Store.PrinterTechnology](T1.PrinterTechnology_PrinterId, T1.PrinterTechnology_Remark, T1.PrinterTechnology_TechnologyId)
+        [EPAGRIFFINModel.Store.PrinterTechnology](T1.PrinterTechnology_PrinterId, T1.PrinterTechnology_Remark, T1.PrinterTechnology_TechnologyId, T1.PrinterTechnology_Technology)
     FROM (
         SELECT 
             T.PrinterId AS PrinterTechnology_PrinterId, 
             T.Remark AS PrinterTechnology_Remark, 
             T.TechnologyId AS PrinterTechnology_TechnologyId, 
+            T.Technology AS PrinterTechnology_Technology, 
             True AS _from0
         FROM EPAGRIFFINEntities.PrinterTechnologies AS T
     ) AS T1");
@@ -2189,12 +2192,13 @@ namespace Edm_EntityMappingGeneratedViews
         {
             return new DbMappingView(@"
     SELECT VALUE -- Constructing PrinterTechnologies
-        [EPAGRIFFINModel.PrinterTechnology](T1.PrinterTechnology_PrinterId, T1.PrinterTechnology_Remark, T1.PrinterTechnology_TechnologyId)
+        [EPAGRIFFINModel.PrinterTechnology](T1.PrinterTechnology_PrinterId, T1.PrinterTechnology_Remark, T1.PrinterTechnology_TechnologyId, T1.PrinterTechnology_Technology)
     FROM (
         SELECT 
             T.PrinterId AS PrinterTechnology_PrinterId, 
             T.Remark AS PrinterTechnology_Remark, 
             T.TechnologyId AS PrinterTechnology_TechnologyId, 
+            T.Technology AS PrinterTechnology_Technology, 
             True AS _from0
         FROM EPAGRIFFINModelStoreContainer.PrinterTechnology AS T
     ) AS T1");
@@ -2533,126 +2537,10 @@ namespace Edm_EntityMappingGeneratedViews
         }
 
         /// <summary>
-        /// Gets the view for EPAGRIFFINModelStoreContainer.ViewPerson.
-        /// </summary>
-        /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView82()
-        {
-            return new DbMappingView(@"
-    SELECT VALUE -- Constructing ViewPerson
-        [EPAGRIFFINModel.Store.ViewPerson](T1.ViewPerson_Id, T1.ViewPerson_DateCreate, T1.ViewPerson_SexId, T1.ViewPerson_FirstName, T1.ViewPerson_LastName, T1.ViewPerson_DateBirth, T1.ViewPerson_Email, T1.ViewPerson_Mobile, T1.ViewPerson_Address, T1.ViewPerson_IsActive, T1.ViewPerson_IsDeleted, T1.ViewPerson_Remark, T1.ViewPerson_Nickname, T1.ViewPerson_IDNo, T1.ViewPerson_UserId, T1.ViewPerson_ImageUrl, T1.ViewPerson_ImageUrl2, T1.ViewPerson_CountryId, T1.ViewPerson_ZIPCode, T1.ViewPerson_State, T1.ViewPerson_City, T1.ViewPerson_Company, T1.ViewPerson_University, T1.ViewPerson_Website, T1.ViewPerson_Twitter, T1.ViewPerson_LinkedIn, T1.ViewPerson_Headline, T1.ViewPerson_DegreeId, T1.ViewPerson_PositionId, T1.ViewPerson_DateJoin, T1.ViewPerson_DateJoinStr, T1.ViewPerson_Name, T1.ViewPerson_FieldOfStudyId, T1.ViewPerson_Position, T1.ViewPerson_FieldOfStudy, T1.ViewPerson_Degree, T1.ViewPerson_CountrySortName, T1.ViewPerson_Country, T1.ViewPerson_Location, T1.ViewPerson_Education, T1.ViewPerson_Networks, T1.ViewPerson_NetworkIds)
-    FROM (
-        SELECT 
-            T.Id AS ViewPerson_Id, 
-            T.DateCreate AS ViewPerson_DateCreate, 
-            T.SexId AS ViewPerson_SexId, 
-            T.FirstName AS ViewPerson_FirstName, 
-            T.LastName AS ViewPerson_LastName, 
-            T.DateBirth AS ViewPerson_DateBirth, 
-            T.Email AS ViewPerson_Email, 
-            T.Mobile AS ViewPerson_Mobile, 
-            T.Address AS ViewPerson_Address, 
-            T.IsActive AS ViewPerson_IsActive, 
-            T.IsDeleted AS ViewPerson_IsDeleted, 
-            T.Remark AS ViewPerson_Remark, 
-            T.Nickname AS ViewPerson_Nickname, 
-            T.IDNo AS ViewPerson_IDNo, 
-            T.UserId AS ViewPerson_UserId, 
-            T.ImageUrl AS ViewPerson_ImageUrl, 
-            T.ImageUrl2 AS ViewPerson_ImageUrl2, 
-            T.CountryId AS ViewPerson_CountryId, 
-            T.ZIPCode AS ViewPerson_ZIPCode, 
-            T.State AS ViewPerson_State, 
-            T.City AS ViewPerson_City, 
-            T.Company AS ViewPerson_Company, 
-            T.University AS ViewPerson_University, 
-            T.Website AS ViewPerson_Website, 
-            T.Twitter AS ViewPerson_Twitter, 
-            T.LinkedIn AS ViewPerson_LinkedIn, 
-            T.Headline AS ViewPerson_Headline, 
-            T.DegreeId AS ViewPerson_DegreeId, 
-            T.PositionId AS ViewPerson_PositionId, 
-            T.DateJoin AS ViewPerson_DateJoin, 
-            T.DateJoinStr AS ViewPerson_DateJoinStr, 
-            T.Name AS ViewPerson_Name, 
-            T.FieldOfStudyId AS ViewPerson_FieldOfStudyId, 
-            T.Position AS ViewPerson_Position, 
-            T.FieldOfStudy AS ViewPerson_FieldOfStudy, 
-            T.Degree AS ViewPerson_Degree, 
-            T.CountrySortName AS ViewPerson_CountrySortName, 
-            T.Country AS ViewPerson_Country, 
-            T.Location AS ViewPerson_Location, 
-            T.Education AS ViewPerson_Education, 
-            T.Networks AS ViewPerson_Networks, 
-            T.NetworkIds AS ViewPerson_NetworkIds, 
-            True AS _from0
-        FROM EPAGRIFFINEntities.ViewPersons AS T
-    ) AS T1");
-        }
-
-        /// <summary>
-        /// Gets the view for EPAGRIFFINEntities.ViewPersons.
-        /// </summary>
-        /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView83()
-        {
-            return new DbMappingView(@"
-    SELECT VALUE -- Constructing ViewPersons
-        [EPAGRIFFINModel.ViewPerson](T1.ViewPerson_Id, T1.ViewPerson_DateCreate, T1.ViewPerson_SexId, T1.ViewPerson_FirstName, T1.ViewPerson_LastName, T1.ViewPerson_DateBirth, T1.ViewPerson_Email, T1.ViewPerson_Mobile, T1.ViewPerson_Address, T1.ViewPerson_IsActive, T1.ViewPerson_IsDeleted, T1.ViewPerson_Remark, T1.ViewPerson_Nickname, T1.ViewPerson_IDNo, T1.ViewPerson_UserId, T1.ViewPerson_ImageUrl, T1.ViewPerson_ImageUrl2, T1.ViewPerson_CountryId, T1.ViewPerson_ZIPCode, T1.ViewPerson_State, T1.ViewPerson_City, T1.ViewPerson_Company, T1.ViewPerson_University, T1.ViewPerson_Website, T1.ViewPerson_Twitter, T1.ViewPerson_LinkedIn, T1.ViewPerson_Headline, T1.ViewPerson_DegreeId, T1.ViewPerson_PositionId, T1.ViewPerson_DateJoin, T1.ViewPerson_DateJoinStr, T1.ViewPerson_Name, T1.ViewPerson_FieldOfStudyId, T1.ViewPerson_Position, T1.ViewPerson_FieldOfStudy, T1.ViewPerson_Degree, T1.ViewPerson_CountrySortName, T1.ViewPerson_Country, T1.ViewPerson_Location, T1.ViewPerson_Education, T1.ViewPerson_Networks, T1.ViewPerson_NetworkIds)
-    FROM (
-        SELECT 
-            T.Id AS ViewPerson_Id, 
-            T.DateCreate AS ViewPerson_DateCreate, 
-            T.SexId AS ViewPerson_SexId, 
-            T.FirstName AS ViewPerson_FirstName, 
-            T.LastName AS ViewPerson_LastName, 
-            T.DateBirth AS ViewPerson_DateBirth, 
-            T.Email AS ViewPerson_Email, 
-            T.Mobile AS ViewPerson_Mobile, 
-            T.Address AS ViewPerson_Address, 
-            T.IsActive AS ViewPerson_IsActive, 
-            T.IsDeleted AS ViewPerson_IsDeleted, 
-            T.Remark AS ViewPerson_Remark, 
-            T.Nickname AS ViewPerson_Nickname, 
-            T.IDNo AS ViewPerson_IDNo, 
-            T.UserId AS ViewPerson_UserId, 
-            T.ImageUrl AS ViewPerson_ImageUrl, 
-            T.ImageUrl2 AS ViewPerson_ImageUrl2, 
-            T.CountryId AS ViewPerson_CountryId, 
-            T.ZIPCode AS ViewPerson_ZIPCode, 
-            T.State AS ViewPerson_State, 
-            T.City AS ViewPerson_City, 
-            T.Company AS ViewPerson_Company, 
-            T.University AS ViewPerson_University, 
-            T.Website AS ViewPerson_Website, 
-            T.Twitter AS ViewPerson_Twitter, 
-            T.LinkedIn AS ViewPerson_LinkedIn, 
-            T.Headline AS ViewPerson_Headline, 
-            T.DegreeId AS ViewPerson_DegreeId, 
-            T.PositionId AS ViewPerson_PositionId, 
-            T.DateJoin AS ViewPerson_DateJoin, 
-            T.DateJoinStr AS ViewPerson_DateJoinStr, 
-            T.Name AS ViewPerson_Name, 
-            T.FieldOfStudyId AS ViewPerson_FieldOfStudyId, 
-            T.Position AS ViewPerson_Position, 
-            T.FieldOfStudy AS ViewPerson_FieldOfStudy, 
-            T.Degree AS ViewPerson_Degree, 
-            T.CountrySortName AS ViewPerson_CountrySortName, 
-            T.Country AS ViewPerson_Country, 
-            T.Location AS ViewPerson_Location, 
-            T.Education AS ViewPerson_Education, 
-            T.Networks AS ViewPerson_Networks, 
-            T.NetworkIds AS ViewPerson_NetworkIds, 
-            True AS _from0
-        FROM EPAGRIFFINModelStoreContainer.ViewPerson AS T
-    ) AS T1");
-        }
-
-        /// <summary>
         /// Gets the view for EPAGRIFFINModelStoreContainer.ViewPersonNetwork.
         /// </summary>
         /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView84()
+        private static DbMappingView GetView82()
         {
             return new DbMappingView(@"
     SELECT VALUE -- Constructing ViewPersonNetwork
@@ -2673,7 +2561,7 @@ namespace Edm_EntityMappingGeneratedViews
         /// Gets the view for EPAGRIFFINEntities.ViewPersonNetworks.
         /// </summary>
         /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView85()
+        private static DbMappingView GetView83()
         {
             return new DbMappingView(@"
     SELECT VALUE -- Constructing ViewPersonNetworks
@@ -2694,7 +2582,7 @@ namespace Edm_EntityMappingGeneratedViews
         /// Gets the view for EPAGRIFFINModelStoreContainer.ViewPersonPatent.
         /// </summary>
         /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView86()
+        private static DbMappingView GetView84()
         {
             return new DbMappingView(@"
     SELECT VALUE -- Constructing ViewPersonPatent
@@ -2717,7 +2605,7 @@ namespace Edm_EntityMappingGeneratedViews
         /// Gets the view for EPAGRIFFINEntities.ViewPersonPatents.
         /// </summary>
         /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView87()
+        private static DbMappingView GetView85()
         {
             return new DbMappingView(@"
     SELECT VALUE -- Constructing ViewPersonPatents
@@ -2740,7 +2628,7 @@ namespace Edm_EntityMappingGeneratedViews
         /// Gets the view for EPAGRIFFINModelStoreContainer.ViewPersonPublication.
         /// </summary>
         /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView88()
+        private static DbMappingView GetView86()
         {
             return new DbMappingView(@"
     SELECT VALUE -- Constructing ViewPersonPublication
@@ -2763,7 +2651,7 @@ namespace Edm_EntityMappingGeneratedViews
         /// Gets the view for EPAGRIFFINEntities.ViewPersonPublications.
         /// </summary>
         /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView89()
+        private static DbMappingView GetView87()
         {
             return new DbMappingView(@"
     SELECT VALUE -- Constructing ViewPersonPublications
@@ -2786,7 +2674,7 @@ namespace Edm_EntityMappingGeneratedViews
         /// Gets the view for EPAGRIFFINModelStoreContainer.ViewPersonReview.
         /// </summary>
         /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView90()
+        private static DbMappingView GetView88()
         {
             return new DbMappingView(@"
     SELECT VALUE -- Constructing ViewPersonReview
@@ -2816,7 +2704,7 @@ namespace Edm_EntityMappingGeneratedViews
         /// Gets the view for EPAGRIFFINEntities.ViewPersonReviews.
         /// </summary>
         /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView91()
+        private static DbMappingView GetView89()
         {
             return new DbMappingView(@"
     SELECT VALUE -- Constructing ViewPersonReviews
@@ -2846,7 +2734,7 @@ namespace Edm_EntityMappingGeneratedViews
         /// Gets the view for EPAGRIFFINModelStoreContainer.ViewPrinter.
         /// </summary>
         /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView92()
+        private static DbMappingView GetView90()
         {
             return new DbMappingView(@"
     SELECT VALUE -- Constructing ViewPrinter
@@ -2879,7 +2767,7 @@ namespace Edm_EntityMappingGeneratedViews
         /// Gets the view for EPAGRIFFINEntities.ViewPrinters.
         /// </summary>
         /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView93()
+        private static DbMappingView GetView91()
         {
             return new DbMappingView(@"
     SELECT VALUE -- Constructing ViewPrinters
@@ -2912,7 +2800,7 @@ namespace Edm_EntityMappingGeneratedViews
         /// Gets the view for EPAGRIFFINModelStoreContainer.ViewPrinter2Optic.
         /// </summary>
         /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView94()
+        private static DbMappingView GetView92()
         {
             return new DbMappingView(@"
     SELECT VALUE -- Constructing ViewPrinter2Optic
@@ -2932,7 +2820,7 @@ namespace Edm_EntityMappingGeneratedViews
         /// Gets the view for EPAGRIFFINEntities.ViewPrinter2Optic.
         /// </summary>
         /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView95()
+        private static DbMappingView GetView93()
         {
             return new DbMappingView(@"
     SELECT VALUE -- Constructing ViewPrinter2Optic
@@ -2952,7 +2840,7 @@ namespace Edm_EntityMappingGeneratedViews
         /// Gets the view for EPAGRIFFINModelStoreContainer.ViewPrinterTechnology.
         /// </summary>
         /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView96()
+        private static DbMappingView GetView94()
         {
             return new DbMappingView(@"
     SELECT VALUE -- Constructing ViewPrinterTechnology
@@ -2972,7 +2860,7 @@ namespace Edm_EntityMappingGeneratedViews
         /// Gets the view for EPAGRIFFINEntities.ViewPrinterTechnologies.
         /// </summary>
         /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView97()
+        private static DbMappingView GetView95()
         {
             return new DbMappingView(@"
     SELECT VALUE -- Constructing ViewPrinterTechnologies
@@ -2992,7 +2880,7 @@ namespace Edm_EntityMappingGeneratedViews
         /// Gets the view for EPAGRIFFINModelStoreContainer.ViewProject.
         /// </summary>
         /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView98()
+        private static DbMappingView GetView96()
         {
             return new DbMappingView(@"
     SELECT VALUE -- Constructing ViewProject
@@ -3014,7 +2902,7 @@ namespace Edm_EntityMappingGeneratedViews
         /// Gets the view for EPAGRIFFINEntities.ViewProjects.
         /// </summary>
         /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView99()
+        private static DbMappingView GetView97()
         {
             return new DbMappingView(@"
     SELECT VALUE -- Constructing ViewProjects
@@ -3036,7 +2924,7 @@ namespace Edm_EntityMappingGeneratedViews
         /// Gets the view for EPAGRIFFINModelStoreContainer.ViewUserContentActivity.
         /// </summary>
         /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView100()
+        private static DbMappingView GetView98()
         {
             return new DbMappingView(@"
     SELECT VALUE -- Constructing ViewUserContentActivity
@@ -3061,7 +2949,7 @@ namespace Edm_EntityMappingGeneratedViews
         /// Gets the view for EPAGRIFFINEntities.ViewUserContentActivities.
         /// </summary>
         /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView101()
+        private static DbMappingView GetView99()
         {
             return new DbMappingView(@"
     SELECT VALUE -- Constructing ViewUserContentActivities
@@ -3086,7 +2974,7 @@ namespace Edm_EntityMappingGeneratedViews
         /// Gets the view for EPAGRIFFINModelStoreContainer.ViewManufacturer.
         /// </summary>
         /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView102()
+        private static DbMappingView GetView100()
         {
             return new DbMappingView(@"
     SELECT VALUE -- Constructing ViewManufacturer
@@ -3105,7 +2993,7 @@ namespace Edm_EntityMappingGeneratedViews
         /// Gets the view for EPAGRIFFINEntities.ViewManufacturers.
         /// </summary>
         /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView103()
+        private static DbMappingView GetView101()
         {
             return new DbMappingView(@"
     SELECT VALUE -- Constructing ViewManufacturers
@@ -3124,7 +3012,7 @@ namespace Edm_EntityMappingGeneratedViews
         /// Gets the view for EPAGRIFFINModelStoreContainer.ViewPrinterModel.
         /// </summary>
         /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView104()
+        private static DbMappingView GetView102()
         {
             return new DbMappingView(@"
     SELECT VALUE -- Constructing ViewPrinterModel
@@ -3145,7 +3033,7 @@ namespace Edm_EntityMappingGeneratedViews
         /// Gets the view for EPAGRIFFINEntities.ViewPrinterModels.
         /// </summary>
         /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView105()
+        private static DbMappingView GetView103()
         {
             return new DbMappingView(@"
     SELECT VALUE -- Constructing ViewPrinterModels
@@ -3166,7 +3054,7 @@ namespace Edm_EntityMappingGeneratedViews
         /// Gets the view for EPAGRIFFINModelStoreContainer.Printer2.
         /// </summary>
         /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView106()
+        private static DbMappingView GetView104()
         {
             return new DbMappingView(@"
     SELECT VALUE -- Constructing Printer2
@@ -3214,7 +3102,7 @@ namespace Edm_EntityMappingGeneratedViews
         /// Gets the view for EPAGRIFFINEntities.Printer2.
         /// </summary>
         /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView107()
+        private static DbMappingView GetView105()
         {
             return new DbMappingView(@"
     SELECT VALUE -- Constructing Printer2
@@ -3262,7 +3150,7 @@ namespace Edm_EntityMappingGeneratedViews
         /// Gets the view for EPAGRIFFINModelStoreContainer.ViewPrinter2.
         /// </summary>
         /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView108()
+        private static DbMappingView GetView106()
         {
             return new DbMappingView(@"
     SELECT VALUE -- Constructing ViewPrinter2
@@ -3334,7 +3222,7 @@ namespace Edm_EntityMappingGeneratedViews
         /// Gets the view for EPAGRIFFINEntities.ViewPrinter2.
         /// </summary>
         /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView109()
+        private static DbMappingView GetView107()
         {
             return new DbMappingView(@"
     SELECT VALUE -- Constructing ViewPrinter2
@@ -3406,7 +3294,7 @@ namespace Edm_EntityMappingGeneratedViews
         /// Gets the view for EPAGRIFFINModelStoreContainer.Material.
         /// </summary>
         /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView110()
+        private static DbMappingView GetView108()
         {
             return new DbMappingView(@"
     SELECT VALUE -- Constructing Material
@@ -3445,7 +3333,7 @@ namespace Edm_EntityMappingGeneratedViews
         /// Gets the view for EPAGRIFFINEntities.Materials.
         /// </summary>
         /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView111()
+        private static DbMappingView GetView109()
         {
             return new DbMappingView(@"
     SELECT VALUE -- Constructing Materials
@@ -3484,7 +3372,7 @@ namespace Edm_EntityMappingGeneratedViews
         /// Gets the view for EPAGRIFFINModelStoreContainer.Supplier.
         /// </summary>
         /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView112()
+        private static DbMappingView GetView110()
         {
             return new DbMappingView(@"
     SELECT VALUE -- Constructing Supplier
@@ -3503,7 +3391,7 @@ namespace Edm_EntityMappingGeneratedViews
         /// Gets the view for EPAGRIFFINEntities.Suppliers.
         /// </summary>
         /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView113()
+        private static DbMappingView GetView111()
         {
             return new DbMappingView(@"
     SELECT VALUE -- Constructing Suppliers
@@ -3522,7 +3410,7 @@ namespace Edm_EntityMappingGeneratedViews
         /// Gets the view for EPAGRIFFINModelStoreContainer.ViewAMProcess.
         /// </summary>
         /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView114()
+        private static DbMappingView GetView112()
         {
             return new DbMappingView(@"
     SELECT VALUE -- Constructing ViewAMProcess
@@ -3540,7 +3428,7 @@ namespace Edm_EntityMappingGeneratedViews
         /// Gets the view for EPAGRIFFINEntities.ViewAMProcesses.
         /// </summary>
         /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView115()
+        private static DbMappingView GetView113()
         {
             return new DbMappingView(@"
     SELECT VALUE -- Constructing ViewAMProcesses
@@ -3558,7 +3446,7 @@ namespace Edm_EntityMappingGeneratedViews
         /// Gets the view for EPAGRIFFINModelStoreContainer.ViewAmTechnology.
         /// </summary>
         /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView116()
+        private static DbMappingView GetView114()
         {
             return new DbMappingView(@"
     SELECT VALUE -- Constructing ViewAmTechnology
@@ -3576,7 +3464,7 @@ namespace Edm_EntityMappingGeneratedViews
         /// Gets the view for EPAGRIFFINEntities.ViewAmTechnologies.
         /// </summary>
         /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView117()
+        private static DbMappingView GetView115()
         {
             return new DbMappingView(@"
     SELECT VALUE -- Constructing ViewAmTechnologies
@@ -3594,7 +3482,7 @@ namespace Edm_EntityMappingGeneratedViews
         /// Gets the view for EPAGRIFFINModelStoreContainer.ViewCompanyPrinter.
         /// </summary>
         /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView118()
+        private static DbMappingView GetView116()
         {
             return new DbMappingView(@"
     SELECT VALUE -- Constructing ViewCompanyPrinter
@@ -3695,7 +3583,7 @@ namespace Edm_EntityMappingGeneratedViews
         /// Gets the view for EPAGRIFFINEntities.ViewCompanyPrinters.
         /// </summary>
         /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView119()
+        private static DbMappingView GetView117()
         {
             return new DbMappingView(@"
     SELECT VALUE -- Constructing ViewCompanyPrinters
@@ -3796,7 +3684,7 @@ namespace Edm_EntityMappingGeneratedViews
         /// Gets the view for EPAGRIFFINModelStoreContainer.CompanyPrinter.
         /// </summary>
         /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView120()
+        private static DbMappingView GetView118()
         {
             return new DbMappingView(@"
     SELECT VALUE -- Constructing CompanyPrinter
@@ -3816,7 +3704,7 @@ namespace Edm_EntityMappingGeneratedViews
         /// Gets the view for EPAGRIFFINEntities.CompanyPrinters.
         /// </summary>
         /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView121()
+        private static DbMappingView GetView119()
         {
             return new DbMappingView(@"
     SELECT VALUE -- Constructing CompanyPrinters
@@ -3836,7 +3724,7 @@ namespace Edm_EntityMappingGeneratedViews
         /// Gets the view for EPAGRIFFINModelStoreContainer.ViewCompany.
         /// </summary>
         /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView122()
+        private static DbMappingView GetView120()
         {
             return new DbMappingView(@"
     SELECT VALUE -- Constructing ViewCompany
@@ -3889,7 +3777,7 @@ namespace Edm_EntityMappingGeneratedViews
         /// Gets the view for EPAGRIFFINEntities.ViewCompanies.
         /// </summary>
         /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView123()
+        private static DbMappingView GetView121()
         {
             return new DbMappingView(@"
     SELECT VALUE -- Constructing ViewCompanies
@@ -3935,6 +3823,122 @@ namespace Edm_EntityMappingGeneratedViews
             T.MaxLayer AS ViewCompany_MaxLayer, 
             True AS _from0
         FROM EPAGRIFFINModelStoreContainer.ViewCompany AS T
+    ) AS T1");
+        }
+
+        /// <summary>
+        /// Gets the view for EPAGRIFFINModelStoreContainer.ViewPerson.
+        /// </summary>
+        /// <returns>The mapping view.</returns>
+        private static DbMappingView GetView122()
+        {
+            return new DbMappingView(@"
+    SELECT VALUE -- Constructing ViewPerson
+        [EPAGRIFFINModel.Store.ViewPerson](T1.ViewPerson_Id, T1.ViewPerson_DateCreate, T1.ViewPerson_SexId, T1.ViewPerson_FirstName, T1.ViewPerson_LastName, T1.ViewPerson_DateBirth, T1.ViewPerson_Email, T1.ViewPerson_Mobile, T1.ViewPerson_Address, T1.ViewPerson_IsActive, T1.ViewPerson_IsDeleted, T1.ViewPerson_Remark, T1.ViewPerson_Nickname, T1.ViewPerson_IDNo, T1.ViewPerson_UserId, T1.ViewPerson_ImageUrl, T1.ViewPerson_ImageUrl2, T1.ViewPerson_CountryId, T1.ViewPerson_ZIPCode, T1.ViewPerson_State, T1.ViewPerson_City, T1.ViewPerson_Company, T1.ViewPerson_University, T1.ViewPerson_Website, T1.ViewPerson_Twitter, T1.ViewPerson_LinkedIn, T1.ViewPerson_Headline, T1.ViewPerson_DegreeId, T1.ViewPerson_PositionId, T1.ViewPerson_DateJoin, T1.ViewPerson_DateJoinStr, T1.ViewPerson_Name, T1.ViewPerson_FieldOfStudyId, T1.ViewPerson_Position, T1.ViewPerson_FieldOfStudy, T1.ViewPerson_Degree, T1.ViewPerson_CountrySortName, T1.ViewPerson_Country, T1.ViewPerson_Location, T1.ViewPerson_Education, T1.ViewPerson_Networks, T1.ViewPerson_NetworkIds)
+    FROM (
+        SELECT 
+            T.Id AS ViewPerson_Id, 
+            T.DateCreate AS ViewPerson_DateCreate, 
+            T.SexId AS ViewPerson_SexId, 
+            T.FirstName AS ViewPerson_FirstName, 
+            T.LastName AS ViewPerson_LastName, 
+            T.DateBirth AS ViewPerson_DateBirth, 
+            T.Email AS ViewPerson_Email, 
+            T.Mobile AS ViewPerson_Mobile, 
+            T.Address AS ViewPerson_Address, 
+            T.IsActive AS ViewPerson_IsActive, 
+            T.IsDeleted AS ViewPerson_IsDeleted, 
+            T.Remark AS ViewPerson_Remark, 
+            T.Nickname AS ViewPerson_Nickname, 
+            T.IDNo AS ViewPerson_IDNo, 
+            T.UserId AS ViewPerson_UserId, 
+            T.ImageUrl AS ViewPerson_ImageUrl, 
+            T.ImageUrl2 AS ViewPerson_ImageUrl2, 
+            T.CountryId AS ViewPerson_CountryId, 
+            T.ZIPCode AS ViewPerson_ZIPCode, 
+            T.State AS ViewPerson_State, 
+            T.City AS ViewPerson_City, 
+            T.Company AS ViewPerson_Company, 
+            T.University AS ViewPerson_University, 
+            T.Website AS ViewPerson_Website, 
+            T.Twitter AS ViewPerson_Twitter, 
+            T.LinkedIn AS ViewPerson_LinkedIn, 
+            T.Headline AS ViewPerson_Headline, 
+            T.DegreeId AS ViewPerson_DegreeId, 
+            T.PositionId AS ViewPerson_PositionId, 
+            T.DateJoin AS ViewPerson_DateJoin, 
+            T.DateJoinStr AS ViewPerson_DateJoinStr, 
+            T.Name AS ViewPerson_Name, 
+            T.FieldOfStudyId AS ViewPerson_FieldOfStudyId, 
+            T.Position AS ViewPerson_Position, 
+            T.FieldOfStudy AS ViewPerson_FieldOfStudy, 
+            T.Degree AS ViewPerson_Degree, 
+            T.CountrySortName AS ViewPerson_CountrySortName, 
+            T.Country AS ViewPerson_Country, 
+            T.Location AS ViewPerson_Location, 
+            T.Education AS ViewPerson_Education, 
+            T.Networks AS ViewPerson_Networks, 
+            T.NetworkIds AS ViewPerson_NetworkIds, 
+            True AS _from0
+        FROM EPAGRIFFINEntities.ViewPersons AS T
+    ) AS T1");
+        }
+
+        /// <summary>
+        /// Gets the view for EPAGRIFFINEntities.ViewPersons.
+        /// </summary>
+        /// <returns>The mapping view.</returns>
+        private static DbMappingView GetView123()
+        {
+            return new DbMappingView(@"
+    SELECT VALUE -- Constructing ViewPersons
+        [EPAGRIFFINModel.ViewPerson](T1.ViewPerson_Id, T1.ViewPerson_DateCreate, T1.ViewPerson_SexId, T1.ViewPerson_FirstName, T1.ViewPerson_LastName, T1.ViewPerson_DateBirth, T1.ViewPerson_Email, T1.ViewPerson_Mobile, T1.ViewPerson_Address, T1.ViewPerson_IsActive, T1.ViewPerson_IsDeleted, T1.ViewPerson_Remark, T1.ViewPerson_Nickname, T1.ViewPerson_IDNo, T1.ViewPerson_UserId, T1.ViewPerson_ImageUrl, T1.ViewPerson_ImageUrl2, T1.ViewPerson_CountryId, T1.ViewPerson_ZIPCode, T1.ViewPerson_State, T1.ViewPerson_City, T1.ViewPerson_Company, T1.ViewPerson_University, T1.ViewPerson_Website, T1.ViewPerson_Twitter, T1.ViewPerson_LinkedIn, T1.ViewPerson_Headline, T1.ViewPerson_DegreeId, T1.ViewPerson_PositionId, T1.ViewPerson_DateJoin, T1.ViewPerson_DateJoinStr, T1.ViewPerson_Name, T1.ViewPerson_FieldOfStudyId, T1.ViewPerson_Position, T1.ViewPerson_FieldOfStudy, T1.ViewPerson_Degree, T1.ViewPerson_CountrySortName, T1.ViewPerson_Country, T1.ViewPerson_Location, T1.ViewPerson_Education, T1.ViewPerson_Networks, T1.ViewPerson_NetworkIds)
+    FROM (
+        SELECT 
+            T.Id AS ViewPerson_Id, 
+            T.DateCreate AS ViewPerson_DateCreate, 
+            T.SexId AS ViewPerson_SexId, 
+            T.FirstName AS ViewPerson_FirstName, 
+            T.LastName AS ViewPerson_LastName, 
+            T.DateBirth AS ViewPerson_DateBirth, 
+            T.Email AS ViewPerson_Email, 
+            T.Mobile AS ViewPerson_Mobile, 
+            T.Address AS ViewPerson_Address, 
+            T.IsActive AS ViewPerson_IsActive, 
+            T.IsDeleted AS ViewPerson_IsDeleted, 
+            T.Remark AS ViewPerson_Remark, 
+            T.Nickname AS ViewPerson_Nickname, 
+            T.IDNo AS ViewPerson_IDNo, 
+            T.UserId AS ViewPerson_UserId, 
+            T.ImageUrl AS ViewPerson_ImageUrl, 
+            T.ImageUrl2 AS ViewPerson_ImageUrl2, 
+            T.CountryId AS ViewPerson_CountryId, 
+            T.ZIPCode AS ViewPerson_ZIPCode, 
+            T.State AS ViewPerson_State, 
+            T.City AS ViewPerson_City, 
+            T.Company AS ViewPerson_Company, 
+            T.University AS ViewPerson_University, 
+            T.Website AS ViewPerson_Website, 
+            T.Twitter AS ViewPerson_Twitter, 
+            T.LinkedIn AS ViewPerson_LinkedIn, 
+            T.Headline AS ViewPerson_Headline, 
+            T.DegreeId AS ViewPerson_DegreeId, 
+            T.PositionId AS ViewPerson_PositionId, 
+            T.DateJoin AS ViewPerson_DateJoin, 
+            T.DateJoinStr AS ViewPerson_DateJoinStr, 
+            T.Name AS ViewPerson_Name, 
+            T.FieldOfStudyId AS ViewPerson_FieldOfStudyId, 
+            T.Position AS ViewPerson_Position, 
+            T.FieldOfStudy AS ViewPerson_FieldOfStudy, 
+            T.Degree AS ViewPerson_Degree, 
+            T.CountrySortName AS ViewPerson_CountrySortName, 
+            T.Country AS ViewPerson_Country, 
+            T.Location AS ViewPerson_Location, 
+            T.Education AS ViewPerson_Education, 
+            T.Networks AS ViewPerson_Networks, 
+            T.NetworkIds AS ViewPerson_NetworkIds, 
+            True AS _from0
+        FROM EPAGRIFFINModelStoreContainer.ViewPerson AS T
     ) AS T1");
         }
     }

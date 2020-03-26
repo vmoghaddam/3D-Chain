@@ -29,7 +29,7 @@ app.controller('materialProfileController', ['$scope', '$location', '$window', '
 
 
         var _d = $scope.profile;
-        _d.User.TotalRate = 3.5;
+        _d.User.TotalRate = 0;
         _d.rateStars = "";
         var score = Math.floor(_d.User.TotalRate);
         for (var i = 0; i < score; i++) {

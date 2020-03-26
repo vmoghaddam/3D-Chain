@@ -85,6 +85,7 @@
     <Content Include="app\controllers\profileController.js" />
     <Content Include="app\controllers\researchController.js" />
     <Content Include="app\controllers\researchersController.js" />
+    <Content Include="app\controllers\settingController.js" />
     <Content Include="app\controllers\signInController.js" />
     <Content Include="app\controllers\signup2Controller.js" />
     <Content Include="app\controllers\signUpController.js" />
@@ -113,6 +114,7 @@
     <Content Include="app\views\profile.html" />
     <Content Include="app\views\research.html" />
     <Content Include="app\views\researchers.html" />
+    <Content Include="app\views\setting.html" />
     <Content Include="app\views\signin.html" />
     <Content Include="app\views\signup.html" />
     <Content Include="app\views\signup2.html" />

@@ -2,7 +2,7 @@
 app.controller('materialsController', ['$scope', '$location', '$window', '$routeParams', '$rootScope', 'userService', 'authService', '$http', '$q', function ($scope, $location, $window, $routeParams, $rootScope, userService, authService, $http, $q) {
 
     var $jq = jQuery.noConflict();
-    $jq('body').on('click', '.link-profile', function (e) {
+    $jq('body').on('click', '.link-profile-material', function (e) {
         // do something
         e.preventDefault();
         var id = $jq(this).data('uid');
@@ -1000,7 +1000,7 @@ app.controller('materialsController', ['$scope', '$location', '$window', '$route
         {
             dataField: 'Material1', caption: 'Material', allowResizing: true, alignment: 'left', dataType: 'string', allowEditing: false, fixed: false, fixedPosition: 'left',
             cellTemplate: function (container, options) {
-                var elem = "<div class='dg-cell-div' ><a class='dg-cell-link link-profile' href='#' data-uid='" + options.data.Id + "' style='' target='_blank'   >" + options.data.Material1 + "</a></div>";
+                var elem = "<div class='dg-cell-div' ><a class='dg-cell-link link-profile-material' href='#' data-uid='" + options.data.Id + "' style='' target='_blank'   >" + options.data.Material1 + "</a></div>";
                 $jq("<div>")
                     // .append($jq("<img style='border-radius:50%'>", { "src":'../../content/upload/'+ options.value }))
                     .append(elem)
@@ -1198,12 +1198,12 @@ app.controller('materialsController', ['$scope', '$location', '$window', '$route
                 var elem = "<div style='width:100%'>"
                     + "<table style='width:100%;border-bottom:1px solid gray !important'><tr>"
                     + "<td style='width:80px;min-width:80px;text-align:left;position:relative;vertical-align:middle'>"
-                    + "<a class='dg-cell-link link-profile' href='#' data-uid='" + options.data.Id + "' style='font-size:14px;'    >"
+                    + "<a class='dg-cell-link link-profile-material' href='#' data-uid='" + options.data.Id + "' style='font-size:14px;'    >"
                     + "<img style='border-radius:0%;min-width:95px;width:95px;height:95px; '  src='../../content/upload/" + options.value + "' />"
                     + "</a>"
                     + "</td>"
                     + "<td style='padding-top:0 !important'>"
-                    + "<div class='dg-cell-div' ><a class='dg-cell-link link-profile' href='#' data-uid='" + options.data.Id + "' style='font-size:15px;'    >" + options.data.Name + "</a></div>"
+                    + "<div class='dg-cell-div' ><a class='dg-cell-link link-profile-material' href='#' data-uid='" + options.data.Id + "' style='font-size:15px;'    >" + options.data.Name + "</a></div>"
                    // + "<div class='dg-cell-div' style='font-size:13px'>" + options.data.Organization + ", " + options.data.Position + "</div>"
                     + "<div  class='dg-cell-div'  style='font-size:13px'>" + options.data.Location + "</div>"
                     + "<div class='dg-cell-div'>" + "<a class='dg-cell-link' style='font-size:13px;' href='#'>" + options.data.Website + "</a>" + "</div>"

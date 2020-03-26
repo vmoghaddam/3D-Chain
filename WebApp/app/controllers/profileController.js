@@ -228,7 +228,7 @@ app.controller('profileController', ['$scope', '$location', '$routeParams', '$ro
     ////////////////////////////////////////////
     if (!authService.isAuthorized()) {
 
-      //  authService.redirectToLogin();
+       //  authService.redirectToLogin();
 
     }
     else {
@@ -1284,7 +1284,7 @@ app.controller('profileController', ['$scope', '$location', '$routeParams', '$ro
     $scope.txt_university = {
         placeholder: 'Company or University',
         bindingOptions: {
-            value: 'user.University'
+            value: 'user.Company'
         }
 
     };

@@ -318,6 +318,28 @@ app.factory('authService', ['$http', '$q', 'localStorageService', 'ngAuthSetting
 
         return deferred.promise;
     };
+    var _changePassword = function (entity) {
+        var deferred = $q.defer();
+        $http.post($rootScope.serviceUrl + 'api/password/change', entity).then(function (response) {
+            deferred.resolve(response.data);
+        }, function (err, status) {
+
+            deferred.reject(Exceptions.getMessage(err));
+        });
+
+        return deferred.promise;
+    };
+    var _registerResearcher = function (entity) {
+        var deferred = $q.defer();
+        $http.post($rootScope.serviceUrl + 'api/researcher/register', entity).then(function (response) {
+            deferred.resolve(response.data);
+        }, function (err, status) {
+
+            deferred.reject(Exceptions.getMessage(err));
+        });
+
+        return deferred.promise;
+    };
 
 
     authServiceFactory.setModule = _setModule;
@@ -336,7 +358,10 @@ app.factory('authService', ['$http', '$q', 'localStorageService', 'ngAuthSetting
     authServiceFactory.externalAuthData = _externalAuthData;
     authServiceFactory.registerExternal = _registerExternal;
     authServiceFactory.register2 = _register2;
+    authServiceFactory.changePassword = _changePassword;
+    authServiceFactory.registerResearcher = _registerResearcher;
     authServiceFactory.IsAuthurized = function () {
+
 
         return authServiceFactory.authentication.isAuth;
     };

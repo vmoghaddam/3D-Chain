@@ -155,6 +155,98 @@ namespace API.Controllers
 
         }
 
+
+        [Route("api/researcher/register")]
+
+        [AcceptVerbs("POST")]
+        public async Task<IHttpActionResult> PostResearcherRegister(dynamic dto)
+        {
+            var email = Convert.ToString(dto.Email);
+            var password = Convert.ToString(dto.Password);
+            var userName = Convert.ToString(dto.UserName);
+            var fn = Convert.ToString(dto.FirstName);
+            var ln = Convert.ToString(dto.LastName);
+            var degree= Convert.ToString(dto.Degree);
+            var company = Convert.ToString(dto.Company);
+            var position = Convert.ToString(dto.Position);
+            var website = Convert.ToString(dto.Website);
+            var linkedIn = Convert.ToString(dto.LinkedIn);
+            var location = Convert.ToString(dto.Location);
+            string groups = Convert.ToString(dto.Groups);
+            var networks = groups.Split('_').Select(q => Convert.ToInt32(q)).ToList();
+
+
+
+            ApplicationUserManager UserManager = Request.GetOwinContext().GetUserManager<ApplicationUserManager>();
+
+            var user = new ApplicationUser() { UserName = userName, Email = email };
+
+            IdentityResult result = await UserManager.CreateAsync(user, password);
+            if (!result.Succeeded)
+            {
+                return new CustomActionResult(HttpStatusCode.BadRequest, GetErrorResult(result));
+
+            }
+
+            ApplicationUser created = await UserManager.FindByNameAsync(userName);
+            await UserManager.AddToRoleAsync(created.Id, "Researcher");
+            //if (dto.Roles != null)
+            //{
+            //    var roles = JsonConvert.DeserializeObject<List<string>>(JsonConvert.SerializeObject(dto.Roles)); //dto.Roles as List<string>;
+            //    foreach (var x in roles)
+            //    {
+            //        await UserManager.AddToRoleAsync(created.Id, x);
+
+            //    }
+
+            //}
+            //else
+            //{
+            //    await UserManager.AddToRoleAsync(created.Id, "User");
+            //}
+
+
+            //var ext = new UserExt()
+            //{
+            //    Id = created.Id,
+            //    FirstName = fn,
+            //    LastName = ln,
+            //};
+
+            //unitOfWork.PersonRepository.Insert(ext);
+            var person = new Person()
+            {
+                SexId = 30,
+                UserId = created.Id,
+                FirstName = fn,
+                LastName = ln,
+                DateCreate = DateTime.Now,
+                IsActive = true,
+                IsDeleted = false,
+                Email = email,
+                ImageUrl = "user.png",
+                LinkedIn=linkedIn,
+                Website=website,
+                Company=company,
+                Degree=degree,
+                Position2=position,
+                Location2=location,
+            };
+            foreach (var item in networks)
+                person.PersonNetworks.Add(new PersonNetwork() { NetworkId = item });
+            unitOfWork.PersonRepository.Insert(person);
+            var saveResult = await unitOfWork.SaveAsync();
+            if (saveResult.Code != HttpStatusCode.OK)
+                return saveResult;
+
+
+            return Ok(dto);
+
+
+
+
+        }
+
         [Route("api/resp")]
         [EnableQuery]
         public async Task<IHttpActionResult> GetResp()
@@ -164,7 +256,7 @@ namespace API.Controllers
             {
                 ApplicationUserManager UserManager = Request.GetOwinContext().GetUserManager<ApplicationUserManager>();
                 var user = await UserManager.FindByIdAsync(x.Id);
-
+                
                 var token = await UserManager.GeneratePasswordResetTokenAsync(x.Id);
                 IdentityResult result = await UserManager.ResetPasswordAsync(x.Id, token, /*x.UserName*/"babak" + "1234@");
             }
@@ -194,6 +286,26 @@ namespace API.Controllers
             //var saveResult = await unitOfWork.SaveAsync();
             //if (saveResult.Code != HttpStatusCode.OK)
             //    return saveResult;
+            return Ok(true);
+        }
+
+        [Route("api/password/change")]
+        [EnableQuery]
+        public async Task<IHttpActionResult> PostChangePassword(dynamic dto)
+        {
+            var password = Convert.ToString(dto.Password);
+            var old = Convert.ToString(dto.Old);
+            var username= Convert.ToString(dto.UserName);
+
+            ApplicationUserManager UserManager = Request.GetOwinContext().GetUserManager<ApplicationUserManager>();
+            ApplicationUser user = await UserManager.FindByNameAsync(username);
+            IdentityResult result = await UserManager.ChangePasswordAsync(user.Id, old, password);
+            if (!result.Succeeded)
+            {
+                return new CustomActionResult(HttpStatusCode.BadRequest, GetErrorResult(result));
+
+            }
+             
             return Ok(true);
         }
 

@@ -93,7 +93,7 @@ namespace API.Providers
                         properties.Dictionary.Add("Name", person.Name);
                         properties.Dictionary.Add("UserId", person.Id.ToString());
                         properties.Dictionary.Add("Image", person.ImageUrl.ToString());
-                        properties.Dictionary.Add("Role", "Person");
+                        properties.Dictionary.Add("Role",  roles != "User"? "Person":"User");
                         //   properties.Dictionary.Add("EmployeeId", employee.Id.ToString());
 
                     }

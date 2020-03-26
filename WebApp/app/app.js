@@ -153,6 +153,13 @@ app.config(function ($routeProvider) {
 
     });
 
+    $routeProvider.when("/setting", {
+        controller: "settingController",
+        templateUrl: "/app/views/setting.html",
+        type: -1,
+
+    });
+
      
      $routeProvider.otherwise({ redirectTo: "/home" });
 
@@ -188,7 +195,15 @@ app.config(['$httpProvider', function ($httpProvider) {
 }]);
  
 app.run(['$rootScope', '$location', '$window', '$templateCache', 'authService', 'activityService', function ($rootScope, $location, $window, $templateCache, authService, activityService) {
-   
+    $window.ga('create', 'UA-161262331-1', 'auto');
+    $rootScope.$on('$routeChangeSuccess', function () {
+        // $window.ga('set', 'userId', 'USER_ID');
+        $window.ga('send', 'pageview', { page: $location.url() });
+ 
+
+    });
+
+
     $rootScope.browser_title = '';
     $rootScope.serviceUrl = serviceBase;
     $rootScope.fileHandlerUrl = webBase + 'filehandler.ashx';

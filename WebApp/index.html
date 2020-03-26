@@ -17,7 +17,21 @@
 
     </title>
 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-161262331-1"></script>
+    <script>
+ (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-161262331-1');
+    </script>
 
 
     <link href="content/css/bootstrap.css" rel="stylesheet" />
@@ -39,11 +53,11 @@
         var LS_Meta = { "v": "6.7.6" };
         /* ]]> */
     </script>
-    
+
     <script type='text/javascript' src='scripts/greenshock.js'></script>
     <script type='text/javascript' src='scripts/wp-jquery.js'></script>
     <script type='text/javascript' src='scripts/wp-jquery-migrate.min.js'></script>
-    
+
     <script type='text/javascript' src='scripts/layerslider.kreaturamedia.jquery.js'></script>
     <!--<script type='text/javascript' src='http://commigrant.com/wp-content/plugins/LayerSlider/static/layerslider/js/layerslider.transitions.js?ver=6.7.6'></script>-->
     <script type='text/javascript' src='scripts/wp-jquery.themepunch.tools.min.js'></script>
@@ -104,7 +118,7 @@
             <a href="SignIn.html" class="action_button color-p" target="_self">Sign In</a><div class="extras-wrapper">
 
             </div>
-        </div><div class="search-wrapper"><form id="side-form" method="get"  ><input type="text" class="field" name="s" placeholder="Enter your search" /><input type="submit" class="submit" value="" style="display:none;" /><a class="submit" href="#"><i class="icon-search-fine"></i></a></form></div><div class="lang-wrapper"></div><div class="menu_wrapper"></div>
+        </div><div class="search-wrapper"><form id="side-form" method="get"><input type="text" class="field" name="s" placeholder="Enter your search" /><input type="submit" class="submit" value="" style="display:none;" /><a class="submit" href="#"><i class="icon-search-fine"></i></a></form></div><div class="lang-wrapper"></div><div class="menu_wrapper"></div>
         <ul class="social">
             <li class="twitter"><a href="#" class="social-link"><img src="content/imgs/twitter.png" class="social-icon-1" style="width:25px;height:25px"></a></li>
             <li class="twitter"><a href="#" class="social-link"><img src="content/imgs/telegram.png" class="social-icon-1" title="Telegram" alt="Telegram" style="width:25px;height:25px"></a></li>
@@ -199,6 +213,7 @@
     <script src="app/controllers/materialProfile.js"></script>
     <script src="app/controllers/privacy.js"></script>
     <script src="app/controllers/useragreement.js"></script>
+    <script src="app/controllers/settingController.js"></script>
 
 </body>
 </html>

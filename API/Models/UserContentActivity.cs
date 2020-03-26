@@ -20,7 +20,7 @@ namespace API.Models
         public System.DateTime Date { get; set; }
         public Nullable<int> PersonId { get; set; }
     
-        public virtual Person Person { get; set; }
         public virtual Review Review { get; set; }
+        public virtual Person Person { get; set; }
     }
 }

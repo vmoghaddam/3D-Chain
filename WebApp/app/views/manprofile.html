@@ -1009,7 +1009,7 @@
                     <div ng-repeat="x in profile.data.slider" style="float:left;margin:5px;position:relative">
 
                         <img data-u="image" ng-src="{{getImageUrl(x)}}" style="height:120px;border:1px solid gray;padding:5px;" />
-                        <a href="" class="link_edit" style="position:absolute;top:0px;left:0px" ng-click="delete_printer($event,-1)">
+                        <a href="" class="link_edit" style="position:absolute;top:0px;left:0px" ng-click="delete_slider($event,x)">
                             <i class="icon ion-md-remove-circle" style="font-size:32px;color:red"></i>
                         </a>
 

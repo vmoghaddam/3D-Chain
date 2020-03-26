@@ -17,6 +17,7 @@ namespace API.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Person()
         {
+            this.Companies = new HashSet<Company>();
             this.PersonAccomplishments = new HashSet<PersonAccomplishment>();
             this.PersonNetworks = new HashSet<PersonNetwork>();
             this.PersonAwards = new HashSet<PersonAward>();
@@ -26,7 +27,6 @@ namespace API.Models
             this.PersonPublications = new HashSet<PersonPublication>();
             this.Reviews = new HashSet<Review>();
             this.UserContentActivities = new HashSet<UserContentActivity>();
-            this.Companies = new HashSet<Company>();
         }
     
         public int Id { get; set; }
@@ -63,7 +63,10 @@ namespace API.Models
         public string Education2 { get; set; }
         public string Location2 { get; set; }
         public string Position2 { get; set; }
+        public string Degree { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Company> Companies { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PersonAccomplishment> PersonAccomplishments { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
@@ -82,7 +85,5 @@ namespace API.Models
         public virtual ICollection<Review> Reviews { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<UserContentActivity> UserContentActivities { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Company> Companies { get; set; }
     }
 }

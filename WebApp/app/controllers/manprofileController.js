@@ -124,6 +124,7 @@ app.controller('manprofileController', ['$scope', '$location', '$window', '$rout
     };
     ////////////////////////////////
     $scope.getImageUrl = function (url) {
+        
         return "../../content/upload/" + url;
     };
     ///////////////////////////////////////////
@@ -269,6 +270,8 @@ app.controller('manprofileController', ['$scope', '$location', '$window', '$rout
         }
     };
     $scope.edit_main = function () {
+
+        
         $scope.user = JSON.parse(JSON.stringify($scope.profile.User));
         $scope.user.rush24 = $scope.profile.data.rush24;
         $scope.user.rush48 = $scope.profile.data.rush48;
@@ -1136,6 +1139,24 @@ app.controller('manprofileController', ['$scope', '$location', '$window', '$rout
         }, function (err) { $scope.loadingVisible = false; General.ShowNotify(err.message, 'error'); });
     };
 
+    $scope.delete_slider = function ($event, url) {
+        $event.stopPropagation();
+
+         
+        var dto = {
+            url: url,
+
+        };
+        $scope.loadingVisible = true;
+        userService.removeSlider(dto).then(function (response) {
+
+            General.ShowNotify(Config.Text_SavedOk, 'success');
+            $scope.loadingVisible = false;
+            $scope.profile.data.slider = Enumerable.From($scope.profile.data.slider).Where('$!="' + url + '"').ToArray();
+
+        }, function (err) { $scope.loadingVisible = false; General.ShowNotify(err.message, 'error'); });
+    };
+
     /////////////////////////////////////////////
     $scope.edit_printer = function ($event, id) {
         $event.stopPropagation();
@@ -1609,7 +1630,7 @@ app.controller('manprofileController', ['$scope', '$location', '$window', '$rout
     }
     $scope.buildSlider = function () {
         jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
-
+      
         /*#region responsive code begin*/
 
 
@@ -1624,11 +1645,11 @@ app.controller('manprofileController', ['$scope', '$location', '$window', '$rout
     };
 
     $scope.$on('sliderRendered', function () {
-       
-        //$jq('.company').fadeIn(500, function () {
+        //$scope.buildSlider();
+      //  $jq('.company').fadeIn(500, function () {
            
-        //    $scope.buildSlider();
-        //});
+        //     $scope.buildSlider();
+       //  });
 
 
 
@@ -1660,8 +1681,11 @@ app.controller('manprofileController', ['$scope', '$location', '$window', '$rout
         //});
         $scope.bind($scope.profileId, function () {
             $jq('.company').fadeIn(500, function () {
-
-                $scope.buildSlider();
+                //kiss
+                setTimeout(function () {
+                    $scope.buildSlider();
+                }, 500);
+                
             });
         });
 

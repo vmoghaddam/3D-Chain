@@ -39,7 +39,6 @@ namespace API.Models
         public virtual DbSet<Manufacturer> Manufacturers { get; set; }
         public virtual DbSet<NetworkGroup> NetworkGroups { get; set; }
         public virtual DbSet<Option> Options { get; set; }
-        public virtual DbSet<Person> People { get; set; }
         public virtual DbSet<PersonAccomplishment> PersonAccomplishments { get; set; }
         public virtual DbSet<PersonAward> PersonAwards { get; set; }
         public virtual DbSet<PersonCertification> PersonCertifications { get; set; }
@@ -63,7 +62,6 @@ namespace API.Models
         public virtual DbSet<ViewCertification> ViewCertifications { get; set; }
         public virtual DbSet<ViewCountry> ViewCountries { get; set; }
         public virtual DbSet<ViewOption> ViewOptions { get; set; }
-        public virtual DbSet<ViewPerson> ViewPersons { get; set; }
         public virtual DbSet<ViewPersonNetwork> ViewPersonNetworks { get; set; }
         public virtual DbSet<ViewPersonPatent> ViewPersonPatents { get; set; }
         public virtual DbSet<ViewPersonPublication> ViewPersonPublications { get; set; }
@@ -86,5 +84,7 @@ namespace API.Models
         public virtual DbSet<CompanyPrinter> CompanyPrinters { get; set; }
         public virtual DbSet<Company> Companies { get; set; }
         public virtual DbSet<ViewCompany> ViewCompanies { get; set; }
+        public virtual DbSet<Person> People { get; set; }
+        public virtual DbSet<ViewPerson> ViewPersons { get; set; }
     }
 }

@@ -32,8 +32,8 @@ namespace API.Models
         public Nullable<int> ToNetworkGroupId { get; set; }
         public Nullable<int> ToReviewId { get; set; }
     
-        public virtual Person Person { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<UserContentActivity> UserContentActivities { get; set; }
+        public virtual Person Person { get; set; }
     }
 }

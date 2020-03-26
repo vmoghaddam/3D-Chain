@@ -2,14 +2,46 @@
 app.controller('printingController', ['$scope', '$location', '$window', '$routeParams', '$rootScope', 'userService', 'authService', '$http', '$q', function ($scope, $location, $window, $routeParams, $rootScope, userService, authService, $http, $q) {
 
     var $jq = jQuery.noConflict();
-    $jq('body').on('click', '.link-profile', function (e) {
-        // do something
+    $jq('body').on('click', '.link-profile-service', function (e) {
+      
         e.preventDefault();
         var id = $jq(this).data('uid');
-        // $rootScope.navigate('/profile/'+id);
-        $window.open('#!/company/' + id);
+         
+        if (authService.isAuthorized()) {
+            $window.open('#!/company/' + id);
+        }
+        else {
+            //alert('sign in/sign up');
+
+            $scope.$apply(function () {
+                $scope.showInfo();
+            });
+        }
+       
+        
 
     });
+    /////////////////////////////////
+    $scope.visiblePopup = false;
+
+    $scope.popupOptions = {
+        width: 450,
+        height: 130,
+        contentTemplate: "info",
+        showTitle: true,
+        title: "",
+        dragEnabled: false,
+        closeOnOutsideClick: true,
+        bindingOptions: {
+            visible: "visiblePopup",
+        }
+    };
+
+    $scope.showInfo = function () {
+
+        $scope.visiblePopup = true;
+    };
+    //////////////////////////////////
     $scope.prms = $routeParams.prms;
 
     $scope.location = "";
@@ -663,7 +695,7 @@ app.controller('printingController', ['$scope', '$location', '$window', '$routeP
             allowFiltering: false,
             allowSorting: false,
             cellTemplate: function (container, options) {
-                var img = "<a class='dg-cell-link link-profile' href='#' data-uid='" + options.data.Id + "' style=''    >"
+                var img = "<a class='dg-cell-link link-profile-service' href='#' data-uid='" + options.data.Id + "' style=''    >"
                     + "<img style='border-radius:0%;'  src='../../content/upload/" + options.value + "' />"
                     + "</a>";
                 $jq("<div style='width:75px;height:75px'>")
@@ -675,7 +707,7 @@ app.controller('printingController', ['$scope', '$location', '$window', '$routeP
         {
             dataField: 'Name', caption: 'Name', allowResizing: true, alignment: 'left', dataType: 'string', allowEditing: false,
             cellTemplate: function (container, options) {
-                var elem = "<div class='dg-cell-div' ><a class='dg-cell-link link-profile' href='#' data-uid='" + options.data.Id + "' style=''    >" + options.data.Name + "</a></div>";
+                var elem = "<div class='dg-cell-div' ><a class='dg-cell-link link-profile-service' href='#' data-uid='" + options.data.Id + "' style=''    >" + options.data.Name + "</a></div>";
                 $jq("<div>")
                     // .append($jq("<img style='border-radius:50%'>", { "src":'../../content/upload/'+ options.value }))
                     .append(elem)
@@ -707,7 +739,7 @@ app.controller('printingController', ['$scope', '$location', '$window', '$routeP
             visible: false
         },
         filterRow: {
-            visible: false,
+            visible: true,
             showOperationChooser: true,
         },
         showRowLines: true,
@@ -780,12 +812,12 @@ app.controller('printingController', ['$scope', '$location', '$window', '$routeP
                 var elem = "<div style='width:100%'>"
                     + "<table style='width:100%;border-bottom:1px solid gray !important'><tr>"
                     + "<td style='width:80px;min-width:80px;text-align:left;position:relative;vertical-align:middle'>"
-                    + "<a class='dg-cell-link link-profile' href='#' data-uid='" + options.data.Id + "' style='font-size:14px;'    >"
+                    + "<a class='dg-cell-link link-profile-service' href='#' data-uid='" + options.data.Id + "' style='font-size:14px;'    >"
                     + "<img style='border-radius:0%;min-width:95px;width:95px;height:95px; '  src='../../content/upload/" + options.value + "' />"
                     + "</a>"
                     + "</td>"
                     + "<td style='padding-top:0 !important'>"
-                    + "<div class='dg-cell-div' ><a class='dg-cell-link link-profile' href='#' data-uid='" + options.data.Id + "' style='font-size:15px;'    >" + options.data.Name + "</a></div>"
+                    + "<div class='dg-cell-div' ><a class='dg-cell-link link-profile-service' href='#' data-uid='" + options.data.Id + "' style='font-size:15px;'    >" + options.data.Name + "</a></div>"
                    // + "<div class='dg-cell-div' style='font-size:13px'>" + options.data.Organization + ", " + options.data.Position + "</div>"
                     + "<div  class='dg-cell-div'  style='font-size:13px'>" + options.data.Location + "</div>"
                     + "<div class='dg-cell-div'>" + "<a class='dg-cell-link' style='font-size:13px;' href='#'>" + options.data.Website + "</a>" + "</div>"

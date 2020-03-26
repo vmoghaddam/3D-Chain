@@ -17,6 +17,7 @@ namespace API.Models
         public int PrinterId { get; set; }
         public string Remark { get; set; }
         public int TechnologyId { get; set; }
+        public string Technology { get; set; }
     
         public virtual Option Option { get; set; }
     }

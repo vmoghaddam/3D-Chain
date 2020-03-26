@@ -176,6 +176,13 @@ namespace API.Repositories
             return true;
         }
 
+        public async Task<bool> RemoveCompanySlider(string url)
+        {
+            var pc = await this.context.CompanySliders.Where(q => q.Url == url).FirstOrDefaultAsync();
+            this.context.CompanySliders.Remove(pc);
+            return true;
+        }
+
         public async Task<Company> UpdateCompany(ViewModels.CompanyDto dto)
         {
             Company company = await this.context.Companies.Where(q => q.Id == dto.Id).FirstOrDefaultAsync();

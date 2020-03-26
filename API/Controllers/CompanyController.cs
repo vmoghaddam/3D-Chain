@@ -255,6 +255,24 @@ namespace API.Controllers
             return Ok(true);
         }
 
+        [Route("api/company/slider/remove")]
+        [AcceptVerbs("POST")]
+        public async Task<IHttpActionResult> PostRemoveCompanySlider(dynamic dto)
+        {
+            string url = Convert.ToString(dto.url);
+
+            await unitOfWork.CompanyRepository.RemoveCompanySlider(url);
+            // return Ok(client);
+
+
+            var saveResult = await unitOfWork.SaveAsync();
+            if (saveResult.Code != HttpStatusCode.OK)
+                return saveResult;
+
+
+            return Ok(true);
+        }
+
         //mami
         [Route("api/companies")]
         [EnableQuery]
@@ -839,14 +857,14 @@ namespace API.Controllers
 
         public  List<Material>  CacheMaterials()
         {
-            MemoryCacher mc = new MemoryCacher();
+           // MemoryCacher mc = new MemoryCacher();
             //var cnt =await unitOfWork.CompanyRepository.GetMaterials().CountAsync();
             //mc.Add("materials_count", cnt, DateTimeOffset.UtcNow.AddMinutes(5));
 
-            var items =   unitOfWork.CompanyRepository.GetMaterials().ToList();
-            mc.Add("materials", items, DateTimeOffset.UtcNow.AddHours(5));
+           // var items =   unitOfWork.CompanyRepository.GetMaterials().ToList();
+           // mc.Add("materials", items, DateTimeOffset.UtcNow.AddHours(5));
 
-            return items;
+            return null;
         }
 
 
